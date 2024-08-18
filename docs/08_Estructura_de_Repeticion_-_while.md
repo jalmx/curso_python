@@ -187,7 +187,7 @@ print("Programa a finalizado")
 ### Ejercicios:
 
 1. Imprimir la tabla del 8, del 1 al 10, con el siguiente formato "8 x 1 = 8"
-2. Realizar un programa que solicite 10 numeros e imprima si es par o impar y si es mayor a 10 que lo indique, de lo contrario solo dice "es impar"
+2. Realizar un programa que solicite 10 números e imprima si es par o impar y si es mayor a 10 que lo indique, de lo contrario solo dice "es impar"
 5. Realizar un programa solicite los 3 parciales de Matematicas, e imprimir el promedio, pero si reprueba, ahora tendra que pedir el resultado de su extra, en caso que haya pasado el extra, le dara su calificacion final y le dira "aprobado". En caso que no apruebe su extra, solo le dirá "estas en recursamiento"
 
 ## 2.8.2 Continue y Break
@@ -195,7 +195,7 @@ print("Programa a finalizado")
 Existen 2 palabras reservadas que nos ayudan a un control mas complejo dentro de los ciclos, que son `break` y `continue`.
 
 - La palabra reservada `break` me sirve para romper un ciclo cuando yo no necesite, muy util en ciclos infinitos que necesitemos `romper`.
-- La palabra reservada `continue` me sirve para ignorar el codigo restante e iniciar la siguiente vuelta del ciclo.
+- La palabra reservada `continue` me sirve para ignorar el código restante e iniciar la siguiente vuelta del ciclo.
 
 
 
@@ -223,7 +223,7 @@ while True: # ciclo infinito
 
 
 ```python
-# vamos a hacer que el ciclo ignore todo el codigo que tiene por debajo cuando encuentre la palabra continue
+# vamos a hacer que el ciclo ignore todo el código que tiene por debajo cuando encuentre la palabra continue
 
 contador = 0
 

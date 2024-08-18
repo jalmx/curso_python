@@ -1,19 +1,24 @@
+---
+title: 4 Operadores aritméticos
+---
+
+
 ![banner](assets/banner.png)
 
-# 2.4 Operadores aritméticos
+# 4. Operadores aritméticos
 
 En Python contamos con varios operadores aritméticos.
 
-Nombre| Símbolo| Ejemplo
-:-|:-:|-
-Suma| + | 4 + 2
-Resta| - | 4 - 5
-Negación| - | -2
-Multiplicación| * | 6 * 8
-División| / | 1 / 2
-División entera| // | 5 // 3
-Exponente| ** | 4\**2
-Módulo| % | 5 % 2
+| Nombre          | Símbolo | Ejemplo |
+| :-------------- | :-----: | ------- |
+| Suma            |    +    | 4 + 2   |
+| Resta           |    -    | 4 - 5   |
+| Negación        |    -    | -2      |
+| Multiplicación  |    *    | 6 * 8   |
+| División        |    /    | 1 / 2   |
+| División entera |   //    | 5 // 3  |
+| Exponente       |   **    | 4\**2   |
+| Módulo          |    %    | 5 % 2   |
 
 
 ```python
@@ -72,13 +77,13 @@ print(10 % 3) # 10%3 = 1
 
 El orden de precedencia de ejecución de los operadores aritméticos es:
 
-Orden| Operador
-:-|:-:|
-0. Agrupación |( )
-1. Exponente | \**
-2. Negación |-
-3. Multiplicación, División, División entera, Módulo |*, /, //, %
-4. Suma, Resta |+, -
+| Orden                                                |  Operador   |
+| :--------------------------------------------------- | :---------: |
+| 0. Agrupación                                        |     ( )     |
+| 1. Exponente                                         |     \**     |
+| 2. Negación                                          |      -      |
+| 3. Multiplicación, División, División entera, Módulo | *, /, //, % |
+| 4. Suma, Resta                                       |    +, -     |
 
 
 ## Ejemplos:

@@ -2,15 +2,15 @@
 
 # Funciones
 
-Bloque de codigo reutilizable que puede ser llamado n cantidad de veces, debe ser corta,  hacer una sola cosa (resuelve un problema) y hacerla bien.
+Bloque de código reutilizable que puede ser llamado n cantidad de veces, debe ser corta,  hacer una sola cosa (resuelve un problema) y hacerla bien.
 
 ## Como se nombran las funciones (Buenas practicas)
 
-- El nombre es una `accion` es decir un verbo
-- El nombre debe ser en minusculas
+- El nombre es una `acción` es decir un verbo
+- El nombre debe ser en minúsculas
 - No tiene espacios el nombre, por lo tanto, son `separados por guion bajo(_)`
 
-## Como escribo una funcion y como la utilizo
+## Como escribo una función y como la utilizo
 
 **Sintaxis**
 
@@ -23,23 +23,23 @@ def name_function():
     #code block
 ```
 
-Como la llamo a la funcion:
+Como la llamo a la función:
 
 ```python
-nombre_funcion()
+name_function()
 ```
 
 
 ```python
 def elevar_cuadrado():
-    '''Esta funcion eleva al cuadrado el numero 2'''
+    '''Esta función eleva al cuadrado el numero 2'''
     cuadrado = 2 ** 2
     print(cuadrado)
 
 
 def saludar():
     '''
-    Esta funcion manda un saludo
+    Esta función manda un saludo
     '''
     print('Hola a todos!!! xD')
 
@@ -53,17 +53,17 @@ elevar_cuadrado()
 
 **Ejercicios:**
 
-1. Realizar una funcion que en su cuerpo realice la suma de dos numeros (estos estan dados por ustedes), e imprimir el resultado, es decir, cuando se invoque
+1. Realizar una función que en su cuerpo realice la suma de dos números (estos están dados por ustedes), e imprimir el resultado, es decir, cuando se invoque
 
-2. Realizar una funcion que en su cuerpo realice la impresion de 3 mensajes, los que ustedes quiereran, y al invocarla que salgan esos mensajes
+2. Realizar una función que en su cuerpo realice la impresión de 3 mensajes, los que ustedes quieran, y al invocarla que salgan esos mensajes
 
-## Funciones con parametros
+## Funciones con parámetros
 
-Las funciones en ocasiones necesitan parametros para funcionar y poder realizar la accion.
+Las funciones en ocasiones necesitan parámetros para funcionar y poder realizar la acción.
 
-Parametro = Argumento = variable
+Parámetro = Argumento = variable
 
-**Como escribo una funcion y como la utilizo**
+**Como escribo una función y como la utilizo**
 
 **Sintaxis**
 
@@ -79,7 +79,7 @@ def name_function(argumeto1, argumentos2, ..., argumentosN):
 *Como la llamo a la funcion, coloco su nombre, abro parentesis y coloco los argumentos que necesita:*
 
 ```python
-nombre_funcion(arg1, arg2...)
+name_function(arg1, arg2...)
 ```
 
 
@@ -92,7 +92,7 @@ def potencia(base:float, potencia:int):
 
 
 def saludo2(nombre:str):
-    '''Funcion que imprime un mensaje personalizado'''
+    '''Función que imprime un mensaje personalizado'''
     print(f'Hola {nombre}, que chido es conocerte!!!')
 
 saludo2('Axel')
@@ -115,19 +115,19 @@ potencia(3,3)
 
 **Ejercicios:**
 
-1. Realizar una funcion que realice el calculo del area del circulo, la funcion recibe el radio. Ocupando las funciones de la libreria `math`.
+1. Realizar una función que realice el calculo del area del circulo, la función recibe el radio. Ocupando las funciones de la libreria `math`.
 
-2. Realizar una funcion que reciba el nombre y la edad, y que imprima un mensaje con estos datos, ejemplo: "Hola 'alejandro'  que buena onda que tengas '20' anios"
+2. Realizar una función que reciba el nombre y la edad, y que imprima un mensaje con estos datos, ejemplo: "Hola 'alejandro'  que buena onda que tengas '20' anios"
 
 
 
 ## Funciones con parametros por default u opcionales
 
-Las funciones en ocasiones necesitan parametros para funcionar, pero no es necesario pasarle todos los parametros requeridos, dado que pueden ser opcionales y poder realizar la accion.
+Las funciones en ocasiones necesitan parametros para funcionar, pero no es necesario pasarle todos los parametros requeridos, dado que pueden ser opcionales y poder realizar la acción.
 
 Parametro = Argumento = variable
 
-**Como escribo una funcion y como la utilizo**
+**Como escribo una función y como la utilizo**
 
 **Sintaxis**
 
@@ -143,13 +143,13 @@ def name_function(argumeto1=valor, argumentos2=valor, ..., argumentosN=valorN):
 *Como la llamo a la funcion, coloco su nombre, abro parentesis y coloco los argumentos que necesita:*
 
 ```python
-nombre_funcion(arg1, ... [arg2])
+name_function(arg1, ... [arg2])
 ```
 
 
 ```python
 def saludo3(nombre:str = 'Desconocido'):
-    '''Funcion que imprime un mensaje personalizado'''
+    '''Función que imprime un mensaje personalizado'''
     print(f'Hola {nombre}, que chido es conocerte!!!')
 
 def potencia2(base=1, potencia = 2):
@@ -157,7 +157,7 @@ def potencia2(base=1, potencia = 2):
     resultado = pow(base, potencia)
     print(resultado)
 
-def imprir_0_10(tope=10):
+def imprimir_0_10(tope=10):
     print('--------------------')
     for i in range(tope+1):
         print(i)
@@ -171,7 +171,7 @@ potencia2(3)
 potencia2(3,3)
 potencia2(3,4)
 
-imprir_0_10(1)
+imprimir_0_10(1)
 ```
 
     Hola Desconocido, que chido es conocerte!!!
@@ -188,14 +188,14 @@ imprir_0_10(1)
 
 **Ejercicios:**
 
-1. Crear una funcion que reciba la edad, pero la edad es opcion, por default que tenga el valor de 15, y que mande a imprimir si es menor o mayor de edad, pero si es 15, que imprima tambien, la frase "Creo que no me pasaste la edad, tramposo!"
-2. Crear una funcion que calcule el area de cuadrados y rectangulos, la funcion recibe 2 parametros, la base y la altura, pero cuando es cuadrado solo recibe uno, por lo tanto, el segundo parametros es opcional, el segundo parametros por default es 0.
+1. Crear una función que reciba la edad, pero la edad es opcion, por default que tenga el valor de 15, y que mande a imprimir si es menor o mayor de edad, pero si es 15, que imprima tambien, la frase "Creo que no me pasaste la edad, tramposo!"
+2. Crear una función que calcule el area de cuadrados y rectangulos, la función recibe 2 parametros, la base y la altura, pero cuando es cuadrado solo recibe uno, por lo tanto, el segundo parametros es opcional, el segundo parametros por default es 0.
 
 ## Retornado valores de una funcion
 
-En ocasiones necesitamos que la funcion nos devuelva informacion, es decir, que realice la operacion y nos devuelva ese resultado, para ello ocupamos la palabra reservada `return`. El valor que devuelve normalmente lo debemos guardar.
+En ocasiones necesitamos que la función nos devuelva informacion, es decir, que realice la operacion y nos devuelva ese resultado, para ello ocupamos la palabra reservada `return`. El valor que devuelve normalmente lo debemos guardar.
 
-**Como escribo una funcion y como la utilizo**
+**Como escribo una función y como la utilizo**
 
 **Sintaxis**
 
@@ -209,10 +209,10 @@ def name_function([argumeto1, argumentos2=valor, ..., argumentosN]):
     return valor
 ```
 
-*Como la llamo a la funcion, coloco su nombre, abro parentesis y coloco los argumentos que necesita y ese resultado lo guardamos en una variable:*
+*Como la llamo a la función, coloco su nombre, abro parentesis y coloco los argumentos que necesita y ese resultado lo guardamos en una variable:*
 
 ```python
-resultado = nombre_funcion([arg1, ... arg2])
+resultado = name_function([arg1, ... arg2])
 ```
 
 
@@ -249,8 +249,8 @@ print(f'El area del triangulo es: {area_t}')
 ```python
 def operaciones_circulo(radio, area='area'):
     '''
-    Esta funcion realiza la operacion del area o perimetro
-    en funcion de la variable area
+    Esta función realiza la operación del area o perímetro
+    en función de la variable area
     '''
     if area == 'area':
         return pi * pow(radio,2)
@@ -286,7 +286,7 @@ print(f'El perimetro es {operaciones_circulo(5,"perimetro")}')
 
 **Ejercicios:**
 
-1. Crear una funcion que calcule el promedio, pasandole los 3 parciales y te devuelve el resultado. Despues indicar si aprobo o esta en recursa.
+1. Crear una función que calcule el promedio, pasandole los 3 parciales y te devuelve el resultado. Despues indicar si aprobo o esta en recursa.
 2. Crear las funciones de ley de ohm, una que calcule resistencia, corriente y otra voltaje, pasando el parametro necesario: Ejemplo de aplicacion:
     - r = resistencia(10, 0.5)
     - i = corriente(10, 1000)
@@ -298,7 +298,7 @@ Normalmente pasamos argumentos a las funciones con un orden orden establecido, y
 
 *Nota: Los parametros nombrados y tambien con valores por default van al final se colocan al final*
 
-Como escribo una funcion y como la utilizo.
+Como escribo una función y como la utilizo.
 
 **Sintaxis**
 

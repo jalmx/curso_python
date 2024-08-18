@@ -1,3 +1,7 @@
+---
+title: 1 Introducción a Python
+---
+
 ![banner](assets/banner.png)
 
 # 1. Introducción a Python

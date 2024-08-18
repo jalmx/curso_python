@@ -2,7 +2,7 @@
 
 # 2.5 Ingresando dato y cómo convertirlos
 
-## 2.5.1 Funcion `input()`
+## 2.5.1 Función `input()`
 
 La función input sirve para leer datos desde teclado en la terminal.
 
@@ -58,7 +58,7 @@ print("Tu edad es: " + edad)
     Tu edad es: 50
 
 
-## 5.5.2 Funcion `int()`
+## 5.5.2 Función `int()`
 
 En muchas ocasiones puedes tener un `número entero` almacenado en una variable pero no exactamnete es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `int` para poder realizar operaciones con él. Para esos casos contamos con la función `int()`
 
@@ -93,7 +93,7 @@ print(hexadecimal)
     255
 
 
-## 5.5.3 Funcion `float()`
+## 5.5.3 Función `float()`
 
 En muchas ocasiones puedes tener un `número de punto flotante` almacenado en una variable pero no exactamnete es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `float` para poder realizar operaciones con él. Para esos casos contamos con la función `float()`
 
@@ -124,7 +124,7 @@ print(un_medio)
     0.5
 
 
-## 5.5.4 Funcion `bool()`
+## 5.5.4 Función `bool()`
 
 En muchas ocasiones puedes tener `una expresion booleana` almacenado en una variable pero no exactamnete es tipo `booleano`. Entonces, en ese caso necesitamos que sea de tipo `boolean` para poder realizar operaciones con él. Para esos casos contamos con la función `bool()`
 
@@ -176,11 +176,11 @@ print(texto_vacio)
 
 ## Aplicaciones
 
-**1. Pedir dos numeros e imprimir el resultado**
+**1. Pedir dos números e imprimir el resultado**
 
 
 ```python
-print("Mi super calculador de 2 numeros")
+print("Mi super calculador de 2 números")
 valor1 = int(input("Dar el valor 1: "))
 valor2 = int(input("Dar el valor 2: "))
 
@@ -189,7 +189,7 @@ suma = valor1 + valor2
 print("El resultado es: " + str(suma))
 ```
 
-    Mi super calculador de 2 numeros
+    Mi super calculador de 2 números
     Dar el valor 1: 5
     Dar el valor 2: 6
     El resultado es: 11

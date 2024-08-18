@@ -14,9 +14,9 @@ for variable in iterador :
     ...
 ```
 
-## Funcion `range()`
+## Función `range()`
 
-La funcion `range()` retorna un secuencia de numeros, comenzando por default en 0 e incrementando en 1, y se detiene antes del número especificado.
+La función `range()` retorna un secuencia de números, comenzando por default en 0 e incrementando en 1, y se detiene antes del número especificado.
 
 **Sintaxis**
 
@@ -118,7 +118,7 @@ print(f"El promedio es {suma / 3}")
     El promedio es 8.333333333333334
 
 
-**2. Imprimir la tabla del 7 con el formato "7 x 10 = 70", comenzando en 7x1 y terminando ene 7x10. Utilizando la estructura for y la funcion range()**
+**2. Imprimir la tabla del 7 con el formato "7 x 10 = 70", comenzando en 7x1 y terminando ene 7x10. Utilizando la estructura for y la función range()**
 
 
 ```python
@@ -259,7 +259,7 @@ while contador < 10:
 1. Recorer un rango del 0 al 10 e indicar cuales son par e impar
 2. Recorer un rango del 5 al 32 e indicar los que sean multiplos de 5
 3. Solicitarle al usuario que tabla desea imprimir, indicando desde donde comienza y donde termina
-4. Calcular el promedio de la sumatoria de los numeros pares desde el 2 hasta el 200
+4. Calcular el promedio de la sumatoria de los números pares desde el 2 hasta el 200
 
 ---
 

@@ -1,6 +1,10 @@
+---
+title: 3 Concatenación de Strings
+---
+
 ![banner](assets/banner.png)
 
-# 3 Concatenación de Strings
+# 3. Concatenación de Strings
 
 La concatenación es el poder agrupar, juntar, unir, fusionar, pegar cadenas de caracteres, es decir, "sumar" varios string para formar uno solo.
 
@@ -132,17 +136,17 @@ print("Mi nombre es " + nombre + ", mi edad es de " + str(edad) + " anios," + "t
 
 Las secuencias de espace son caracteres especiales para darle formato a las cadenas de texto (Strings).
 
-Nombre|Simbolo|Secuencia de escape
-:-|:-:|:-:
-Backslash|\\| `\\`
-Comilla simple|\'|`\'`
-Comilla doble|\"|`\"`
-Bell|(sonido)|`\a`
-Retroceso||`\b`
-Nueva línea|(enter)|`\n`
-Carriage return|\r|`\r`
-Tab horizontal|tab|`\t`
-Tab vertical|tab vertical|`\v`
+| Nombre          |   Simbolo    | Secuencia de escape |
+| :-------------- | :----------: | :-----------------: |
+| Backslash       |   \\| `\\`   |
+| Comilla simple  |      \'      |        `\'`         |
+| Comilla doble   |      \"      |        `\"`         |
+| Bell            |   (sonido)   |        `\a`         |
+| Retroceso       |              |        `\b`         |
+| Nueva línea     |   (enter)    |        `\n`         |
+| Carriage return |      \r      |        `\r`         |
+| Tab horizontal  |     tab      |        `\t`         |
+| Tab vertical    | tab vertical |        `\v`         |
 
 #### Salto de línea `\n`
 
@@ -227,7 +231,7 @@ print(mensaje)
     ruta\carperta1\carperta2\archivo
 
 
-## 3.5 Formateo de Strings - funcion `format()`
+## 3.5 Formateo de Strings - función `format()`
 
 Los `str` tienen una propiedad llamada `format()` con la cual podemos concatenar variables, se tienen en varias formas para realizar la concatenacion con este metodo. Retorna el `str` con el formato indicado. Las variables se colocaran automaticamente en la llaves.
 
@@ -282,9 +286,9 @@ print(texto_variables)
     Mi nombre es Alejandro tengo 25 anios
 
 
-#### 3.5.1 Formato para numeros y la precision
+#### 3.5.1 Formato para números y la precision
 
-En muchas ocasiones queremos imprimir un valor numerico pero con cierta cantidad decimales, con la funcion `format()` nos da un formato para especificar como queremos la salida.
+En muchas ocasiones queremos imprimir un valor numerico pero con cierta cantidad decimales, con la función `format()` nos da un formato para especificar como queremos la salida.
 
 Debemos marcar una sintaxis especial que sigue el siguiente formato, principalmente es para valores flotantes:
 
@@ -298,9 +302,9 @@ Debemos marcar una sintaxis especial que sigue el siguiente formato, principalme
 
 - `d` para enteros
 - `f` para flotantes
-- `b` para numeros binarios
-- `o` para numeros octal
-- `x` para numeros hexadecimal
+- `b` para números binarios
+- `o` para números octal
+- `x` para números hexadecimal
 - `s` para strings
 - `e` para flotante en formato exponente
 
@@ -392,7 +396,7 @@ print(mensaje2)
     El numero de autos es "5" y todos son color "tutifruti"
 
 
-#### 3.6.1 Formato a numeros con `f'string'`
+#### 3.6.1 Formato a números con `f'string'`
 
 **Sintaxis:**
 
@@ -410,7 +414,7 @@ print(f"El valor de pi es: {num:{1}.{3}}")
 
 
 ```python
-# Es similar a la funcion format(), con respecto a la sintaxis, no es necesario indicar la posicion de la variable
+# Es similar a la función format(), con respecto a la sintaxis, no es necesario indicar la posicion de la variable
 # los decimales es el valor menos 1
 
 num = 3.14159

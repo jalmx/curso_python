@@ -337,7 +337,7 @@ print("El valor minimo:", minimo)
 
 1. Crear una lista de frutas: *manzana*, *platano* y *melon*. Posteriormete agregar *sandia*. Despues agregarle una lista mas que contenga *papaya*, *kiwi* y *durazno*. He imprimir la lista completa. Despues remover la *sandia* e imprimir el resultado. Recorrer la lista de frutas imprimiendo cada una (usando un ciclo, de preferencia usar *for*).
 
-2. Crear una lista con sus calificaciones de Neumatica, y obtener el promedio. Se debe utilizar la funcion `sum` para el procedimiento. Imprimir cual es la calificacion maxima y minima, usando las funciones `max()` y `min()`
+2. Crear una lista con sus calificaciones de Neumatica, y obtener el promedio. Se debe utilizar la función `sum` para el procedimiento. Imprimir cual es la calificacion maxima y minima, usando las funciones `max()` y `min()`
 
 
 ## Eliminando elementos de la lista `del`
@@ -370,9 +370,9 @@ del alumnos['carlos']
 print(alumnos)
 ```
 
-## Funcion `len`
+## Función `len`
 
-Los iteradores por default no te dicen cual es su largo, en muchas ocasiones necesitamos saber el largo para realizar ciertas tareas, para eso Python trae una funcion que nos ayuda.
+Los iteradores por default no te dicen cual es su largo, en muchas ocasiones necesitamos saber el largo para realizar ciertas tareas, para eso Python trae una función que nos ayuda.
 
 **Sintaxis**
 
@@ -380,7 +380,7 @@ Los iteradores por default no te dicen cual es su largo, en muchas ocasiones nec
 
 
 ```python
-# Ejemplos de aplicacion de la funcion len()
+# Ejemplos de aplicacion de la función len()
 
 string = 'hola'
 str_len = len(string)
@@ -584,9 +584,9 @@ for values in calificaciones_neumatica.values():
     10
 
 
-## Funcion `tuple()`
+## Función `tuple()`
 
-La funcion tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
+La función tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
 
 
 ```python
@@ -606,9 +606,9 @@ print(tupla_calificaciones)
     (8, 6, 9, 6, 8)
 
 
-## Funcion `list()`
+## Función `list()`
 
-La funcion list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
+La función list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
 
 
 ```python
@@ -628,9 +628,9 @@ print(lista_calificaciones)
     [8, 6, 9, 6, 8]
 
 
-## Funcion `dict()`
+## Función `dict()`
 
-La funcion dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
+La función dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
 
 
 ```python
@@ -647,9 +647,9 @@ print(mi_diccionario)
     {'hola': 4}
 
 
-## Funcion `enumerate()`
+## Función `enumerate()`
 
-A esta funcion se le pasa un iterable y me devuelve 2 valores, en la primera posicion me pasa el indice y en la segunda posicion me pasa el valor que tiene en ese momento el iterador.
+A esta función se le pasa un iterable y me devuelve 2 valores, en la primera posicion me pasa el indice y en la segunda posicion me pasa el valor que tiene en ese momento el iterador.
 
 
 **Sintaxis:**

@@ -71,7 +71,7 @@ print(numero_rango_min_max)
 
 
 ```python
-# con esta funcion le podemos pasar una lista y devolvera un valor de esa lista al azar
+# con esta función le podemos pasar una lista y devolvera un valor de esa lista al azar
 
 lista = ["hola","mensaje", "texto","mecatronica","cbtis85"]
 valor = random.choice(lista)
@@ -291,10 +291,10 @@ sum(list)
 
 
 ```python
-# Tenemos a disposicion una funcion llamada sum
+# Tenemos a disposicion una función llamada sum
 
-numeros =[1.6,2.6,3,6,7,5,85,5,87]
-sumatoria = sum(numeros)
+números =[1.6,2.6,3,6,7,5,85,5,87]
+sumatoria = sum(números)
 
 print(f'Resultado de la suma: {sumatoria}')
 ```

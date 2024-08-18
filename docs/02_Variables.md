@@ -1,3 +1,7 @@
+---
+title: 2 Variables en Python
+---
+
 ![banner](assets/banner.png)
 
 # 2. Variables en Python
@@ -9,7 +13,7 @@
 En Python las buenas practicas que se aplican a la declaración de variables, son las siguientes:
 
 - Se deben escribir en minúsculas
-- Solo puede contener numeros despues de la primera letra con el que comienza el nombre de la variable que estamos declarando.
+- Solo puede contener números después, de la primera letra con el que comienza el nombre de la variable que estamos declarando.
     - Ejemplo:
         - `k5m`
         - `variable1`
@@ -18,10 +22,10 @@ En Python las buenas practicas que se aplican a la declaración de variables, so
 - Sensibles a minúsculas y mayúsculas; es decir, si declaro una variable llamada `variable1` y otra llamada `Variable1`, para la computadora son variables o espacios de memoria distintos, aun que suenen igual, con el solo hecho de cambiar una letra, ya estamos hablando de una variable distinta.
 - No pueden contener espacios entre letras o palabras
 - No puede comenzar con números o símbolos
-- No puede contener carácteres especiales, todos son caracteres especiales menos el abecedario ingles. Ejemplo: !"·\$%&\/()=?¿.
+- No puede contener caracteres especiales, todos son caracteres especiales menos el abecedario ingles. Ejemplo: !"·\$%&\/()=?¿.
 - **El nombre debe ser descriptivo**; es decir, con solo leerlo podemos deducir qué hace o para qué fue declarada
 - *(Regla especial):* Todo de escribe en ingles.
-- Si se desea escribir una variable combinando dos palabras o más, se separarán con un guíon bajo (_). Esta **convensión** se llama **Snake Case** (snake_case)
+- Si se desea escribir una variable combinando dos palabras o más, se separarán con un guión bajo (_). Esta **convención** se llama **Snake Case** (snake_case)
     - Ejemplos:
         - `valor`
         - `valor1`
@@ -34,22 +38,22 @@ En Python las buenas practicas que se aplican a la declaración de variables, so
 
 ## 2.2 Tipos de datos en Python
 
-Al ser un lenguaje debilmente tipado no es necesario indicar que tipo es variable, pero se deben conocer para la compatibilidad de tipos y cómo podemos trabajar con ellos.
+Al ser un lenguaje dinamicamente tipado no es necesario indicar que tipo es variable, pero se deben conocer para la compatibilidad de tipos y cómo podemos trabajar con ellos.
 
-Tipo | Descripción | Ejemplo
-:-:|:-|:-
-**Int**| Números enteros naturales | `variable_int = 10`
-**Float**| Números con punto decimal | `variable_flotante = 2.2`
-**str**|Cadena de caracteres (String)| `variable_str = "texto"`
-**Bool**|Tipo booleano | `variable_bool = True`
-**Complex**| Tipo número complejo | `variable_complex = 3+5j`
-(Int) Hexadecimal|Número hexadecimal |`variable_hex = 0xa`
-(Int) Octal|Número octal | `variable_oct =  0o12`
-(Int) Binario| Número binario | `variable_bin = 0b1010`
+|       Tipo        | Descripción                   | Ejemplo                   |
+| :---------------: | :---------------------------- | :------------------------ |
+|      **Int**      | Números enteros naturales     | `variable_int = 10`       |
+|     **Float**     | Números con punto decimal     | `variable_flotante = 2.2` |
+|      **str**      | Cadena de caracteres (String) | `variable_str = "texto"`  |
+|     **Bool**      | Tipo booleano                 | `variable_bool = True`    |
+|    **Complex**    | Tipo número complejo          | `variable_complex = 3+5j` |
+| (Int) Hexadecimal | Número hexadecimal            | `variable_hex = 0xa`      |
+|    (Int) Octal    | Número octal                  | `variable_oct =  0o12`    |
+|   (Int) Binario   | Número binario                | `variable_bin = 0b1010`   |
 
 ## 2.3 Variables tipo Enteras (int)
 
-El tipo de variable más común son las variables entereras, que son valores tanto *negativos o positivos enteros*. Practicamente no hay límite con el valor que se puede asignar, siempre y cuando no tenga parte fraccionaria.
+El tipo de variable más común son las variables entereras, que son valores tanto *negativos o positivos enteros*. Practicamente no hay límite con el valor que se puede asignar, siempre y cuando no tenga parte fracciónaria.
 
 **Ejemplo:**
 

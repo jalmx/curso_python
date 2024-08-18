@@ -22,21 +22,21 @@ Con este operador se analizan dos comparaciones y `si ambas son verdaderas`, nos
 
 Tabla de verdad para el operador `and`
 
-A|B|Resultado
-:-:|:-:|:-:
-False|False|False
-False|True|False
-True|False|False
-True|True|True
+|   A   |   B   | Resultado |
+| :---: | :---: | :-------: |
+| False | False |   False   |
+| False | True  |   False   |
+| True  | False |   False   |
+| True  | True  |   True    |
 
 La forma de aplicación:
 
-Ejemplo|Analizando resultado |Resultado
-:-|:-:|:-:
-6 < 10 `and` 3 > 0 |True `and` True|True
-40 < 10 `and` 13 > 5 |False `and` True|False
-9 < 12 `and` 4 > 8 |True `and` False|False
-6 > 10 `and` 3 < 0 |False `and` False|False
+| Ejemplo              | Analizando resultado | Resultado |
+| :------------------- | :------------------: | :-------: |
+| 6 < 10 `and` 3 > 0   |   True `and` True    |   True    |
+| 40 < 10 `and` 13 > 5 |   False `and` True   |   False   |
+| 9 < 12 `and` 4 > 8   |   True `and` False   |   False   |
+| 6 > 10 `and` 3 < 0   |  False `and` False   |   False   |
 
 ### 2.7.1.1 Ejemplo con operador lógico `and`
 
@@ -50,7 +50,7 @@ if a > 0 and b > 0:
     print("A y B son mayores que 0")
 
 if a > 0 and b > 0 and c > 0:
-    print("Todos los numeros son diferentes de 0")
+    print("Todos los números son diferentes de 0")
 else:
     print("Al menos un numero no es mayor a 0")
 
@@ -62,13 +62,13 @@ else:
 
 
 ```python
-# Aquí se comparan numeros, todos daran True, menos los que tenga el valor de 0
+# Aquí se comparan números, todos daran True, menos los que tenga el valor de 0
 a = 10 # True
 b = -12 # True
 c = 0 # False
 
 if a and b and c:
-    print("Todos los numeros se toman como True")
+    print("Todos los números se toman como True")
 else:
     print("Al menos un valor es False")
 ```
@@ -82,21 +82,21 @@ Con este operador se analizan dos comparaciones y si alguna es verdadera, nos en
 
 Tabla de verdad para el operador `or`
 
-A|B|Resultado
-:-:|:-:|:-:
-False|False|False
-False|True|True
-True|False|True
-True|True|True
+|   A   |   B   | Resultado |
+| :---: | :---: | :-------: |
+| False | False |   False   |
+| False | True  |   True    |
+| True  | False |   True    |
+| True  | True  |   True    |
 
 La forma de aplicación:
 
-Ejemplo|Analizando resultado |Resultado
-:-|:-:|:-:
-6 < 10 `or` 3 > 0 |True `or` True|True
-40 < 10 `or` 13 > 5 |False `or` True|True
-9 < 12 `or` 4 > 8 |True `or` False|True
-6 > 10 `or` 3 < 0 |False `or` False|False
+| Ejemplo             | Analizando resultado | Resultado |
+| :------------------ | :------------------: | :-------: |
+| 6 < 10 `or` 3 > 0   |    True `or` True    |   True    |
+| 40 < 10 `or` 13 > 5 |   False `or` True    |   True    |
+| 9 < 12 `or` 4 > 8   |   True `or` False    |   True    |
+| 6 > 10 `or` 3 < 0   |   False `or` False   |   False   |
 
 ### 2.7.2.1 Ejemplo con operador lógico `or`
 
@@ -142,19 +142,19 @@ Este operador invierte el resultado booleana que recibe. La palabra reservada es
 
 Tabla de verdad para el operador `not`
 
-A|Resultado
-:-:|:-:
-False|True
-True|False
+|   A   | Resultado |
+| :---: | :-------: |
+| False |   True    |
+| True  |   False   |
 
 La forma de aplicación:
 
-Ejemplo|Analizando resultado |Resultado
-:-|:-:|:-:
-`not`(6 < 10) |`not`(True)|False
-`not`(20 < 12) |`not`(False)|True
-`not`(2 < 10) |`not`(True)|False
-`not`(False)|`not`(False)|True
+| Ejemplo        | Analizando resultado | Resultado |
+| :------------- | :------------------: | :-------: |
+| `not`(6 < 10)  |     `not`(True)      |   False   |
+| `not`(20 < 12) |     `not`(False)     |   True    |
+| `not`(2 < 10)  |     `not`(True)      |   False   |
+| `not`(False)   |     `not`(False)     |   True    |
 
 ### 2.7.3.1 Ejemplo con operador lógico `not`
 

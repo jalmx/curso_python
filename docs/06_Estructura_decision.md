@@ -20,14 +20,14 @@ if comparacion_verdadera :
 
 ## 2.6.3 Operadores de comparación
 
-Nombre | Símbolo | Ejemplo
-:-|:-:|:-
-Mayor que | `>` | `7 > 5 -> True`
-Mayor o igual que | `>=` | `8 >= 6 -> False`
-Menor que | `<` | ` 9 < 10  -> Falso`
-Menor o igual que | `<=` | ` 5 <= 5 -> True`
-Igual que | `==` | ` 4 == 2 -> False`
-Diferente de | `!=` | ` 9 != 9 -> False`
+| Nombre            | Símbolo | Ejemplo             |
+| :---------------- | :-----: | :------------------ |
+| Mayor que         |   `>`   | `7 > 5 -> True`     |
+| Mayor o igual que |  `>=`   | `8 >= 6 -> False`   |
+| Menor que         |   `<`   | ` 9 < 10  -> Falso` |
+| Menor o igual que |  `<=`   | ` 5 <= 5 -> True`   |
+| Igual que         |  `==`   | ` 4 == 2 -> False`  |
+| Diferente de      |  `!=`   | ` 9 != 9 -> False`  |
 
 *Nota: No puede existir espacio en el símbolo*
 
@@ -259,7 +259,7 @@ else:
 Existe una versión corta cuando si la condición se cumple entra a hacer una cosa y termina.
 
 ```python
-if condicion_verdadera: una_accion_a_realizar
+if condicion_verdadera: una_acción_a_realizar
 ```
 
 

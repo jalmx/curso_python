@@ -5,9 +5,9 @@
 El manejo de archivos en Python es algo nativo, es decir, por default te da una utileria para comenzar a trabajar con ellos. Esto significa que podemos abrir y leer el contenido de un archivo plano de una manera muy sencilla y rapida.
 
 
-## Funcion `open()`
+## Función `open()`
 
-Con solo abrir un archivo de Python podemos llamar a la funcion `open` la cual le indicamos la ruta del archivo que queremos abrir y cargar su informacion, junto con el modo en que lo vamos a utilizar.
+Con solo abrir un archivo de Python podemos llamar a la función `open` la cual le indicamos la ruta del archivo que queremos abrir y cargar su informacion, junto con el modo en que lo vamos a utilizar.
 
 **Sintaxis:**
 
@@ -86,9 +86,9 @@ print(archivo.readline())
 ```
 
     estoy escribiendo el archivo plano
-    
+
     esto es el manejo de archivos en python
-    
+
 
 
 ## Bloque `with`
@@ -104,7 +104,7 @@ Tenemos una palabra reservada `with` la cual nos facilita abrir un archivo y lo 
 ```python
     # Aplicado a archivos
     with open('ruta','modo') as nombre_variable:
-        # codigo para manipular el archivo
+        # código para manipular el archivo
 
 ```
 
@@ -119,13 +119,13 @@ with open('datos.csv', mode='r', encoding='utf-8') as archivo_csv:
 ```
 
     dato1,dato2,dato3
-    
+
     dato10,dato20,dato30
-    
+
     dato11,dato21,dato31
-    
+
     dato12,dato22,dato32
-    
+
 
 
 ---
