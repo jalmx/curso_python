@@ -25,7 +25,7 @@ theme:
     - navigation.footer
     - content.code.copy
 
-repo_url: https://github.com/jalmx/micro-esp
+repo_url: https://github.com/jalmx/curso-python
 
 markdown_extensions:
   - tables
@@ -58,21 +58,8 @@ extra_javascript:
   - https://unpkg.com/markmap-view@0.2.6/dist/index.min.js
 
 extra:
-  homepage: https://www.alejandro-leyva.com/algoritmos/
+  homepage: https://www.alejandro-leyva.com/curso-python/
   version: 1.0
-
-
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/jalmx
-    - icon: fontawesome/brands/dev
-      link: https://www.alejandro-leyva.com
-    - icon: fontawesome/brands/facebook
-      link: https://www.facebook.com/mecatronica85/
-    - icon: fontawesome/brands/medium
-      link: https://medium.com/@xizuth
-    - icon: fontawesome/solid/paper-plane
-      link: mailto:alejandro.leyva.us@gmail.com
 
 plugins:
   - search:
