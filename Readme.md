@@ -1,5 +1,7 @@
 # Curso Python desde Cero
 
+https://www.alejandro-leyva.com/curso_python/
+
 1. Introducción
    1. ¿Qué es Python?
    2. Instalación de python
