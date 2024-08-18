@@ -1,0 +1,1554 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación curso de Python desde Cero a Experto">
+      
+      
+        <meta name="author" content="Alejandro Leyva">
+      
+      
+        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/10_Colecciones/">
+      
+      
+        <link rel="prev" href="../09_Estructura_repeticionr/">
+      
+      
+        <link rel="next" href="../11_Funciones/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>10 Colecciones - Documentación curso de Python desde Cero</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#210-colecciones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación curso de Python desde Cero
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              10 Colecciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Documentación curso de Python desde Cero
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curso Python desde Cero
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_Introducci%C3%B3n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Introducción a Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Variables en Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_Concatenacion_de_Strings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Concatenación de Strings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_Operadores_aritm%C3%A9ticos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Operadores aritméticos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_ingresando_dato_y_como_convertirlos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 ingresando dato y como convertirlos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_Estructura_decision/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 Estructura decision
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_Operadores_l%C3%B3gicos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 Operadores lógicos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_Estructura_de_Repeticion_-_while/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08 Estructura de Repeticion   while
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_1_Modulos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09 1 Modulos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_2_Strings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09 2 Strings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_Estructura_repeticionr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09 Estructura repeticionr
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    10 Colecciones
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    10 Colecciones
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#101-tuplas" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 Tuplas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 Listas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2 Listas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-deben-nombrar-las-listas-buena-practica-o-convension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como se deben nombrar las listas (buena practica o convension)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21021-funciones-de-las-listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10.2.1 Funciones de las listas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obteniendo-los-datos-de-una-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obteniendo los datos de una lista
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eliminando-elementos-de-la-lista-del" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminando elementos de la lista del
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-len" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función len
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-diccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 Diccionarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función tuple()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función list()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función dict()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-enumerate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función enumerate()
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_Archivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12 Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#101-tuplas" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1 Tuplas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.2 Listas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2 Listas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-se-deben-nombrar-las-listas-buena-practica-o-convension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como se deben nombrar las listas (buena practica o convension)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21021-funciones-de-las-listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10.2.1 Funciones de las listas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obteniendo-los-datos-de-una-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obteniendo los datos de una lista
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eliminando-elementos-de-la-lista-del" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminando elementos de la lista del
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-len" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función len
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-diccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3 Diccionarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-tuple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función tuple()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función list()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función dict()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcion-enumerate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función enumerate()
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><img alt="banner" src="logo/banner.png" /></p>
+<h1 id="210-colecciones">2.10 Colecciones</h1>
+<p>Dentro de los lenguajes de programación hay tipos datos que son estructuras que pueden contener más de un dato, a comparación de los tipos de datos básicos, estas estructuras pueden contener muchos de esos datos básicos en su interior. Podrías decir que es una base de datos, pero esta solo existe mientras está la aplicación en ejecución, los datos son temporales. Las colecciones pueden contener cualquier tipo de dato, incluso mas colecciones.</p>
+<p>En python son los siguientes:</p>
+<ul>
+<li><code>Tuplas</code> Tipo de dato Inmutable</li>
+<li><code>Listas (arrays)</code> Tipo de Mutable</li>
+<li><code>Diccionarios</code></li>
+<li><code>Sets</code></li>
+</ul>
+<p><em>Nota: En este curso solo se cubriran las tuplas y las listas.</em></p>
+<h2 id="101-tuplas">10.1 Tuplas</h2>
+<p>Es una estructura de datos <strong>inmutables</strong>, una vez declarada no puede cambiar su contenido, ni agregar, ni eliminar, no modificar.</p>
+<p>Cada posicion de los datos tiene un <strong>indice</strong> (index), el cual me ayuda a acceder a el. <em>La primera posicion siempre es 0</em>.</p>
+<p><strong>La convencion de como declarar o nombrar a una lista o tupla es en plural</strong></p>
+<p>Parametros a destacar:</p>
+<ul>
+<li>index: Indice</li>
+<li>len: Longitud</li>
+</ul>
+<p><strong>Sintaxis:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre_tupla</span> <span class="o">=</span> <span class="p">(</span><span class="n">dato1</span><span class="p">,</span> <span class="n">dato2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">datoN</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Declaracion de una tupla</span>
+
+<span class="c1"># Tiene 3 posiciones, comenzado en el 0. Largo de 3</span>
+
+<span class="n">calificaciones</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calificaciones</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">calificaciones</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>(8, 7, 9)
+
+
+
+
+
+tuple
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># vamos a acceder a cada dato</span>
+
+<span class="n">calificacion1</span> <span class="o">=</span> <span class="n">calificaciones</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">calificacion2</span> <span class="o">=</span> <span class="n">calificaciones</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">calificacion3</span> <span class="o">=</span> <span class="n">calificaciones</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calificacion1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calificacion2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calificacion3</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>8
+7
+9
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># intentando modificar una tupla</span>
+
+<span class="n">calificaciones</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+/tmp/ipykernel_890/2729348892.py in &lt;module&gt;
+      1 # intentando modificar una tupla
+      2
+----&gt; 3 calificaciones[0] = 10
+
+
+TypeError: 'tuple' object does not support item assignment
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># intentando borrar un elemento de la tupla</span>
+
+<span class="k">del</span> <span class="n">calificaciones</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+/tmp/ipykernel_890/1285800133.py in &lt;module&gt;
+      1 # intentando borrar un elemento de la tupla
+      2
+----&gt; 3 del calificaciones[1]
+
+
+TypeError: 'tuple' object doesn't support item deletion
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Recorriendo tuplas con for y while</span>
+
+<span class="k">for</span> <span class="n">calificacion</span> <span class="ow">in</span> <span class="n">calificaciones</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">calificacion</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------&#39;</span><span class="p">)</span>
+
+<span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">contador</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">calificaciones</span><span class="p">):</span>
+    <span class="n">calificacion</span> <span class="o">=</span> <span class="n">calificaciones</span><span class="p">[</span><span class="n">contador</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">calificacion</span><span class="p">)</span>
+    <span class="n">contador</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>
+<pre><code>8
+7
+9
+-------------------------
+8
+7
+9
+</code></pre>
+<h2 id="102-listas">10.2 Listas</h2>
+<p>Es una coleccion de elementos ordenados. En otro lenguajes es conocido como un <code>array</code>. A este tipo de coleccion es Mutable, es decir, se le pueden agregar, eliminar, quitar, elementos. Podemos hacer diversas operaciones con ellos.</p>
+<p>Elementos que debemos tener en cuenta son:</p>
+<ul>
+<li><code>index</code>: El indice o posicion de cada elemento en la lista, recordar que todas comienzan en la posicion 0.</li>
+<li><code>length</code>: La longitud o cantidad de elementos que contiene la lista</li>
+</ul>
+<p><strong>Sintaxis</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">nombre_lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">elemento1</span><span class="p">,</span> <span class="n">elemento2</span><span class="p">,</span> <span class="n">elemento3</span><span class="p">,</span><span class="o">..</span> <span class="p">,</span> <span class="n">elementoN</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="como-se-deben-nombrar-las-listas-buena-practica-o-convension">Como se deben nombrar las listas (buena practica o convension)</h3>
+<ul>
+<li>El nombre de la varable que contanga una lista, debe ser en <strong>plural</strong></li>
+<li>Puede contener la palabra <strong>**list_**</strong> o <strong>**_list**</strong></li>
+</ul>
+<h3 id="21021-funciones-de-las-listas">2.10.2.1 Funciones de las listas</h3>
+<p>Las lista son un objeto, por lo tanto cuenta con diversos metodos los cuales nos ayudan a interactuar con ellos:</p>
+<ul>
+<li><code>append(element)</code>:    Adds an element at the end of the list</li>
+<li><code>clear()</code>:    Removes all the elements from the list</li>
+<li><code>copy()</code>: Returns a copy of the list</li>
+<li><code>count(element)</code>: Returns the number of elements with the specified value</li>
+<li><code>extend(list)</code>:   Add the elements of a list (or any iterable), to the end of the current list</li>
+<li><code>index(element[,start[,end]])</code>:   Returns the index of the first element with the specified value</li>
+<li><code>insert(position, element)</code>:  Adds an element at the specified position</li>
+<li><code>pop([index])</code>:   Removes the element at the specified position</li>
+<li><code>remove(element)</code>:    Removes the first item with the specified value</li>
+<li><code>reverse()</code>:  Reverses the order of the list</li>
+<li><code>sort()</code>: Sorts the list</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Declaro una lista con unas materias</span>
+<span class="n">materias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;analogicas&#39;</span><span class="p">,</span> <span class="s1">&#39;digitales&#39;</span><span class="p">,</span> <span class="s1">&#39;mediciones&#39;</span><span class="p">]</span> <span class="c1"># lista de str</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+
+<span class="c1">#agregamos una materia mas a la lista</span>
+<span class="n">materias</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;dibujo 3D&#39;</span><span class="p">)</span>
+
+<span class="c1">#imprimo la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+
+<span class="c1">#creo otra lista</span>
+<span class="n">materias2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;neumatica&#39;</span><span class="p">,</span> <span class="s1">&#39;mecanismos&#39;</span><span class="p">]</span>
+
+<span class="c1"># Extendemos la primer lista con la segunda</span>
+<span class="n">materias</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">materias2</span><span class="p">)</span>
+
+<span class="c1">#imprimo la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+
+<span class="c1">#inserto una materia en la posicion 2</span>
+<span class="n">materias</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Matematicas&#39;</span><span class="p">)</span>
+
+<span class="c1">#imprimo la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+
+<span class="c1">#removemos el elemento &#39;Matematicas&#39;</span>
+<span class="n">materias</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Matematicas&quot;</span><span class="p">)</span>
+
+<span class="c1">#imprimo la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+
+<span class="c1"># Ordenamos las lista</span>
+<span class="n">materias</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="c1">#imprimo la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+
+<span class="c1"># sacamos un elemento de la lista, si no se especifica saca al ultimo</span>
+<span class="n">ultima_materia</span> <span class="o">=</span> <span class="n">materias</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+
+<span class="c1">#imprimo la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ultima materia:&#39;</span><span class="p">,</span> <span class="n">ultima_materia</span><span class="p">)</span>
+
+<span class="c1"># Invierto el orden de la lista</span>
+<span class="n">materias</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="c1">#imprimo la lista</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>['analogicas', 'digitales', 'mediciones']
+['analogicas', 'digitales', 'mediciones', 'dibujo 3D']
+['analogicas', 'digitales', 'mediciones', 'dibujo 3D', 'neumatica', 'mecanismos']
+['analogicas', 'digitales', 'Matematicas', 'mediciones', 'dibujo 3D', 'neumatica', 'mecanismos']
+['analogicas', 'digitales', 'mediciones', 'dibujo 3D', 'neumatica', 'mecanismos']
+['analogicas', 'dibujo 3D', 'digitales', 'mecanismos', 'mediciones', 'neumatica']
+['analogicas', 'dibujo 3D', 'digitales', 'mecanismos', 'mediciones']
+ultima materia: neumatica
+['mediciones', 'mecanismos', 'digitales', 'dibujo 3D', 'analogicas']
+</code></pre>
+<h3 id="obteniendo-los-datos-de-una-lista">Obteniendo los datos de una lista</h3>
+<p><strong>Sintaxis</strong></p>
+<div class="highlight"><pre><span></span><code>    <span class="n">variable</span> <span class="o">=</span> <span class="n">nombre_lista</span> <span class="p">[</span> <span class="n">posicion</span> <span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">#Acceso a los datos de la lista</span>
+
+<span class="n">materia1</span> <span class="o">=</span> <span class="n">materias</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">materia2</span> <span class="o">=</span> <span class="n">materias</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">materia3</span> <span class="o">=</span> <span class="n">materias</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">materia4</span> <span class="o">=</span> <span class="n">materias</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">materia1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materia2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materia3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">materia4</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>mediciones
+mecanismos
+digitales
+dibujo 3D
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Recorriendo una lista con FOR</span>
+
+<span class="k">for</span> <span class="n">materia</span> <span class="ow">in</span> <span class="n">materias</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La materia es: &#39;</span><span class="p">,</span> <span class="n">materia</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*********************&#39;</span><span class="p">)</span>
+
+<span class="c1"># Recorriendo una lista con WHILE</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">materias</span><span class="p">):</span>
+    <span class="n">materia</span> <span class="o">=</span> <span class="n">materias</span><span class="p">[</span><span class="n">count</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La materia es: &#39;</span><span class="p">,</span><span class="n">materia</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+</code></pre></div>
+<pre><code>La materia es:  mediciones
+La materia es:  mecanismos
+La materia es:  digitales
+La materia es:  dibujo 3D
+La materia es:  analogicas
+*********************
+La materia es:  mediciones
+La materia es:  mecanismos
+La materia es:  digitales
+La materia es:  dibujo 3D
+La materia es:  analogicas
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cosas adicionales que se pueden realizar con listas</span>
+
+<span class="c1"># obtener la suma de los valores contenidos en la lista</span>
+
+<span class="n">valores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">valores</span><span class="p">)</span>
+<span class="n">maximo</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">valores</span><span class="p">)</span>
+<span class="n">minimo</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">valores</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma:&quot;</span><span class="p">,</span> <span class="n">suma</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor maximo:&quot;</span><span class="p">,</span> <span class="n">maximo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El valor minimo:&quot;</span><span class="p">,</span> <span class="n">minimo</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>La suma: 88
+El valor maximo: 9
+El valor minimo: 1
+</code></pre>
+<h3 id="ejercicios">Ejercicios</h3>
+<ol>
+<li>
+<p>Crear una lista de frutas: <em>manzana</em>, <em>platano</em> y <em>melon</em>. Posteriormete agregar <em>sandia</em>. Despues agregarle una lista mas que contenga <em>papaya</em>, <em>kiwi</em> y <em>durazno</em>. He imprimir la lista completa. Despues remover la <em>sandia</em> e imprimir el resultado. Recorrer la lista de frutas imprimiendo cada una (usando un ciclo, de preferencia usar <em>for</em>).</p>
+</li>
+<li>
+<p>Crear una lista con sus calificaciones de Neumatica, y obtener el promedio. Se debe utilizar la función <code>sum</code> para el procedimiento. Imprimir cual es la calificacion maxima y minima, usando las funciones <code>max()</code> y <code>min()</code></p>
+</li>
+</ol>
+<h2 id="eliminando-elementos-de-la-lista-del">Eliminando elementos de la lista <code>del</code></h2>
+<p>Cuando queremos eliminar algun elemento de una coleccion se usa la palabra reservada <code>del</code> junto a la posicion del elemento a eliminar.</p>
+<p><strong>Sintaxis</strong></p>
+<ul>
+<li><code>del coleccion[posicion|key]</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Eliminar elementos de una coleccion</span>
+
+<span class="n">materias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;analogica&#39;</span><span class="p">,</span> <span class="s1">&#39;digitales&#39;</span><span class="p">,</span> <span class="s1">&#39;mediciones&#39;</span> <span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">materias</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># Elimino el elemento que esta en la posicion 1 de la coleccion</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
+
+
+<span class="n">alumnos</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;carlos&#39;</span><span class="p">:[</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span> <span class="p">,</span> <span class="s1">&#39;angel&#39;</span><span class="p">:[</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span> <span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+
+<span class="k">del</span> <span class="n">alumnos</span><span class="p">[</span><span class="s1">&#39;carlos&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="funcion-len">Función <code>len</code></h2>
+<p>Los iteradores por default no te dicen cual es su largo, en muchas ocasiones necesitamos saber el largo para realizar ciertas tareas, para eso Python trae una función que nos ayuda.</p>
+<p><strong>Sintaxis</strong></p>
+<ul>
+<li><code>len(iterator)</code>: Devuelve el numero de los elementos de una coleccion</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ejemplos de aplicacion de la función len()</span>
+
+<span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;hola&#39;</span>
+<span class="n">str_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+
+<span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;mensaje&#39;</span><span class="p">)</span>
+<span class="n">tupla_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;hola&#39;</span><span class="p">]</span>
+<span class="n">lista_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+
+<span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key1&#39;</span><span class="p">:</span> <span class="s1">&#39;valor1&#39;</span><span class="p">,</span> <span class="s1">&#39;key2&#39;</span><span class="p">:</span> <span class="s1">&#39;valor2&#39;</span><span class="p">,</span> <span class="s1">&#39;key3&#39;</span><span class="p">:</span> <span class="s1">&#39;valor3&#39;</span> <span class="p">}</span>
+<span class="n">dic_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">diccionario</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;largo de str&#39;</span><span class="p">,</span><span class="n">str_len</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;largo de tupla&#39;</span><span class="p">,</span><span class="n">tupla_len</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;largo de lista&#39;</span><span class="p">,</span><span class="n">lista_len</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;largo de diccionario&#39;</span><span class="p">,</span><span class="n">dic_len</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>largo de str 4
+largo de tupla 5
+largo de lista 5
+largo de diccionario 3
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">especialidades</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;mecatronica&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;laboratorio&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;contanbilidad&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;mecanica&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;electricidad&#39;</span>
+    <span class="p">]</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">especialidades</span><span class="p">):</span>
+    <span class="n">especialidad</span> <span class="o">=</span> <span class="n">especialidades</span><span class="p">[</span><span class="n">count</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Una de las especialidades es: </span><span class="si">{</span><span class="n">especialidad</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+</code></pre></div>
+<pre><code>Una de las especialidades es: mecatronica
+Una de las especialidades es: laboratorio
+Una de las especialidades es: contanbilidad
+Una de las especialidades es: mecanica
+Una de las especialidades es: electricidad
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="c1">#Creando un pesudobot</span>
+
+<span class="c1">#declaramos una lista con las frases que queremos decir con nuestro bot</span>
+<span class="n">hobbies</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;leer&#39;</span><span class="p">,</span> <span class="s1">&#39;correr&#39;</span><span class="p">,</span> <span class="s1">&#39;nadar&#39;</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hola, me llamo BotPy&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cual es tu nombre&#39;</span><span class="p">)</span>
+<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Es un gusto concerte </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Que lindo nombre tienes ;)&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cual es tu hobby?&#39;</span><span class="p">)</span>
+<span class="n">hobby</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Wow!!!! que conincidencia, a mi tambien me encanta </span><span class="si">{</span><span class="n">hobby</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Te cuento que tambien me gusta mucho </span><span class="si">{</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">hobbies</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Hola, me llamo BotPy
+Cual es tu nombre
+
+
+
+---------------------------------------------------------------------------
+
+KeyboardInterrupt                         Traceback (most recent call last)
+
+/tmp/ipykernel_30200/981218890.py in &lt;module&gt;
+      8 print('Hola, me llamo BotPy')
+      9 print('Cual es tu nombre')
+---&gt; 10 name = input()
+     11
+     12 print(f'Es un gusto concerte {name}')
+
+
+~/Downloads/Cursos/Python/lib/python3.7/site-packages/ipykernel/kernelbase.py in raw_input(self, prompt)
+    983             self._parent_ident["shell"],
+    984             self.get_parent("shell"),
+--&gt; 985             password=False,
+    986         )
+    987
+
+
+~/Downloads/Cursos/Python/lib/python3.7/site-packages/ipykernel/kernelbase.py in _input_request(self, prompt, ident, parent, password)
+   1024             except KeyboardInterrupt:
+   1025                 # re-raise KeyboardInterrupt, to truncate traceback
+-&gt; 1026                 raise KeyboardInterrupt("Interrupted by user") from None
+   1027             except Exception as e:
+   1028                 self.log.warning("Invalid Message:", exc_info=True)
+
+
+KeyboardInterrupt: Interrupted by user
+</code></pre>
+<h2 id="103-diccionarios">10.3 Diccionarios</h2>
+<p>Son un tipo de coleccion que su estructura es <code>Llave - Valor</code>. Para obtener el acceso al <em>valor</em> se hace a traves de la <em>llave</em>. La llave es unica y por lo tanto no se puede repetir.</p>
+<p><strong>Sintaxis</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Creacion de un diccionario</span>
+    <span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;llave1&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;llave2&#39;</span> <span class="p">:</span> <span class="mi">5</span>
+        <span class="s1">&#39;llave3&#39;</span> <span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s1">&#39;llave4&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+        <span class="o">......</span>
+    <span class="p">}</span>
+
+<span class="c1"># Leyendo datos del diccionario</span>
+
+<span class="n">variable1</span> <span class="o">=</span> <span class="n">diccionario</span><span class="p">[</span><span class="s1">&#39;llave3&#39;</span><span class="p">]</span> <span class="c1"># True</span>
+<span class="n">variable1</span> <span class="o">=</span> <span class="n">diccionario</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;llave3&#39;</span><span class="p">)</span> <span class="c1"># True, en caso que no exista devuelve None</span>
+
+<span class="c1"># Modificando valores existentes en el diccionario</span>
+
+<span class="n">diccionario</span><span class="p">[</span><span class="s1">&#39;llave4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="c1"># Agregando valores nuevos al diccionario</span>
+
+<span class="n">diccionario</span><span class="p">[</span><span class="s1">&#39;llave5&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;un valor&#39;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">calificaciones_neumatica</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gamas&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+    <span class="s1">&#39;angelo&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">&#39;dania&#39;</span> <span class="p">:</span> <span class="mi">10</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calificaciones_neumatica</span><span class="p">[</span><span class="s1">&#39;gamas&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calificaciones_neumatica</span><span class="p">[</span><span class="s1">&#39;angelo&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calificaciones_neumatica</span><span class="p">[</span><span class="s1">&#39;dania&#39;</span><span class="p">]</span> <span class="p">)</span>
+
+<span class="n">calificaciones_neumatica</span><span class="p">[</span><span class="s1">&#39;leon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># agregando un valor al diccionario</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calificaciones_neumatica</span><span class="p">[</span><span class="s1">&#39;leon&#39;</span><span class="p">])</span>
+
+<span class="n">calificaciones_neumatica</span><span class="p">[</span><span class="s1">&#39;angelo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7</span> <span class="c1"># actualizo el valor de esa llave</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calificaciones_neumatica</span><span class="p">[</span><span class="s1">&#39;angelo&#39;</span><span class="p">])</span>
+</code></pre></div>
+<pre><code>9
+8
+10
+10
+7
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">calificaciones_neumatica</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;con la llave: </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">, el valor es: </span><span class="si">{</span><span class="n">calificaciones_neumatica</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=======================&#39;</span><span class="p">)</span>
+
+<span class="c1"># Extraigo todas las llaves</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">calificaciones_neumatica</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=======================&#39;</span><span class="p">)</span>
+
+<span class="c1"># Extraigo los valores</span>
+<span class="k">for</span> <span class="n">values</span> <span class="ow">in</span> <span class="n">calificaciones_neumatica</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>con la llave: gamas, el valor es: 9
+con la llave: angelo, el valor es: 7
+con la llave: dania, el valor es: 10
+con la llave: leon, el valor es: 10
+=======================
+gamas
+angelo
+dania
+leon
+=======================
+9
+7
+10
+10
+</code></pre>
+<h2 id="funcion-tuple">Función <code>tuple()</code></h2>
+<p>La función tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mi_tupla</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span> <span class="c1"># crea una tupla vacia</span>
+
+<span class="n">calificaciones</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="n">tupla_calificaciones</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">calificaciones</span><span class="p">)</span>
+
+<span class="nb">type</span><span class="p">(</span><span class="n">mi_tupla</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calificaciones</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla_calificaciones</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>[8, 6, 9, 6, 8]
+(8, 6, 9, 6, 8)
+</code></pre>
+<h2 id="funcion-list">Función <code>list()</code></h2>
+<p>La función list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.</p>
+<div class="highlight"><pre><span></span><code><span class="n">lista_vacia</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_vacia</span><span class="p">)</span>
+
+<span class="n">tupla_calificaciones</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">lista_calificaciones</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tupla_calificaciones</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla_calificaciones</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_calificaciones</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>[]
+(8, 6, 9, 6, 8)
+[8, 6, 9, 6, 8]
+</code></pre>
+<h2 id="funcion-dict">Función <code>dict()</code></h2>
+<p>La función dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mi_diccionario</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mi_diccionario</span><span class="p">)</span>
+
+<span class="n">mi_diccionario</span><span class="p">[</span><span class="s1">&#39;hola&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mi_diccionario</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>{}
+{'hola': 4}
+</code></pre>
+<h2 id="funcion-enumerate">Función <code>enumerate()</code></h2>
+<p>A esta función se le pasa un iterable y me devuelve 2 valores, en la primera posicion me pasa el indice y en la segunda posicion me pasa el valor que tiene en ese momento el iterador.</p>
+<p><strong>Sintaxis:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">iterador</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">pokemons</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pikachu&#39;</span><span class="p">,</span> <span class="s1">&#39;bolbasor&#39;</span><span class="p">,</span> <span class="s1">&#39;charizard&#39;</span> <span class="p">]</span>
+
+<span class="c1"># Forma fea y horrible</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">pokemon</span> <span class="ow">in</span> <span class="n">pokemons</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La posicion de </span><span class="si">{</span><span class="n">pokemon</span><span class="si">}</span><span class="s1"> es </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;===================================&#39;</span><span class="p">)</span>
+
+<span class="c1"># La forma chida</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pokemons</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La posicion de </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1"> es </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>La posicion de pikachu es 0
+La posicion de bolbasor es 1
+La posicion de charizard es 2
+===================================
+La posicion de pikachu es 0
+La posicion de bolbasor es 1
+La posicion de charizard es 2
+</code></pre>
+<hr />
+<p>Realizado por Docente: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../09_Estructura_repeticionr/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 09 Estructura repeticionr">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                09 Estructura repeticionr
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../11_Funciones/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 11 Funciones">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                11 Funciones
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": 1.0}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="../javascripts/footer.js"></script>
+      
+        <script src="../javascripts/change_height_markmap.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-view@0.2.6/dist/index.min.js"></script>
+      
+    
+  </body>
+</html>

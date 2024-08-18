@@ -1,0 +1,1337 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación curso de Python desde Cero a Experto">
+      
+      
+        <meta name="author" content="Alejandro Leyva">
+      
+      
+        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/03_Concatenacion_de_Strings/">
+      
+      
+        <link rel="prev" href="../02_Variables/">
+      
+      
+        <link rel="next" href="../04_Operadores_aritm%C3%A9ticos/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>3 Concatenación de Strings - Documentación curso de Python desde Cero</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-concatenacion-de-strings" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación curso de Python desde Cero
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3 Concatenación de Strings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Documentación curso de Python desde Cero
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Curso Python desde Cero
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_Introducci%C3%B3n/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Introducción a Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_Variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Variables en Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3 Concatenación de Strings
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3 Concatenación de Strings
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-concatenando-con" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Concatenando con +
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-funcion-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Función str()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-concatenando-otros-tipos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Concatenando otros tipos de datos.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-secuencias-de-espace" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Secuencias de espace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Secuencias de espace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#salto-de-linea-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salto de línea \n
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabulación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comillas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comillas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back-slash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back Slash
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-formateo-de-strings-funcion-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Formateo de Strings - función format()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Formateo de Strings - función format()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-formato-para-numeros-y-la-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1 Formato para números y la precision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-fstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 f'String'
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 f'String'">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-formato-a-numeros-con-fstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1 Formato a números con f'string'
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_Operadores_aritm%C3%A9ticos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Operadores aritméticos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_ingresando_dato_y_como_convertirlos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 ingresando dato y como convertirlos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_Estructura_decision/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 Estructura decision
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_Operadores_l%C3%B3gicos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 Operadores lógicos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_Estructura_de_Repeticion_-_while/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    08 Estructura de Repeticion   while
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_1_Modulos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09 1 Modulos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_2_Strings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09 2 Strings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_Estructura_repeticionr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    09 Estructura repeticionr
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_Colecciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10 Colecciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_Funciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11 Funciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_Archivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12 Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-concatenando-con" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Concatenando con +
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-funcion-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Función str()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-concatenando-otros-tipos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Concatenando otros tipos de datos.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-secuencias-de-espace" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Secuencias de espace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Secuencias de espace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#salto-de-linea-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Salto de línea \n
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tabulación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comillas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comillas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#back-slash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Back Slash
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-formateo-de-strings-funcion-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Formateo de Strings - función format()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Formateo de Strings - función format()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-formato-para-numeros-y-la-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1 Formato para números y la precision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-fstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 f'String'
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 f'String'">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#361-formato-a-numeros-con-fstring" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6.1 Formato a números con f'string'
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><img alt="banner" src="../assets/banner.png" /></p>
+<h1 id="3-concatenacion-de-strings">3. Concatenación de Strings</h1>
+<p>La concatenación es el poder agrupar, juntar, unir, fusionar, pegar cadenas de caracteres, es decir, "sumar" varios string para formar uno solo.</p>
+<p>La concatenación es realiza con el símbolo del signo más <code>+</code>.</p>
+<h2 id="31-concatenando-con">3.1 Concatenando con <code>+</code></h2>
+<p>Tenemos variables tipo <code>str</code> en donde guardamos texto.</p>
+<p><strong>Ejemplo</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Lo mejor del mundo&quot;</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;es saber programación&quot;</span>
+
+<span class="n">frase_completa</span> <span class="o">=</span> <span class="n">frase</span> <span class="o">+</span> <span class="n">nombre</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">frase</span> <span class="o">+</span> <span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">frase_completa</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Lo mejor del mundos saber programación
+Lo mejor del mundos saber programación
+</code></pre>
+<h2 id="32-funcion-str">3.2 Función <code>str()</code></h2>
+<p>En la concatenación básica solo se pueden concatenar tipos <code>str</code>, por lo tanto, si necesitamos hacer un paso previo para que el tipo de dato que no sea <code>str</code> se convierta a este tipo. Para ello contamos con función <code>str()</code> la cual realiza ese trabajo.</p>
+<p>La sintaxis es:</p>
+<p><div class="highlight"><pre><span></span><code><span class="nb">str</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">)</span>
+</code></pre></div>
+<strong>Parámetros:</strong></p>
+<ul>
+<li><code>object   Cualquier tipo de objeto</code></li>
+<li><code>encoding El encoding del objeto. Por default es UTF-8</code></li>
+<li><code>errors   Especifica que si hay un error en el encoding, que debe hacer</code></li>
+<li><code>return: Regresa el dato en tipo str : (str)</code></li>
+</ul>
+<p>Entonces, si tenemos un tipo <code>int</code>, <code>float</code> o <code>boolean</code> primero debemos convertirlos a tipo <code>str</code>.</p>
+<p><strong>Ejemplo:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Mi edad es: &quot;</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">edad_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">frase</span> <span class="o">+</span> <span class="n">edad</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="33-concatenando-otros-tipos-de-datos">3.3 Concatenando otros tipos de datos.</h2>
+<p>Si queremos hacer una concatenación directa entre un tipo <code>str</code> y otro tipo de dato, nos saldrá un error de tipo, indicando que no se puede concatenar <code>str</code> con alguno otro tipo.
+Como se muestra a continuación:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mi edad es: &quot;</span> <span class="o">+</span> <span class="mi">25</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+/tmp/ipykernel_24287/3532323227.py in &lt;module&gt;
+----&gt; 1 print("Mi edad es: " + 25)
+
+
+TypeError: can only concatenate str (not "int") to str
+</code></pre>
+<p>Por lo tanto, debemos hacer esa conversión previa a la concatenación.
+Existen dos formas, tomamos el valor, realizamos la conversión y se guarda en otra variable o la forma directa.</p>
+<p><strong>Ejemplo:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Por partes</span>
+<span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Mi edad es: &quot;</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">edad_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">frase</span> <span class="o">+</span> <span class="n">edad_str</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mi edad es: &quot;</span> <span class="o">+</span> <span class="n">edad_str</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Mi edad es: 25
+Mi edad es: 25
+</code></pre>
+<p><em>Vamos a realizar una combinación básica entre los tipos de datos básicos</em></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Declaro las variables</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">altura</span> <span class="o">=</span> <span class="mf">1.68</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Alejandro&quot;</span>
+<span class="n">casado</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1">#Las convierto a tipo str</span>
+
+<span class="n">edad_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>
+<span class="n">altura_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">altura</span><span class="p">)</span>
+<span class="n">casado_str</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">casado</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mi nombre es &quot;</span> <span class="o">+</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s2">&quot;, mi edad es de &quot;</span> <span class="o">+</span> <span class="n">edad_str</span> <span class="o">+</span> <span class="s2">&quot; anios,&quot;</span> <span class="o">+</span> <span class="s2">&quot;tengo una altura de &quot;</span> <span class="o">+</span>
+      <span class="n">altura_str</span> <span class="o">+</span> <span class="s2">&quot; mi estado de casado es: &quot;</span> <span class="o">+</span> <span class="n">casado_str</span> <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mi nombre es &quot;</span> <span class="o">+</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s2">&quot;, mi edad es de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; anios,&quot;</span> <span class="o">+</span> <span class="s2">&quot;tengo una altura de &quot;</span> <span class="o">+</span>
+      <span class="nb">str</span><span class="p">(</span><span class="n">altura</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; mi estado de casado es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">casado</span><span class="p">))</span>
+</code></pre></div>
+<pre><code>Mi nombre es Alejandro, mi edad es de 25 anios,tengo una altura de 1.68 mi estado de casado es: False
+Mi nombre es Alejandro, mi edad es de 25 anios,tengo una altura de 1.68 mi estado de casado es: False
+</code></pre>
+<h2 id="34-secuencias-de-espace">3.4 Secuencias de espace</h2>
+<p>Las secuencias de espace son caracteres especiales para darle formato a las cadenas de texto (Strings).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Nombre</th>
+<th style="text-align: center;">Simbolo</th>
+<th style="text-align: center;">Secuencia de escape</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Backslash</td>
+<td style="text-align: center;">\</td>
+<td style="text-align: center;"><code>\\</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Comilla simple</td>
+<td style="text-align: center;">\'</td>
+<td style="text-align: center;"><code>\'</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Comilla doble</td>
+<td style="text-align: center;">\"</td>
+<td style="text-align: center;"><code>\"</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Bell</td>
+<td style="text-align: center;">(sonido)</td>
+<td style="text-align: center;"><code>\a</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Retroceso</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><code>\b</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Nueva línea</td>
+<td style="text-align: center;">(enter)</td>
+<td style="text-align: center;"><code>\n</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Carriage return</td>
+<td style="text-align: center;">\r</td>
+<td style="text-align: center;"><code>\r</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tab horizontal</td>
+<td style="text-align: center;">tab</td>
+<td style="text-align: center;"><code>\t</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Tab vertical</td>
+<td style="text-align: center;">tab vertical</td>
+<td style="text-align: center;"><code>\v</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="salto-de-linea-n">Salto de línea <code>\n</code></h4>
+<p>Cuando queremos que el texto tenga un salto de línea (enter), tenemos la secuencia <code>\n</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mensaje</span> <span class="o">=</span> <span class="s2">&quot;Hola</span><span class="se">\n</span><span class="s2">Texto en siguiente linea</span><span class="se">\n</span><span class="s2">la siguiente linea&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mensaje</span> <span class="p">)</span>
+</code></pre></div>
+<pre><code>Hola
+ Texto en siguiente linea
+la siguiente linea
+</code></pre>
+<h4 id="tabulacion">Tabulación</h4>
+<p>En ocasiones queremos tabular (sangría) nuestro texto para darle un acomodo se aplica <code>\t</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">mensaje</span> <span class="o">=</span> <span class="s2">&quot;Columa 1</span><span class="se">\t</span><span class="s2">Columna2</span><span class="se">\t</span><span class="s2">Columna 3</span><span class="se">\n</span><span class="s2">Columa 1</span><span class="se">\t</span><span class="s2">Columna2</span><span class="se">\t</span><span class="s2">Columna 3&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mensaje</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Columa 1    Columna2    Columna 3
+Columa 1    Columna2    Columna 3
+</code></pre>
+<h4 id="comillas">Comillas</h4>
+<p>En python nos da una ventaja con respecto al uso de comillas simples y dobles por default.
+Recordando que se pueden escribir Strings <code>str</code> con <code>"</code> y <code>'</code>. Pero vamos a ver la diferencia si queremos utilizar las comillas ya sean simple o doble dentro del mensaje que queremos transmitir; al igual la equivalencia de las secuencias de escape <code>\'</code> y <code>\"</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Si que queremos usar las comillas simples en un string sin utilizar la secuencia de escape, debemos usar</span>
+<span class="c1"># la comilla doble para generar dicho string</span>
+
+<span class="n">mensajeDobleComilla</span> <span class="o">=</span> <span class="s2">&quot;hola &#39;este texto esta en comilla simple&#39; , texto fuera de la comilla&quot;</span>
+<span class="n">mensajeComillaSimple</span> <span class="o">=</span> <span class="s1">&#39;hola </span><span class="se">\&#39;</span><span class="s1">este texto esta en comilla simple</span><span class="se">\&#39;</span><span class="s1"> , texto fuera de la comilla &#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mensajeDobleComilla</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mensajeComillaSimple</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>hola 'este texto esta en comilla simple' , texto fuera de la comilla
+hola 'este texto esta en comilla simple' , texto fuera de la comilla
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Si que queremos usar doble comilla en un string sin utilizar la secuencia de escape, debemos usar</span>
+<span class="c1"># la comilla simple para generar dicho string</span>
+
+<span class="n">mensajeComillaSimple</span> <span class="o">=</span> <span class="s1">&#39;hola &quot;este texto esta en doble comilla&quot; texto fuera de la comilla &#39;</span>
+<span class="n">mensajeDobleComilla</span> <span class="o">=</span> <span class="s2">&quot;hola </span><span class="se">\&quot;</span><span class="s2">este texto esta en comilla simple</span><span class="se">\&quot;</span><span class="s2">, texto fuera de la comilla&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mensajeDobleComilla</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mensajeComillaSimple</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>hola "este texto esta en comilla simple", texto fuera de la comilla
+hola "este texto esta en doble comilla" texto fuera de la comilla
+</code></pre>
+<h4 id="back-slash">Back Slash</h4>
+<p>En ocasiones necesitamos utilizar la diagonal (slash) en un texto, para esto existe la secuencia de escape slasj doble <code>\\</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Utilizando slash en un texto, por ejemplo para rutas dentro de un string</span>
+
+<span class="n">mensaje</span> <span class="o">=</span> <span class="s1">&#39;ruta</span><span class="se">\\</span><span class="s1">carperta1</span><span class="se">\\</span><span class="s1">carperta2</span><span class="se">\\</span><span class="s1">archivo&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mensaje</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>ruta\carperta1\carperta2\archivo
+</code></pre>
+<h2 id="35-formateo-de-strings-funcion-format">3.5 Formateo de Strings - función <code>format()</code></h2>
+<p>Los <code>str</code> tienen una propiedad llamada <code>format()</code> con la cual podemos concatenar variables, se tienen en varias formas para realizar la concatenacion con este metodo. Retorna el <code>str</code> con el formato indicado. Las variables se colocaran automaticamente en la llaves.</p>
+<p><strong>Sintaxis:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;string </span><span class="si">{}</span><span class="s1"> ... </span><span class="si">{}</span><span class="s1"> ... &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">variable1</span><span class="p">,</span> <span class="n">variable2</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
+
+<span class="s1">&#39;string </span><span class="si">{0}</span><span class="s1"> ... </span><span class="si">{1}</span><span class="s1"> ... &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">variable1</span><span class="p">,</span> <span class="n">variable2</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
+
+<span class="s1">&#39;string </span><span class="si">{variable1}</span><span class="s1"> ... </span><span class="si">{variable2}</span><span class="s1"> ... &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">variable1</span> <span class="o">=</span><span class="s2">&quot;hola&quot;</span><span class="p">,</span> <span class="n">variable2</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># La forma que es por default sin indicar nada, en el orden que los pasamos, seran asignados</span>
+<span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Alejandro&quot;</span>
+<span class="n">edad</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="n">texto_default</span> <span class="o">=</span> <span class="s2">&quot;Mi nombre es </span><span class="si">{}</span><span class="s2"> y tengo </span><span class="si">{}</span><span class="s2"> anios de edad&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">edad</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">texto_default</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Mi nombre es Alejandro y tengo 30 anios de edad
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Formato indicando la varible en las llaves, esto sirve para cambiar el orden</span>
+
+<span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Rojo&quot;</span>
+<span class="n">numero</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">texto</span> <span class="o">=</span> <span class="s2">&quot;El numero &#39;</span><span class="si">{1}</span><span class="s2">&#39; corresponde al color &#39;</span><span class="si">{0}</span><span class="s2">&#39;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">numero</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>El numero '3' corresponde al color 'Rojo'
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Indicando el nombre de la variable</span>
+
+<span class="n">texto_variables</span> <span class="o">=</span> <span class="s2">&quot;Mi nombre es </span><span class="si">{nombre}</span><span class="s2"> tengo </span><span class="si">{edad}</span><span class="s2"> anios&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;Alejandro&quot;</span><span class="p">,</span> <span class="n">edad</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">texto_variables</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Mi nombre es Alejandro tengo 25 anios
+</code></pre>
+<h4 id="351-formato-para-numeros-y-la-precision">3.5.1 Formato para números y la precision</h4>
+<p>En muchas ocasiones queremos imprimir un valor numerico pero con cierta cantidad decimales, con la función <code>format()</code> nos da un formato para especificar como queremos la salida.</p>
+<p>Debemos marcar una sintaxis especial que sigue el siguiente formato, principalmente es para valores flotantes:</p>
+<p><strong>Sintaxis:</strong></p>
+<div class="highlight"><pre><span></span><code>[index]:[width][.precision][type]
+</code></pre></div>
+<p><strong>Tipos:</strong></p>
+<ul>
+<li><code>d</code> para enteros</li>
+<li><code>f</code> para flotantes</li>
+<li><code>b</code> para números binarios</li>
+<li><code>o</code> para números octal</li>
+<li><code>x</code> para números hexadecimal</li>
+<li><code>s</code> para strings</li>
+<li><code>e</code> para flotante en formato exponente</li>
+</ul>
+<p><strong>Aplicado:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;El precio es </span><span class="si">{0:1.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">25.365894</span><span class="p">)</span> <span class="c1">#es la primera posicion [0]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">#es la primera posicion [0], parte entera como minimo un valor, con 2 decimales y tomarlo como tipo flotante</span>
+<span class="n">numero</span> <span class="o">=</span> <span class="mf">561.265264161</span>
+<span class="n">valor1</span> <span class="o">=</span> <span class="s2">&quot;El precio es </span><span class="si">{0:1.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+
+<span class="c1"># los valores enteros no es necesario indicar la parte decimal, solo se indica la posicion</span>
+<span class="n">valor2</span> <span class="o">=</span> <span class="s2">&quot;La calificacion final es </span><span class="si">{0:.2f}</span><span class="s2"> de </span><span class="si">{1}</span><span class="s2"> parciales&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">8.369</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">valor1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">valor2</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>El precio es 561.27
+La calificacion final es 8.37 de 3 parciales
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">valor1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Dar valor 1: &#39;</span><span class="p">))</span>
+<span class="n">valor2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Dar valor 2: &#39;</span><span class="p">))</span>
+
+<span class="n">suma</span> <span class="o">=</span> <span class="n">valor1</span> <span class="o">+</span> <span class="n">valor2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El resultado es </span><span class="si">{0:1.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">suma</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Dar formato con decimales de forma dinamica</span>
+<span class="n">valor</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Dar un valor para redondear: &#39;</span><span class="p">))</span>
+<span class="n">redondeo</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;A cuantos decimales?: &#39;</span><span class="p">))</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="s1">&#39;0:1.</span><span class="si">{}</span><span class="s1">f&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">redondeo</span><span class="p">)</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;El valor redondeado a </span><span class="si">{1}</span><span class="s1"> decimales es: {&#39;</span> <span class="o">+</span> <span class="n">r</span> <span class="o">+</span> <span class="s1">&#39;}&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">valor</span><span class="p">,</span> <span class="n">redondeo</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">nombre</span> <span class="o">=</span> <span class="s2">&quot;Alejandro&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mi nombre es </span><span class="si">{0:s}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">nombre</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="36-fstring">3.6 <code>f'String'</code></h2>
+<p>Actualmente se tiene una nueva forma para crear strings de forma mas sencilla y dar formato.</p>
+<p><strong>Esta es la forma mas actual que se usa.</strong></p>
+<p><strong>Sintaxis:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">cantidad</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;verde&quot;</span>
+
+<span class="sa">f</span><span class="s1">&#39;El numero de autos es </span><span class="si">{</span><span class="n">cantidad</span><span class="si">}</span><span class="s1"> y todos son color </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="sa">f</span><span class="s2">&quot;El numero de autos es </span><span class="si">{</span><span class="n">cantidad</span><span class="si">}</span><span class="s2"> y todos son color </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">cantidad</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;tutifruti&quot;</span>
+
+<span class="n">mensaje1</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;El numero de autos es </span><span class="si">{</span><span class="n">cantidad</span><span class="si">}</span><span class="s1"> y todos son color </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">mensaje2</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;El numero de autos es </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">cantidad</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2"> y todos son color </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mensaje1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mensaje2</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>El numero de autos es 5 y todos son color tutifruti
+El numero de autos es "5" y todos son color "tutifruti"
+</code></pre>
+<h4 id="361-formato-a-numeros-con-fstring">3.6.1 Formato a números con <code>f'string'</code></h4>
+<p><strong>Sintaxis:</strong></p>
+<div class="highlight"><pre><span></span><code>{variable:{width}.{decimal-1}}
+</code></pre></div>
+<p><strong>Aplicacion:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="mf">3.141592</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor de pi es: </span><span class="si">{</span><span class="n">num</span><span class="si">:{</span><span class="mi">1</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="mi">3</span><span class="si">}}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Es similar a la función format(), con respecto a la sintaxis, no es necesario indicar la posicion de la variable</span>
+<span class="c1"># los decimales es el valor menos 1</span>
+
+<span class="n">num</span> <span class="o">=</span> <span class="mf">3.14159</span>
+<span class="n">texto_formateado</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;El valor de pi es: </span><span class="si">{</span><span class="n">num</span><span class="si">:{</span><span class="mi">1</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="mi">3</span><span class="si">}}</span><span class="s2">&quot;</span> <span class="c1"># queremos 2 decimales</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">texto_formateado</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>El valor de pi es: 3.14
+</code></pre>
+<hr />
+<p>Realizado por Docente: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../02_Variables/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 2 Variables en Python">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                2 Variables en Python
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04_Operadores_aritm%C3%A9ticos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 4 Operadores aritméticos">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                4 Operadores aritméticos
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": 1.0}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="../javascripts/footer.js"></script>
+      
+        <script src="../javascripts/change_height_markmap.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/d3@6.7.0/dist/d3.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-lib@0.11.6/dist/browser/index.min.js"></script>
+      
+        <script src="https://unpkg.com/markmap-view@0.2.6/dist/index.min.js"></script>
+      
+    
+  </body>
+</html>
