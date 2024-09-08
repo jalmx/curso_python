@@ -12,7 +12,7 @@ https://www.alejandro-leyva.com/curso_python/
 3. Tipos de datos
    1. Números
       1. Enteros (int)
-      2. Flotatens (float)
+      2. Flotantes (float)
    2. String (str)
       1. Concatenación de strings
    3. Booleanos (bool)
@@ -50,6 +50,10 @@ https://www.alejandro-leyva.com/curso_python/
     1. Generador de contraseñas seguras
     2. Organizador de archivos
     3. Detector de archivos repetidos
+
+## Códigos de ejemplo
+
+[Ir a la carpeta ded códigos de ejemplo](./codigos)
 
 ## Develop
 

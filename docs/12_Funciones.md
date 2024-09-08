@@ -1,6 +1,10 @@
+---
+title: 12 Funciones
+---
+
 ![banner](assets/banner.png)
 
-# Funciones
+# 12. Funciones
 
 Bloque de código reutilizable que puede ser llamado n cantidad de veces, debe ser corta,  hacer una sola cosa (resuelve un problema) y hacerla bien.
 
@@ -29,7 +33,6 @@ Como la llamo a la función:
 name_function()
 ```
 
-
 ```python
 def elevar_cuadrado():
     '''Esta función eleva al cuadrado el numero 2'''
@@ -49,7 +52,6 @@ elevar_cuadrado()
 
     Hola a todos!!! xD
     4
-
 
 **Ejercicios:**
 
@@ -82,7 +84,6 @@ def name_function(argumeto1, argumentos2, ..., argumentosN):
 name_function(arg1, arg2...)
 ```
 
-
 ```python
 # base ^ potencia   -> 2^3 = 8
 
@@ -112,14 +113,11 @@ potencia(3,3)
     2 elevado a la 3 es: 8
     3 elevado a la 3 es: 27
 
-
 **Ejercicios:**
 
 1. Realizar una función que realice el calculo del area del circulo, la función recibe el radio. Ocupando las funciones de la libreria `math`.
 
 2. Realizar una función que reciba el nombre y la edad, y que imprima un mensaje con estos datos, ejemplo: "Hola 'alejandro'  que buena onda que tengas '20' anios"
-
-
 
 ## Funciones con parametros por default u opcionales
 
@@ -145,7 +143,6 @@ def name_function(argumeto1=valor, argumentos2=valor, ..., argumentosN=valorN):
 ```python
 name_function(arg1, ... [arg2])
 ```
-
 
 ```python
 def saludo3(nombre:str = 'Desconocido'):
@@ -185,10 +182,9 @@ imprimir_0_10(1)
     1
     --------------------
 
-
 **Ejercicios:**
 
-1. Crear una función que reciba la edad, pero la edad es opcion, por default que tenga el valor de 15, y que mande a imprimir si es menor o mayor de edad, pero si es 15, que imprima tambien, la frase "Creo que no me pasaste la edad, tramposo!"
+1. Crear una función que reciba la edad, pero la edad es opcion, por default que tenga el valor de 15, y que mande a imprimir si es menor o mayor de edad, pero si es 15, que imprima también, la frase "Creo que no me pasaste la edad, tramposo!"
 2. Crear una función que calcule el area de cuadrados y rectangulos, la función recibe 2 parametros, la base y la altura, pero cuando es cuadrado solo recibe uno, por lo tanto, el segundo parametros es opcional, el segundo parametros por default es 0.
 
 ## Retornado valores de una funcion
@@ -214,8 +210,6 @@ def name_function([argumeto1, argumentos2=valor, ..., argumentosN]):
 ```python
 resultado = name_function([arg1, ... arg2])
 ```
-
-
 
 ```python
 from math import pi
@@ -244,8 +238,6 @@ print(f'El area del triangulo es: {area_t}')
     Que onda Pricila!!, la estamos pasando chido!!! vamos por la coca
     El area del triangulo es: 10.5
 
-
-
 ```python
 def operaciones_circulo(radio, area='area'):
     '''
@@ -260,7 +252,6 @@ def operaciones_circulo(radio, area='area'):
 print(f"El area es {operaciones_circulo(5,'area')}")
 print(f'El perimetro es {operaciones_circulo(5,"perimetro")}')
 ```
-
 
     ---------------------------------------------------------------------------
 
@@ -283,7 +274,6 @@ print(f'El perimetro es {operaciones_circulo(5,"perimetro")}')
 
     NameError: name 'pi' is not defined
 
-
 **Ejercicios:**
 
 1. Crear una función que calcule el promedio, pasandole los 3 parciales y te devuelve el resultado. Despues indicar si aprobo o esta en recursa.
@@ -296,7 +286,7 @@ print(f'El perimetro es {operaciones_circulo(5,"perimetro")}')
 
 Normalmente pasamos argumentos a las funciones con un orden orden establecido, y el orden que le coloco el programador, pero hay una forma de poder los argumentos en un orden cual sea, pero se debe especificar que argumento es.
 
-*Nota: Los parametros nombrados y tambien con valores por default van al final se colocan al final*
+*Nota: Los parametros nombrados y también con valores por default van al final se colocan al final*
 
 Como escribo una función y como la utilizo.
 
@@ -311,12 +301,12 @@ def name_function(variable1, variable2 = 'str'):
     #code block
     return valor
 ```
+
 Como la llamo a la funcion, coloco su nombre, abro parentesis y coloco los argumentos que necesita indicando su nombre con su valor, sin importar el orden:
 
 ```python
 name_function(variable2='pokemon', variable1=10)
 ```
-
 
 ```python
 def create_pokemon(name = 'unknown', power=0):
@@ -328,11 +318,10 @@ print( create_pokemon(power=25, name='pikachu'))
 
     Mi pokemo se llama pikachu con un poder de 25
 
-
 ## Devolviendo varios valores
 
 <!-- TODO: pendiente -->
 
 ---
 
-Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
+Realizado por el Instructor: [Alejandro Leyva](https://www.alejandro-leyva.com/)

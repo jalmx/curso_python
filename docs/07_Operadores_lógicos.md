@@ -1,22 +1,26 @@
+---
+title: 7 Operadores lógicos
+---
+
 ![banner](assets/banner.png)
 
-# 2.7 Operadores lógicos
+# 7. Operadores lógicos
 
 Contamos con los operadores lógicos básicos, `AND`, `OR` y `NOT`. Los operadores lógicos toman el objeto como booleanos para realizar la comparación.
 
 Estos operadores nos ayudan a realizar operaciones más complejas en las decisiones y ciclos.
 
-Todo objeto con algun contenido será tomado como `True`, a menos que:
+Todo objeto con algún contenido será tomado como `True`, a menos que:
 
 - El objetos esté vacío, como `[]`, `()`, `{}`
 - El objeto es `False`
 - El objeto es `0`
 - El objeto es `None`
-- El objeto es cadena vacia `""` o `''`
+- El objeto es cadena vacía `""` o `''`
 
 En todos estos casos, se toman como `False`.
 
-## 2.7.1 Operador `AND`
+## 7.1 Operador `AND`
 
 Con este operador se analizan dos comparaciones y `si ambas son verdaderas`, nos entrega un resultado `True`. La palabra reservada usada en python es `and`.
 
@@ -38,8 +42,7 @@ La forma de aplicación:
 | 9 < 12 `and` 4 > 8   |   True `and` False   |   False   |
 | 6 > 10 `and` 3 < 0   |  False `and` False   |   False   |
 
-### 2.7.1.1 Ejemplo con operador lógico `and`
-
+### 7.1.1 Ejemplo con operador lógico `and`
 
 ```python
 a = 10
@@ -56,13 +59,13 @@ else:
 
 ```
 
+```text
     A y B son mayores que 0
     Al menos un numero no es mayor a 0
-
-
+```
 
 ```python
-# Aquí se comparan números, todos daran True, menos los que tenga el valor de 0
+# Aquí se comparan números, todos darán True, menos los que tenga el valor de 0
 a = 10 # True
 b = -12 # True
 c = 0 # False
@@ -73,12 +76,13 @@ else:
     print("Al menos un valor es False")
 ```
 
+```text
     Al menos un valor es False
+```
 
+## 7.2 Operador `OR`
 
-## 2.7.2 Operador `OR`
-
-Con este operador se analizan dos comparaciones y si alguna es verdadera, nos entrega un resultado `True`. La palabra reservada usada en python es `or`.
+Con este operador se analizan dos comparaciones y si algúna es verdadera, nos entrega un resultado `True`. La palabra reservada usada en python es `or`.
 
 Tabla de verdad para el operador `or`
 
@@ -98,8 +102,7 @@ La forma de aplicación:
 | 9 < 12 `or` 4 > 8   |   True `or` False    |   True    |
 | 6 > 10 `or` 3 < 0   |   False `or` False   |   False   |
 
-### 2.7.2.1 Ejemplo con operador lógico `or`
-
+### 7.2.1 Ejemplo con operador lógico `or`
 
 ```python
 a = 10
@@ -117,10 +120,10 @@ else:
     print("B y C NO no son mayores que 0")
 ```
 
+```text
     A o B es mayor que 0
     B y C NO no son mayores que 0
-
-
+```
 
 ```python
 a = 10
@@ -133,10 +136,11 @@ else:
     print("Todos los valores dan como resultado False")
 ```
 
+```text
     Al menos un valor se considera True
+```
 
-
-## 2.7.3 Operador `not`
+## 7.3 Operador `not`
 
 Este operador invierte el resultado booleana que recibe. La palabra reservada es `not`
 
@@ -156,8 +160,7 @@ La forma de aplicación:
 | `not`(2 < 10)  |     `not`(True)      |   False   |
 | `not`(False)   |     `not`(False)     |   True    |
 
-### 2.7.3.1 Ejemplo con operador lógico `not`
-
+### 7.3.1 Ejemplo con operador lógico `not`
 
 ```python
 a = 10
@@ -177,11 +180,12 @@ else:
     print("10 es divisible entre 3 or 5")
 ```
 
+```text
     1
     0
     10 es divisible entre 3 or 5
-
+```
 
 ---
 
-Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
+Realizado por el Instructor: [Alejandro Leyva](https://www.alejandro-leyva.com/)

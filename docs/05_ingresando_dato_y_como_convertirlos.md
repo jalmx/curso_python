@@ -1,8 +1,12 @@
+---
+title: 5 Ingresando dato y cómo convertirlos
+---
+
 ![banner](assets/banner.png)
 
-# 2.5 Ingresando dato y cómo convertirlos
+# 5 Ingresando dato y cómo convertirlos
 
-## 2.5.1 Función `input()`
+## 5.1 Función `input()`
 
 La función input sirve para leer datos desde teclado en la terminal.
 
@@ -12,7 +16,7 @@ La función input sirve para leer datos desde teclado en la terminal.
 input(prompt)
 ```
 
-**Parametros:**
+### Parámetros
 
 - `prompt (opcional): Es un string que se puede colocar para que aparezca antes del ingreso de datos`
 - `return: Regresa el texto que ingresen desde terminal : (str)`
@@ -25,8 +29,6 @@ Cuando queremos recibir datos del usuario debemos guardarla en una variable para
 datos = input()
 ```
 
-
-
 ```python
 print('Ingreso de datos')
 datos = input()
@@ -35,18 +37,18 @@ print('impresion de datos')
 print(datos)
 ```
 
+```text
     Ingreso de datos
     Hola
     impresion de datos
     Hola
+```
 
-
-Ahora si queremos que el usuario vea un mensaje y a continuación coloque los datos, debemos pasarle el valor para el argumento `prompt` entre los paréntesis.
+Ahora si queremos que el usuario vea un mensaje y a continuación coloque los datos, debemos pasar el valor para el argumento `prompt` entre los paréntesis.
 
 ```python
 edad = input("Dar la edad")
 ```
-
 
 ```python
 edad = input("Dar edad: ")# devuelve un str
@@ -54,11 +56,12 @@ edad = input("Dar edad: ")# devuelve un str
 print("Tu edad es: " + edad)
 ```
 
+```text
     Dar edad: 50
     Tu edad es: 50
+```
 
-
-## 5.5.2 Función `int()`
+## 5.2 Función `int()`
 
 En muchas ocasiones puedes tener un `número entero` almacenado en una variable pero no exactamnete es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `int` para poder realizar operaciones con él. Para esos casos contamos con la función `int()`
 
@@ -72,11 +75,10 @@ int(value, base)
 
 - `value: Un número o un string que puede ser convertido a número entero`
 - `base (opcional) : El formato con el que representa el número. Default value: 10`
-    - `base: 10 -> decimal (Valor por default)`
-    - `base: 2 -> binario`
-    - `base: 16 -> hexadecimal `
+  - `base: 10 -> decimal (Valor por default)`
+  - `base: 2 -> binario`
+  - `base: 16 -> hexadecimal`
 - `return: el valor en tipo int (decimal por default)`
-
 
 ```python
 decimal = int("100")       # el valor es decimal, por default lo toma así
@@ -88,12 +90,13 @@ print(binario)
 print(hexadecimal)
 ```
 
+```text
     100
     10
     255
+```
 
-
-## 5.5.3 Función `float()`
+## 5.3 Función `float()`
 
 En muchas ocasiones puedes tener un `número de punto flotante` almacenado en una variable pero no exactamnete es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `float` para poder realizar operaciones con él. Para esos casos contamos con la función `float()`
 
@@ -108,7 +111,6 @@ float(value)
 - `value: Un número o string que puede ser convertido en tipo número float`
 - `return: Regresa un tipo float`
 
-
 ```python
 altura = float("1.680000")
 valor = float("4.3")
@@ -119,14 +121,15 @@ print(valor)
 print(un_medio)
 ```
 
+```text
     1.68
     4.3
     0.5
+```
 
+## 5.4 Función `bool()`
 
-## 5.5.4 Función `bool()`
-
-En muchas ocasiones puedes tener `una expresion booleana` almacenado en una variable pero no exactamnete es tipo `booleano`. Entonces, en ese caso necesitamos que sea de tipo `boolean` para poder realizar operaciones con él. Para esos casos contamos con la función `bool()`
+En muchas ocasiones puedes tener `una expresión booleana` almacenado en una variable pero no exactamente es tipo `booleano`. Entonces, en ese caso necesitamos que sea de tipo `boolean` para poder realizar operaciones con él. Para esos casos contamos con la función `bool()`
 
 **Sintaxis:**
 
@@ -134,7 +137,7 @@ En muchas ocasiones puedes tener `una expresion booleana` almacenado en una vari
 bool(object)
 ```
 
-**Parametros:**
+### Parámetros
 
 - `object: Cualquier objet, string, lista, numero, etc.`
 - `return: Regresa un tipo boolean`
@@ -148,7 +151,6 @@ La función siempre regresa `True`, a menos que:
 - Cadena vacia `""`
 
 En todos estos casos, retorna `False`
-
 
 ```python
 uno = bool(1)
@@ -166,18 +168,18 @@ print(texto)
 print(texto_vacio)
 ```
 
-    True
-    False
-    False
-    True
-    True
-    False
-
+```text
+True
+False
+False
+True
+True
+False
+```
 
 ## Aplicaciones
 
-**1. Pedir dos números e imprimir el resultado**
-
+### 1. Pedir dos números e imprimir el resultado**
 
 ```python
 print("Mi super calculador de 2 números")
@@ -189,34 +191,34 @@ suma = valor1 + valor2
 print("El resultado es: " + str(suma))
 ```
 
-    Mi super calculador de 2 números
-    Dar el valor 1: 5
-    Dar el valor 2: 6
-    El resultado es: 11
+```text
+Mi super calculador de 2 números
+Dar el valor 1: 5
+Dar el valor 2: 6
+El resultado es: 11
+```
 
-
-**2. Calculadora de Segunda Ley**
-
+### 2. Calculadora de Segunda Ley
 
 ```python
 # F = m * a
 print("Calculadora de Segunda Ley - Fuerza")
 masa = float( input("Dar el valor de la masa (kg):" ) )
-aceleracion = float( input("Dar el valor de la aceleracion (m/s^2):"  )  )
+aceleracion = float( input("Dar el valor de la aceleración (m/s^2):"  )  )
 
 fuerza =  masa * aceleracion
 
 print("la fuerza es: " + str(fuerza)+ "N")
 ```
 
+```text
     Calculadora de Segunda Ley - Fuerza
     Dar el valor de la masa (kg):25
     Dar el valor de la aceleracion (m/s^2):36
     la fuerza es: 900.0N
+```
 
-
-**3. Programa que calcule las resistencias en serie, el usuario debe ingresar 3 resistencias**
-
+### 3. Programa que calcule las resistencias en serie, el usuario debe ingresar 3 resistencias
 
 ```python
 print("Dar tres resistencias para obtener su valor en serie")
@@ -225,16 +227,16 @@ resistencia1 = float( input("Valor de resistencia 1: ")  )
 resistencia2 = float( input("Valor de resistencia 2: ")  )
 resistencia3 = float( input("Valor de resistencia 3: ")  )
 
-resitencia_total = resistencia1 + resistencia2 + resistencia
+resistencia_total = resistencia1 + resistencia2 + resistencia
 
-print("El valor total en serie es " + str(resitencia_total) + " ohms")
+print("El valor total en serie es " + str(resistencia_total) + " ohms")
 ```
 
 ### Ejercicios
 
-1. Hacer un programa que calcule el area y el perimetro del circulo, pidiendo los datos al usuario
-2. Hacer un programa que calcule 3 resistencias en paralelo, solicitando la informacion al usuario
+1. Hacer un programa que calcule el area y el perímetro del circulo, pidiendo los datos al usuario
+2. Hacer un programa que calcule 3 resistencias en paralelo, solicitando la información al usuario
 
 ---
 
-Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
+Realizado por el Instructor: [Alejandro Leyva](https://www.alejandro-leyva.com/)

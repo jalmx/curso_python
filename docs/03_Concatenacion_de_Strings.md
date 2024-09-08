@@ -10,13 +10,11 @@ La concatenación es el poder agrupar, juntar, unir, fusionar, pegar cadenas de 
 
 La concatenación es realiza con el símbolo del signo más `+`.
 
-
 ## 3.1 Concatenando con `+`
 
 Tenemos variables tipo `str` en donde guardamos texto.
 
-**Ejemplo**
-
+### Ejemplo
 
 ```python
 frase = "Lo mejor del mundo"
@@ -28,9 +26,10 @@ print(frase + nombre)
 print(frase_completa)
 ```
 
+```text
     Lo mejor del mundos saber programación
     Lo mejor del mundos saber programación
-
+```
 
 ## 3.2 Función `str()`
 
@@ -41,11 +40,12 @@ La sintaxis es:
 ```python
 str(object, encoding=encoding, errors=errors)
 ```
+
 **Parámetros:**
 
-- `object	Cualquier tipo de objeto`
-- `encoding	El encoding del objeto. Por default es UTF-8`
-- `errors	Especifica que si hay un error en el encoding, que debe hacer`
+- `object Cualquier tipo de objeto`
+- `encoding El encoding del objeto. Por default es UTF-8`
+- `errors Especifica que si hay un error en el encoding, que debe hacer`
 - `return: Regresa el dato en tipo str : (str)`
 
 Entonces, si tenemos un tipo `int`, `float` o `boolean` primero debemos convertirlos a tipo `str`.
@@ -61,33 +61,31 @@ print(frase + edad)
 
 ```
 
-## 3.3 Concatenando otros tipos de datos.
+## 3.3 Concatenando otros tipos de datos
 
-Si queremos hacer una concatenación directa entre un tipo `str` y otro tipo de dato, nos saldrá un error de tipo, indicando que no se puede concatenar `str` con alguno otro tipo.
+Si queremos hacer una concatenación directa entre un tipo `str` y otro tipo de dato, nos saldrá un error de tipo, indicando que no se puede concatenar `str` con algúno otro tipo.
 Como se muestra a continuación:
-
 
 ```python
 print("Mi edad es: " + 25)
 ```
 
+```text
+---------------------------------------------------------------------------
 
-    ---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
 
-    TypeError                                 Traceback (most recent call last)
-
-    /tmp/ipykernel_24287/3532323227.py in <module>
-    ----> 1 print("Mi edad es: " + 25)
+/tmp/ipykernel_24287/3532323227.py in <module>
+----> 1 print("Mi edad es: " + 25)
 
 
-    TypeError: can only concatenate str (not "int") to str
-
+TypeError: can only concatenate str (not "int") to str
+```
 
 Por lo tanto, debemos hacer esa conversión previa a la concatenación.
 Existen dos formas, tomamos el valor, realizamos la conversión y se guarda en otra variable o la forma directa.
 
-**Ejemplo:**
-
+### Ejemplo
 
 ```python
 #Por partes
@@ -99,13 +97,12 @@ print(frase + edad_str)
 print("Mi edad es: " + edad_str)
 ```
 
+```text
     Mi edad es: 25
     Mi edad es: 25
+```
 
-
-*Vamos a realizar una combinación básica entre los tipos de datos básicos*
-
-
+### Vamos a realizar una combinación básica entre los tipos de datos básicos
 
 ```python
 # Declaro las variables
@@ -128,19 +125,20 @@ print("Mi nombre es " + nombre + ", mi edad es de " + str(edad) + " anios," + "t
 
 ```
 
+```text
     Mi nombre es Alejandro, mi edad es de 25 anios,tengo una altura de 1.68 mi estado de casado es: False
     Mi nombre es Alejandro, mi edad es de 25 anios,tengo una altura de 1.68 mi estado de casado es: False
+```
 
+## 3.4 Secuencias de escape
 
-## 3.4 Secuencias de espace
-
-Las secuencias de espace son caracteres especiales para darle formato a las cadenas de texto (Strings).
+Las secuencias de escape son caracteres especiales para darle formato a las cadenas de texto (Strings).
 
 | Nombre          |   Simbolo    | Secuencia de escape |
 | :-------------- | :----------: | :-----------------: |
-| Backslash       |   \\| `\\`   |
-| Comilla simple  |      \'      |        `\'`         |
-| Comilla doble   |      \"      |        `\"`         |
+| Backslash       |     \\\\     |        `\\`         |
+| Comillas simple  |      \'      |        `\'`         |
+| Comillas doble   |      \"      |        `\"`         |
 | Bell            |   (sonido)   |        `\a`         |
 | Retroceso       |              |        `\b`         |
 | Nueva línea     |   (enter)    |        `\n`         |
@@ -148,10 +146,9 @@ Las secuencias de espace son caracteres especiales para darle formato a las cade
 | Tab horizontal  |     tab      |        `\t`         |
 | Tab vertical    | tab vertical |        `\v`         |
 
-#### Salto de línea `\n`
+### Salto de línea `\n`
 
 Cuando queremos que el texto tenga un salto de línea (enter), tenemos la secuencia `\n`.
-
 
 ```python
 mensaje = "Hola\nTexto en siguiente linea\nla siguiente linea"
@@ -159,34 +156,34 @@ mensaje = "Hola\nTexto en siguiente linea\nla siguiente linea"
 print(mensaje )
 ```
 
+```text
     Hola
      Texto en siguiente linea
     la siguiente linea
+```
 
-
-#### Tabulación
+### Tabulación
 
 En ocasiones queremos tabular (sangría) nuestro texto para darle un acomodo se aplica `\t`
-
 
 ```python
 mensaje = "Columa 1\tColumna2\tColumna 3\nColuma 1\tColumna2\tColumna 3"
 print(mensaje)
 ```
 
-    Columa 1	Columna2	Columna 3
-    Columa 1	Columna2	Columna 3
+```text
+Columa 1 Columna2 Columna 3
+Columa 1 Columna2 Columna 3
+```
 
-
-#### Comillas
+### Comillas
 
 En python nos da una ventaja con respecto al uso de comillas simples y dobles por default.
 Recordando que se pueden escribir Strings `str` con `"` y `'`. Pero vamos a ver la diferencia si queremos utilizar las comillas ya sean simple o doble dentro del mensaje que queremos transmitir; al igual la equivalencia de las secuencias de escape `\'` y `\"`.
 
-
 ```python
 # Si que queremos usar las comillas simples en un string sin utilizar la secuencia de escape, debemos usar
-# la comilla doble para generar dicho string
+# las comillas doble para generar dicho string
 
 mensajeDobleComilla = "hola 'este texto esta en comilla simple' , texto fuera de la comilla"
 mensajeComillaSimple = 'hola \'este texto esta en comilla simple\' , texto fuera de la comilla '
@@ -195,10 +192,10 @@ print(mensajeDobleComilla)
 print(mensajeComillaSimple)
 ```
 
-    hola 'este texto esta en comilla simple' , texto fuera de la comilla
-    hola 'este texto esta en comilla simple' , texto fuera de la comilla
-
-
+```text
+hola 'este texto esta en comilla simple' , texto fuera de la comilla
+hola 'este texto esta en comilla simple' , texto fuera de la comilla
+```
 
 ```python
 # Si que queremos usar doble comilla en un string sin utilizar la secuencia de escape, debemos usar
@@ -211,14 +208,14 @@ print(mensajeDobleComilla)
 print(mensajeComillaSimple)
 ```
 
+```text
     hola "este texto esta en comilla simple", texto fuera de la comilla
     hola "este texto esta en doble comilla" texto fuera de la comilla
+```
 
-
-#### Back Slash
+### Back Slash
 
 En ocasiones necesitamos utilizar la diagonal (slash) en un texto, para esto existe la secuencia de escape slasj doble `\\`.
-
 
 ```python
 # Utilizando slash en un texto, por ejemplo para rutas dentro de un string
@@ -228,12 +225,13 @@ mensaje = 'ruta\\carperta1\\carperta2\\archivo'
 print(mensaje)
 ```
 
-    ruta\carperta1\carperta2\archivo
-
+```text
+ruta\carperta1\carperta2\archivo
+```
 
 ## 3.5 Formateo de Strings - función `format()`
 
-Los `str` tienen una propiedad llamada `format()` con la cual podemos concatenar variables, se tienen en varias formas para realizar la concatenacion con este metodo. Retorna el `str` con el formato indicado. Las variables se colocaran automaticamente en la llaves.
+Los `str` tienen una propiedad llamada `format()` con la cual podemos concatenar variables, se tienen en varias formas para realizar la concatenación con este método. Retorna el `str` con el formato indicado. Las variables se colocaran automáticamente en la llaves.
 
 **Sintaxis:**
 
@@ -245,7 +243,6 @@ Los `str` tienen una propiedad llamada `format()` con la cual podemos concatenar
 'string {variable1} ... {variable2} ... '.format(variable1 ="hola", variable2=5,...)
 ```
 
-
 ```python
 # La forma que es por default sin indicar nada, en el orden que los pasamos, seran asignados
 nombre = "Alejandro"
@@ -256,9 +253,9 @@ texto_default = "Mi nombre es {} y tengo {} anios de edad".format(nombre, edad)
 print(texto_default)
 ```
 
+```text
     Mi nombre es Alejandro y tengo 30 anios de edad
-
-
+```
 
 ```python
 # Formato indicando la varible en las llaves, esto sirve para cambiar el orden
@@ -271,9 +268,9 @@ texto = "El numero '{1}' corresponde al color '{0}'".format(color, numero)
 print(texto)
 ```
 
+```text
     El numero '3' corresponde al color 'Rojo'
-
-
+```
 
 ```python
 # Indicando el nombre de la variable
@@ -283,18 +280,19 @@ texto_variables = "Mi nombre es {nombre} tengo {edad} anios".format(nombre="Alej
 print(texto_variables)
 ```
 
+```text
     Mi nombre es Alejandro tengo 25 anios
+```
 
+### 3.5.1 Formato para números y la precision
 
-#### 3.5.1 Formato para números y la precision
-
-En muchas ocasiones queremos imprimir un valor numerico pero con cierta cantidad decimales, con la función `format()` nos da un formato para especificar como queremos la salida.
+En muchas ocasiones queremos imprimir un valor numérico pero con cierta cantidad decimales, con la función `format()` nos da un formato para especificar como queremos la salida.
 
 Debemos marcar una sintaxis especial que sigue el siguiente formato, principalmente es para valores flotantes:
 
 **Sintaxis:**
 
-```
+```text
 [index]:[width][.precision][type]
 ```
 
@@ -316,10 +314,8 @@ Debemos marcar una sintaxis especial que sigue el siguiente formato, principalme
 
 ```
 
-
-
 ```python
-#es la primera posicion [0], parte entera como minimo un valor, con 2 decimales y tomarlo como tipo flotante
+#es la primera posición [0], parte entera como mínimo un valor, con 2 decimales y tomarlo como tipo flotante
 numero = 561.265264161
 valor1 = "El precio es {0:1.2f}".format(numero)
 
@@ -330,10 +326,10 @@ print(valor1)
 print(valor2)
 ```
 
+```text
     El precio es 561.27
     La calificacion final es 8.37 de 3 parciales
-
-
+```
 
 ```python
 valor1 = float(input('Dar valor 1: '))
@@ -343,7 +339,6 @@ suma = valor1 + valor2
 
 print('El resultado es {0:1.3f}'.format(suma))
 ```
-
 
 ```python
 # Dar formato con decimales de forma dinamica
@@ -356,7 +351,6 @@ msg = 'El valor redondeado a {1} decimales es: {' + r + '}'
 print(msg)
 print(msg.format(valor, redondeo))
 ```
-
 
 ```python
 nombre = "Alejandro"
@@ -380,7 +374,6 @@ f'El numero de autos es {cantidad} y todos son color {color}'
 f"El numero de autos es {cantidad} y todos son color {color}"
 ```
 
-
 ```python
 cantidad = 5
 color = "tutifruti"
@@ -392,26 +385,26 @@ print(mensaje1)
 print(mensaje2)
 ```
 
+```text
     El numero de autos es 5 y todos son color tutifruti
     El numero de autos es "5" y todos son color "tutifruti"
-
-
-#### 3.6.1 Formato a números con `f'string'`
-
-**Sintaxis:**
-
 ```
+
+### 3.6.1 Formato a números con `f'string'`
+
+#### Sintaxis
+
+```text
 {variable:{width}.{decimal-1}}
 ```
 
-**Aplicacion:**
+#### Aplicación
 
 ```python
 num = 3.141592
 
 print(f"El valor de pi es: {num:{1}.{3}}")
 ```
-
 
 ```python
 # Es similar a la función format(), con respecto a la sintaxis, no es necesario indicar la posicion de la variable
@@ -422,8 +415,10 @@ texto_formateado = f"El valor de pi es: {num:{1}.{3}}" # queremos 2 decimales
 print(texto_formateado)
 ```
 
+```text
     El valor de pi es: 3.14
-
+```
 
 ---
-Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
+
+Realizado por el Instructor: [Alejandro Leyva](https://www.alejandro-leyva.com/)

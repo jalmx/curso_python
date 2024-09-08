@@ -1,6 +1,10 @@
+---
+title: 9 Módulos
+---
+
 ![banner](assets/banner.png)
 
-# 9.1 Módulos
+# 9. Módulos
 
 Son funciones que existen dentro de Python para realizar alguna cosa que necesitemos o sean comunes para resolver algún problema. Muchos módulos se deben importar, dado que no están disponible con solo invocar la función a ocupar.
 
@@ -16,7 +20,6 @@ Tienes muchas funciones útiles, pero aquí solo se mencionan algunas, para más
 - `randint(min, max)`: Retorna un valor entero aleatorio entre el mínimo y máximo que se le indique
 
 [Documentación oficial de random](https://docs.python.org/3.7/library/random.html)
-
 
 ```python
 import random # siempre que queremos usar el modulo random lo debemos importarlo
@@ -44,8 +47,6 @@ while count < 10:
     0.02064234430594214
     0.438587694506148
 
-
-
 ```python
 #nos devuelve un valor entero de 0 al valor que le dimos - 1
 
@@ -55,8 +56,6 @@ print(numero_en_rango)
 ```
 
     63
-
-
 
 ```python
 # nos devulve un valor en el rango de 5 (min) al 15 (max)
@@ -68,8 +67,6 @@ print(numero_rango_min_max)
 
     5
 
-
-
 ```python
 # con esta función le podemos pasar una lista y devolvera un valor de esa lista al azar
 
@@ -80,8 +77,6 @@ print(valor)
 ```
 
     mensaje
-
-
 
 ```python
 #Juego de adivina el numero vBTV
@@ -137,8 +132,6 @@ while True:
     Llevas 5 intentos
     Perdiste, lastima margarito  T.T
 
-
-
 ```python
 #Juego de adivina el numero vATM
 import random
@@ -189,7 +182,6 @@ while True:
     EL numero era: 8
     Lastima margarito
 
-
 ## Módulo `math`
 
 Este módulo es enfocado a matemáticas, tiene funciones que nos facilitan realizar cálculos complejos.
@@ -204,9 +196,7 @@ Este módulo es enfocado a matemáticas, tiene funciones que nos facilitan reali
 - `pi`: Devuelve el valor de PI =π = 3.141592...
 - `e`: Devuelve el valor de E (Euler) = 2.718281...
 
-
 [Documentación oficial de math](https://docs.python.org/3.7/library/math.html)
-
 
 ```python
 # Redondeos
@@ -227,8 +217,6 @@ print(f'Redondeo hacia arriba {r_arriba}')
     Redondeo hacia abajo 2
     Redondeo hacia arriba 3
 
-
-
 ```python
 # Potencia y raiz cuadrada
 
@@ -241,8 +229,6 @@ print(f'La raiz cuadrada de 25 es: {raiz}')
 
     Elevando 2 al cubo es: 8.0
     La raiz cuadrada de 25 es: 5.0
-
-
 
 ```python
 # Funciones trigonometricas, siempre se dan los resultado en radianes,
@@ -261,8 +247,6 @@ print(f'Tangete de de 30 es: {tangente}')
     Seno de 30 es: 0.8509035245341184
     Tangete de de 30 es: 1.6197751905438615
 
-
-
 ```python
 # Normalmente todos los lenguajes tiene una libreria matematica y traen las constantes matematicas comunes
 
@@ -272,7 +256,6 @@ print(f'Valor de Euler: {math.e}')
 
     Valor de pi: 3.141592653589793
     Valor de Euler: 2.718281828459045
-
 
 ### La función `sum`
 
@@ -289,7 +272,6 @@ sum(list)
 - `list` : es una lista de números, pueden ser enteros o flotantes
 - `return`: El resultado de la sumatoria de los valores de la lista
 
-
 ```python
 # Tenemos a disposicion una función llamada sum
 
@@ -305,7 +287,6 @@ Cuando iniciamos un programa en python, por default ya contamos con varias funci
 
 Para ver las funciones disponibles ir a la [Documentacion de python "Funciones"](https://docs.python.org/3/library/functions.html)
 
-
 ---
 
-Realizado por Docente: [Alejandro Leyva](https://www.alejandro-leyva.com/)
+Realizado por el Instructor: [Alejandro Leyva](https://www.alejandro-leyva.com/)

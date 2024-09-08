@@ -1,2 +1,2 @@
 mkdocs-material==9.5.31
-poetry
+poetry==1.8.2
