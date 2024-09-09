@@ -12,21 +12,21 @@
         <meta name="author" content="Alejandro Leyva">
       
       
-        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/09_2_Strings/">
+        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/10_strings/">
       
       
-        <link rel="prev" href="../09_1_Modulos/">
+        <link rel="prev" href="../09_Modulos/">
       
       
-        <link rel="next" href="../09_Estructura_repeticionr/">
+        <link rel="next" href="../11_Colecciones/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
-        <title>09 2 Strings - Documentación curso de Python desde Cero</title>
+        <title>10 Strings - Documentación curso de Python desde Cero</title>
       
     
     
@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#strings-str" class="md-skip">
+        <a href="#10-strings-str" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -98,10 +98,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -118,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              09 2 Strings
+              10 Strings
             
           </span>
         </div>
@@ -131,7 +130,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -141,7 +140,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -195,7 +194,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -231,17 +230,16 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     Documentación curso de Python desde Cero
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -365,7 +363,7 @@
         
   
   <span class="md-ellipsis">
-    05 ingresando dato y como convertirlos
+    5 Ingresando dato y cómo convertirlos
   </span>
   
 
@@ -385,7 +383,7 @@
         
   
   <span class="md-ellipsis">
-    06 Estructura decision
+    6 Decisiones
   </span>
   
 
@@ -405,7 +403,7 @@
         
   
   <span class="md-ellipsis">
-    07 Operadores lógicos
+    7 Operadores lógicos
   </span>
   
 
@@ -421,11 +419,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../08_Estructura_de_Repeticion_-_while/" class="md-nav__link">
+      <a href="../08_Estructuras_de_Repeticion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    08 Estructura de Repeticion   while
+    8 Estructuras de repetición
   </span>
   
 
@@ -441,11 +439,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_1_Modulos/" class="md-nav__link">
+      <a href="../09_Modulos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 1 Modulos
+    9 Módulos
   </span>
   
 
@@ -474,7 +472,7 @@
           
   
   <span class="md-ellipsis">
-    09 2 Strings
+    10 Strings
   </span>
   
 
@@ -485,7 +483,7 @@
         
   
   <span class="md-ellipsis">
-    09 2 Strings
+    10 Strings
   </span>
   
 
@@ -566,11 +564,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_Estructura_repeticionr/" class="md-nav__link">
+      <a href="../11_Colecciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 Estructura repeticionr
+    11 Colecciones
   </span>
   
 
@@ -586,11 +584,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_Colecciones/" class="md-nav__link">
+      <a href="../12_Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    10 Colecciones
+    12 Funciones
   </span>
   
 
@@ -606,11 +604,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../11_Funciones/" class="md-nav__link">
+      <a href="../13_Archivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    11 Funciones
+    13 Archivos
   </span>
   
 
@@ -626,11 +624,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../12_Archivos/" class="md-nav__link">
+      <a href="../14_errores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    12 Archivos
+    14 Errores
   </span>
   
 
@@ -725,12 +723,12 @@
                   
 
 
-<p><img alt="banner" src="logo/banner.png" /></p>
-<h1 id="strings-str">Strings (str)</h1>
-<p>En esta sección veremos con mas detalle la manipulacion de <a href="https://www.w3schools.com/python/python_ref_string.asp">strings</a>.
-La manipulacion de string a detalle es sumamente util para separarlo, saber si contiene alguna letra, palabra u oración. Recordemos que todo en python es un objeto y al ser un objeto contienen por default muchos métodos con los cuales podemos operar ese <code>string</code>.</p>
+<p><img alt="banner" src="../assets/banner.png" /></p>
+<h1 id="10-strings-str">10. Strings <code>str</code></h1>
+<p>En esta sección veremos con mas detalle la manipulación de <a href="https://www.w3schools.com/python/python_ref_string.asp">strings</a>.
+La manipulación de string a detalle es sumamente util para separarlo, saber si contiene algúna letra, palabra u oración. Recordemos que todo en python es un objeto y al ser un objeto contienen por default muchos métodos con los cuales podemos operar ese <code>string</code>.</p>
 <h2 id="convertir-a-minusculas-lower">Convertir a minúsculas (lower)</h2>
-<p>Una función que nos fascilita es convertir todo el string a minúsculas. Ignora simbolos y números.</p>
+<p>Una función que nos facilita es convertir todo el string a minúsculas. Ignora simbolos y números.</p>
 <ul>
 <li>lower(): Converts a string into lower case</li>
 </ul>
@@ -746,7 +744,7 @@ La manipulacion de string a detalle es sumamente util para separarlo, saber si c
 hola como estas
 </code></pre>
 <h2 id="convertir-a-mayusculas-upper">Convertir a Mayúsculas (upper)</h2>
-<p>Una función que nos fascilita es convertir todo el string a mayúsculas. Ignora simbolos y números.</p>
+<p>Una función que nos facilita es convertir todo el string a mayúsculas. Ignora símbolos y números.</p>
 <ul>
 <li>upper(): Converts a string into upper case</li>
 </ul>
@@ -797,11 +795,11 @@ Hola como estas
 <h2 id="es-o-no-es-un">Es o no es un</h2>
 <p>En ocasiones queremos conocer si un string es o esta en cierta forma.</p>
 <ul>
-<li><code>isdigit()</code>:  Returns True if all characters in the string are digits</li>
-<li><code>islower()</code>:  Returns True if all characters in the string are lower case</li>
-<li><code>isnumeric()</code>:    Returns True if all characters in the string are numeric</li>
-<li><code>isspace()</code>:  Returns True if all characters in the string are whitespaces</li>
-<li><code>isupper()</code>:  Returns True if all characters in the string are upper case</li>
+<li><code>isdigit()</code>: Returns True if all characters in the string are digits</li>
+<li><code>islower()</code>: Returns True if all characters in the string are lower case</li>
+<li><code>isnumeric()</code>: Returns True if all characters in the string are numeric</li>
+<li><code>isspace()</code>: Returns True if all characters in the string are whitespaces</li>
+<li><code>isupper()</code>: Returns True if all characters in the string are upper case</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Es un número: </span><span class="si">{</span><span class="s2">&quot;4&quot;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Es un número: </span><span class="si">{</span><span class="s2">&quot;4&quot;</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -816,32 +814,35 @@ Esta en mayúsculas: True
 Son espacios: True
 </code></pre>
 <ul>
-<li>endswith(value)   Returns true if the string ends with the specified value</li>
-<li>title()   Converts the first character of each word to upper case</li>
-<li>find()    Searches the string for a specified value and returns the position of where it was found</li>
-<li>index()   Searches the string for a specified value and returns the position of where it was found</li>
-<li>format()  Formats specified values in a string</li>
-<li>join()    Joins the elements of an iterable to the end of the string</li>
-<li>lstrip()  Returns a left trim version of the string</li>
+<li>endswith(value) Returns true if the string ends with the specified value</li>
+<li>title() Converts the first character of each word to upper case</li>
+<li>find() Searches the string for a specified value and returns the position of where it was found</li>
+<li>index() Searches the string for a specified value and returns the position of where it was found</li>
+<li>format() Formats specified values in a string</li>
+<li>join() Joins the elements of an iterable to the end of the string</li>
+<li>lstrip() Returns a left trim version of the string</li>
 <li>replace() Returns a string where a specified value is replaced with a specified value</li>
-<li>rfind()   Searches the string for a specified value and returns the last position of where it was found</li>
-<li>rindex()  Searches the string for a specified value and returns the last position of where it was found</li>
-<li>rsplit()  Splits the string at the specified separator, and returns a list</li>
-<li>rstrip()  Returns a right trim version of the string</li>
-<li>split()   Splits the string at the specified separator, and returns a list</li>
-<li>splitlines()  Splits the string at line breaks and returns a list</li>
-<li>startswith()  Returns true if the string starts with the specified value</li>
-<li>strip()   Returns a trimmed version of the string</li>
+<li>rfind() Searches the string for a specified value and returns the last position of where it was found</li>
+<li>rindex() Searches the string for a specified value and returns the last position of where it was found</li>
+<li>rsplit() Splits the string at the specified separator, and returns a list</li>
+<li>rstrip() Returns a right trim version of the string</li>
+<li>split() Splits the string at the specified separator, and returns a list</li>
+<li>splitlines() Splits the string at line breaks and returns a list</li>
+<li>startswith() Returns true if the string starts with the specified value</li>
+<li>strip() Returns a trimmed version of the string</li>
 </ul>
-<p>https://www.w3schools.com/python/python_ref_string.asp</p>
+<p><a href="https://www.w3schools.com/python/python_ref_string.asp">https://www.w3schools.com/python/python_ref_string.asp</a></p>
 <hr />
-<p>Realizado por Docente: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
+<p>Realizado por el Instructor: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -865,7 +866,7 @@ Son espacios: True
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../09_1_Modulos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 09 1 Modulos">
+          <a href="../09_Modulos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 9 Módulos">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -875,20 +876,20 @@ Son espacios: True
                 Anterior
               </span>
               <div class="md-ellipsis">
-                09 1 Modulos
+                9 Módulos
               </div>
             </div>
           </a>
         
         
           
-          <a href="../09_Estructura_repeticionr/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 09 Estructura repeticionr">
+          <a href="../11_Colecciones/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 11 Colecciones">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                09 Estructura repeticionr
+                11 Colecciones
               </div>
             </div>
             <div class="md-footer__button md-icon">

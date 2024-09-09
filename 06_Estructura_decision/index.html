@@ -21,12 +21,12 @@
         <link rel="next" href="../07_Operadores_l%C3%B3gicos/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
-        <title>06 Estructura decision - Documentación curso de Python desde Cero</title>
+        <title>6 Decisiones - Documentación curso de Python desde Cero</title>
       
     
     
@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#26-decisiones-if-if-else-elif" class="md-skip">
+        <a href="#6-decisiones-if-if-else-elif" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -98,10 +98,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -118,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              06 Estructura decision
+              6 Decisiones
             
           </span>
         </div>
@@ -131,7 +130,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -141,7 +140,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -195,7 +194,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -231,17 +230,16 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     Documentación curso de Python desde Cero
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -365,7 +363,7 @@
         
   
   <span class="md-ellipsis">
-    05 ingresando dato y como convertirlos
+    5 Ingresando dato y cómo convertirlos
   </span>
   
 
@@ -394,7 +392,7 @@
           
   
   <span class="md-ellipsis">
-    06 Estructura decision
+    6 Decisiones
   </span>
   
 
@@ -405,7 +403,7 @@
         
   
   <span class="md-ellipsis">
-    06 Estructura decision
+    6 Decisiones
   </span>
   
 
@@ -427,73 +425,175 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#261-que-es-una-estructura-de-decision" class="md-nav__link">
+  <a href="#61-que-es-una-estructura-de-decision" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6.1 ¿Qué es una estructura de decisión?
+      6.1 ¿Qué es una estructura de decisión?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#262-estructura-if" class="md-nav__link">
+  <a href="#62-estructura-if" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6.2 Estructura if
+      6.2 Estructura if
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#263-operadores-de-comparacion" class="md-nav__link">
+  <a href="#63-operadores-de-comparacion" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6.3 Operadores de comparación
+      6.3 Operadores de comparación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#264-aplicando-la-estructura-if" class="md-nav__link">
+  <a href="#64-aplicando-la-estructura-if" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6.4 Aplicando la estructura if
+      6.4 Aplicando la estructura if
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#265-estructura-if-else" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.6.5 Estructura if-else
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#265-estructura-elif" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.6.5 Estructura elif
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#555-short-hands" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.5.5 Short Hands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5.5.5 Short Hands">
+    <nav class="md-nav" aria-label="6.4 Aplicando la estructura if">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#5551-short-hands-if" class="md-nav__link">
+  <a href="#ejemplos" class="md-nav__link">
     <span class="md-ellipsis">
-      5.5.5.1 Short Hands If
+      Ejemplos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-realizar-un-programa-que-nos-diga-si-la-edad-de-la-persona-es-mayor-de-edad-o-menor-de-edad" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad**
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-realizar-un-programa-que-nos-diga-si-la-edad-de-la-persona-es-mayor-de-edad-o-menor-de-edad-la-edad-debe-ser-ingresada-desde-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad, la edad debe ser ingresada desde terminal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-estructura-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Estructura if-else
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Estructura if-else">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-realizar-un-programa-que-nos-diga-si-la-edad-de-la-persona-es-mayor-de-edad-o-menor-de-edad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-realizar-una-calculadora-que-pueda-solo-sumar-y-restar-dando-estas-opciones-al-usuario-y-realizando-la-opcion-eligida" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción eligida**
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-estructura-elif" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Estructura elif
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Estructura elif">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-realizar-una-calculadora-que-pueda-solo-sumar-y-restar-dando-estas-opciones-al-usuario-y-realizando-la-opcion-elegida-si-da-un-opcion-que-no-existe-simplemente-termina-el-programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción elegida, si da un opción que no existe, simplemente termina el programa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-realizar-una-calculadora-que-pueda-solo-sumar-y-restar-dando-estas-opciones-al-usuario-y-realizando-la-opcion-elegida-si-da-un-opcion-que-no-existe-indicar-con-un-mensaje-que-la-opcion-no-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción elegida, si da un opcion que no existe indicar con un mensaje que la opción no existe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
     </span>
   </a>
   
@@ -505,9 +605,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#556-anidando-if" class="md-nav__link">
+  <a href="#66-short-hands" class="md-nav__link">
     <span class="md-ellipsis">
-      5.5.6 Anidando if
+      6.6 Short Hands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6 Short Hands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#661-short-hands-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.1 Short Hands If
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-anidando-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7 Anidando if
     </span>
   </a>
   
@@ -532,7 +656,7 @@
         
   
   <span class="md-ellipsis">
-    07 Operadores lógicos
+    7 Operadores lógicos
   </span>
   
 
@@ -548,11 +672,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../08_Estructura_de_Repeticion_-_while/" class="md-nav__link">
+      <a href="../08_Estructuras_de_Repeticion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    08 Estructura de Repeticion   while
+    8 Estructuras de repetición
   </span>
   
 
@@ -568,11 +692,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_1_Modulos/" class="md-nav__link">
+      <a href="../09_Modulos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 1 Modulos
+    9 Módulos
   </span>
   
 
@@ -588,11 +712,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_2_Strings/" class="md-nav__link">
+      <a href="../10_strings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 2 Strings
+    10 Strings
   </span>
   
 
@@ -608,11 +732,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_Estructura_repeticionr/" class="md-nav__link">
+      <a href="../11_Colecciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 Estructura repeticionr
+    11 Colecciones
   </span>
   
 
@@ -628,11 +752,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_Colecciones/" class="md-nav__link">
+      <a href="../12_Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    10 Colecciones
+    12 Funciones
   </span>
   
 
@@ -648,11 +772,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../11_Funciones/" class="md-nav__link">
+      <a href="../13_Archivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    11 Funciones
+    13 Archivos
   </span>
   
 
@@ -668,11 +792,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../12_Archivos/" class="md-nav__link">
+      <a href="../14_errores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    12 Archivos
+    14 Errores
   </span>
   
 
@@ -708,73 +832,175 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#261-que-es-una-estructura-de-decision" class="md-nav__link">
+  <a href="#61-que-es-una-estructura-de-decision" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6.1 ¿Qué es una estructura de decisión?
+      6.1 ¿Qué es una estructura de decisión?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#262-estructura-if" class="md-nav__link">
+  <a href="#62-estructura-if" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6.2 Estructura if
+      6.2 Estructura if
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#263-operadores-de-comparacion" class="md-nav__link">
+  <a href="#63-operadores-de-comparacion" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6.3 Operadores de comparación
+      6.3 Operadores de comparación
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#264-aplicando-la-estructura-if" class="md-nav__link">
+  <a href="#64-aplicando-la-estructura-if" class="md-nav__link">
     <span class="md-ellipsis">
-      2.6.4 Aplicando la estructura if
+      6.4 Aplicando la estructura if
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#265-estructura-if-else" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.6.5 Estructura if-else
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#265-estructura-elif" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.6.5 Estructura elif
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#555-short-hands" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.5.5 Short Hands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5.5.5 Short Hands">
+    <nav class="md-nav" aria-label="6.4 Aplicando la estructura if">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#5551-short-hands-if" class="md-nav__link">
+  <a href="#ejemplos" class="md-nav__link">
     <span class="md-ellipsis">
-      5.5.5.1 Short Hands If
+      Ejemplos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-realizar-un-programa-que-nos-diga-si-la-edad-de-la-persona-es-mayor-de-edad-o-menor-de-edad" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad**
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-realizar-un-programa-que-nos-diga-si-la-edad-de-la-persona-es-mayor-de-edad-o-menor-de-edad-la-edad-debe-ser-ingresada-desde-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad, la edad debe ser ingresada desde terminal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-estructura-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Estructura if-else
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Estructura if-else">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-realizar-un-programa-que-nos-diga-si-la-edad-de-la-persona-es-mayor-de-edad-o-menor-de-edad_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-realizar-una-calculadora-que-pueda-solo-sumar-y-restar-dando-estas-opciones-al-usuario-y-realizando-la-opcion-eligida" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción eligida**
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-estructura-elif" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Estructura elif
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Estructura elif">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-realizar-una-calculadora-que-pueda-solo-sumar-y-restar-dando-estas-opciones-al-usuario-y-realizando-la-opcion-elegida-si-da-un-opcion-que-no-existe-simplemente-termina-el-programa" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción elegida, si da un opción que no existe, simplemente termina el programa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-realizar-una-calculadora-que-pueda-solo-sumar-y-restar-dando-estas-opciones-al-usuario-y-realizando-la-opcion-elegida-si-da-un-opcion-que-no-existe-indicar-con-un-mensaje-que-la-opcion-no-existe" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción elegida, si da un opcion que no existe indicar con un mensaje que la opción no existe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
     </span>
   </a>
   
@@ -786,9 +1012,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#556-anidando-if" class="md-nav__link">
+  <a href="#66-short-hands" class="md-nav__link">
     <span class="md-ellipsis">
-      5.5.6 Anidando if
+      6.6 Short Hands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6 Short Hands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#661-short-hands-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.1 Short Hands If
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-anidando-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7 Anidando if
     </span>
   </a>
   
@@ -810,17 +1060,17 @@
 
 
 <p><img alt="banner" src="../assets/banner.png" /></p>
-<h1 id="26-decisiones-if-if-else-elif">2.6 Decisiones  <code>if</code> <code>if-else</code> <code>elif</code></h1>
-<h2 id="261-que-es-una-estructura-de-decision">2.6.1 ¿Qué es una estructura de decisión?</h2>
+<h1 id="6-decisiones-if-if-else-elif">6. Decisiones  <code>if</code> <code>if-else</code> <code>elif</code></h1>
+<h2 id="61-que-es-una-estructura-de-decision">6.1 ¿Qué es una estructura de decisión?</h2>
 <p>Dentro de la programación tenemos una estructura que nos ayuda a poder tomar decisiones con base a una comparación y de esta manera poder tomar un camino o tomar otro. Es una sentencias <code>IF</code>s la cual no ayuda a tomar la ruta que necesitemos</p>
-<h2 id="262-estructura-if">2.6.2 Estructura <code>if</code></h2>
-<p>Python la única referencia que ocupa es la <strong>identación</strong>, sean <code>espacios</code> o <code>tabs</code> y dos puntos <code>:</code> para indicar que comienza un bloque nuevo, en este caso una sentencia <code>if</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">comparacion_verdadera</span> <span class="p">:</span>
+<h2 id="62-estructura-if">6.2 Estructura <code>if</code></h2>
+<p>Python la única referencia que ocupa es la <strong>indentación</strong>, sean <code>espacios</code> o <code>tabs</code> y dos puntos <code>:</code> para indicar que comienza un bloque nuevo, en este caso una sentencia <code>if</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">comparación_verdadera</span> <span class="p">:</span>
     <span class="n">código</span> <span class="n">que</span> <span class="n">ejecuta</span> <span class="n">si</span> <span class="n">es</span> <span class="n">verdadero</span>
     <span class="n">más</span> <span class="n">código</span>
     <span class="o">...</span>
 </code></pre></div>
-<h2 id="263-operadores-de-comparacion">2.6.3 Operadores de comparación</h2>
+<h2 id="63-operadores-de-comparacion">6.3 Operadores de comparación</h2>
 <table>
 <thead>
 <tr>
@@ -862,41 +1112,43 @@
 </tr>
 </tbody>
 </table>
-<p><em>Nota: No puede existir espacio en el símbolo</em></p>
-<h2 id="264-aplicando-la-estructura-if">2.6.4 Aplicando la estructura <code>if</code></h2>
-<p>Vamos a realizar el primer ejemplo:</p>
-<p><strong>1. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad</strong></p>
+<blockquote>
+<p>📝 <em><strong>Nota</strong>: No puede existir espacio en el símbolo</em></p>
+</blockquote>
+<h2 id="64-aplicando-la-estructura-if">6.4 Aplicando la estructura <code>if</code></h2>
+<h3 id="ejemplos">Ejemplos</h3>
+<h4 id="1-realizar-un-programa-que-nos-diga-si-la-edad-de-la-persona-es-mayor-de-edad-o-menor-de-edad">1. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad**</h4>
 <p>Debemos comparar la edad para saber si es mayor o no, primero verificamos si es mayor de edad, en caso de que no sea así, el programa sigue y pregunta si es menor de edad, en caso de que sea verdadero, entra y da el mensaje correspondiente.</p>
 <div class="highlight"><pre><span></span><code><span class="n">edad</span> <span class="o">=</span> <span class="mi">19</span> <span class="c1">#Declaramos una variable donde guardaremos la edad y asignamos el valor de 18</span>
 
-<span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>  <span class="c1"># recordemos que se hace una comparacion y despues los dos puntos (:)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es mayor de edad&quot;</span><span class="p">)</span>   <span class="c1">#Recordemos que se debe aplicar una identacion</span>
+<span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>  <span class="c1"># recordemos que se hace una comparación y después los dos puntos (:)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es mayor de edad&quot;</span><span class="p">)</span>   <span class="c1">#Recordemos que se debe aplicar una indentación</span>
 
-<span class="k">if</span> <span class="n">edad</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>    <span class="c1"># recordemos que se hace una comparacion y despues los dos puntos (:)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es menor de edad&quot;</span><span class="p">)</span> <span class="c1">#Recordemos que se debe aplicar una identacion</span>
+<span class="k">if</span> <span class="n">edad</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>    <span class="c1"># recordemos que se hace una comparación y después los dos puntos (:)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es menor de edad&quot;</span><span class="p">)</span> <span class="c1">#Recordemos que se debe aplicar una indentación</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fin del programa&quot;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>Es mayor de edad
-fin del programa
-</code></pre>
-<p><strong>2. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad, la edad debe ser ingreasada desde terminal</strong></p>
-<p>Debemos primero perdir la edad, una vez guardada debemos comparar la edad para saber si es mayor o no, primero verificamos si es mayor de edad, en caso de que no sea así, el programa sigue y pregunta si es menor de edad, en caso de que sea verdadero, entra y da el mensaje correspondiente.</p>
+<div class="highlight"><pre><span></span><code>    Es mayor de edad
+    fin del programa
+</code></pre></div>
+<h4 id="2-realizar-un-programa-que-nos-diga-si-la-edad-de-la-persona-es-mayor-de-edad-o-menor-de-edad-la-edad-debe-ser-ingresada-desde-terminal">2. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad, la edad debe ser ingresada desde terminal</h4>
+<p>Debemos primero pedir la edad, una vez guardada debemos comparar la edad para saber si es mayor o no, primero verificamos si es mayor de edad, en caso de que no sea así, el programa sigue y pregunta si es menor de edad, en caso de que sea verdadero, entra y da el mensaje correspondiente.</p>
 <div class="highlight"><pre><span></span><code><span class="n">edad</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dar edad: &quot;</span><span class="p">)</span> <span class="c1">#Pedimos el dato al usuario, este dato es tipo str</span>
 <span class="n">edad_int</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>       <span class="c1">#la edad esta en tipo str, lo convertimos a int para poder realizar la comparación</span>
 
-<span class="k">if</span> <span class="n">edad_int</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>  <span class="c1"># recordemos que se hace una comparacion y despues los dos puntos (:)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">)</span>   <span class="c1">#Recordemos que se debe aplicar una identacion</span>
+<span class="k">if</span> <span class="n">edad_int</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>  <span class="c1"># recordemos que se hace una  comparación y después los dos puntos (:)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres mayor de edad&quot;</span><span class="p">)</span>   <span class="c1">#Recordemos que se debe aplicar una indentación</span>
 
-<span class="k">if</span> <span class="n">edad_int</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>    <span class="c1"># recordemos que se hace una comparacion y despues los dos puntos (:)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">)</span> <span class="c1">#Recordemos que se debe aplicar una identacion</span>
+<span class="k">if</span> <span class="n">edad_int</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>    <span class="c1"># recordemos que se hace una comparación y después los dos puntos (:)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eres menor de edad&quot;</span><span class="p">)</span> <span class="c1">#Recordemos que se debe aplicar una indentación</span>
 </code></pre></div>
-<pre><code>Dar edad: 20
-Eres mayor de edad
-</code></pre>
-<h2 id="265-estructura-if-else">2.6.5 Estructura <code>if-else</code></h2>
+<div class="highlight"><pre><span></span><code>    Dar edad: 20
+    Eres mayor de edad
+</code></pre></div>
+<h2 id="65-estructura-if-else">6.5 Estructura <code>if-else</code></h2>
 <p>En ocasiones necesitamos que nuestro programa tome una de las 2 rutas posibles, pero aquí en caso que no se cumpla la comparación entra al otro bloque si o si. Esta estructura es un <code>if-else</code>, <em>si se cumple la condición, realizo la acción, de lo contrario hago otra</em></p>
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">comparacion_verdadera</span> <span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">comparación_verdadera</span> <span class="p">:</span>
     <span class="n">código</span> <span class="n">que</span> <span class="n">ejecuta</span> <span class="n">si</span> <span class="n">es</span> <span class="n">verdadero</span>
     <span class="n">más</span> <span class="n">código</span>
     <span class="o">...</span>
@@ -905,22 +1157,22 @@ Eres mayor de edad
     <span class="n">más</span> <span class="n">código</span>
     <span class="o">...</span>
 </code></pre></div>
-<p>Vamos a realizar el primer ejemplo:</p>
-<p><strong>3. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad</strong></p>
-<p><em>Volveremos a realizar el mismo ejemplo, pero si nos damos cuenta en este ejercicio, si no es el primer caso debe ser el segundo, no tenemos otro ruta o alguna otra decisión.</em></p>
+<h3 id="ejemplo">Ejemplo</h3>
+<h4 id="1-realizar-un-programa-que-nos-diga-si-la-edad-de-la-persona-es-mayor-de-edad-o-menor-de-edad_1">1. Realizar un programa que nos diga si la edad de la persona es mayor de edad o menor de edad</h4>
+<p><em>Volveremos a realizar el mismo ejemplo, pero si nos damos cuenta en este ejercicio, si no es el primer caso debe ser el segundo, no tenemos otro ruta o algúna otra decisión.</em></p>
 <div class="highlight"><pre><span></span><code><span class="n">edad</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dar la edad: &quot;</span><span class="p">))</span> <span class="c1"># Tomamos el dato y directamente la conversion de str a int</span>
 
-<span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>  <span class="c1"># recordemos que se hace una comparacion y despues los dos puntos (:)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es mayor de edad&quot;</span><span class="p">)</span>   <span class="c1">#Recordemos que se debe aplicar una identacion</span>
-<span class="k">else</span><span class="p">:</span>           <span class="c1">#aplicamos la palabra reservada else y sus dos puntos, esta sección siempre se ejucatará siempre que no se cumpla la condición inicial</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es menor de edad&quot;</span><span class="p">)</span> <span class="c1">#Recordemos que se debe aplicar una identacion</span>
+<span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>  <span class="c1"># recordemos que se hace una comparación y después los dos puntos (:)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es mayor de edad&quot;</span><span class="p">)</span>   <span class="c1">#Recordemos que se debe aplicar una indentación</span>
+<span class="k">else</span><span class="p">:</span>           <span class="c1">#aplicamos la palabra reservada else y sus dos puntos, esta sección siempre se ejecutará siempre que no se cumpla la condición inicial</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Es menor de edad&quot;</span><span class="p">)</span> <span class="c1">#Recordemos que se debe aplicar una indentación</span>
 </code></pre></div>
-<pre><code>Dar la edad: 15
-Es menor de edad
-</code></pre>
-<p><strong>4. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción eligida</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Damos el menu y guardamos la opcion del usuario</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calcualdora de Suma y Resta&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>    Dar la edad: 15
+    Es menor de edad
+</code></pre></div>
+<h4 id="2-realizar-una-calculadora-que-pueda-solo-sumar-y-restar-dando-estas-opciones-al-usuario-y-realizando-la-opcion-eligida">2. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción eligida**</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Damos el menu y guardamos la opción del usuario</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calculadora de Suma y Resta&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1) Suma&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2) Resta&quot;</span><span class="p">)</span>
 <span class="n">opcion</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
@@ -938,18 +1190,18 @@ Es menor de edad
     <span class="n">resta</span> <span class="o">=</span> <span class="n">valor_1</span> <span class="o">-</span> <span class="n">valor_2</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La resta es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">resta</span><span class="p">))</span>
 </code></pre></div>
-<pre><code>Calcualdora de Suma y Resta
-1) Suma
-2) Resta
-2
-====== RESTA =======
-Dar valor 1: 5
-Dar valor 2: 6
-La resta es: -1
-</code></pre>
-<h2 id="265-estructura-elif">2.6.5 Estructura <code>elif</code></h2>
-<p>En ocasiones necesitamos verificar varias opciones y en alguna tiene que encajar o por ultimas terminar en una opción. Para esto tenemos que combinar muchos <code>if</code> con su <code>else</code>, para ello tenemos el siguiente operador, el cual nos ayuda a hacerlo de manera corta y fácil de leer.
-Para esto siempre debemos realizar una comparación si entra en ese bloque o va al siguiente, y por ultimo si no coincide con alguna, termina en un bloque por <em>default</em>.</p>
+<div class="highlight"><pre><span></span><code>    Calculadora de Suma y Resta
+    1) Suma
+    2) Resta
+    2
+    ====== RESTA =======
+    Dar valor 1: 5
+    Dar valor 2: 6
+    La resta es: -1
+</code></pre></div>
+<h2 id="65-estructura-elif">6.5 Estructura <code>elif</code></h2>
+<p>En ocasiones necesitamos verificar varias opciones y en algúna tiene que encajar o por ultimas terminar en una opción. Para esto tenemos que combinar muchos <code>if</code> con su <code>else</code>, para ello tenemos el siguiente operador, el cual nos ayuda a hacerlo de manera corta y fácil de leer.
+Para esto siempre debemos realizar una comparación si entra en ese bloque o va al siguiente, y por ultimo si no coincide con algúna, termina en un bloque por <em>default</em>.</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">comparacion_verdadera</span> <span class="p">:</span>
     <span class="n">código</span> <span class="n">que</span> <span class="n">ejecuta</span> <span class="n">si</span> <span class="n">es</span> <span class="n">verdadero</span>
     <span class="n">más</span> <span class="n">código</span>
@@ -967,10 +1219,11 @@ Para esto siempre debemos realizar una comparación si entra en ese bloque o va 
     <span class="n">más</span> <span class="n">código</span>
     <span class="o">...</span>
 </code></pre></div>
-<p><strong>4. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción eligida, si da un opcion que no existe, simplemente termina el programa</strong></p>
+<h3 id="ejemplo_1">Ejemplo</h3>
+<h4 id="1-realizar-una-calculadora-que-pueda-solo-sumar-y-restar-dando-estas-opciones-al-usuario-y-realizando-la-opcion-elegida-si-da-un-opcion-que-no-existe-simplemente-termina-el-programa">1. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción elegida, si da un opción que no existe, simplemente termina el programa</h4>
 <p>En esta ocasión si el usuario no da una opción que no existe, terminamos el programa sin indicar nada</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Damos el menu y guardamos la opcion del usuario</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calcualdora de Suma y Resta&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Damos el menu y guardamos la opción del usuario</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calculadora de Suma y Resta&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1) Suma&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2) Resta&quot;</span><span class="p">)</span>
 <span class="n">opcion</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
@@ -992,20 +1245,20 @@ Para esto siempre debemos realizar una comparación si entra en ese bloque o va 
 <span class="k">elif</span> <span class="n">opcion</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Saliendo del programa&#39;</span><span class="p">)</span>
 
-<span class="c1">#    Dont Repeat Yourself -&gt; No repitas a ti mismo</span>
+<span class="c1">#    Don&#39;t Repeat Yourself -&gt; No repitas a ti mismo</span>
 </code></pre></div>
-<pre><code>Calcualdora de Suma y Resta
-1) Suma
-2) Resta
-2
-====== RESTA =======
-Dar valor 1: 5
-Dar valor 2: 2
-La resta es: 3
-</code></pre>
-<p><strong>5. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción eligida, si da un opcion que no existe indicar con un mensaje que la opción no existe</strong></p>
+<div class="highlight"><pre><span></span><code>    Calculadora de Suma y Resta
+    1) Suma
+    2) Resta
+    2
+    ====== RESTA =======
+    Dar valor 1: 5
+    Dar valor 2: 2
+    La resta es: 3
+</code></pre></div>
+<h4 id="2-realizar-una-calculadora-que-pueda-solo-sumar-y-restar-dando-estas-opciones-al-usuario-y-realizando-la-opcion-elegida-si-da-un-opcion-que-no-existe-indicar-con-un-mensaje-que-la-opcion-no-existe">2. Realizar una calculadora que pueda solo sumar y restar, dando estas opciones al usuario y realizando la opción elegida, si da un opcion que no existe indicar con un mensaje que la opción no existe</h4>
 <div class="highlight"><pre><span></span><code><span class="c1"># Damos el menu y guardamos la opcion del usuario</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calcualdora de Suma y Resta&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Calculadora de Suma y Resta&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1) Suma&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2) Resta&quot;</span><span class="p">)</span>
 <span class="n">opcion</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
@@ -1023,23 +1276,23 @@ La resta es: 3
     <span class="n">resta</span> <span class="o">=</span> <span class="n">valor_1</span> <span class="o">-</span> <span class="n">valor_2</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La resta es: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">resta</span><span class="p">))</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Opcion no existe&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Opción no existe&quot;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>Calcualdora de Suma y Resta
-1) Suma
-2) Resta
-2
-====== RESTA =======
-Dar valor 1: 65
-Dar valor 2: 5
-La resta es: 60
-</code></pre>
-<p><strong>Ejercicios:</strong></p>
+<div class="highlight"><pre><span></span><code>    Calculadora de Suma y Resta
+    1) Suma
+    2) Resta
+    2
+    ====== RESTA =======
+    Dar valor 1: 65
+    Dar valor 2: 5
+    La resta es: 60
+</code></pre></div>
+<h3 id="ejercicios">Ejercicios</h3>
 <ol>
-<li>Hacer la calculadora de area y perimetro de un cuadrado, las opciones son calcular el area y el perimetro del del cuadrado, si da una opcion que no existe, indicar con un mensaje que la "opcion no existe".</li>
+<li>Hacer la calculadora de area y perímetro de un cuadrado, las opciones son calcular el area y el perímetro del del cuadrado, si da una opcion que no existe, indicar con un mensaje que la "opcion no existe".</li>
 </ol>
-<h2 id="555-short-hands">5.5.5 Short Hands</h2>
-<h3 id="5551-short-hands-if">5.5.5.1 Short Hands If</h3>
+<h2 id="66-short-hands">6.6 Short Hands</h2>
+<h3 id="661-short-hands-if">6.6.1 Short Hands If</h3>
 <p>Existe una versión corta cuando si la condición se cumple entra a hacer una cosa y termina.</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">condicion_verdadera</span><span class="p">:</span> <span class="n">una_acción_a_realizar</span>
 </code></pre></div>
@@ -1048,31 +1301,34 @@ La resta es: 60
 
 <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a es mas grande que b&quot;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>a es mas grande que b
-</code></pre>
-<h2 id="556-anidando-if">5.5.6 Anidando <code>if</code></h2>
+<div class="highlight"><pre><span></span><code>    a es mas grande que b
+</code></pre></div>
+<h2 id="67-anidando-if">6.7 Anidando <code>if</code></h2>
 <p>Podemos meter <code>if</code> dentro de otro <code>if</code>, no hay limites de anidamiento. Se pueden utilizar la cantidad de <code>if</code> que sean necesarios. Esta acción se llama <code>ifs anidados</code></p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dar un numero&quot;</span><span class="p">))</span>
 
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mayor a 10&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tambien mayor 20!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;también mayor 20!&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pero menor a 20.&quot;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>Dar un numero25
+<div class="highlight"><pre><span></span><code>Dar un numero25
 Mayor a 10
-Tambien mayor 20!
-</code></pre>
+también mayor 20!
+</code></pre></div>
 <hr />
-<p>Realizado por Docente: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
+<p>Realizado por el Instructor: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1096,7 +1352,7 @@ Tambien mayor 20!
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../05_ingresando_dato_y_como_convertirlos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 05 ingresando dato y como convertirlos">
+          <a href="../05_ingresando_dato_y_como_convertirlos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 5 Ingresando dato y cómo convertirlos">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1106,20 +1362,20 @@ Tambien mayor 20!
                 Anterior
               </span>
               <div class="md-ellipsis">
-                05 ingresando dato y como convertirlos
+                5 Ingresando dato y cómo convertirlos
               </div>
             </div>
           </a>
         
         
           
-          <a href="../07_Operadores_l%C3%B3gicos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 07 Operadores lógicos">
+          <a href="../07_Operadores_l%C3%B3gicos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 7 Operadores lógicos">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                07 Operadores lógicos
+                7 Operadores lógicos
               </div>
             </div>
             <div class="md-footer__button md-icon">

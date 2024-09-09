@@ -12,21 +12,21 @@
         <meta name="author" content="Alejandro Leyva">
       
       
-        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/10_Colecciones/">
+        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/11_Colecciones/">
       
       
-        <link rel="prev" href="../09_Estructura_repeticionr/">
+        <link rel="prev" href="../10_strings/">
       
       
-        <link rel="next" href="../11_Funciones/">
+        <link rel="next" href="../12_Funciones/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
-        <title>10 Colecciones - Documentación curso de Python desde Cero</title>
+        <title>11 Colecciones - Documentación curso de Python desde Cero</title>
       
     
     
@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#210-colecciones" class="md-skip">
+        <a href="#11-colecciones" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -98,10 +98,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -118,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 Colecciones
+              11 Colecciones
             
           </span>
         </div>
@@ -131,7 +130,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -141,7 +140,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -195,7 +194,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -231,17 +230,16 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     Documentación curso de Python desde Cero
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -365,7 +363,7 @@
         
   
   <span class="md-ellipsis">
-    05 ingresando dato y como convertirlos
+    5 Ingresando dato y cómo convertirlos
   </span>
   
 
@@ -385,7 +383,7 @@
         
   
   <span class="md-ellipsis">
-    06 Estructura decision
+    6 Decisiones
   </span>
   
 
@@ -405,7 +403,7 @@
         
   
   <span class="md-ellipsis">
-    07 Operadores lógicos
+    7 Operadores lógicos
   </span>
   
 
@@ -421,11 +419,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../08_Estructura_de_Repeticion_-_while/" class="md-nav__link">
+      <a href="../08_Estructuras_de_Repeticion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    08 Estructura de Repeticion   while
+    8 Estructuras de repetición
   </span>
   
 
@@ -441,11 +439,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_1_Modulos/" class="md-nav__link">
+      <a href="../09_Modulos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 1 Modulos
+    9 Módulos
   </span>
   
 
@@ -461,31 +459,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_2_Strings/" class="md-nav__link">
+      <a href="../10_strings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 2 Strings
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../09_Estructura_repeticionr/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    09 Estructura repeticionr
+    10 Strings
   </span>
   
 
@@ -514,7 +492,7 @@
           
   
   <span class="md-ellipsis">
-    10 Colecciones
+    11 Colecciones
   </span>
   
 
@@ -525,7 +503,7 @@
         
   
   <span class="md-ellipsis">
-    10 Colecciones
+    11 Colecciones
   </span>
   
 
@@ -684,11 +662,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../11_Funciones/" class="md-nav__link">
+      <a href="../12_Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    11 Funciones
+    12 Funciones
   </span>
   
 
@@ -704,11 +682,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../12_Archivos/" class="md-nav__link">
+      <a href="../13_Archivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    12 Archivos
+    13 Archivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_errores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14 Errores
   </span>
   
 
@@ -881,8 +879,8 @@
                   
 
 
-<p><img alt="banner" src="logo/banner.png" /></p>
-<h1 id="210-colecciones">2.10 Colecciones</h1>
+<p><img alt="banner" src="../assets/banner.png" /></p>
+<h1 id="11-colecciones">11 Colecciones</h1>
 <p>Dentro de los lenguajes de programación hay tipos datos que son estructuras que pueden contener más de un dato, a comparación de los tipos de datos básicos, estas estructuras pueden contener muchos de esos datos básicos en su interior. Podrías decir que es una base de datos, pero esta solo existe mientras está la aplicación en ejecución, los datos son temporales. Las colecciones pueden contener cualquier tipo de dato, incluso mas colecciones.</p>
 <p>En python son los siguientes:</p>
 <ul>
@@ -1008,16 +1006,16 @@ TypeError: 'tuple' object doesn't support item deletion
 <h3 id="21021-funciones-de-las-listas">2.10.2.1 Funciones de las listas</h3>
 <p>Las lista son un objeto, por lo tanto cuenta con diversos metodos los cuales nos ayudan a interactuar con ellos:</p>
 <ul>
-<li><code>append(element)</code>:    Adds an element at the end of the list</li>
-<li><code>clear()</code>:    Removes all the elements from the list</li>
+<li><code>append(element)</code>: Adds an element at the end of the list</li>
+<li><code>clear()</code>: Removes all the elements from the list</li>
 <li><code>copy()</code>: Returns a copy of the list</li>
 <li><code>count(element)</code>: Returns the number of elements with the specified value</li>
-<li><code>extend(list)</code>:   Add the elements of a list (or any iterable), to the end of the current list</li>
-<li><code>index(element[,start[,end]])</code>:   Returns the index of the first element with the specified value</li>
-<li><code>insert(position, element)</code>:  Adds an element at the specified position</li>
-<li><code>pop([index])</code>:   Removes the element at the specified position</li>
-<li><code>remove(element)</code>:    Removes the first item with the specified value</li>
-<li><code>reverse()</code>:  Reverses the order of the list</li>
+<li><code>extend(list)</code>: Add the elements of a list (or any iterable), to the end of the current list</li>
+<li><code>index(element[,start[,end]])</code>: Returns the index of the first element with the specified value</li>
+<li><code>insert(position, element)</code>: Adds an element at the specified position</li>
+<li><code>pop([index])</code>: Removes the element at the specified position</li>
+<li><code>remove(element)</code>: Removes the first item with the specified value</li>
+<li><code>reverse()</code>: Reverses the order of the list</li>
 <li><code>sort()</code>: Sorts the list</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># Declaro una lista con unas materias</span>
@@ -1159,7 +1157,7 @@ El valor minimo: 1
 </li>
 </ol>
 <h2 id="eliminando-elementos-de-la-lista-del">Eliminando elementos de la lista <code>del</code></h2>
-<p>Cuando queremos eliminar algun elemento de una coleccion se usa la palabra reservada <code>del</code> junto a la posicion del elemento a eliminar.</p>
+<p>Cuando queremos eliminar algún elemento de una coleccion se usa la palabra reservada <code>del</code> junto a la posicion del elemento a eliminar.</p>
 <p><strong>Sintaxis</strong></p>
 <ul>
 <li><code>del coleccion[posicion|key]</code></li>
@@ -1251,8 +1249,8 @@ Una de las especialidades es: electricidad
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cual es tu hobby?&#39;</span><span class="p">)</span>
 <span class="n">hobby</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Wow!!!! que conincidencia, a mi tambien me encanta </span><span class="si">{</span><span class="n">hobby</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Te cuento que tambien me gusta mucho </span><span class="si">{</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">hobbies</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Wow!!!! que conincidencia, a mi también me encanta </span><span class="si">{</span><span class="n">hobby</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Te cuento que también me gusta mucho </span><span class="si">{</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">hobbies</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div>
 <pre><code>Hola, me llamo BotPy
 Cual es tu nombre
@@ -1441,13 +1439,16 @@ La posicion de bolbasor es 1
 La posicion de charizard es 2
 </code></pre>
 <hr />
-<p>Realizado por Docente: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
+<p>Realizado por el Instructor: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -1471,7 +1472,7 @@ La posicion de charizard es 2
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../09_Estructura_repeticionr/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 09 Estructura repeticionr">
+          <a href="../10_strings/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 10 Strings">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1481,20 +1482,20 @@ La posicion de charizard es 2
                 Anterior
               </span>
               <div class="md-ellipsis">
-                09 Estructura repeticionr
+                10 Strings
               </div>
             </div>
           </a>
         
         
           
-          <a href="../11_Funciones/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 11 Funciones">
+          <a href="../12_Funciones/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 12 Funciones">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                11 Funciones
+                12 Funciones
               </div>
             </div>
             <div class="md-footer__button md-icon">

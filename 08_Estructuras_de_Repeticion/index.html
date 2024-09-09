@@ -12,21 +12,21 @@
         <meta name="author" content="Alejandro Leyva">
       
       
-        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/08_Estructura_de_Repeticion_-_while/">
+        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/08_Estructuras_de_Repeticion/">
       
       
         <link rel="prev" href="../07_Operadores_l%C3%B3gicos/">
       
       
-        <link rel="next" href="../09_1_Modulos/">
+        <link rel="next" href="../09_Modulos/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
-        <title>08 Estructura de Repeticion while - Documentación curso de Python desde Cero</title>
+        <title>8 Estructuras de repetición - Documentación curso de Python desde Cero</title>
       
     
     
@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#28-estructura-de-repeticion-while" class="md-skip">
+        <a href="#8-estructuras-de-repeticion" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -98,10 +98,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -118,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              08 Estructura de Repeticion   while
+              8 Estructuras de repetición
             
           </span>
         </div>
@@ -131,7 +130,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -141,7 +140,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -195,7 +194,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -231,17 +230,16 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     Documentación curso de Python desde Cero
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -365,7 +363,7 @@
         
   
   <span class="md-ellipsis">
-    05 ingresando dato y como convertirlos
+    5 Ingresando dato y cómo convertirlos
   </span>
   
 
@@ -385,7 +383,7 @@
         
   
   <span class="md-ellipsis">
-    06 Estructura decision
+    6 Decisiones
   </span>
   
 
@@ -405,7 +403,7 @@
         
   
   <span class="md-ellipsis">
-    07 Operadores lógicos
+    7 Operadores lógicos
   </span>
   
 
@@ -434,7 +432,7 @@
           
   
   <span class="md-ellipsis">
-    08 Estructura de Repeticion   while
+    8 Estructuras de repetición
   </span>
   
 
@@ -445,7 +443,7 @@
         
   
   <span class="md-ellipsis">
-    08 Estructura de Repeticion   while
+    8 Estructuras de repetición
   </span>
   
 
@@ -467,19 +465,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#281-estructura-while" class="md-nav__link">
+  <a href="#81-estructura-de-repeticion-while" class="md-nav__link">
     <span class="md-ellipsis">
-      2.8.1 Estructura while
+      8.1 Estructura de repetición while
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.8.1 Estructura while">
+    <nav class="md-nav" aria-label="8.1 Estructura de repetición while">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#2811-ejemplo" class="md-nav__link">
+  <a href="#811-estructura-while" class="md-nav__link">
     <span class="md-ellipsis">
-      2.8.1.1 Ejemplo
+      8.1.1 Estructura while
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1.1 Estructura while">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos
     </span>
   </a>
   
@@ -488,7 +496,21 @@
           <li class="md-nav__item">
   <a href="#ejercicios" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicios:
+      Ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#812-continue-y-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1.2 Continue y Break
     </span>
   </a>
   
@@ -500,11 +522,83 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#282-continue-y-break" class="md-nav__link">
+  <a href="#82-estructura-de-repeticion-for" class="md-nav__link">
     <span class="md-ellipsis">
-      2.8.2 Continue y Break
+      8.2 Estructura de repetición for
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="8.2 Estructura de repetición for">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcion-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función range()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Función range()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parámetros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-solicitar-3-calificaciones-del-parcial-y-calcular-el-promedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Solicitar 3 calificaciones del parcial y calcular el promedio**
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-y-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Break y Continue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -523,11 +617,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_1_Modulos/" class="md-nav__link">
+      <a href="../09_Modulos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 1 Modulos
+    9 Módulos
   </span>
   
 
@@ -543,11 +637,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_2_Strings/" class="md-nav__link">
+      <a href="../10_strings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 2 Strings
+    10 Strings
   </span>
   
 
@@ -563,11 +657,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_Estructura_repeticionr/" class="md-nav__link">
+      <a href="../11_Colecciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 Estructura repeticionr
+    11 Colecciones
   </span>
   
 
@@ -583,11 +677,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_Colecciones/" class="md-nav__link">
+      <a href="../12_Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    10 Colecciones
+    12 Funciones
   </span>
   
 
@@ -603,11 +697,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../11_Funciones/" class="md-nav__link">
+      <a href="../13_Archivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    11 Funciones
+    13 Archivos
   </span>
   
 
@@ -623,11 +717,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../12_Archivos/" class="md-nav__link">
+      <a href="../14_errores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    12 Archivos
+    14 Errores
   </span>
   
 
@@ -663,19 +757,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#281-estructura-while" class="md-nav__link">
+  <a href="#81-estructura-de-repeticion-while" class="md-nav__link">
     <span class="md-ellipsis">
-      2.8.1 Estructura while
+      8.1 Estructura de repetición while
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.8.1 Estructura while">
+    <nav class="md-nav" aria-label="8.1 Estructura de repetición while">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#2811-ejemplo" class="md-nav__link">
+  <a href="#811-estructura-while" class="md-nav__link">
     <span class="md-ellipsis">
-      2.8.1.1 Ejemplo
+      8.1.1 Estructura while
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.1.1 Estructura while">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos
     </span>
   </a>
   
@@ -684,7 +788,21 @@
           <li class="md-nav__item">
   <a href="#ejercicios" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicios:
+      Ejercicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#812-continue-y-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1.2 Continue y Break
     </span>
   </a>
   
@@ -696,11 +814,83 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#282-continue-y-break" class="md-nav__link">
+  <a href="#82-estructura-de-repeticion-for" class="md-nav__link">
     <span class="md-ellipsis">
-      2.8.2 Continue y Break
+      8.2 Estructura de repetición for
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="8.2 Estructura de repetición for">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcion-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      Función range()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Función range()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parámetros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-solicitar-3-calificaciones-del-parcial-y-calcular-el-promedio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Solicitar 3 calificaciones del parcial y calcular el promedio**
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-y-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Break y Continue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -720,9 +910,10 @@
 
 
 <p><img alt="banner" src="../assets/banner.png" /></p>
-<h1 id="28-estructura-de-repeticion-while">2.8 Estructura de repetición <code>while</code></h1>
-<p>Dentro de la programación tenemos estructuras de control para repetir acciones. Hay 2 estructuras que podemos utilizar, los ciclos son <code>while</code>,  <code>for</code>; este ultimo se verá en otro cápitulo.</p>
-<h2 id="281-estructura-while">2.8.1 Estructura <code>while</code></h2>
+<h1 id="8-estructuras-de-repeticion">8 Estructuras de repetición</h1>
+<h2 id="81-estructura-de-repeticion-while">8.1 Estructura de repetición <code>while</code></h2>
+<p>Dentro de la programación tenemos estructuras de control para repetir acciones. Hay 2 estructuras que podemos utilizar, los ciclos son <code>while</code>,  <code>for</code>; este ultimo se verá en otro capitulo.</p>
+<h3 id="811-estructura-while">8.1.1 Estructura <code>while</code></h3>
 <p>La sintaxis de la estructura <code>while</code> es muy sencilla; es la siguiente:</p>
 <div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condicion_verdadera</span><span class="p">:</span>
     <span class="n">línea</span> <span class="n">de</span> <span class="n">código</span>
@@ -730,9 +921,9 @@
     <span class="n">línea</span> <span class="n">de</span> <span class="n">código</span>
     <span class="o">...</span>
 </code></pre></div>
-<p>La forma de leerla es: <strong>mientras la condición se cumpla seguira dentro del ciclo</strong>.</p>
+<p>La forma de leerla es: <strong>mientras la condición se cumpla seguirá dentro del ciclo</strong>.</p>
 <p><em>Lo que tiene esta estructura es que al momento de preguntar por primera vez, sino cumple la condición no entra al ciclo.</em></p>
-<h3 id="2811-ejemplo">2.8.1.1 Ejemplo</h3>
+<h4 id="ejemplos">Ejemplos</h4>
 <ol>
 <li><strong>Vamos a imprimir 10 números, desde el 0 al 9, en cada vuelta del ciclo debemos tener una variable que nos ayude a saber cuando hayamos terminado.</strong></li>
 </ol>
@@ -744,18 +935,18 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El ciclo termino&quot;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-El ciclo termino
-</code></pre>
+<div class="highlight"><pre><span></span><code>    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    El ciclo termino
+</code></pre></div>
 <ol>
 <li><strong>Imprimir la tabla del 7, que vaya desde el 1 al 10.</strong></li>
 </ol>
@@ -766,17 +957,17 @@ El ciclo termino
     <span class="nb">print</span><span class="p">(</span><span class="n">tabla</span> <span class="o">*</span> <span class="n">contador</span><span class="p">)</span>
     <span class="n">contador</span> <span class="o">+=</span> <span class="mi">1</span>
 </code></pre></div>
-<pre><code>7
-14
-21
-28
-35
-42
-49
-56
-63
-70
-</code></pre>
+<div class="highlight"><pre><span></span><code>    7
+    14
+    21
+    28
+    35
+    42
+    49
+    56
+    63
+    70
+</code></pre></div>
 <ol>
 <li><strong>solicitar al usuario 10 números e indicar si es par o impar</strong></li>
 </ol>
@@ -795,38 +986,38 @@ El ciclo termino
 
     <span class="n">contador</span> <span class="o">+=</span><span class="mi">1</span>
 </code></pre></div>
-<pre><code>Par o Impar
-Dar valor 1: 5
-El valor 5 es impar
--------------------------------------------
-Dar valor 2: 6
-El valor 6 es par
--------------------------------------------
-Dar valor 3: 5
-El valor 5 es impar
--------------------------------------------
-Dar valor 4: 5
-El valor 5 es impar
--------------------------------------------
-Dar valor 5: 6
-El valor 6 es par
--------------------------------------------
-Dar valor 6: 5
-El valor 5 es impar
--------------------------------------------
-Dar valor 7: 5
-El valor 5 es impar
--------------------------------------------
-Dar valor 8: 8
-El valor 8 es par
--------------------------------------------
-Dar valor 9: 6
-El valor 6 es par
--------------------------------------------
-Dar valor 10: 6
-El valor 6 es par
--------------------------------------------
-</code></pre>
+<div class="highlight"><pre><span></span><code>    Par o Impar
+    Dar valor 1: 5
+    El valor 5 es impar
+    -------------------------------------------
+    Dar valor 2: 6
+    El valor 6 es par
+    -------------------------------------------
+    Dar valor 3: 5
+    El valor 5 es impar
+    -------------------------------------------
+    Dar valor 4: 5
+    El valor 5 es impar
+    -------------------------------------------
+    Dar valor 5: 6
+    El valor 6 es par
+    -------------------------------------------
+    Dar valor 6: 5
+    El valor 5 es impar
+    -------------------------------------------
+    Dar valor 7: 5
+    El valor 5 es impar
+    -------------------------------------------
+    Dar valor 8: 8
+    El valor 8 es par
+    -------------------------------------------
+    Dar valor 9: 6
+    El valor 6 es par
+    -------------------------------------------
+    Dar valor 10: 6
+    El valor 6 es par
+    -------------------------------------------
+</code></pre></div>
 <ol>
 <li><strong>Solicitar las 3 calificaciones de materia e imprimir su promedio con la frase de "Aprobo" o "Reprobo" dependiendo el caso</strong></li>
 </ol>
@@ -873,21 +1064,21 @@ El valor 6 es par
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Programa a finalizado&quot;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>-------------------------------------
-Calculadora Suma y Resta
-1. Suma
-2. Resta
-3. Salir
-3
-Programa a finalizado
-</code></pre>
-<h3 id="ejercicios">Ejercicios:</h3>
+<div class="highlight"><pre><span></span><code>    -------------------------------------
+    Calculadora Suma y Resta
+    1. Suma
+    2. Resta
+    3. Salir
+    3
+    Programa a finalizado
+</code></pre></div>
+<h4 id="ejercicios">Ejercicios</h4>
 <ol>
 <li>Imprimir la tabla del 8, del 1 al 10, con el siguiente formato "8 x 1 = 8"</li>
 <li>Realizar un programa que solicite 10 números e imprima si es par o impar y si es mayor a 10 que lo indique, de lo contrario solo dice "es impar"</li>
-<li>Realizar un programa solicite los 3 parciales de Matematicas, e imprimir el promedio, pero si reprueba, ahora tendra que pedir el resultado de su extra, en caso que haya pasado el extra, le dara su calificacion final y le dira "aprobado". En caso que no apruebe su extra, solo le dirá "estas en recursamiento"</li>
+<li>Realizar un programa solicite los 3 parciales de Matemáticas, e imprimir el promedio, pero si reprueba, ahora tendrá que pedir el resultado de su extra, en caso que haya pasado el extra, le dará su calificación final y le dirá "aprobado". En caso que no apruebe su extra, solo le dirá "estas en recursamiento"</li>
 </ol>
-<h2 id="282-continue-y-break">2.8.2 Continue y Break</h2>
+<h3 id="812-continue-y-break">8.1.2 Continue y Break</h3>
 <p>Existen 2 palabras reservadas que nos ayudan a un control mas complejo dentro de los ciclos, que son <code>break</code> y <code>continue</code>.</p>
 <ul>
 <li>La palabra reservada <code>break</code> me sirve para romper un ciclo cuando yo no necesite, muy util en ciclos infinitos que necesitemos <code>romper</code>.</li>
@@ -905,13 +1096,13 @@ Programa a finalizado
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Se rompe el ciclo en el valor &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">contador</span><span class="p">))</span>
         <span class="k">break</span>   <span class="c1"># cuando se ejecute esta linea el ciclo termina</span>
 </code></pre></div>
-<pre><code>El valor del contador es: 0
-El valor del contador es: 1
-El valor del contador es: 2
-El valor del contador es: 3
-El valor del contador es: 4
-Se rompe el ciclo en el valor 5
-</code></pre>
+<div class="highlight"><pre><span></span><code>    El valor del contador es: 0
+    El valor del contador es: 1
+    El valor del contador es: 2
+    El valor del contador es: 3
+    El valor del contador es: 4
+    Se rompe el ciclo en el valor 5
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1"># vamos a hacer que el ciclo ignore todo el código que tiene por debajo cuando encuentre la palabra continue</span>
 
 <span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
@@ -923,11 +1114,11 @@ Se rompe el ciclo en el valor 5
         <span class="k">continue</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor del contador es: </span><span class="si">{</span><span class="n">contador</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>El valor del contador es: 1
-El valor del contador es: 2
-El valor del contador es: 4
-El valor del contador es: 5
-</code></pre>
+<div class="highlight"><pre><span></span><code>    El valor del contador es: 1
+    El valor del contador es: 2
+    El valor del contador es: 4
+    El valor del contador es: 5
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1"># Realizar una calculadora que sume y reste, mostrando un menu indicando las opciones,</span>
 <span class="c1"># Debe tener la opcion de salir, en caso que ingrese una opcion que no existe,</span>
 <span class="c1"># mandar el mensaje de que la opcion no es valida. El programa termina cuando el usuario</span>
@@ -955,22 +1146,237 @@ El valor del contador es: 5
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La opcion no existe&quot;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>-------------------------------------
-Calculadora Suma y Resta
-1. Suma
-2. Resta
-3. Salir
-3
-Programa a finalizado
-</code></pre>
+<div class="highlight"><pre><span></span><code>    -------------------------------------
+    Calculadora Suma y Resta
+    1. Suma
+    2. Resta
+    3. Salir
+    3
+    Programa a finalizado
+</code></pre></div>
+<h2 id="82-estructura-de-repeticion-for">8.2 Estructura de repetición <code>for</code></h2>
+<p>La siguiente estructura de control se llama <code>for</code>. Esta estructura tiene un comportamiento similar a <code>while</code>. En esencial hace lo mismo, repite hasta un limite pero este se da distinto. <code>For each</code>.</p>
+<p><strong>Sintaxis:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">iterador</span> <span class="p">:</span>
+    <span class="n">código</span> <span class="n">a</span> <span class="n">ejecutar</span>
+    <span class="n">código</span> <span class="n">a</span> <span class="n">ejecutar</span>
+    <span class="n">código</span> <span class="n">a</span> <span class="n">ejecutar</span>
+    <span class="o">...</span>
+</code></pre></div>
+<h3 id="funcion-range">Función <code>range()</code></h3>
+<p>La función <code>range()</code> retorna un secuencia de números, comenzando por default en 0 e incrementando en 1, y se detiene antes del número especificado.</p>
+<h4 id="sintaxis">Sintaxis</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="parametros">Parámetros</h4>
+<ul>
+<li><code>start</code>: (<em>opcional</em>). Un numero entero específicamente para la posición inicial, por default es 0</li>
+<li><code>stop</code>: (Requerido). Un numero entero que especifica en donde se detendrá.</li>
+<li><code>step</code>: (<em>opcional</em>). Un numero entero que especifica el incremento. Por default es 1.</li>
+</ul>
+<p>Esta función se utiliza con el ciclo <code>for</code></p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Vamos a imprimir 10 números, del 0 al 9, recordemos que el número que le pasamos es el tope y ese no se imprime,</span>
+<span class="c1">#y el valor inicial por default es 0, el incremento es de 1 en 1</span>
+
+<span class="k">for</span> <span class="n">valor</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;el valor actual es: &quot;</span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>    el valor actual es: &quot;0&quot;
+    el valor actual es: &quot;1&quot;
+    el valor actual es: &quot;2&quot;
+    el valor actual es: &quot;3&quot;
+    el valor actual es: &quot;4&quot;
+    el valor actual es: &quot;5&quot;
+    el valor actual es: &quot;6&quot;
+    el valor actual es: &quot;7&quot;
+    el valor actual es: &quot;8&quot;
+    el valor actual es: &quot;9&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ahora vamos a imprimir en un rango, entonces se le pasa el inicio y el fin,</span>
+<span class="c1"># comenzando en 2 y terminando en 11</span>
+
+<span class="k">for</span> <span class="n">valor</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;el valor actual es: &quot;</span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>    el valor actual es: &quot;2&quot;
+    el valor actual es: &quot;3&quot;
+    el valor actual es: &quot;4&quot;
+    el valor actual es: &quot;5&quot;
+    el valor actual es: &quot;6&quot;
+    el valor actual es: &quot;7&quot;
+    el valor actual es: &quot;8&quot;
+    el valor actual es: &quot;9&quot;
+    el valor actual es: &quot;10&quot;
+    el valor actual es: &quot;11&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ahora vamos a imprimir en un rango, entonces se le pasa el inicio y el fin,</span>
+<span class="c1"># comenzando en 1 y terminando en 20, de 2 en 2</span>
+
+<span class="k">for</span> <span class="n">valor</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">valor</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>    3
+    5
+    7
+    9
+    11
+    13
+    15
+    17
+    19
+    21
+</code></pre></div>
+<blockquote>
+<p>📝 Nota: Cuando queramos ya sea comenzar en un numero distinto, o cero con un incremento diferente se tiene que pasar el valor de incremento forzosamente*</p>
+</blockquote>
+<h4 id="ejemplos_1">Ejemplos</h4>
+<h5 id="1-solicitar-3-calificaciones-del-parcial-y-calcular-el-promedio">1. Solicitar 3 calificaciones del parcial y calcular el promedio**</h5>
+<div class="highlight"><pre><span></span><code><span class="n">suma</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="k">for</span> <span class="n">calificacion</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">suma</span> <span class="o">+=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dar el parcial </span><span class="si">{</span><span class="n">calificacion</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">: &quot;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El promedio es </span><span class="si">{</span><span class="n">suma</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>    Dar el parcial 1: 10
+    Dar el parcial 2: 8
+    Dar el parcial 3: 7
+    El promedio es 8.333333333333334
+</code></pre></div>
+<p><strong>2. Imprimir la tabla del 7 con el formato "7 x 10 = 70", comenzando en 7x1 y terminando ene 7x10. Utilizando la estructura for y la función range()</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">tabla</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="k">for</span> <span class="n">contador</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="n">tabla</span> <span class="o">*</span> <span class="n">contador</span>
+    <span class="nb">print</span><span class="p">(</span> <span class="nb">str</span><span class="p">(</span><span class="n">tabla</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; x &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">contador</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; = &quot;</span> <span class="o">+</span>  <span class="nb">str</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>    7 x 1 = 7
+    7 x 2 = 14
+    7 x 3 = 21
+    7 x 4 = 28
+    7 x 5 = 35
+    7 x 6 = 42
+    7 x 7 = 49
+    7 x 8 = 56
+    7 x 9 = 63
+    7 x 10 = 70
+</code></pre></div>
+<h3 id="break-y-continue">Break y Continue</h3>
+<p>La palabra reservada <strong>break</strong> y <strong>continue</strong> también sirve en el ciclo <em>for</em></p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">break</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>    0
+    1
+    2
+    3
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">mensaje</span> <span class="o">=</span> <span class="s2">&quot;Lo mejor del mundo es saber programar&quot;</span>
+
+<span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">mensaje</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>    L
+    o
+
+    m
+    e
+    j
+    o
+    r
+
+    d
+    e
+    l
+
+    m
+    u
+    n
+    d
+    o
+
+    e
+    s
+
+    s
+    a
+    b
+    e
+    r
+
+    p
+    r
+    o
+    g
+    r
+    a
+    m
+    a
+    r
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code><span class="c1">#Comparativa entre el for vs while</span>
+<span class="c1"># imprimir del  0 al 9</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Con FOR&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">contador</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">contador</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Con WHILE&#39;</span><span class="p">)</span>
+
+<span class="n">contador</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">contador</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">contador</span><span class="p">)</span>
+    <span class="n">contador</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>    Con FOR
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    ---------------
+    Con WHILE
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+</code></pre></div></p>
+<p><strong>Ejercicio:</strong></p>
+<ol>
+<li>Recorre un rango del 0 al 10 e indicar cuales son par e impar</li>
+<li>Recorre un rango del 5 al 32 e indicar los que sean múltiplos de 5</li>
+<li>Solicitarle al usuario que tabla desea imprimir, indicando desde donde comienza y donde termina</li>
+<li>Calcular el promedio de la sumatoria de los números pares desde el 2 hasta el 200</li>
+</ol>
 <hr />
-<p>Realizado por Docente: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
+<p>Realizado por el Instructor: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -994,7 +1400,7 @@ Programa a finalizado
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../07_Operadores_l%C3%B3gicos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 07 Operadores lógicos">
+          <a href="../07_Operadores_l%C3%B3gicos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 7 Operadores lógicos">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1004,20 +1410,20 @@ Programa a finalizado
                 Anterior
               </span>
               <div class="md-ellipsis">
-                07 Operadores lógicos
+                7 Operadores lógicos
               </div>
             </div>
           </a>
         
         
           
-          <a href="../09_1_Modulos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 09 1 Modulos">
+          <a href="../09_Modulos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 9 Módulos">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                09 1 Modulos
+                9 Módulos
               </div>
             </div>
             <div class="md-footer__button md-icon">

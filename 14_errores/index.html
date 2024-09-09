@@ -12,19 +12,19 @@
         <meta name="author" content="Alejandro Leyva">
       
       
-        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/12_Archivos/">
+        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/14_errores/">
       
       
-        <link rel="prev" href="../11_Funciones/">
+        <link rel="prev" href="../13_Archivos/">
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
       
-        <title>12 Archivos - Documentación curso de Python desde Cero</title>
+        <title>14 Errores - Documentación curso de Python desde Cero</title>
       
     
     
@@ -67,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#archivos" class="md-skip">
+        <a href="#14-errores-try-except" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -96,10 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-header__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -116,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12 Archivos
+              14 Errores
             
           </span>
         </div>
@@ -129,7 +128,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -139,7 +138,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
@@ -193,7 +192,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -229,17 +228,16 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://www.alejandro-leyva.com/curso-python/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
+    <a href="/" title="Documentación curso de Python desde Cero" class="md-nav__button md-logo" aria-label="Documentación curso de Python desde Cero" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     Documentación curso de Python desde Cero
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/jalmx/curso-python" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/jalmx/curso_python" title="Ir al repositorio" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -363,7 +361,7 @@
         
   
   <span class="md-ellipsis">
-    05 ingresando dato y como convertirlos
+    5 Ingresando dato y cómo convertirlos
   </span>
   
 
@@ -383,7 +381,7 @@
         
   
   <span class="md-ellipsis">
-    06 Estructura decision
+    6 Decisiones
   </span>
   
 
@@ -403,7 +401,7 @@
         
   
   <span class="md-ellipsis">
-    07 Operadores lógicos
+    7 Operadores lógicos
   </span>
   
 
@@ -419,11 +417,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../08_Estructura_de_Repeticion_-_while/" class="md-nav__link">
+      <a href="../08_Estructuras_de_Repeticion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    08 Estructura de Repeticion   while
+    8 Estructuras de repetición
   </span>
   
 
@@ -439,11 +437,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_1_Modulos/" class="md-nav__link">
+      <a href="../09_Modulos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 1 Modulos
+    9 Módulos
   </span>
   
 
@@ -459,11 +457,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_2_Strings/" class="md-nav__link">
+      <a href="../10_strings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 2 Strings
+    10 Strings
   </span>
   
 
@@ -479,11 +477,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_Estructura_repeticionr/" class="md-nav__link">
+      <a href="../11_Colecciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    09 Estructura repeticionr
+    11 Colecciones
   </span>
   
 
@@ -499,11 +497,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_Colecciones/" class="md-nav__link">
+      <a href="../12_Funciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    10 Colecciones
+    12 Funciones
   </span>
   
 
@@ -519,11 +517,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../11_Funciones/" class="md-nav__link">
+      <a href="../13_Archivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    11 Funciones
+    13 Archivos
   </span>
   
 
@@ -548,78 +546,15 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    12 Archivos
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    12 Archivos
+    14 Errores
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#funcion-open" class="md-nav__link">
-    <span class="md-ellipsis">
-      Función open()
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Función open()">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metodos-de-los-arhivos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metodos de los arhivos
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bloque-with" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bloque with
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -645,47 +580,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#funcion-open" class="md-nav__link">
-    <span class="md-ellipsis">
-      Función open()
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Función open()">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metodos-de-los-arhivos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metodos de los arhivos
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bloque-with" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bloque with
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -699,108 +593,17 @@
                   
 
 
-<p><img alt="banner" src="logo/banner.png" /></p>
-<h1 id="archivos">Archivos</h1>
-<p>El manejo de archivos en Python es algo nativo, es decir, por default te da una utileria para comenzar a trabajar con ellos. Esto significa que podemos abrir y leer el contenido de un archivo plano de una manera muy sencilla y rapida.</p>
-<h2 id="funcion-open">Función <code>open()</code></h2>
-<p>Con solo abrir un archivo de Python podemos llamar a la función <code>open</code> la cual le indicamos la ruta del archivo que queremos abrir y cargar su informacion, junto con el modo en que lo vamos a utilizar.</p>
-<p><strong>Sintaxis:</strong></p>
-<div class="highlight"><pre><span></span><code>    <span class="nb">open</span><span class="p">(</span><span class="n">ruta_archivo</span><span class="p">,</span><span class="n">modo</span><span class="p">,</span><span class="n">encoding</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Parametros:</strong></p>
-<ul>
-<li><code>ruta_archivo</code>: Es la ruta del archivo que se va a carga, la ruta puede ser relativa o absoluta</li>
-<li><code>modo</code>: El modo es como se manejara el archivo, los modos son:<ul>
-<li><code>r</code>: Read - Valor por default. Abre el archivo para leerlo. Lanza error en caso que no exista.</li>
-<li><code>w</code>: Write - Abre el archivo para leerlo, en caso que no exista lo creara.</li>
-<li><code>a</code>: Append - Abre el archivo y todo lo que vayamos a escribir se lo agregara.</li>
-<li><code>x</code>: Create - Crear el archivo, lanza error en caso que exista.</li>
-<li><code>+</code>: Read-Write - Indica que tenemos el modo lectura y que podemos escribir en él.</li>
-<li>Modos adicionales:<ul>
-<li><code>t</code>: text (Valor por default)- Indica que el archivo es un texto plano.</li>
-<li><code>b</code>: binario - Indica que es otro tipo de archivo, ejemplo: imagenes, archivos de word, excel, etc.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>encoding</code>: Formato de codificacion de caracteres. Por default no tiene, pero en nuestro caso que hablamos español, es combeniente colocar <code>utf-8</code>, con esto identifica acentos y todo lo relacionado al lenguaje.</li>
-<li><strong>return</strong> <code>file</code>: Regresa un Objeto tipo archivo.</li>
-</ul>
-<p><a href="https://docs.python.org/3/library/functions.html#open">Documentacion open()</a></p>
-<h3 id="metodos-de-los-arhivos">Metodos de los arhivos</h3>
-<p>Los archivos tiene diversos metodos para manipular su contenido</p>
-<ul>
-<li><code>read([count])</code>: Lee todo el contenido del archivo y lo carga en memoria. Si indicamos el contador, solo lee esa cantidad de caracteres.</li>
-<li><code>readline()</code>: Lee una sola linea del archivo. Por default comienza en la primera.</li>
-<li><code>readlines()</code>: Crea una lista con el contenido de cada linea del archivo.</li>
-<li><code>write(data)</code>: Escribe lo que le pasamos como argumento.</li>
-<li><code>seek(position)</code>: Coloca el cursor en esa posicion dentro del archivo.</li>
-<li><code>close()</code>: Cierra el archivo. Esto siempre se debe hacer si se usa el metodo <code>open()</code> solo.</li>
-</ul>
-<p><em>Nota: Contiene mas metodos, ir a la documentacion oficial de <a href="https://docs.python.org/3/library/io.html">IO</a></em></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Creando un archivo vacio</span>
-<span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;archivo.txt&#39;</span>
-
-<span class="n">mi_archivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="c1">#aqui el archivo se crea y esta listo para escribir en él</span>
-
-<span class="n">mi_archivo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1"># tenemos que cerrar el archivo</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">mi_archivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w+&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-
-<span class="n">mi_archivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;estoy escribiendo el archivo plano</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">mi_archivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;esto es el manejo de archivos en python</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">mi_archivo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">csv</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datos.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w+&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-
-<span class="n">csv</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;dato1,dato2,dato3</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">csv</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;dato1,dato2,dato3</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">csv</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;dato1,dato2,dato3</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">csv</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;dato1,dato2,dato3</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="n">csv</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">archivo</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;archivo.txt&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">archivo</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">archivo</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
-</code></pre></div>
-<pre><code>estoy escribiendo el archivo plano
-
-esto es el manejo de archivos en python
-</code></pre>
-<h2 id="bloque-with">Bloque <code>with</code></h2>
-<p>Tenemos una palabra reservada <code>with</code> la cual nos facilita abrir un archivo y lo cierra en automatico al salir del bloque. Es decir, <code>with</code> toma la gestion de los archivos y nosotros nos enfocamos en utilizar la informacion obtenida de él. Lo mas recomendable es usar la palabra <code>with</code> con los archivos.</p>
-<p><strong>Sintaxis:</strong>
-<div class="highlight"><pre><span></span><code>    <span class="k">with</span> <span class="n">EXPRESSION</span> <span class="k">as</span> <span class="n">TARGET</span><span class="p">:</span>
-        <span class="n">SUITE</span>
-</code></pre></div></p>
-<div class="highlight"><pre><span></span><code>    <span class="c1"># Aplicado a archivos</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;ruta&#39;</span><span class="p">,</span><span class="s1">&#39;modo&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">nombre_variable</span><span class="p">:</span>
-        <span class="c1"># código para manipular el archivo</span>
-</code></pre></div>
-<p>Documentacion de <a href="https://docs.python.org/3/reference/compound_stmts.html#the-with-statement">The with statement</a></p>
-<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datos.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">archivo_csv</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">archivo_csv</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-</code></pre></div>
-<pre><code>dato1,dato2,dato3
-
-dato10,dato20,dato30
-
-dato11,dato21,dato31
-
-dato12,dato22,dato32
-</code></pre>
-<hr />
-<p>Realizado por Docente: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
+<p><img alt="banner" src="../assets/banner.png" /></p>
+<h1 id="14-errores-try-except">14. Errores <code>try-except</code></h1>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -824,7 +627,7 @@ dato12,dato22,dato32
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../11_Funciones/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 11 Funciones">
+          <a href="../13_Archivos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 13 Archivos">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -834,7 +637,7 @@ dato12,dato22,dato32
                 Anterior
               </span>
               <div class="md-ellipsis">
-                11 Funciones
+                13 Archivos
               </div>
             </div>
           </a>
