@@ -18,7 +18,7 @@ Con solo abrir un archivo de Python podemos llamar a la función `open` la cual 
     open(ruta_archivo,modo,encoding)
 ```
 
-**Parametros:**
+**parámetros:**
 
 - `ruta_archivo`: Es la ruta del archivo que se va a carga, la ruta puede ser relativa o absoluta
 - `modo`: El modo es como se manejara el archivo, los modos son:

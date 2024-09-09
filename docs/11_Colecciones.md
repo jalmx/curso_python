@@ -25,7 +25,7 @@ Cada posicion de los datos tiene un **indice** (index), el cual me ayuda a acced
 
 **La convencion de como declarar o nombrar a una lista o tupla es en plural**
 
-Parametros a destacar:
+parámetros a destacar:
 
 - index: Indice
 - len: Longitud

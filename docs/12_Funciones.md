@@ -16,7 +16,7 @@ Bloque de código reutilizable que puede ser llamado n cantidad de veces, debe s
 
 ## Como escribo una función y como la utilizo
 
-**Sintaxis**
+### Sintaxis
 
 ```python
 def name_function():
@@ -27,7 +27,7 @@ def name_function():
     #code block
 ```
 
-Como la llamo a la función:
+Cómo la llamo a la función:
 
 ```python
 name_function()
@@ -50,10 +50,12 @@ saludar()
 elevar_cuadrado()
 ```
 
+```text
     Hola a todos!!! xD
     4
+```
 
-**Ejercicios:**
+### Ejercicios:
 
 1. Realizar una función que en su cuerpo realice la suma de dos números (estos están dados por ustedes), e imprimir el resultado, es decir, cuando se invoque
 
@@ -65,9 +67,9 @@ Las funciones en ocasiones necesitan parámetros para funcionar y poder realizar
 
 Parámetro = Argumento = variable
 
-**Como escribo una función y como la utilizo**
+### Cómo escribo una función y cómo la utilizo
 
-**Sintaxis**
+#### Sintaxis
 
 ```python
 def name_function(argumeto1, argumentos2, ..., argumentosN):
@@ -78,7 +80,7 @@ def name_function(argumeto1, argumentos2, ..., argumentosN):
     #code block
 ```
 
-*Como la llamo a la funcion, coloco su nombre, abro parentesis y coloco los argumentos que necesita:*
+Como la llamo a la función, coloco su nombre, abro parentesis y coloco los argumentos que necesita:
 
 ```python
 name_function(arg1, arg2...)
@@ -106,12 +108,14 @@ potencia(3,3)
 
 ```
 
-    Hola Axel, que chido es conocerte!!!
-    Hola Melani, que chido es conocerte!!!
-    Hola David, que chido es conocerte!!!
-    Hola Raul, que chido es conocerte!!!
-    2 elevado a la 3 es: 8
-    3 elevado a la 3 es: 27
+```text
+Hola Axel, que chido es conocerte!!!
+Hola Melani, que chido es conocerte!!!
+Hola David, que chido es conocerte!!!
+Hola Raul, que chido es conocerte!!!
+2 elevado a la 3 es: 8
+3 elevado a la 3 es: 27
+```
 
 **Ejercicios:**
 
@@ -119,15 +123,15 @@ potencia(3,3)
 
 2. Realizar una función que reciba el nombre y la edad, y que imprima un mensaje con estos datos, ejemplo: "Hola 'alejandro'  que buena onda que tengas '20' anios"
 
-## Funciones con parametros por default u opcionales
+## Funciones con parámetros por default u opcionales
 
-Las funciones en ocasiones necesitan parametros para funcionar, pero no es necesario pasarle todos los parametros requeridos, dado que pueden ser opcionales y poder realizar la acción.
+Las funciones en ocasiones necesitan parámetros para funcionar, pero no es necesario pasarle todos los parámetros requeridos, dado que pueden ser opcionales y poder realizar la acción.
 
 Parametro = Argumento = variable
 
-**Como escribo una función y como la utilizo**
+### Como escribo una función y como la utilizo
 
-**Sintaxis**
+#### Sintaxis
 
 ```python
 def name_function(argumeto1=valor, argumentos2=valor, ..., argumentosN=valorN):
@@ -171,21 +175,23 @@ potencia2(3,4)
 imprimir_0_10(1)
 ```
 
-    Hola Desconocido, que chido es conocerte!!!
-    Hola Ricardo, que chido es conocerte!!!
-    1
-    9
-    27
-    81
-    --------------------
-    0
-    1
-    --------------------
+```text
+Hola Desconocido, que chido es conocerte!!!
+Hola Ricardo, que chido es conocerte!!!
+1
+9
+27
+81
+--------------------
+0
+1
+--------------------
+```
 
 **Ejercicios:**
 
 1. Crear una función que reciba la edad, pero la edad es opcion, por default que tenga el valor de 15, y que mande a imprimir si es menor o mayor de edad, pero si es 15, que imprima también, la frase "Creo que no me pasaste la edad, tramposo!"
-2. Crear una función que calcule el area de cuadrados y rectangulos, la función recibe 2 parametros, la base y la altura, pero cuando es cuadrado solo recibe uno, por lo tanto, el segundo parametros es opcional, el segundo parametros por default es 0.
+2. Crear una función que calcule el area de cuadrados y rectangulos, la función recibe 2 parámetros, la base y la altura, pero cuando es cuadrado solo recibe uno, por lo tanto, el segundo parámetros es opcional, el segundo parámetros por default es 0.
 
 ## Retornado valores de una funcion
 
@@ -282,11 +288,11 @@ print(f'El perimetro es {operaciones_circulo(5,"perimetro")}')
     - i = corriente(10, 1000)
     - r = voltaje(10, 5)
 
-## Funciones con parametros nombrados
+## Funciones con parámetros nombrados
 
 Normalmente pasamos argumentos a las funciones con un orden orden establecido, y el orden que le coloco el programador, pero hay una forma de poder los argumentos en un orden cual sea, pero se debe especificar que argumento es.
 
-*Nota: Los parametros nombrados y también con valores por default van al final se colocan al final*
+*Nota: Los parámetros nombrados y también con valores por default van al final se colocan al final*
 
 Como escribo una función y como la utilizo.
 

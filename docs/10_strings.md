@@ -72,7 +72,7 @@ Los string cuenta con método el cual nos ayuda directamente a saber cuantas vec
 
 - count(value, start, end): method returns the number of times a specified value appears in the string
 
-**Parametros:**
+**parámetros:**
 
 - `value`: Required. A String. The string to value to search for
 - `start`: Optional. An Integer. The position to start the search. Default is 0

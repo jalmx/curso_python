@@ -71,7 +71,7 @@ En muchas ocasiones puedes tener un `número entero` almacenado en una variable 
 int(value, base)
 ```
 
-**Parametros:**
+**parámetros:**
 
 - `value: Un número o un string que puede ser convertido a número entero`
 - `base (opcional) : El formato con el que representa el número. Default value: 10`
@@ -106,7 +106,7 @@ En muchas ocasiones puedes tener un `número de punto flotante` almacenado en un
 float(value)
 ```
 
-**Parametros:**
+**parámetros:**
 
 - `value: Un número o string que puede ser convertido en tipo número float`
 - `return: Regresa un tipo float`
