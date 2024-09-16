@@ -12,11 +12,13 @@
         <meta name="author" content="Alejandro Leyva">
       
       
-        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/14_errores/">
+        <link rel="canonical" href="https://www.alejandro-leyva.com/curso_python/100_ejercicios/">
       
       
-        <link rel="prev" href="../13_Archivos/">
+        <link rel="prev" href="../09_Modulos/">
       
+      
+        <link rel="next" href="../10_strings/">
       
       
       <link rel="icon" href="../assets/logo.png">
@@ -24,7 +26,7 @@
     
     
       
-        <title>14 Errores - Documentación curso de Python desde Cero</title>
+        <title>15 Ejercicios - Documentación curso de Python desde Cero</title>
       
     
     
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#14-errores-try-except" class="md-skip">
+        <a href="#ejercicios" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -115,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              14 Errores
+              15 Ejercicios
             
           </span>
         </div>
@@ -454,10 +456,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../100_ejercicios/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    15 Ejercicios
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -466,6 +488,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Básicos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decisiones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores lógicos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ciclos-while-y-con-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclos while y con for
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -554,19 +632,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../14_errores/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -575,7 +644,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -600,6 +668,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Básicos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decisiones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operadores-logicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operadores lógicos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ciclos-while-y-con-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ciclos while y con for
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -614,7 +726,205 @@
 
 
 <p><img alt="banner" src="../assets/banner.png" /></p>
-<h1 id="14-errores-try-except">14. Errores <code>try-except</code></h1>
+<h1 id="ejercicios">Ejercicios</h1>
+<h2 id="basicos">Básicos</h2>
+<ol>
+<li>Realizar el cálculo del perímetro de un cuadrado, con datos en memoria, e imprimir el resultado</li>
+<li>Realizar el cálculo del perímetro y area de un rectángulo, solicitando el lado de la figura al usuario, e imprimir el resultado, primero perímetro, y después el area.</li>
+<li>Realizar el cálculo del area de un cuadrado, solicitando el lado de la figura al usuario, e imprimir el resultado</li>
+<li>Realizar un programa que realice el cálculo de Fuerza en la segunda Ley de Newton. La formula es <mark><span class="arithmatex">\(Fuerza = masa * aceleración\)</span></mark>. Solicitando al usuario las variables necesarias.</li>
+<li>Realizar una calculadora que convierta de centímetros a pulgadas, solicitando el dato al usuario, e imprimir el resultado. <mark><em>1 In = 2.54cm</em></mark></li>
+<li>Convertidor de temperatura de Fahrenheit a Celsius. <span class="arithmatex">\(C=\frac{5}{9}(F - 32)\)</span></li>
+</ol>
+<h2 id="decisiones">Decisiones</h2>
+<ol>
+<li>Realizar una calculadora básica, que realice la operación de sumar, restar, multiplicar, dividir. Al comenzar muestre un menu y el usuario elija la opción deseada. Se debe pedir el primer valor y el segundo, con ello realizar la operación</li>
+<li>Solicitar un número entero al usuario, e imprimir por pantalla si es valor par o impar</li>
+<li>
+<p>Hacer una calculadora de áreas geométricas, las opciones son:</p>
+<ul>
+<li>Área del cuadrado</li>
+<li>Área del círculo</li>
+<li>Área del triángulo</li>
+<li>Con opción de salir del programa y al final imprimir el resultado con la frase "El área del figura nombre de la figura elegida es resultado"</li>
+</ul>
+</li>
+<li>
+<p>Hacer una calculadora de ley de ohms, las opciones son:</p>
+<ul>
+<li>Calcular resistencia</li>
+<li>Calcular corriente</li>
+<li>Calcular voltaje</li>
+<li>Calcular potencia</li>
+<li>Con opción de salir del programa y al final debe imprimir el resultado con la frase "El resultado es: XX"</li>
+</ul>
+</li>
+<li>
+<p>Que resuelva una ecuación de segundo orden, aplicando la fórmula general; recuerda que no existen las raíces negativas. Debe entregarle los valores de las raíces o en caso que alguna o ninguna raíz exista, indicarlo. <em><mark>Nota: Debes usar las funciones matemáticas que vienen en el lenguaje</mark></em></p>
+</li>
+<li>Realizar una calculadora del Teorema de Pitágoras, el usuario debe elegir, cateto opuesto, adyacente o hipotenusa, salir, que desear calcular. <em><mark>Nota: Debes usar las funciones matemáticas que vienen en el lenguaje</mark></em></li>
+<li>Hacer una caja registradora, que reciba el valor del producto y al final entregue el costo total con IVA y sin IVA; es decir, En total es <em>$18.35</em> y con IVA son <em>$21.28</em>, recordar que el IVA es del <em>16%</em></li>
+</ol>
+<h2 id="operadores-logicos">Operadores lógicos</h2>
+<ol>
+<li>
+<p>Solicitar al usuario su promedio actual, en valor entero, el algoritmo debe tomar la decisión con basé al número ingresado, y dar un mensaje (ver la tabla)</p>
+<table>
+<thead>
+<tr>
+<th>Rango de calificación</th>
+<th>Mensaje a imprimir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 a menor que 6</td>
+<td>"lastima margarito"</td>
+</tr>
+<tr>
+<td>6 a menor que 7</td>
+<td>"Aplícate"</td>
+</tr>
+<tr>
+<td>7 a menor que 8</td>
+<td>"Apenitas y la libraste, metele papí"</td>
+</tr>
+<tr>
+<td>8 a menor que 9</td>
+<td>"Bastante bien, puedes mejorar"</td>
+</tr>
+<tr>
+<td>9 a menor que 10</td>
+<td>"muy bien amiguito, te ganaste la cheve!"</td>
+</tr>
+<tr>
+<td>Igual a 10</td>
+<td>"Excelente, tu muy bien"</td>
+</tr>
+<tr>
+<td>Menor a 0 y mayor a 10</td>
+<td>"Calificación no posible"</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Cálculo de BMI (Indice de Masa Corporal) para peso y altura, indicando cual es tu BMI y en que nivel de obesidad te encuentras (<em>Ver tabla</em>). La formula es <span class="arithmatex">\(BMI = peso (kg) * estatura^2 (cm)\)</span></p>
+<table>
+<thead>
+<tr>
+<th>IMC</th>
+<th>Nivel de peso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Por debajo de 18.5</td>
+<td>Bajo peso</td>
+</tr>
+<tr>
+<td>18.5 – 24.9</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>25.0 – 29.9</td>
+<td>Sobrepeso</td>
+</tr>
+<tr>
+<td>30.0 o más</td>
+<td>Obesidad</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Mandar la letra del múltiplo o submultiple correspondiente, es decir, si el usuario ingresa el valor de 1,000, el valor que se debe desplegar por pantalla es la letra "K", si el usuario ingresa el valor de 0.02, se debe desplegar por pantalla la letra "m"</p>
+<table>
+<thead>
+<tr>
+<th>Unidad</th>
+<th>Símbolo</th>
+<th>Rango</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pico</td>
+<td>p</td>
+<td><span class="arithmatex">\(x10^{-12}\)</span></td>
+</tr>
+<tr>
+<td>nano</td>
+<td>n</td>
+<td><span class="arithmatex">\(x10^{-}\)</span></td>
+</tr>
+<tr>
+<td>micro</td>
+<td>u</td>
+<td><span class="arithmatex">\(x10^{-6}\)</span></td>
+</tr>
+<tr>
+<td>mili</td>
+<td>m</td>
+<td><span class="arithmatex">\(x10^{-3}\)</span></td>
+</tr>
+<tr>
+<td>unidad</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>kilo</td>
+<td>K</td>
+<td><span class="arithmatex">\(x10^{3}\)</span></td>
+</tr>
+<tr>
+<td>mega</td>
+<td>M</td>
+<td><span class="arithmatex">\(x10^{6}\)</span></td>
+</tr>
+<tr>
+<td>giga</td>
+<td>G</td>
+<td><span class="arithmatex">\(x10^{9}\)</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="ciclos-while-y-con-for">Ciclos <code>while</code> y con <code>for</code></h2>
+<p>Todos estos ejercicios se debe implementar un ciclo <code>while</code> y otro con la version del <code>for</code> . No esta permitido hacer uso de las funciones propias del lenguaje que pueden resolver algún problema o alguna parte de el, a menos que lo indique en la instrucción.</p>
+<ol>
+<li>Imprimir del 1 al 99.</li>
+<li>Imprimir una tabla de equivalencia de temperaturas de Celsius y Fahrenheit. Desde 0ºC hasta 100ºC. Es decir, 0C -&gt; 32F, 1C -&gt; 33.8F, 2C -&gt; 35.6F ..... 99C -&gt; 210.2, 100C -&gt; 212F</li>
+<li>Calcular el promedio final, solicita al usuario sus calificaciones parciales una a una, y al final da el mensaje "Aprobado", en caso que haya pasado arriba de 6 y "Estas en repite" si es menor. Considerando que son 3 parciales.</li>
+<li>Imprimir la tabla del 8, desde <mark><em>8x1=8 hasta 8x10=80</em></mark>.</li>
+<li>Realizar un programa para visualizar la tabla de multiplicar que desee el usuario, el usuario dará el valor para la tabla, la tabla debe de ir desde el 1 hasta el 10, es decir, por ejemplo si da el numero 3, la tabla comienza en <em><mark>3x1=3 ... hasta 3x10=30</mark></em></li>
+<li>Realizar un programa para visualizar la tabla de multiplicar que desee el usuario, el usuario dará el valor para la tabla, también debe dar el limite donde comienza hasta donde termina, es decir, por ejemplo si da el numero 5, comenzando desde <em><mark>el 3 hasta el 25, comenzara la tabla 5x3 = 15 ... 5x25=125</mark></em></li>
+<li>Leer 10 números enteros, solicitando uno a uno al usuario, e imprimir al final cuántos fueron par y cuántos impar.</li>
+<li>Calcular el factorial de un número entero. Se le solicita al usuario que ingrese un número entero el cuál quiere calcular el factorial del mismo. <mark>Ejemplo: 5! = 120</mark></li>
+<li>Calcular la potencia de un número, solicita al usuario el número que desea elevar y después la base a la cuál lo elevara. Ejemplo: <em><mark>2^2= 4, 2^3=8</mark></em></li>
+<li>Leer 10 números, solicitando uno a uno al usuario, y al final se imprime por pantalla el número más alto ingresado de los 10.</li>
+<li>Calculadora de la segunda ley de newton. Sale el menú indicando que desea calcular y la opción de salir. Después solicita al usuario los valores que conoce e imprimir el resultado, una vez termina de hacer todas las operaciones, debe regresar al menú inicial, debe existir una opción para terminal el programa, en caso que coloque una opción no existen, debe volver a mostrar el mensaje.</li>
+<li>Cálculo de la media de un conjunto de datos. Se le pregunta al usuario cuantos números son, comienza a pedirlos uno a uno y al final imprime el resultado de la media de todos los datos.</li>
+<li>Cálculo de la media de un conjunto de datos positivos. En cada iteración pregunta al usuario si quiere terminar para conocer el resultado o ingresar otro valor. Cuando elija terminar, imprimir el valor total del promedio o media.</li>
+<li>Realizar un programa que solicite las calificaciones del parcial; es decir, irá pidiendo una a una las calificaciones, y al final que diga si te vas a <em>recursamiento o no</em></li>
+<li>Algoritmo para convertir número decimal a binario, debe ir mostrando el numero en binario uno a uno, no es todo el numero binario completo, comenzando por el bit mas significativo. Por ejemplo el usuario ingresa el valor de 5, debe imprimir 101. Dado que 5 en binario es 101.</li>
+<li>
+<p>Una pastelería nos solicita realizar un programa para una maquina de pastelitos, las opciones son las siguientes</p>
+<p><img alt="esquema" src="https://www.alejandro-leyva.com/algoritmos/img/diagra1.svg" /></p>
+<ul>
+<li>Debe ir sumando las opciones que elije que elija el usuario. Pero cada vez que termine de elegir, debe volver a mostrar el menú, hasta que el usuario elija terminar debe imprimir la cantidad total a pagar. El usuario en cualquier momento puede terminar la orden y la maquina debe darle la cantidad a pagar.</li>
+<li>Por ejemplo, al inicio muestra el menu de pastel, cupcake y salir. Si elije, pastel, ahora le muestra las opciones de chocolate, vainilla, natural y salir, el usuario elije vainilla, y por ultimo elije chispas, debe preguntar si añade algo mas, si es asi, vuelve a mostrar el menu inicial. En caso que elija que ya termino, debe imprimir la cantidad que debe pagar, es decir, (5+1+0.5) "Cantidad a pagar $6.5".</li>
+<li>Recuerda el usuario puede salir en cualquier momento y debe recibir la cantidad que debe pagar.</li>
+<li>Extra:</li>
+<li>Generar un listado de todo lo que solicito, es decir, generar una especie de ticket y al final dar el valor a pagar</li>
+</ul>
+</li>
+<li>
+<p>Realizar una calculadora de ley de Ohm, al inicio te da el menú para seleccionar que se desea calcular; para terminar el programa se debe dar la opción de salida, si no el programa sigue mostrando el menu inicial, si el usuario ingresa un valor y "no existe en el menu", manda mensaje que la opción no existe y vuelve a mostrar el menu. El resultado lo debe lanzar en el mejor formato, es decir, si el resultado es 1,000 ohms, en pantalla debe salir 1k, si es posible agregar el símbolo de Omega (<span class="arithmatex">\(\Omega\)</span>) para resistencias, de lo contrario colocar la palabra <strong>"Ohms"</strong>. Si el resultado es 0.005A en pantalla debe salir 5mA. El usuario debe ingresar el valor sin redondear, es decir, si son 10mA debe ingresar -&gt; 0.01A, si el valor es 10k<span class="arithmatex">\(\Omega\)</span> debe ingresar -&gt; 10000.</p>
+</li>
+</ol>
 
 
 
@@ -647,7 +957,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../13_Archivos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 13 Archivos">
+          <a href="../09_Modulos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 9 Módulos">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -657,11 +967,27 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                13 Archivos
+                9 Módulos
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../10_strings/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 10 Strings">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                10 Strings
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
