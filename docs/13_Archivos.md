@@ -10,7 +10,7 @@ El manejo de archivos en Python es algo nativo, es decir, por default te da una 
 
 ## Función `open()`
 
-Con solo abrir un archivo de Python podemos llamar a la función `open` la cual le indicamos la ruta del archivo que queremos abrir y cargar su informacion, junto con el modo en que lo vamos a utilizar.
+Con solo abrir un archivo de Python podemos llamar a la función `open` la cual le indicamos la ruta del archivo que queremos abrir y cargar su información, junto con el modo en que lo vamos a utilizar.
 
 **Sintaxis:**
 
@@ -84,9 +84,11 @@ print(archivo.readline())
 print(archivo.readline())
 ```
 
+```text
     estoy escribiendo el archivo plano
 
     esto es el manejo de archivos en python
+```
 
 ## Bloque `with`
 
