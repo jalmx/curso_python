@@ -566,6 +566,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    14 Errores
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -575,6 +586,73 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloque de errores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bloque de errores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de errores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de errores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jerarquia-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jerarquía de errores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -600,6 +678,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bloque-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bloque de errores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bloque de errores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de errores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de errores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jerarquia-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jerarquía de errores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -615,6 +749,97 @@
 
 <p><img alt="banner" src="../assets/banner.png" /></p>
 <h1 id="14-errores-try-except">14. Errores <code>try-except</code></h1>
+<p>Para crear un buen software y no generar malas experiencias de usuario, siempre se le debe indicar al usuario de la manera mas clara para el, porque ha fallado el programa o que ha realizado mal, ademas que no queremos que el programa cierre inesperadamente o cancele lo que estaba realizando; para todo esto tenemos una forma de manejo de errores, el cual se llama <strong><code>try-except</code></strong>.</p>
+<h2 id="bloque-de-errores">Bloque de errores</h2>
+<p>Para <code>atrapar</code> un error se debe utilizar un bloque <code>try</code>, en se coloca el código habitual, pero que sabemos que nos puede generar un error al realizar su operación, posteriormente debemos coloca un bloque que se encarga de realizar la tarea que debe resolver o indicar el error al usuario, es el bloque <code>except</code>.</p>
+<h3 id="sintaxis">Sintaxis</h3>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+
+    <span class="c1"># código a ejecutar de manera normal</span>
+
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="c1"># código que se ejecuta si el bloque de arriba falla</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="c1"># mandamos a imprimir el error</span>
+</code></pre></div>
+<h2 id="tipos-de-errores">Tipos de errores</h2>
+<p>Existen diversos tipos de errores que se pueden producir en nuestro codigo, solo algunos de ellos son:</p>
+<ul>
+<li><code>SyntaxError</code>: Error de sintaxis</li>
+<li><code>TypeError</code>: Error en el tipo de dato</li>
+<li><code>ValueError</code>: Error en el tipo de valor</li>
+<li><code>ZeroDivisionError</code>: Error generado en un division por cero</li>
+<li><code>Exception</code>: Es el error general de todos</li>
+</ul>
+<h3 id="jerarquia-de-errores">Jerarquía de errores</h3>
+<div class="highlight"><pre><span></span><code>BaseException
+ ├── BaseExceptionGroup
+ ├── GeneratorExit
+ ├── KeyboardInterrupt
+ ├── SystemExit
+ └── Exception
+      ├── ArithmeticError
+      │    ├── FloatingPointError
+      │    ├── OverflowError
+      │    └── ZeroDivisionError
+      ├── AssertionError
+      ├── AttributeError
+      ├── BufferError
+      ├── EOFError
+      ├── ExceptionGroup [BaseExceptionGroup]
+      ├── ImportError
+      │    └── ModuleNotFoundError
+      ├── LookupError
+      │    ├── IndexError
+      │    └── KeyError
+      ├── MemoryError
+      ├── NameError
+      │    └── UnboundLocalError
+      ├── OSError
+      │    ├── BlockingIOError
+      │    ├── ChildProcessError
+      │    ├── ConnectionError
+      │    │    ├── BrokenPipeError
+      │    │    ├── ConnectionAbortedError
+      │    │    ├── ConnectionRefusedError
+      │    │    └── ConnectionResetError
+      │    ├── FileExistsError
+      │    ├── FileNotFoundError
+      │    ├── InterruptedError
+      │    ├── IsADirectoryError
+      │    ├── NotADirectoryError
+      │    ├── PermissionError
+      │    ├── ProcessLookupError
+      │    └── TimeoutError
+      ├── ReferenceError
+      ├── RuntimeError
+      │    ├── NotImplementedError
+      │    └── RecursionError
+      ├── StopAsyncIteration
+      ├── StopIteration
+      ├── SyntaxError
+      │    └── IndentationError
+      │         └── TabError
+      ├── SystemError
+      ├── TypeError
+      ├── ValueError
+      │    └── UnicodeError
+      │         ├── UnicodeDecodeError
+      │         ├── UnicodeEncodeError
+      │         └── UnicodeTranslateError
+      └── Warning
+           ├── BytesWarning
+           ├── DeprecationWarning
+           ├── EncodingWarning
+           ├── FutureWarning
+           ├── ImportWarning
+           ├── PendingDeprecationWarning
+           ├── ResourceWarning
+           ├── RuntimeWarning
+           ├── SyntaxWarning
+           ├── UnicodeWarning
+           └── UserWarning
+</code></pre></div>
+<p>Mas información en <a href="https://docs.python.org/3/library/exceptions.html">https://docs.python.org/3/library/exceptions.html</a></p>
 
 
 
