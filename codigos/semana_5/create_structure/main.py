@@ -9,6 +9,6 @@
 # lib
 # ---> util.py
 
-
+## Funcionamiento
 # strc_py duplicate
 # strc_py
