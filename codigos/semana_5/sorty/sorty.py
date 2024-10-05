@@ -6,6 +6,8 @@ import sys  # aqui viene el método para mover archivos
 
 files_ext = {
     "pdf": {"ext": [".pdf"]},
+    "exec" : {"ext": ["exec"]},
+    "compress" : {"ext": ["zip","rar","7zip"]},
     "word": {"ext": [".doc", ".docx"]},
     "imgs": {"ext": [".png", ".jpeg", ".jpg", "webm", ".gif", ".svg"]},
     "others": {"ext": []},
