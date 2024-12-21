@@ -102,3 +102,7 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
       - Generar un listado de todo lo que solicito, es decir, generar una especie de ticket y al final dar el valor a pagar
 
 17. Realizar una calculadora de ley de Ohm, al inicio te da el menú para seleccionar que se desea calcular; para terminar el programa se debe dar la opción de salida, si no el programa sigue mostrando el menu inicial, si el usuario ingresa un valor y "no existe en el menu", manda mensaje que la opción no existe y vuelve a mostrar el menu. El resultado lo debe lanzar en el mejor formato, es decir, si el resultado es 1,000 ohms, en pantalla debe salir 1k, si es posible agregar el símbolo de Omega ($\Omega$) para resistencias, de lo contrario colocar la palabra **"Ohms"**. Si el resultado es 0.005A en pantalla debe salir 5mA. El usuario debe ingresar el valor sin redondear, es decir, si son 10mA debe ingresar -> 0.01A, si el valor es 10k$\Omega$ debe ingresar -> 10000.
+
+## POO
+
+## GUI (Qt)
