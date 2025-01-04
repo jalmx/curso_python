@@ -58,7 +58,7 @@
     4. Uso de métodos y atributos.
 19. Encapsulamiento
     1. Niveles de acceso
-    2. Métodos getter y setter.
+    <!-- 2. Métodos getter y setter. -->
 20. Relaciones entre Clases
     1. Herencia Concepto y aplicación.
     2. Sobrescritura de métodos.
