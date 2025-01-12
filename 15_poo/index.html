@@ -18,6 +18,8 @@
         <link rel="prev" href="../14_errores/">
       
       
+        <link rel="next" href="../16_db/">
+      
       
       <link rel="icon" href="../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
@@ -1269,6 +1271,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ejemplos-super" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos super()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1283,6 +1303,46 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16_db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Introducción a Bases de Datos y ORM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17_gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GUI con QT
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1955,6 +2015,24 @@
   <a href="#sintaxis" class="md-nav__link">
     <span class="md-ellipsis">
       Sintaxis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-super" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos super()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
     </span>
   </a>
   
@@ -2856,7 +2934,8 @@ Cada definición de objetos corresponde a algún concepto o cosa del mundo real,
     <span class="nb">print</span><span class="p">(</span><span class="n">auto</span><span class="o">.</span><span class="n">tipo</span><span class="p">())</span>
 </code></pre></div>
 <h3 id="ejercicios_1">Ejercicios</h3>
-<p>d</p>
+<!-- TODO: agregar ejercicios de sobre escritura sin ocupar super  -->
+
 <h3 id="el-metodo-super">El Método <code>super()</code></h3>
 <p><strong>El método super() se utiliza para acceder a métodos y atributos de la clase padre desde una clase hija.</strong> Es una herramienta poderosa en la programación orientada a objetos porque permite extender o reutilizar funcionalidad heredada sin necesidad de referenciar directamente el nombre de la clase padre.</p>
 <h4 id="caracteristicas-del-metodo-super">Características del método <code>super()</code></h4>
@@ -2874,6 +2953,47 @@ Cada definición de objetos corresponde a algún concepto o cosa del mundo real,
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">metodo</span><span class="p">()</span>  <span class="c1"># Llamada al método de la clase padre</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Método en la ClaseHija&quot;</span><span class="p">)</span>
 </code></pre></div>
+<h4 id="ejemplos-super">Ejemplos <code>super()</code></h4>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Padre</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atributo</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">atributo</span> <span class="o">=</span> <span class="n">atributo</span>
+
+<span class="k">class</span> <span class="nc">Hija</span><span class="p">(</span><span class="n">Padre</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atributo</span><span class="p">,</span> <span class="n">otro_atributo</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">atributo</span><span class="p">)</span>  <span class="c1"># Inicializa el atributo en la clase Padre</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">otro_atributo</span> <span class="o">=</span> <span class="n">otro_atributo</span>
+
+    <span class="k">def</span> <span class="nf">mostrar_atributos</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Atributo de Padre: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">atributo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Atributo de Hija: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">otro_atributo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Prueba</span>
+<span class="n">hija</span> <span class="o">=</span> <span class="n">Hija</span><span class="p">(</span><span class="s2">&quot;Valor del padre&quot;</span><span class="p">,</span> <span class="s2">&quot;Valor de la hija&quot;</span><span class="p">)</span>
+<span class="n">hija</span><span class="o">.</span><span class="n">mostrar_atributos</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Padre</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_atributo_protegido</span> <span class="o">=</span> <span class="s2">&quot;Soy un atributo protegido&quot;</span>
+
+<span class="k">class</span> <span class="nc">Hija</span><span class="p">(</span><span class="n">Padre</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">mostrar_atributo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Atributo protegido: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_atributo_protegido</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Prueba</span>
+<span class="n">hija</span> <span class="o">=</span> <span class="n">Hija</span><span class="p">()</span>
+<span class="n">hija</span><span class="o">.</span><span class="n">mostrar_atributo</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="ejercicios_2">Ejercicios</h4>
+<ul>
+<li><strong>Ejercicio 1</strong>: Uso de <code>super()</code> en constructores</li>
+<li>
+<p>Crea una clase base llamada <code>Vehiculo</code> con atributos <code>marca</code> y <code>modelo</code>. Crea una clase hija llamada <code>Coche</code> que además incluya el atributo <code>puertas</code>. Usa <code>super()</code> para inicializar los atributos de la clase base desde la clase hija.</p>
+</li>
+<li>
+<p><strong>Ejercicio 2</strong>: Extender un método heredado</p>
+</li>
+<li>Define una clase <code>Empleado</code> con un método <code>salario_base</code> que imprima un salario fijo. Crea una clase hija <code>Gerente</code> que sobrescriba este método para imprimir el salario base más un bono adicional, usando <code>super()</code>.</li>
+</ul>
 <hr />
 <p>Referencia: <a href="https://docs.python.org/es/3/tutorial/classes.html">https://docs.python.org/es/3/tutorial/classes.html</a></p>
 
@@ -2923,6 +3043,22 @@ Cada definición de objetos corresponde a algún concepto o cosa del mundo real,
             </div>
           </a>
         
+        
+          
+          <a href="../16_db/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 16. Introducción a Bases de Datos y ORM">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                16. Introducción a Bases de Datos y ORM
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
