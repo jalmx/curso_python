@@ -63,7 +63,6 @@
     1. Herencia Concepto y aplicación.
     2. Sobrescritura de métodos.
     3. Uso de la función *super().*
-    4. Polimorfismo e interfaces
 21. Introducción a Bases de Datos y ORM
     1. ¿Qué es un ORM y por qué usarlo?
     2. Configuración del ORM.
@@ -71,7 +70,7 @@
     1. Mapear tablas a clases.
     2. Crear, leer, actualizar y eliminar registros (operaciones CRUD).
     3. Uso de SQLite.
-    4. Relaciones entre Tablas.
+    <!-- 4. Relaciones entre Tablas. -->
 23. Introducción a interfaz gráfica (PyQt)
     1. ¿Qué es PyQt?
     2. Instalación de PyQt y configuración del entorno.

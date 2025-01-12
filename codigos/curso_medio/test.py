@@ -1,25 +1,20 @@
 class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
 
-    def __init__(self, nombre=None, edad=None):
-        if nombre is None and (edad is None or edad == 0):
-            self.nombre = "Desconocido"
-            self.edad = 0
-        elif edad is None:
-            self.nombre = nombre
-            self.edad = 0
-        elif nombre is None:
-            self.nombre = "Desconocido"
-            self.edad = edad
-        else:
-            self.nombre = nombre
-            self.edad = edad
+    def saludo(self, argumento):
+        print(f"{self.nombre} - {argumento}")
+
+class Estudiante(Persona):
+    def __init__(self, nombre, matricula):
+        super().__init__(nombre)  # Llama al constructor de la clase padre
+        self.matricula = matricula
+
+    def mostrar_informacion(self):
+        print(f"Nombre: {self.nombre}, Matrícula: {self.matricula}")
+        self.saludo(self.nombre)
 
 
-persona1 = Persona()
-persona2 = Persona("Luis")
-persona3 = Persona("Ana", 30)
-persona4 = Persona(edad=30)
-print(persona1.nombre, persona1.edad)  # Desconocido 0
-print(persona2.nombre, persona2.edad)  # Luis 0
-print(persona3.nombre, persona3.edad)  # Ana 30
-print(persona4.nombre, persona4.edad)  # Desconocido 30
+# Prueba
+estudiante = Estudiante("Juan", "12345")
+estudiante.mostrar_informacion()

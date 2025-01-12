@@ -10,8 +10,8 @@ title: 15. Programación Orientada a Objetos
 
 La programación orienta a objetos es un paradigma de programación, lo cual esta enfocado en la abstracción del mundo real a código de programación; es decir, es una representación de las cosas del mundo en un archivo con código, el cual tiene los atributos y comportamientos.
 
->Los programas se construyen a partir de definiciones de objetos y definiciones de funciones; la mayoría de los cómputos se hacen con base en objetos.
->Cada definición de objetos corresponde a algún concepto o cosa del mundo real, y las funciones que operan sobre esos objetos corresponden a las maneras en que los conceptos o cosas reales interactúan
+> Los programas se construyen a partir de definiciones de objetos y definiciones de funciones; la mayoría de los cómputos se hacen con base en objetos.
+> Cada definición de objetos corresponde a algún concepto o cosa del mundo real, y las funciones que operan sobre esos objetos corresponden a las maneras en que los conceptos o cosas reales interactúan
 
 ### Clase
 
@@ -1014,7 +1014,7 @@ for auto in autos:
 
 ### Ejercicios
 
-d
+<!-- TODO: agregar ejercicios de sobre escritura sin ocupar super  -->
 
 ### El Método `super()`
 
@@ -1038,6 +1038,50 @@ class ClaseHija(ClasePadre):
         print("Método en la ClaseHija")
 
 ```
+
+#### Ejemplos `super()`
+
+```python
+class Padre:
+    def __init__(self, atributo):
+        self.atributo = atributo
+
+class Hija(Padre):
+    def __init__(self, atributo, otro_atributo):
+        super().__init__(atributo)  # Inicializa el atributo en la clase Padre
+        self.otro_atributo = otro_atributo
+
+    def mostrar_atributos(self):
+        print(f"Atributo de Padre: {self.atributo}")
+        print(f"Atributo de Hija: {self.otro_atributo}")
+
+# Prueba
+hija = Hija("Valor del padre", "Valor de la hija")
+hija.mostrar_atributos()
+
+```
+
+```python
+class Padre:
+    def __init__(self):
+        self._atributo_protegido = "Soy un atributo protegido"
+
+class Hija(Padre):
+    def mostrar_atributo(self):
+        print(f"Atributo protegido: {self._atributo_protegido}")
+
+# Prueba
+hija = Hija()
+hija.mostrar_atributo()
+```
+
+#### Ejercicios
+
+- **Ejercicio 1**: Uso de `super()` en constructores
+  - Crea una clase base llamada `Vehiculo` con atributos `marca` y `modelo`. Crea una clase hija llamada `Coche` que además incluya el atributo `puertas`. Usa `super()` para inicializar los atributos de la clase base desde la clase hija.
+
+- **Ejercicio 2**: Extender un método heredado
+  - Define una clase `Empleado` con un método `salario_base` que imprima un salario fijo. Crea una clase hija `Gerente` que sobrescriba este método para imprimir el salario base más un bono adicional, usando `super()`.
 
 ---
 
