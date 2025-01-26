@@ -1,5 +1,5 @@
 ---
-title: 15 Ejercicios
+title: Ejercicios
 ---
 
 ![banner](assets/banner.png)

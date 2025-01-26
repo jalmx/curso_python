@@ -279,7 +279,7 @@ persona.__saludar()     # Error: AttributeError
 - Usa `__` para datos que realmente necesitan ser privados y protegidos contra modificaciones accidentales.
 - Usa `_` para señalar que un atributo o método es solo para uso interno.
 
-### Constructor
+### Constructor &#95;&#95;init&#95;&#95;
 
 Un constructor es un método especial en una clase que se llama automáticamente cuando se crea una nueva instancia de esa clase. En Python, el constructor se define mediante el método especial `__init__`.
 
@@ -1012,6 +1012,25 @@ for auto in autos:
 
 ```
 
+### Sobre escritura de &#95;&#95;str&#95;&#95;
+
+Cuando mandamos un objeto al método `print()`, éste por default llama al método `__str__` del objeto. Si el método no ha sido sobrescrito veremos algo como `<__main__.Objeto object at 0x7f17bcc31700>`, esto lo que nos indica es la posición de la memoria de dicho objeto. Pero, nosotros no queremos ver eso, deseamos algo mas descriptivo o el estado de lo que contiene el objeto.
+Lo que se debe colocar en el método `__str__` es totalmente arbitrario, obviamente debe ser algo que nos sea util, ademas que si dicho método en el clase padre ya contiene algo, podemos cambiarlo en la clase hija.
+
+```python
+class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+    def __str__(self):
+        return f"Persona. nombre={self.nombre} :D"
+
+
+# Prueba
+persona = Persona("Carlos")
+print(persona)
+```
+
 ### Ejercicios
 
 <!-- TODO: agregar ejercicios de sobre escritura sin ocupar super  -->
@@ -1078,10 +1097,10 @@ hija.mostrar_atributo()
 #### Ejercicios
 
 - **Ejercicio 1**: Uso de `super()` en constructores
-  - Crea una clase base llamada `Vehiculo` con atributos `marca` y `modelo`. Crea una clase hija llamada `Coche` que además incluya el atributo `puertas`. Usa `super()` para inicializar los atributos de la clase base desde la clase hija.
+    - Crea una clase base llamada `Vehiculo` con atributos `marca` y `modelo`. Crea una clase hija llamada `Coche` que además incluya el atributo `puertas`. Usa `super()` para inicializar los atributos de la clase base desde la clase hija.
 
 - **Ejercicio 2**: Extender un método heredado
-  - Define una clase `Empleado` con un método `salario_base` que imprima un salario fijo. Crea una clase hija `Gerente` que sobrescriba este método para imprimir el salario base más un bono adicional, usando `super()`.
+    - Define una clase `Empleado` con un método `salario_base` que imprima un salario fijo. Crea una clase hija `Gerente` que sobrescriba este método para imprimir el salario base más un bono adicional, usando `super()`.
 
 ---
 
