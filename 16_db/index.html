@@ -1077,6 +1077,66 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#actualizando-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizando registros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminando-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminando registro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-gestion-de-una-lista-de-tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1: Gestión de una Lista de Tareas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-sistema-de-gestion-de-estudiantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2: Sistema de Gestión de Estudiantes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-biblioteca-de-libros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3: Biblioteca de Libros
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1569,6 +1629,66 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#actualizando-registros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actualizando registros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminando-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminando registro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejercicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-1-gestion-de-una-lista-de-tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 1: Gestión de una Lista de Tareas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-2-sistema-de-gestion-de-estudiantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 2: Sistema de Gestión de Estudiantes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-3-biblioteca-de-libros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio 3: Biblioteca de Libros
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1795,7 +1915,7 @@ Una vez queda nuestro modelo listo, ya podemos usarlo.</p>
     <span class="n">date_register</span> <span class="o">=</span> <span class="n">DateTimeField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">)</span><span class="c1"># creamos el campo que tendrá el registro</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;code: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s2"> - name: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> - date: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">date_register</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;id: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> - code: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s2"> - name: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> - date: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">date_register</span><span class="si">}</span><span class="s2">&quot;</span>
 
     <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
         <span class="n">database</span> <span class="o">=</span> <span class="n">db</span>
@@ -1838,11 +1958,106 @@ Una vez queda nuestro modelo listo, ya podemos usarlo.</p>
 <p>Con relación a obtención de los registros individuales, siempre se debe tener un valor en el <strong>registro que sea único</strong>, por eso siempre se define un <code>id</code> único, el cual sabemos que no se repite en ninguno mas.
 Para este caso, definimos en el modelo <code>id = AutoField()</code>, con esto se indica que sera único e incremental. Y sera el campo que nos ayuda a obtener ese registro.
 La forma de obtener un registro es con el método <code>Model.get( filtro )</code>.</p>
-<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="ow">not</span> <span class="n">Component</span><span class="o">.</span><span class="n">table_exists</span><span class="p">():</span>
-        <span class="n">Component</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span> <span class="n">Component</span><span class="o">.</span><span class="n">table_exists</span><span class="p">():</span>
+    <span class="n">Component</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
 
-    <span class="n">component</span> <span class="o">=</span> <span class="n">Component</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Component</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">component</span><span class="p">)</span> <span class="c1"># Resultado: code: c4.7u - name: capacitor 4.7u - date: 2025-01-12 17:59:06.432133</span>
+<span class="n">component</span> <span class="o">=</span> <span class="n">Component</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Component</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">component</span><span class="p">)</span> <span class="c1"># Resultado: code: c4.7u - name: capacitor 4.7u - date: 2025-01-12 17:59:06.432133</span>
+</code></pre></div>
+<h3 id="actualizando-registros">Actualizando registros</h3>
+<p>Para actualizar un registro, primero hay que extraerlo, se modifica el campo del objeto y se salva.</p>
+<div class="highlight"><pre><span></span><code><span class="n">component</span> <span class="o">=</span> <span class="n">Component</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Component</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">)</span> <span class="c1"># buscamos el registro</span>
+<span class="n">component</span><span class="o">.</span><span class="n">power</span> <span class="o">=</span> <span class="s2">&quot;1/2W&quot;</span>    <span class="c1"># aquí es donde modificamos el dato</span>
+<span class="n">component</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>            <span class="c1"># guardamos el cambio en la db</span>
+</code></pre></div>
+<h3 id="eliminando-registro">Eliminando registro</h3>
+<p>Se debe obtener el registro y aplicar el método <code>delete_instance()</code> para eliminar</p>
+<div class="highlight"><pre><span></span><code><span class="n">component</span> <span class="o">=</span> <span class="n">Component</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Component</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span><span class="p">)</span>
+<span class="n">component</span><span class="o">.</span><span class="n">delete_instance</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="ejercicios">Ejercicios</h3>
+<p>Toma en consideraciones los siguientes puntos,</p>
+<ul>
+<li>Se toma como obvio pero debes agregar el campo de <code>id</code>.</li>
+<li>Define los modelos con las clases de Peewee.</li>
+<li>Usa los métodos como <code>create()</code>, <code>select()</code>, <code>get()</code>, y <code>delete_instance()</code> para las operaciones CRUD.</li>
+<li>Integra validaciones o menús interactivos en la consola para practicar con entradas dinámicas.</li>
+</ul>
+<h4 id="ejercicio-1-gestion-de-una-lista-de-tareas">Ejercicio 1: Gestión de una Lista de Tareas</h4>
+<p>Crea una aplicación simple para gestionar una lista de tareas. Las tareas deben tener un título, una descripción y un estado (pendiente o completada).</p>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>Crear una base de datos SQLite llamada tareas.db.</li>
+<li>Diseñar un modelo llamado Tarea con los campos:<ul>
+<li>titulo (texto, obligatorio, único).</li>
+<li>descripcion (texto, opcional).</li>
+<li>estado (booleano, False por defecto).</li>
+</ul>
+</li>
+<li>Implementar las siguientes operaciones:<ul>
+<li>Agregar una nueva tarea.</li>
+<li>Listar todas las tareas.</li>
+<li>Marcar una tarea como completada.</li>
+</ul>
+</li>
+</ol>
+<p>Ejemplo de vista</p>
+<div class="highlight"><pre><span></span><code>Tareas pendientes:
+1. Comprar comida (Pendiente)
+2. Terminar proyecto (Pendiente)
+
+Tareas completadas:
+1. Limpiar la casa
+</code></pre></div>
+<h4 id="ejercicio-2-sistema-de-gestion-de-estudiantes">Ejercicio 2: Sistema de Gestión de Estudiantes</h4>
+<p>Crea una base de datos para gestionar estudiantes en un curso. Los estudiantes tienen un nombre, un apellido, y un promedio (float).</p>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>Crear una base de datos SQLite llamada estudiantes.db.</li>
+<li>Diseñar un modelo Estudiante con los campos:<ul>
+<li>nombre (texto, obligatorio).</li>
+<li>apellido (texto, obligatorio).</li>
+<li>promedio (float).</li>
+</ul>
+</li>
+<li>Implementar las siguientes funciones:<ul>
+<li>Agregar nuevos estudiantes.</li>
+<li>Mostrar todos los estudiantes ordenados por su promedio de forma descendente.</li>
+<li>Eliminar un estudiante por su nombre y apellido.</li>
+</ul>
+</li>
+</ol>
+<p>Ejemplo de vista</p>
+<div class="highlight"><pre><span></span><code>Estudiantes registrados:
+1. Ana Pérez, Promedio: 95.0
+2. Juan Gómez, Promedio: 85.5
+</code></pre></div>
+<h3 id="ejercicio-3-biblioteca-de-libros">Ejercicio 3: Biblioteca de Libros</h3>
+<p>Crea una aplicación que permita gestionar una pequeña biblioteca de libros.</p>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li>Crear una base de datos SQLite llamada biblioteca.db.</li>
+<li>Diseñar dos modelos:<ul>
+<li>Autor con los campos:</li>
+<li>nombre (texto, obligatorio).</li>
+<li>Libro con los campos:</li>
+<li>titulo (texto, obligatorio).</li>
+<li>autor (relación con el modelo Autor).</li>
+<li>año_publicacion (entero).</li>
+</ul>
+</li>
+<li>Implementar las siguientes funcionalidades:<ul>
+<li>Agregar un nuevo autor.</li>
+<li>Agregar un nuevo libro y asociarlo con un autor.</li>
+<li>Mostrar todos los libros disponibles junto con su autor.</li>
+<li>Buscar libros publicados por un autor específico.</li>
+</ul>
+</li>
+</ol>
+<p>Ejemplo de vista</p>
+<div class="highlight"><pre><span></span><code>Libros disponibles:
+1. &quot;Cien años de soledad&quot; por Gabriel García Márquez (1967)
+2. &quot;El amor en los tiempos del cólera&quot; por Gabriel García Márquez (1985)
 </code></pre></div>
 <hr />
 <p>Referencia: <a href="https://docs.peewee-orm.com/en/latest/">https://docs.peewee-orm.com/en/latest/</a></p>
