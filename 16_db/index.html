@@ -463,7 +463,7 @@
         
   
   <span class="md-ellipsis">
-    15 Ejercicios
+    Ejercicios
   </span>
   
 
@@ -1023,11 +1023,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aplicando-base-de-datos-con-orm" class="md-nav__link">
+  <a href="#como-usar-peewee-orm" class="md-nav__link">
     <span class="md-ellipsis">
-      Aplicando Base de datos con ORM
+      Como usar Peewee ORM
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Como usar Peewee ORM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creando-el-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando el modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-tabla-y-verificando-su-existencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando tabla y verificando su existencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertando-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertando datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obteniendo-todos-los-registros-de-la-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obteniendo todos los registros de la DB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obteniendo-datos-individuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obteniendo datos individuales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1050,7 +1101,7 @@
         
   
   <span class="md-ellipsis">
-    GUI con QT
+    17. GUI con QT
   </span>
   
 
@@ -1464,11 +1515,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aplicando-base-de-datos-con-orm" class="md-nav__link">
+  <a href="#como-usar-peewee-orm" class="md-nav__link">
     <span class="md-ellipsis">
-      Aplicando Base de datos con ORM
+      Como usar Peewee ORM
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Como usar Peewee ORM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creando-el-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando el modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-tabla-y-verificando-su-existencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando tabla y verificando su existencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insertando-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insertando datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obteniendo-todos-los-registros-de-la-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obteniendo todos los registros de la DB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#obteniendo-datos-individuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obteniendo datos individuales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1497,7 +1599,7 @@
 <ul>
 <li>Utilizan tablas para estructurar los datos.</li>
 <li>Basadas en SQL (Structured Query Language) para realizar operaciones sobre los datos.</li>
-<li>Ejemplos: MySQL, PostgreSQL, SQLite.</li>
+<li>Ejemplos: MySQL, <strong>PostgreSQL</strong>, <strong>SQLite</strong>.</li>
 </ul>
 <h4 id="no-relacionales-nosql">No Relacionales (NoSQL)</h4>
 <ul>
@@ -1673,7 +1775,75 @@
 <p>DB Browser for SQLite (DB4S) is a high quality, visual, open source tool designed for people who want to create, search, and edit SQLite or SQLCipher database files. DB4S gives a familiar spreadsheet-like interface on the database in addition to providing a full SQL query facility.</p>
 <p><a href="https://sqlitebrowser.org/">https://sqlitebrowser.org/</a></p>
 <p><img alt="DB Browser for SQLite" src="https://sqlitebrowser.org/images/screenshot.png" /></p>
-<h2 id="aplicando-base-de-datos-con-orm">Aplicando Base de datos con ORM</h2>
+<h2 id="como-usar-peewee-orm">Como usar Peewee ORM</h2>
+<h3 id="creando-el-modelo">Creando el modelo</h3>
+<p><strong>Primero</strong> debemos crear un modelo del objeto que vamos a almacenar en la base de datos.
+Una vez queda nuestro modelo listo, ya podemos usarlo.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">peewee</span> <span class="kn">import</span> <span class="o">*</span>            <span class="c1"># importamos todo lo necesario de la librería peewee</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>   <span class="c1"># la vamos a usar para asignar cuando se crea el registro</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">SqliteDatabase</span><span class="p">(</span><span class="s2">&quot;components.db&quot;</span><span class="p">)</span>    <span class="c1">#le damos el nombre a la base de datos que se creará</span>
+
+<span class="k">class</span> <span class="nc">Component</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">AutoField</span><span class="p">()</span>                        <span class="c1"># creamos el campo que tendrá el registro</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">()</span>                      <span class="c1"># creamos el campo que tendrá el registro</span>
+    <span class="n">code</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>           <span class="c1"># creamos el campo que tendrá el registro</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">()</span>               <span class="c1"># creamos el campo que tendrá el registro</span>
+    <span class="n">quantity</span> <span class="o">=</span> <span class="n">IntegerField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>      <span class="c1"># creamos el campo que tendrá el registro</span>
+    <span class="n">power</span> <span class="o">=</span> <span class="n">FloatField</span><span class="p">(</span><span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>           <span class="c1"># creamos el campo que tendrá el registro</span>
+    <span class="n">date_register</span> <span class="o">=</span> <span class="n">DateTimeField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">)</span><span class="c1"># creamos el campo que tendrá el registro</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;code: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s2"> - name: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> - date: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">date_register</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">database</span> <span class="o">=</span> <span class="n">db</span>
+        <span class="n">db_table</span> <span class="o">=</span> <span class="s2">&quot;component&quot;</span>
+<span class="c1"># para conocer mas sobre los campos que se pueden crear ir a https://docs.peewee-orm.com/en/latest/peewee/models.html</span>
+</code></pre></div>
+<blockquote>
+<p>Referencia: <a href="https://docs.peewee-orm.com/en/latest/peewee/models.html">https://docs.peewee-orm.com/en/latest/peewee/models.html</a></p>
+</blockquote>
+<h3 id="creando-tabla-y-verificando-su-existencia">Creando tabla y verificando su existencia</h3>
+<p><strong>Segundo</strong>. Tenemos que crear la tabla para poder agregar registros a la base de datos.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+
+    <span class="n">Component</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span> <span class="c1"># creamos la tabla, primero debe existir para insertar datos.</span>
+</code></pre></div>
+<p>Necesitamos siempre verificar si la tabla en donde vamos a insertar un registro nuevo, existe, de lo contrario se debe crear.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">Component</span><span class="o">.</span><span class="n">table_exists</span><span class="p">():</span>
+        <span class="n">Component</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="insertando-datos">Insertando datos</h3>
+<p>Ya que se comprobar la base de datos y sus tablas podemos insertar datos.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">Component</span><span class="o">.</span><span class="n">table_exists</span><span class="p">():</span>
+        <span class="n">Component</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
+
+    <span class="n">Component</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;resistencia R10&quot;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s2">&quot;r10&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Resistencia de 10 ohms&quot;</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># creando componente e insertando en db</span>
+    <span class="n">Component</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;capacitor 4.7u&quot;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s2">&quot;c4.7u&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;capacitor de 4.7uF a 50V&quot;</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># creando componente e insertando en db</span>
+    <span class="n">Component</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;microcontrolador ATMEGA328P&quot;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s2">&quot;ATMEGA328P&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;microcontrolador ATMEGA328P AVR 8-bits PDIP28&quot;</span><span class="p">)</span> <span class="c1"># creando componente e insertando en db</span>
+</code></pre></div>
+<h3 id="obteniendo-todos-los-registros-de-la-db">Obteniendo todos los registros de la DB</h3>
+<div class="highlight"><pre><span></span><code>    <span class="n">components</span> <span class="o">=</span> <span class="n">Component</span><span class="o">.</span><span class="n">select</span><span class="p">()</span> <span class="c1"># aquí obtenemos todos los datos de la db</span>
+
+    <span class="k">for</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">components</span><span class="p">:</span> <span class="c1"># vamos a recorrer todos los registros e imprimir su contenido</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">component</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="obteniendo-datos-individuales">Obteniendo datos individuales</h3>
+<p>Con relación a obtención de los registros individuales, siempre se debe tener un valor en el <strong>registro que sea único</strong>, por eso siempre se define un <code>id</code> único, el cual sabemos que no se repite en ninguno mas.
+Para este caso, definimos en el modelo <code>id = AutoField()</code>, con esto se indica que sera único e incremental. Y sera el campo que nos ayuda a obtener ese registro.
+La forma de obtener un registro es con el método <code>Model.get( filtro )</code>.</p>
+<div class="highlight"><pre><span></span><code>    <span class="k">if</span> <span class="ow">not</span> <span class="n">Component</span><span class="o">.</span><span class="n">table_exists</span><span class="p">():</span>
+        <span class="n">Component</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
+
+    <span class="n">component</span> <span class="o">=</span> <span class="n">Component</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Component</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">component</span><span class="p">)</span> <span class="c1"># Resultado: code: c4.7u - name: capacitor 4.7u - date: 2025-01-12 17:59:06.432133</span>
+</code></pre></div>
 <hr />
 <p>Referencia: <a href="https://docs.peewee-orm.com/en/latest/">https://docs.peewee-orm.com/en/latest/</a></p>
 
@@ -1725,13 +1895,13 @@
         
         
           
-          <a href="../17_gui/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: GUI con QT">
+          <a href="../17_gui/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 17. GUI con QT">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                GUI con QT
+                17. GUI con QT
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -463,7 +463,7 @@
         
   
   <span class="md-ellipsis">
-    15 Ejercicios
+    Ejercicios
   </span>
   
 
@@ -863,13 +863,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#constructor" class="md-nav__link">
+  <a href="#constructor-__init__" class="md-nav__link">
     <span class="md-ellipsis">
-      Constructor
+      Constructor &#95;&#95;init&#95;&#95;
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Constructor">
+    <nav class="md-nav" aria-label="Constructor __init__">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1235,6 +1235,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sobre-escritura-de-__str__" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobre escritura de &#95;&#95;str&#95;&#95;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ejercicios_1" class="md-nav__link">
     <span class="md-ellipsis">
       Ejercicios
@@ -1338,7 +1347,7 @@
         
   
   <span class="md-ellipsis">
-    GUI con QT
+    17. GUI con QT
   </span>
   
 
@@ -1612,13 +1621,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#constructor" class="md-nav__link">
+  <a href="#constructor-__init__" class="md-nav__link">
     <span class="md-ellipsis">
-      Constructor
+      Constructor &#95;&#95;init&#95;&#95;
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Constructor">
+    <nav class="md-nav" aria-label="Constructor __init__">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1980,6 +1989,15 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobre-escritura-de-__str__" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobre escritura de &#95;&#95;str&#95;&#95;
+    </span>
+  </a>
   
 </li>
         
@@ -2287,7 +2305,7 @@ Cada definición de objetos corresponde a algún concepto o cosa del mundo real,
 <li>Usa <code>__</code> para datos que realmente necesitan ser privados y protegidos contra modificaciones accidentales.</li>
 <li>Usa <code>_</code> para señalar que un atributo o método es solo para uso interno.</li>
 </ul>
-<h3 id="constructor">Constructor</h3>
+<h3 id="constructor-__init__">Constructor &#95;&#95;init&#95;&#95;</h3>
 <p>Un constructor es un método especial en una clase que se llama automáticamente cuando se crea una nueva instancia de esa clase. En Python, el constructor se define mediante el método especial <code>__init__</code>.</p>
 <p>El Constructor en Python</p>
 <p>Un constructor es un método especial en una clase que se llama automáticamente cuando se crea una nueva instancia de esa clase. En Python, el constructor se define mediante el método especial <strong>init</strong>.</p>
@@ -2933,6 +2951,21 @@ Cada definición de objetos corresponde a algún concepto o cosa del mundo real,
 <span class="k">for</span> <span class="n">auto</span> <span class="ow">in</span> <span class="n">autos</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">auto</span><span class="o">.</span><span class="n">tipo</span><span class="p">())</span>
 </code></pre></div>
+<h3 id="sobre-escritura-de-__str__">Sobre escritura de &#95;&#95;str&#95;&#95;</h3>
+<p>Cuando mandamos un objeto al método <code>print()</code>, éste por default llama al método <code>__str__</code> del objeto. Si el método no ha sido sobrescrito veremos algo como <code>&lt;__main__.Objeto object at 0x7f17bcc31700&gt;</code>, esto lo que nos indica es la posición de la memoria de dicho objeto. Pero, nosotros no queremos ver eso, deseamos algo mas descriptivo o el estado de lo que contiene el objeto.
+Lo que se debe colocar en el método <code>__str__</code> es totalmente arbitrario, obviamente debe ser algo que nos sea util, ademas que si dicho método en el clase padre ya contiene algo, podemos cambiarlo en la clase hija.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Persona</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Persona. nombre=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="si">}</span><span class="s2"> :D&quot;</span>
+
+
+<span class="c1"># Prueba</span>
+<span class="n">persona</span> <span class="o">=</span> <span class="n">Persona</span><span class="p">(</span><span class="s2">&quot;Carlos&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">persona</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="ejercicios_1">Ejercicios</h3>
 <!-- TODO: agregar ejercicios de sobre escritura sin ocupar super  -->
 
@@ -2985,14 +3018,18 @@ Cada definición de objetos corresponde a algún concepto o cosa del mundo real,
 </code></pre></div>
 <h4 id="ejercicios_2">Ejercicios</h4>
 <ul>
-<li><strong>Ejercicio 1</strong>: Uso de <code>super()</code> en constructores</li>
 <li>
-<p>Crea una clase base llamada <code>Vehiculo</code> con atributos <code>marca</code> y <code>modelo</code>. Crea una clase hija llamada <code>Coche</code> que además incluya el atributo <code>puertas</code>. Usa <code>super()</code> para inicializar los atributos de la clase base desde la clase hija.</p>
+<p><strong>Ejercicio 1</strong>: Uso de <code>super()</code> en constructores</p>
+<ul>
+<li>Crea una clase base llamada <code>Vehiculo</code> con atributos <code>marca</code> y <code>modelo</code>. Crea una clase hija llamada <code>Coche</code> que además incluya el atributo <code>puertas</code>. Usa <code>super()</code> para inicializar los atributos de la clase base desde la clase hija.</li>
+</ul>
 </li>
 <li>
 <p><strong>Ejercicio 2</strong>: Extender un método heredado</p>
-</li>
+<ul>
 <li>Define una clase <code>Empleado</code> con un método <code>salario_base</code> que imprima un salario fijo. Crea una clase hija <code>Gerente</code> que sobrescriba este método para imprimir el salario base más un bono adicional, usando <code>super()</code>.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <p>Referencia: <a href="https://docs.python.org/es/3/tutorial/classes.html">https://docs.python.org/es/3/tutorial/classes.html</a></p>
