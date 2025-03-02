@@ -105,4 +105,113 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
 
 ## POO
 
+### 1. Clase Persona
+
+```text
+-------------------
+|     Persona     |
+-------------------
+| - nombre: str   |
+| - edad: int     |
+-------------------
+| + __init__()    |
+| + mostrar_info()|
+-------------------
+```
+
+**Descripción:**
+
+- Crea una clase `Persona` con atributos privados `nombre (str)` y `edad (int)`.
+- Implementa un método `__init__` para inicializar los atributos.
+- Añade un método `mostrar_info` que imprima el nombre y la edad de la persona.
+
+### 2. Clase Coche
+
+```text
+-------------------
+|     Coche       |
+-------------------
+| - marca: str    |
+| - modelo: str   |
+| - año: int      |
+-------------------
+| + __init__()    |
+| + arrancar()    |
+| + detener()     |
+-------------------
+```
+
+**Descripción:**
+
+- Crea una clase `Coche` con atributos privados marca, modelo y año.
+- Implementa un método `__init__` para inicializar los atributos.
+- Añade métodos `arrancar` y `detener` que impriman mensajes como "El coche ha arrancado" y "El coche se ha detenido".
+
+### 3. CuentaBancaria
+
+```text
+----------------------------
+|     CuentaBancaria       |
+----------------------------
+| - titular: str           |
+| - saldo: float           |
+----------------------------
+| + __init__()             |
+| + depositar(monto: float)|
+| + retirar(monto: float)  |
+| + mostrar_saldo()        |
+----------------------------
+```
+
+**Descripción:**
+
+- Crea una clase `CuentaBancaria` con atributos privados titular (str) y saldo (float).
+- Implementa un método `__init__` para inicializar los atributos.
+- Añade métodos `depositar` y `retirar` para modificar el saldo.
+- Implementa un método `mostrar_saldo` que imprima el saldo actual.
+
+### 4. Rectángulo
+
+```text
+----------------------------
+|     Rectangulo           |
+----------------------------
+| - ancho: float           |
+| - alto: float            |
+----------------------------
+| + __init__()             |
+| + calcular_area()        |
+| + calcular_perimetro()   |
+----------------------------
+```
+
+**Descripción:**
+
+- Crea una clase `Rectangulo` con atributos privados ancho y alto.
+- Implementa un método `__init__` para inicializar los atributos.
+- Añade métodos `calcular_area` y `calcular_perimetro` que devuelvan el área y el perímetro del rectángulo, respectivamente.
+
+### 5. Estudiante
+
+```text
+----------------------------
+|     Estudiante           |
+----------------------------
+| - nombre: str            |
+| - edad: int              |
+| - cursos: list[str]      |
+----------------------------
+| + __init__()             |
+| + inscribir_curso(curso: str)|
+| + mostrar_cursos()       |
+----------------------------
+```
+
+**Descripción:**
+
+- Crea una clase `Estudiante` con atributos privados nombre, edad y cursos (una lista de strings).
+- Implementa un método `__init__` para inicializar los atributos.
+- Añade un método `inscribir_curso` que permita añadir un curso a la lista.
+- Implementa un método `mostrar_cursos` que imprima todos los cursos en los que está inscrito el estudiante.
+
 ## GUI (Qt)

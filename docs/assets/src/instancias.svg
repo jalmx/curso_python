@@ -174,15 +174,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="2.5530945"
-     inkscape:cx="962.75325"
-     inkscape:cy="269.86859"
+     inkscape:zoom="1.2765473"
+     inkscape:cx="1063.8071"
+     inkscape:cy="387.76473"
      inkscape:window-width="1920"
-     inkscape:window-height="1054"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg18"
+     inkscape:current-layer="g7597"
      showguides="true" /><g
      id="g3"
      transform="translate(495.36791,25.040459)"><path
@@ -235,7 +235,7 @@
            id="tspan1"
            x="-394.405"
            y="369.28812"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:22.8596px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:9.95415">Isntancia(Objeto)</tspan></text></g><g
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:22.8596px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:9.95415">Instancia(Objeto)</tspan></text></g><g
        id="g7595"
        transform="translate(30.444012)"><image
          width="417.42007"
@@ -254,7 +254,7 @@
            id="tspan7593"
            x="88.718277"
            y="369.28812"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:22.8596px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:9.95415">Isntancia(Objeto)</tspan></text></g><g
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:22.8596px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:9.95415">Instancia(Objeto)</tspan></text></g><g
        id="g7594"><image
          width="336.92685"
          height="252.69511"
@@ -272,7 +272,7 @@
            id="tspan7594"
            x="617.33081"
            y="369.28812"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:22.8596px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:9.95415">Isntancia(Objeto)</tspan></text></g></g><g
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:22.8596px;font-family:FreeSans;-inkscape-font-specification:'FreeSans, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:9.95415">Instancia(Objeto)</tspan></text></g></g><g
      id="path7597"><path
        style="color:#000000;fill:#29abe2;stroke-linejoin:bevel;stroke-miterlimit:10;-inkscape-stroke:none"
        d="m 460.10352,156.27344 -1.4629,0.33398 c 0,0 -31.22164,7.10428 -68.76757,18.76367 -37.54593,11.65939 -81.39552,27.81029 -106.98633,46.23243 -18.83091,13.55586 -40.23504,40.27536 -57.07031,63.6582 -16.83528,23.38284 -29.03516,43.42969 -29.03516,43.42969 l -0.7793,1.28125 2.5625,1.55859 0.7793,-1.28125 c 0,0 12.14644,-19.9556 28.9082,-43.23633 16.76176,-23.28073 38.20706,-49.88615 56.38867,-62.97461 24.94153,-17.95473 68.69728,-34.18066 106.12305,-45.80273 37.42578,-11.62208 68.54297,-18.70313 68.54297,-18.70313 l 1.46289,-0.33398 z"
