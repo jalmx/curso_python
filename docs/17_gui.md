@@ -87,6 +87,7 @@ nos lanzara en automático la aplicación para crear nuestra aplicación.:
 ```bash
 pyside6-designer
 ```
+
 ![qt designer](assets/qt_designer_1.png)
 
 Elegimos la opción de `Main Window` o `Ventana principal`, se creara una ventana base:
@@ -104,3 +105,105 @@ La forma de implementarlo es la siguiente:
 ```bash
 pyside6-uic your_file.ui -o ui_your_file.py
 ```
+
+### Ejecutando nuestra ventana
+
+Tenemos que crear nuestro archivo principal donde mandamos a llamar a la ventana que hicimos.
+
+`main.py`
+
+```python
+import sys  # importo el modulo del sistema para pasar los argumentos a la aplicación
+from PySide6.QtWidgets import (
+    QApplication,
+    QMainWindow,
+)  # se deben traer los módulos para crear el contexto de la aplicación
+
+from ui_main_window import Ui_MainWindow
+
+
+class MiVentanaPrincipal(QMainWindow, Ui_MainWindow):
+
+    # Esta clase me sirve para crear toda la interacción con la ventana, las acciones de los botones, textos, todos los widgets, también se pueden agregar por código lo que sea necesario
+
+    def __init__(self):
+        super().__init__()  # inicializo el constructor padre QMainWindow
+        self.setupUi(self)  # inicializo mi ventana que viene de Ui_MainWindow
+
+
+if __name__ == "__main__":
+
+    app = QApplication(sys.argv)    # creo el contexto de la aplicación
+    window = MiVentanaPrincipal()   # creo la instancia de mi ventana
+    window.show()                   # muestro la ventana
+    app.exec()                      # ejecuto la aplicación
+```
+
+Archivo `py` generado a partir del archivo `ui`, usando `pyside6-uic`;
+
+> Nota: Este código es autogenerado, no se debe editar, lo que se modifica es el archivo ui.
+
+Archivo: `ui_main.py`
+
+```python
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'main_window.ui'
+##
+## Created by: Qt User Interface Compiler version 6.8.2
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QMainWindow, QMenuBar, QSizePolicy,
+    QStatusBar, QWidget)
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(800, 600)
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 800, 23))
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+    # retranslateUi
+```
+
+## Widgets
+
+### Layouts
+
+## Ejemplos GUI
+
+### Generador de contraseñas
+
+![pass ui](assets/pass_ui.png)
+
+## Ejercicios GUI
+
+### Segunda ley de Newton
+
+![2a law](assets/app_2a_ley.png)
