@@ -194,7 +194,95 @@ class Ui_MainWindow(object):
 
 ## Widgets
 
-### Layouts
+## Label (Etiquetas) QLabel
+
+La etiqueta nos ayuda a mostrar texto en la GUI.
+La etiqueta se encuentra en la sección de `Display Widgets`, como se ve en la imagen
+
+![label 1](assets/label_0.png)
+
+Aquí podemos encontrar las etiquetas que nos sirven para colocar texto dentro de la aplicación.
+
+![label 1](assets/label_1.png)
+
+Damos click sobre el `widget` y lo colocamos sobre la ventana.
+
+![label 1](assets/label_2.png)
+
+### Código
+
+Con botones podemos dar interactividad al usuario para realizar acciones.
+La etiqueta se encuentra en la sección de `Buttons`, como se ve en la imagen:
+
+![btn](assets/btn_1.png)
+
+Aquí podemos varios tipos de botones, por el momento nos enfocamos en el primero.
+
+![btn](assets/btn_2.png)
+
+Damos click sobre el `widget` y lo colocamos sobre la ventana.
+
+![btn](assets/btn_3.png)
+
+```python
+from PySide6.QtWidgets import QLabel # importación de modulo que contiene la clase QLabel
+
+label = QLabel('This is a QLabel widget') # Se crea una instancia de QLabel
+```
+
+### Métodos
+
+- `setAlignment()`: Aligns the text as per alignment constants
+  - Qt.AlignLeft
+  - Qt.AlignRight
+  - Qt.AlignCenter
+  - Qt.AlignJustify
+- `setIndent()`: Sets the labels text indent
+- `setPixmap()`: Displays an image
+- `Text()`: Displays the caption of the label
+- `setText()`: Programmatically sets the caption
+- `selectedText()`: Displays the selected text from the label (The textInteractionFlag must be set to TextSelectableByMouse)
+- `setBuddy()`: Associates the label with any input widget
+- `setWordWrap()`: Enables or disables wrapping text in the label
+
+Mas información en <https://doc.qt.io/qt-6/qlabel.html>
+
+## Buttons (Botones) QPushButton
+
+### Código
+
+```python
+from PySide6.QtWidgets import QPushButton # importación de modulo que contiene la clase QPushButton
+
+button = QPushButton("Download", self) # Se crea una instancia de QPushButton
+```
+
+### Métodos
+
+- `setCheckable()`: Recognizes pressed and released states of button if set to true
+- `toggle()`: Toggles between checkable states
+- `setIcon()`: Shows an icon formed out of pixmap of an image file
+- `setEnabled()`: When set to false, the button becomes disabled, hence clicking it doesn't emit a signal
+- `isChecked()`: Returns Boolean state of button
+- `setDefault()`: Sets the button as default
+- `setText()`: Programmatically sets buttons caption
+- `text()`: Retrieves buttons caption
+
+## Entra de texto (Line Edit) QLineEdit
+
+Este widget es un elemento para ingresar datos y nosotros prodamos tomar ese contenido y procesarlo.
+
+### Código
+
+```python
+from PySide6.QtWidgets import QLineEdit # importación de modulo que contiene la clase QLineEdit
+
+line_edit = QLineEdit() # Se crea una instancia de QLineEdit
+```
+
+### Métodos
+
+## Layouts
 
 ## Ejemplos GUI
 
