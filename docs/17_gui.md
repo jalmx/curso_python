@@ -230,13 +230,19 @@ from PySide6.QtWidgets import QLabel # importación de modulo que contiene la cl
 label = QLabel('This is a QLabel widget') # Se crea una instancia de QLabel
 ```
 
+![editline](assets/lineedit_1.png)
+
+![editline](assets/lineedit_2.png)
+
+![editline](assets/lineedit_3.png)
+
 ### Métodos
 
 - `setAlignment()`: Aligns the text as per alignment constants
-  - Qt.AlignLeft
-  - Qt.AlignRight
-  - Qt.AlignCenter
-  - Qt.AlignJustify
+  - `Qt.AlignLeft`
+  - `Qt.AlignRight`
+  - `Qt.AlignCenter`
+  - `Qt.AlignJustify`
 - `setIndent()`: Sets the labels text indent
 - `setPixmap()`: Displays an image
 - `Text()`: Displays the caption of the label
@@ -270,27 +276,65 @@ button = QPushButton("Download", self) # Se crea una instancia de QPushButton
 
 ## Entra de texto (Line Edit) QLineEdit
 
-Este widget es un elemento para ingresar datos y nosotros prodamos tomar ese contenido y procesarlo.
+Este widget es un elemento para ingresar datos y nosotros podamos tomar ese contenido y procesarlo.
 
 ### Código
 
 ```python
 from PySide6.QtWidgets import QLineEdit # importación de modulo que contiene la clase QLineEdit
 
-line_edit = QLineEdit() # Se crea una instancia de QLineEdit
+line_edit = QLineEdit('Default Value', parent_widget) # Se crea una instancia de QLineEdit
 ```
 
 ### Métodos
 
+- `setAlignment()`: Aligns the text as per alignment Constants
+  - `Qt.AlignLeft`
+  - `Qt.AlignRight`
+  - `Qt.AlignCenter`
+  - `Qt.AlignJustify`
+- `clear()`: Erases the contents
+- `setEchoMode()`: Controls the appearance of the text inside the box. Echomode values are
+  - `QLineEdit.`
+  - `NormalQLineEdit.`
+  - `NoEchoQLineEdit.`
+  - `PasswordQLineEdit.`
+  - `PasswordEchoOnEdit`
+- `setMaxLength()`:Sets the maximum number of characters for input
+- `setReadOnly()`: Makes the text box non-editable
+- `setText()`: Programmatically sets the text
+- `text()`: Retrieves text in the field
+- `setValidator()`: Sets the validation rules. Available validators are
+  - `QIntValidator`: Restricts input to integer
+  - `QDoubleValidator`: Fraction part of number limited to specified decimals
+  - `QRegexpValidator`: Checks input against a Regex expression
+- `setInputMask()`: Applies mask of combination of characters for input
+- `setFont()`: Displays the contents QFont object
+
 ## Layouts
+
+- `QHBoxLayout`: Linear horizontal layout
+- `QVBoxLayout`: Linear vertical layout
+- `QGridLayout`: In indexable grid XxY
+- `QStackedLayout`:  Stacked (z) in front of one another
+
+## Signal & Slots (Eventos y Callbacks)
+
+Los `Signal` son la manera de conectar los eventos que se disparan cuando sucede algo con el widget; ejemplo, dar click sobre el elemento, si esto pasa se agrega un `Slot`, que es una función o método en la cual se realizara la acción que hayamos asignado al widget cuando pase este evento.
+
+## Ventanas
+
+### Main Window (Ventana principal)
+
+### Dialog (Ventanas de dialog)
+
+### Ventana genérica (Widget)
 
 ## Ejemplos GUI
 
 ### Generador de contraseñas
 
 ![pass ui](assets/pass_ui.png)
-
-## Ejercicios GUI
 
 ### Segunda ley de Newton
 

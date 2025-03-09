@@ -223,3 +223,55 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
 5. Crea una clase `Motor` y una clase `Coche` que contenga un Motor (es decir, que reciba como argumento el constructor). Luego, crea otra clase `Motocicleta` que herede de `Coche` y usa composición para evitar repetir código.
 
 ## GUI (Qt)
+
+### Divisor de tensión
+
+En esta aplicación el objetivo es obtener el voltaje de salida, se debe colocar
+
+- voltaje de entrada
+- El valor de R1 en ohms
+- El valor de R2 en ohms
+
+![divisor de tension](assets/divisor_app.png)
+
+#### Extras
+
+- **Poder elegir que se desea calcular**, es decir, quiero calcular R1, por ende, los demás datos se deben colocar. Se puede colocar algún widget en el elijamos cual es el datos a calcular, es a libre elección.
+
+### Código de colores
+
+Se debe obtener el valor de la resistencia con base a los colores que se elijan, cada vez que cambien un valor se actualice el resultado de la resistencia.
+
+![código de colores](assets/app_codde_color.png)
+
+#### Extras
+
+- Agregar la opción para que sea elija si es de 4 o 5 bandas
+- Crear una app para resistencias SMD
+- Indica si al resistencia formada es comercial o no
+
+### Ley de Ohms
+
+Aplicación de calculo de ley de ohms.
+
+![ohm law](assets/ohm_law.png)
+
+![app ohms law](assets/app_ohms_law.png)
+
+#### Extras
+
+- Agregar que se elija el submúltiplo (mili, micro) y múltiplo (kilo, mega) a cada unidad, es decir, `mA`, `kΩ`, `mV`.
+
+### Todo
+
+Un gestor de tareas por hacer,
+
+- Agregar tarea
+- Eliminar tarea
+- Editar el contenido de la tarea
+- Cambiar de estado la tarea
+- **Usar una base de datos**
+
+### Convertidor de Temperaturas
+
+Celsius - Fahrenheit - Kelvin
