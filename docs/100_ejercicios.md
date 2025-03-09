@@ -214,4 +214,12 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
 - Añade un método `inscribir_curso` que permita añadir un curso a la lista.
 - Implementa un método `mostrar_cursos` que imprima todos los cursos en los que está inscrito el estudiante.
 
+### Herencia
+
+1. Crea una clase base Animal con un método `hacer_sonido()`, y luego crea dos subclases `Perro` y `Gato` que sobrescriban ese método con sonidos específicos.
+2. Define una clase `Vehiculo` con atributos `marca` y `modelo` (son pasados al constructor), y un método `mostrar_info()`. Luego, crea una subclase `Coche` que agregue el atributo puertas. Usa super() para reutilizar el constructor de Vehiculo.
+3. Crea una clase `Persona` con atributos `nombre` y `edad`, y un método `saludar()`. Luego, crea una subclase `Empleado` que agregue un atributo `salario` y un método `trabajar()`.
+4. Crea una clase `Figura` con un método `area()`. Luego, crea subclases `Cuadrado` y `Círculo` que sobrescriban el método `area()` con las fórmulas correspondientes.
+5. Crea una clase `Motor` y una clase `Coche` que contenga un Motor (es decir, que reciba como argumento el constructor). Luego, crea otra clase `Motocicleta` que herede de `Coche` y usa composición para evitar repetir código.
+
 ## GUI (Qt)
