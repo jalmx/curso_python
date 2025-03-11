@@ -262,7 +262,7 @@ Aplicación de calculo de ley de ohms.
 
 - Agregar que se elija el submúltiplo (mili, micro) y múltiplo (kilo, mega) a cada unidad, es decir, `mA`, `kΩ`, `mV`.
 
-### Todo
+### To-do
 
 Un gestor de tareas por hacer,
 
@@ -275,3 +275,13 @@ Un gestor de tareas por hacer,
 ### Convertidor de Temperaturas
 
 Celsius - Fahrenheit - Kelvin
+
+### Estadística inferencial
+
+Se deben poder leer n numero de datos, y generar una salida con los siguientes datos:
+
+- Media
+- Moda
+- Mediana
+- Desviación estándar
+- Varianza

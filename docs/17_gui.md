@@ -294,7 +294,7 @@ line_edit = QLineEdit('Default Value', parent_widget) # Se crea una instancia de
   - `Qt.AlignCenter`
   - `Qt.AlignJustify`
 - `clear()`: Erases the contents
-- `setEchoMode()`: Controls the appearance of the text inside the box. Echomode values are
+- `setEchoMode()`: Controls the appearance of the text inside the box. `Echomode` values are
   - `QLineEdit.`
   - `NormalQLineEdit.`
   - `NoEchoQLineEdit.`
@@ -315,7 +315,7 @@ line_edit = QLineEdit('Default Value', parent_widget) # Se crea una instancia de
 
 - `QHBoxLayout`: Linear horizontal layout
 - `QVBoxLayout`: Linear vertical layout
-- `QGridLayout`: In indexable grid XxY
+- `QGridLayout`: In indexable grid `X`x`Y`
 - `QStackedLayout`:  Stacked (z) in front of one another
 
 ## Signal & Slots (Eventos y Callbacks)
@@ -326,9 +326,15 @@ Los `Signal` son la manera de conectar los eventos que se disparan cuando sucede
 
 ### Main Window (Ventana principal)
 
+Es uno de los componentes más importantes es el `QMainWindow`. Esta clase proporciona la estructura base sobre la cual se construyen muchas aplicaciones de escritorio. `QMainWindow` es una clase que facilita la creación de aplicaciones con una ventana principal que puede **contener menús, barras de herramientas, barras de estado** y otras áreas cruciales para la interacción con el usuario.
+
 ### Dialog (Ventanas de dialog)
 
-### Ventana genérica (Widget)
+Los **cuadros de diálogo** (`QDialog`) son elementos esenciales para interactuar con el usuario. Esta clase proporciona una estructura flexible y sencilla para crear **ventanas modales** o **no modales** que permiten a los usuarios introducir información, hacer selecciones o confirmar acciones.
+
+### Ventana genérica (QWidget)
+
+Es un widget general donde se puede crear una ventana y dentro de ella colocar más widgets. Gracias a su flexibilidad, `QWidget` se puede utilizar tanto para crear ventanas principales, como para agregar controles y otros elementos visuales dentro de esas ventanas.
 
 ## Ejemplos GUI
 
