@@ -969,9 +969,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ventana-generica-widget" class="md-nav__link">
+  <a href="#ventana-generica-qwidget" class="md-nav__link">
     <span class="md-ellipsis">
-      Ventana genérica (Widget)
+      Ventana genérica (QWidget)
     </span>
   </a>
   
@@ -1417,9 +1417,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ventana-generica-widget" class="md-nav__link">
+  <a href="#ventana-generica-qwidget" class="md-nav__link">
     <span class="md-ellipsis">
-      Ventana genérica (Widget)
+      Ventana genérica (QWidget)
     </span>
   </a>
   
@@ -1726,7 +1726,7 @@ La etiqueta se encuentra en la sección de <code>Buttons</code>, como se ve en l
 <li><code>Qt.AlignCenter</code></li>
 <li><code>Qt.AlignJustify</code></li>
 <li><code>clear()</code>: Erases the contents</li>
-<li><code>setEchoMode()</code>: Controls the appearance of the text inside the box. Echomode values are</li>
+<li><code>setEchoMode()</code>: Controls the appearance of the text inside the box. <code>Echomode</code> values are</li>
 <li><code>QLineEdit.</code></li>
 <li><code>NormalQLineEdit.</code></li>
 <li><code>NoEchoQLineEdit.</code></li>
@@ -1747,15 +1747,18 @@ La etiqueta se encuentra en la sección de <code>Buttons</code>, como se ve en l
 <ul>
 <li><code>QHBoxLayout</code>: Linear horizontal layout</li>
 <li><code>QVBoxLayout</code>: Linear vertical layout</li>
-<li><code>QGridLayout</code>: In indexable grid XxY</li>
+<li><code>QGridLayout</code>: In indexable grid <code>X</code>x<code>Y</code></li>
 <li><code>QStackedLayout</code>:  Stacked (z) in front of one another</li>
 </ul>
 <h2 id="signal-slots-eventos-y-callbacks">Signal &amp; Slots (Eventos y Callbacks)</h2>
 <p>Los <code>Signal</code> son la manera de conectar los eventos que se disparan cuando sucede algo con el widget; ejemplo, dar click sobre el elemento, si esto pasa se agrega un <code>Slot</code>, que es una función o método en la cual se realizara la acción que hayamos asignado al widget cuando pase este evento.</p>
 <h2 id="ventanas">Ventanas</h2>
 <h3 id="main-window-ventana-principal">Main Window (Ventana principal)</h3>
+<p>Es uno de los componentes más importantes es el <code>QMainWindow</code>. Esta clase proporciona la estructura base sobre la cual se construyen muchas aplicaciones de escritorio. <code>QMainWindow</code> es una clase que facilita la creación de aplicaciones con una ventana principal que puede <strong>contener menús, barras de herramientas, barras de estado</strong> y otras áreas cruciales para la interacción con el usuario.</p>
 <h3 id="dialog-ventanas-de-dialog">Dialog (Ventanas de dialog)</h3>
-<h3 id="ventana-generica-widget">Ventana genérica (Widget)</h3>
+<p>Los <strong>cuadros de diálogo</strong> (<code>QDialog</code>) son elementos esenciales para interactuar con el usuario. Esta clase proporciona una estructura flexible y sencilla para crear <strong>ventanas modales</strong> o <strong>no modales</strong> que permiten a los usuarios introducir información, hacer selecciones o confirmar acciones.</p>
+<h3 id="ventana-generica-qwidget">Ventana genérica (QWidget)</h3>
+<p>Es un widget general donde se puede crear una ventana y dentro de ella colocar más widgets. Gracias a su flexibilidad, <code>QWidget</code> se puede utilizar tanto para crear ventanas principales, como para agregar controles y otros elementos visuales dentro de esas ventanas.</p>
 <h2 id="ejemplos-gui">Ejemplos GUI</h2>
 <h3 id="generador-de-contrasenas">Generador de contraseñas</h3>
 <p><img alt="pass ui" src="../assets/pass_ui.png" /></p>
