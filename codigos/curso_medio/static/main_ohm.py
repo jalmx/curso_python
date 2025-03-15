@@ -1,4 +1,4 @@
-from ley_ohm import OhmLaw
+from codigos.curso_medio.static.ley_ohm import OhmLaw
 
 if __name__ == "__main__":
     current = 3.2

@@ -1,4 +1,4 @@
-from circulo import Circulo
+from codigos.curso_medio.poo_basic.circulo import Circulo
 from random import random
 
 if __name__ == "__main__":

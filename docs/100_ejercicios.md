@@ -224,6 +224,12 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
 
 ## GUI (Qt)
 
+### Calculadora de la Segunda ley de Newton
+
+Realizar una aplicación visual para el calculo de la segunda ley de Newton.
+
+![2a law](assets/app_2a_ley.png)
+
 ### Divisor de tensión
 
 En esta aplicación el objetivo es obtener el voltaje de salida, se debe colocar
@@ -262,6 +268,10 @@ Aplicación de calculo de ley de ohms.
 
 - Agregar que se elija el submúltiplo (mili, micro) y múltiplo (kilo, mega) a cada unidad, es decir, `mA`, `kΩ`, `mV`.
 
+### Convertidor de Temperaturas
+
+Celsius - Fahrenheit - Kelvin
+
 ### To-do
 
 Un gestor de tareas por hacer,
@@ -271,10 +281,6 @@ Un gestor de tareas por hacer,
 - Editar el contenido de la tarea
 - Cambiar de estado la tarea
 - **Usar una base de datos**
-
-### Convertidor de Temperaturas
-
-Celsius - Fahrenheit - Kelvin
 
 ### Estadística inferencial
 
