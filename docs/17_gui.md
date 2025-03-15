@@ -508,124 +508,143 @@ if __name__ == "__main__":
 
 ```
 
-`ui_window.py`
+`ui_window.ui`
 
-```python
-# -*- coding: utf-8 -*-
-
-################################################################################
-## Form generated from reading UI file 'window.ui'
-##
-## Created by: Qt User Interface Compiler version 6.8.1
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
-
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QLayout,
-    QLineEdit, QPushButton, QScrollArea, QSizePolicy,
-    QSpacerItem, QVBoxLayout, QWidget)
-
-class Ui_Form(object):
-    def setupUi(self, Form):
-        if not Form.objectName():
-            Form.setObjectName(u"Form")
-        Form.resize(539, 410)
-        self.verticalLayout = QVBoxLayout(Form)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setSizeConstraint(QLayout.SizeConstraint.SetMaximumSize)
-        self.label = QLabel(Form)
-        self.label.setObjectName(u"label")
-        font = QFont()
-        font.setPointSize(22)
-        self.label.setFont(font)
-        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.verticalLayout.addWidget(self.label)
-
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.label_2 = QLabel(Form)
-        self.label_2.setObjectName(u"label_2")
-
-        self.horizontalLayout.addWidget(self.label_2)
-
-        self.edit_length = QLineEdit(Form)
-        self.edit_length.setObjectName(u"edit_length")
-
-        self.horizontalLayout.addWidget(self.edit_length)
-
-        self.btn_generate = QPushButton(Form)
-        self.btn_generate.setObjectName(u"btn_generate")
-
-        self.horizontalLayout.addWidget(self.btn_generate)
-
-
-        self.verticalLayout.addLayout(self.horizontalLayout)
-
-        self.scrollArea = QScrollArea(Form)
-        self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.scrollArea.setWidgetResizable(True)
-        self.scrollAreaWidgetContents = QWidget()
-        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 519, 276))
-        self.scrollAreaWidgetContents.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-        self.horizontalLayout_3 = QHBoxLayout(self.scrollAreaWidgetContents)
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.lbl_password = QLabel(self.scrollAreaWidgetContents)
-        self.lbl_password.setObjectName(u"lbl_password")
-        font1 = QFont()
-        font1.setPointSize(18)
-        self.lbl_password.setFont(font1)
-        self.lbl_password.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.lbl_password.setWordWrap(True)
-
-        self.horizontalLayout_3.addWidget(self.lbl_password)
-
-        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-
-        self.verticalLayout.addWidget(self.scrollArea)
-
-        self.horizontalLayout_2 = QHBoxLayout()
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.btn_clear = QPushButton(Form)
-        self.btn_clear.setObjectName(u"btn_clear")
-
-        self.horizontalLayout_2.addWidget(self.btn_clear)
-
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-
-        self.horizontalLayout_2.addItem(self.horizontalSpacer)
-
-        self.btn_copy = QPushButton(Form)
-        self.btn_copy.setObjectName(u"btn_copy")
-
-        self.horizontalLayout_2.addWidget(self.btn_copy)
-
-
-        self.verticalLayout.addLayout(self.horizontalLayout_2)
-
-
-        self.retranslateUi(Form)
-
-        QMetaObject.connectSlotsByName(Form)
-    # setupUi
-
-    def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Password Generator", None))
-        self.label_2.setText(QCoreApplication.translate("Form", u"Length", None))
-        self.btn_generate.setText(QCoreApplication.translate("Form", u"Generate", None))
-        self.lbl_password.setText(QCoreApplication.translate("Form", u"-", None))
-        self.btn_clear.setText(QCoreApplication.translate("Form", u"Clear", None))
-        self.btn_copy.setText(QCoreApplication.translate("Form", u"Copy", None))
-    # retranslateUi
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>539</width>
+    <height>410</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Password Generator</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="sizeConstraint">
+    <enum>QLayout::SizeConstraint::SetMaximumSize</enum>
+   </property>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Password Generator</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Length</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="edit_length"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_generate">
+       <property name="text">
+        <string>Generate</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>519</width>
+        <height>276</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="lbl_password">
+         <property name="font">
+          <font>
+           <pointsize>18</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>-</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="btn_clear">
+       <property name="text">
+        <string>Clear</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_copy">
+       <property name="text">
+        <string>Copy</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
 ```
 
 `password_generator.py`
@@ -738,18 +757,255 @@ Aplicación de calculo de ley de ohms.
 
 Los nombres de los widgets y su jerarquía
 
-![jerarquía](assets/)
+![jerarquía](assets/jerarquia_ohm.png)
 
 #### Código
 
 `main.py`
 
 ```python
+import sys
+from PySide6.QtWidgets import QWidget, QApplication, QMessageBox
+
+from ui_ohm_law import Ui_OhmsLawApp
+from ohm_law import *
+
+
+class AppOhmLaw(QWidget, Ui_OhmsLawApp):
+
+    ONE = 11
+    TWO = 22
+
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.init()
+
+    def init(self):
+        self.buttonGroup_calculate.buttonToggled.connect(self.calculate)
+        self.btn_calculate.clicked.connect(self.calculate)
+
+    def get_value_edit(self, edit_number):
+        value = (
+            self.input_one.text() if edit_number == self.ONE else self.input_two.text()
+        )
+
+        return float(value) if value else None
+
+    def calculate(self):
+        radio = self.buttonGroup_calculate.checkedButton().objectName()
+        result = 0
+        unit = ""
+
+        if self.get_value_edit(self.ONE) and self.get_value_edit(self.TWO):
+
+            if Voltage(0).name() in radio:
+                result = (
+                    Current(self.get_value_edit(self.ONE)).value
+                    * Resistance(self.get_value_edit(self.TWO)).value
+                )
+                unit = Voltage(0).unit_letter
+            elif Current(0).name() in radio:
+                result = (
+                    Voltage(self.get_value_edit(self.ONE)).value
+                    / Resistance(self.get_value_edit(self.TWO)).value
+                )
+                unit = Current(0).unit_letter
+            elif Resistance(0).name() in radio:
+                result = (
+                    Voltage(self.get_value_edit(self.ONE)).value
+                    / Current(self.get_value_edit(self.TWO)).value
+                )
+                unit = Resistance(0).unit_letter
+            self.lbl_result.setText(f"{result}{unit}")
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Icon.Critical)
+            msg.setText("No content value")
+            msg.setWindowTitle("Error")
+            msg.exec()
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = AppOhmLaw()
+    window.show()
+
+    sys.exit(app.exec())
 ```
 
-`ui_window.py`
+`ui_window.ui`
 
-```python
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OhmsLawApp</class>
+ <widget class="QWidget" name="OhmsLawApp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>471</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>App Ohms Law</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Ohm Law</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>To calculate</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="radio_voltage">
+        <property name="text">
+         <string>Voltage</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">buttonGroup_calculate</string>
+        </attribute>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radio_current">
+        <property name="text">
+         <string>Current</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">buttonGroup_calculate</string>
+        </attribute>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radio_resistance">
+        <property name="text">
+         <string>Resistance</string>
+        </property>
+        <attribute name="buttonGroup">
+         <string notr="true">buttonGroup_calculate</string>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="lbl_one">
+       <property name="text">
+        <string>Current</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="input_one"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="unit_one">
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>A</string>
+         </property>
+         <property name="margin">
+          <number>4</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="lbl_two">
+       <property name="text">
+        <string>Resistance</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="input_two"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="unit_two">
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Ω</string>
+         </property>
+         <property name="margin">
+          <number>4</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QPushButton" name="btn_calculate">
+       <property name="text">
+        <string>Calculate</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="lbl_result">
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup_calculate"/>
+ </buttongroups>
+</ui>
 ```
 
 `ohm_lay.py`
@@ -797,3 +1053,5 @@ class OhmsLaw:
     def calculateResistance(voltage: Voltage, current: Current):
         return Resistance(voltage.value / current.value)
 ```
+
+![app](assets/video/ohms_app.gif)

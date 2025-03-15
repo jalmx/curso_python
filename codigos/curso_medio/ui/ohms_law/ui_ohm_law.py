@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'ohm_law.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.1
+## Created by: Qt User Interface Compiler version 6.8.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -145,8 +145,8 @@ class Ui_OhmsLawApp(object):
         self.radio_resistance.setText(QCoreApplication.translate("OhmsLawApp", u"Resistance", None))
         self.lbl_one.setText(QCoreApplication.translate("OhmsLawApp", u"Current", None))
         self.unit_one.setText(QCoreApplication.translate("OhmsLawApp", u"A", None))
-        self.lbl_two.setText(QCoreApplication.translate("OhmsLawApp", u"Resistace", None))
-        self.unit_two.setText(QCoreApplication.translate("OhmsLawApp", u"O", None))
+        self.lbl_two.setText(QCoreApplication.translate("OhmsLawApp", u"Resistance", None))
+        self.unit_two.setText(QCoreApplication.translate("OhmsLawApp", u"\u03a9", None))
         self.btn_calculate.setText(QCoreApplication.translate("OhmsLawApp", u"Calculate", None))
         self.lbl_result.setText(QCoreApplication.translate("OhmsLawApp", u"-", None))
     # retranslateUi

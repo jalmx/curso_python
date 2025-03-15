@@ -108,7 +108,7 @@
      <item row="1" column="0">
       <widget class="QLabel" name="lbl_two">
        <property name="text">
-        <string>Resistace</string>
+        <string>Resistance</string>
        </property>
       </widget>
      </item>
@@ -125,7 +125,7 @@
           </font>
          </property>
          <property name="text">
-          <string>O</string>
+          <string>Ω</string>
          </property>
          <property name="margin">
           <number>4</number>
