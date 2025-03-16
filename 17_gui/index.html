@@ -2248,122 +2248,141 @@ Recibe las solicitudes del usuario, las procesa y actualiza el Modelo o la Vista
     <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
 </code></pre></div>
-<p><code>ui_window.py</code></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*-</span>
-
-<span class="c1">################################################################################</span>
-<span class="c1">## Form generated from reading UI file &#39;window.ui&#39;</span>
-<span class="c1">##</span>
-<span class="c1">## Created by: Qt User Interface Compiler version 6.8.1</span>
-<span class="c1">##</span>
-<span class="c1">## WARNING! All changes made in this file will be lost when recompiling UI file!</span>
-<span class="c1">################################################################################</span>
-
-<span class="kn">from</span> <span class="nn">PySide6.QtCore</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QCoreApplication</span><span class="p">,</span> <span class="n">QDate</span><span class="p">,</span> <span class="n">QDateTime</span><span class="p">,</span> <span class="n">QLocale</span><span class="p">,</span>
-    <span class="n">QMetaObject</span><span class="p">,</span> <span class="n">QObject</span><span class="p">,</span> <span class="n">QPoint</span><span class="p">,</span> <span class="n">QRect</span><span class="p">,</span>
-    <span class="n">QSize</span><span class="p">,</span> <span class="n">QTime</span><span class="p">,</span> <span class="n">QUrl</span><span class="p">,</span> <span class="n">Qt</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">PySide6.QtGui</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QBrush</span><span class="p">,</span> <span class="n">QColor</span><span class="p">,</span> <span class="n">QConicalGradient</span><span class="p">,</span> <span class="n">QCursor</span><span class="p">,</span>
-    <span class="n">QFont</span><span class="p">,</span> <span class="n">QFontDatabase</span><span class="p">,</span> <span class="n">QGradient</span><span class="p">,</span> <span class="n">QIcon</span><span class="p">,</span>
-    <span class="n">QImage</span><span class="p">,</span> <span class="n">QKeySequence</span><span class="p">,</span> <span class="n">QLinearGradient</span><span class="p">,</span> <span class="n">QPainter</span><span class="p">,</span>
-    <span class="n">QPalette</span><span class="p">,</span> <span class="n">QPixmap</span><span class="p">,</span> <span class="n">QRadialGradient</span><span class="p">,</span> <span class="n">QTransform</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QApplication</span><span class="p">,</span> <span class="n">QHBoxLayout</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QLayout</span><span class="p">,</span>
-    <span class="n">QLineEdit</span><span class="p">,</span> <span class="n">QPushButton</span><span class="p">,</span> <span class="n">QScrollArea</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="p">,</span>
-    <span class="n">QSpacerItem</span><span class="p">,</span> <span class="n">QVBoxLayout</span><span class="p">,</span> <span class="n">QWidget</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">Ui_Form</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Form</span><span class="p">):</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">Form</span><span class="o">.</span><span class="n">objectName</span><span class="p">():</span>
-            <span class="n">Form</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;Form&quot;</span><span class="p">)</span>
-        <span class="n">Form</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">539</span><span class="p">,</span> <span class="mi">410</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">verticalLayout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">verticalLayout</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;verticalLayout&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">verticalLayout</span><span class="o">.</span><span class="n">setSizeConstraint</span><span class="p">(</span><span class="n">QLayout</span><span class="o">.</span><span class="n">SizeConstraint</span><span class="o">.</span><span class="n">SetMaximumSize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;label&quot;</span><span class="p">)</span>
-        <span class="n">font</span> <span class="o">=</span> <span class="n">QFont</span><span class="p">()</span>
-        <span class="n">font</span><span class="o">.</span><span class="n">setPointSize</span><span class="p">(</span><span class="mi">22</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">font</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignmentFlag</span><span class="o">.</span><span class="n">AlignCenter</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">verticalLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;horizontalLayout&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">label_2</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;label_2&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">edit_length</span> <span class="o">=</span> <span class="n">QLineEdit</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">edit_length</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;edit_length&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">edit_length</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">btn_generate</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">btn_generate</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;btn_generate&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">btn_generate</span><span class="p">)</span>
-
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">verticalLayout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">scrollArea</span> <span class="o">=</span> <span class="n">QScrollArea</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scrollArea</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;scrollArea&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scrollArea</span><span class="o">.</span><span class="n">setLayoutDirection</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">LayoutDirection</span><span class="o">.</span><span class="n">LeftToRight</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scrollArea</span><span class="o">.</span><span class="n">setWidgetResizable</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scrollAreaWidgetContents</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scrollAreaWidgetContents</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;scrollAreaWidgetContents&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scrollAreaWidgetContents</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="n">QRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">519</span><span class="p">,</span> <span class="mi">276</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">scrollAreaWidgetContents</span><span class="o">.</span><span class="n">setLayoutDirection</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">LayoutDirection</span><span class="o">.</span><span class="n">LeftToRight</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout_3</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scrollAreaWidgetContents</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout_3</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;horizontalLayout_3&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lbl_password</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scrollAreaWidgetContents</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lbl_password</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;lbl_password&quot;</span><span class="p">)</span>
-        <span class="n">font1</span> <span class="o">=</span> <span class="n">QFont</span><span class="p">()</span>
-        <span class="n">font1</span><span class="o">.</span><span class="n">setPointSize</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lbl_password</span><span class="o">.</span><span class="n">setFont</span><span class="p">(</span><span class="n">font1</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lbl_password</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignmentFlag</span><span class="o">.</span><span class="n">AlignCenter</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lbl_password</span><span class="o">.</span><span class="n">setWordWrap</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout_3</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lbl_password</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">scrollArea</span><span class="o">.</span><span class="n">setWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scrollAreaWidgetContents</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">verticalLayout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scrollArea</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout_2</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout_2</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;horizontalLayout_2&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">btn_clear</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">btn_clear</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;btn_clear&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout_2</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">btn_clear</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalSpacer</span> <span class="o">=</span> <span class="n">QSpacerItem</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Policy</span><span class="o">.</span><span class="n">Expanding</span><span class="p">,</span> <span class="n">QSizePolicy</span><span class="o">.</span><span class="n">Policy</span><span class="o">.</span><span class="n">Minimum</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout_2</span><span class="o">.</span><span class="n">addItem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">horizontalSpacer</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">btn_copy</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">btn_copy</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="sa">u</span><span class="s2">&quot;btn_copy&quot;</span><span class="p">)</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout_2</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">btn_copy</span><span class="p">)</span>
-
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">verticalLayout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">horizontalLayout_2</span><span class="p">)</span>
-
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">retranslateUi</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-
-        <span class="n">QMetaObject</span><span class="o">.</span><span class="n">connectSlotsByName</span><span class="p">(</span><span class="n">Form</span><span class="p">)</span>
-    <span class="c1"># setupUi</span>
-
-    <span class="k">def</span> <span class="nf">retranslateUi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Form</span><span class="p">):</span>
-        <span class="n">Form</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">QCoreApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;Form&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;Password Generator&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QCoreApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;Form&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;Length&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">btn_generate</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QCoreApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;Form&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;Generate&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">lbl_password</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QCoreApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;Form&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">btn_clear</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QCoreApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;Form&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;Clear&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">btn_copy</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">QCoreApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s2">&quot;Form&quot;</span><span class="p">,</span> <span class="sa">u</span><span class="s2">&quot;Copy&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-    <span class="c1"># retranslateUi</span>
+<p><code>ui_window.ui</code></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;ui</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;4.0&quot;</span><span class="nt">&gt;</span>
+<span class="w"> </span><span class="nt">&lt;class&gt;</span>Form<span class="nt">&lt;/class&gt;</span>
+<span class="w"> </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QWidget&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Form&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;geometry&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;rect&gt;</span>
+<span class="w">    </span><span class="nt">&lt;x&gt;</span>0<span class="nt">&lt;/x&gt;</span>
+<span class="w">    </span><span class="nt">&lt;y&gt;</span>0<span class="nt">&lt;/y&gt;</span>
+<span class="w">    </span><span class="nt">&lt;width&gt;</span>539<span class="nt">&lt;/width&gt;</span>
+<span class="w">    </span><span class="nt">&lt;height&gt;</span>410<span class="nt">&lt;/height&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/rect&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;windowTitle&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;string&gt;</span>Password<span class="w"> </span>Generator<span class="nt">&lt;/string&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QVBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verticalLayout&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sizeConstraint&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;enum&gt;</span>QLayout::SizeConstraint::SetMaximumSize<span class="nt">&lt;/enum&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;label&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;font&gt;</span>
+<span class="w">       </span><span class="nt">&lt;pointsize&gt;</span>22<span class="nt">&lt;/pointsize&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;string&gt;</span>Password<span class="w"> </span>Generator<span class="nt">&lt;/string&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;alignment&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set&gt;</span>Qt::AlignmentFlag::AlignCenter<span class="nt">&lt;/set&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QHBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalLayout&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;label_2&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Length<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLineEdit&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;edit_length&quot;</span><span class="nt">/&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QPushButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;btn_generate&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Generate<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QScrollArea&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;scrollArea&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layoutDirection&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;enum&gt;</span>Qt::LayoutDirection::LeftToRight<span class="nt">&lt;/enum&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;widgetResizable&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QWidget&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;scrollAreaWidgetContents&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;geometry&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;rect&gt;</span>
+<span class="w">        </span><span class="nt">&lt;x&gt;</span>0<span class="nt">&lt;/x&gt;</span>
+<span class="w">        </span><span class="nt">&lt;y&gt;</span>0<span class="nt">&lt;/y&gt;</span>
+<span class="w">        </span><span class="nt">&lt;width&gt;</span>519<span class="nt">&lt;/width&gt;</span>
+<span class="w">        </span><span class="nt">&lt;height&gt;</span>276<span class="nt">&lt;/height&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/rect&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;layoutDirection&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;enum&gt;</span>Qt::LayoutDirection::LeftToRight<span class="nt">&lt;/enum&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QHBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalLayout_3&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;item&gt;</span>
+<span class="w">        </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lbl_password&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;font&gt;</span>
+<span class="w">           </span><span class="nt">&lt;pointsize&gt;</span>18<span class="nt">&lt;/pointsize&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;string&gt;</span>-<span class="nt">&lt;/string&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;alignment&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;set&gt;</span>Qt::AlignmentFlag::AlignCenter<span class="nt">&lt;/set&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;wordWrap&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QHBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalLayout_2&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QPushButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;btn_clear&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Clear<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;spacer</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalSpacer&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;orientation&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;enum&gt;</span>Qt::Orientation::Horizontal<span class="nt">&lt;/enum&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sizeHint&quot;</span><span class="w"> </span><span class="na">stdset=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;size&gt;</span>
+<span class="w">         </span><span class="nt">&lt;width&gt;</span>40<span class="nt">&lt;/width&gt;</span>
+<span class="w">         </span><span class="nt">&lt;height&gt;</span>20<span class="nt">&lt;/height&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/size&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/spacer&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QPushButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;btn_copy&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Copy<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w"> </span><span class="nt">&lt;resources/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;connections/&gt;</span>
+<span class="nt">&lt;/ui&gt;</span>
 </code></pre></div>
 <p><code>password_generator.py</code></p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
@@ -2462,13 +2481,248 @@ Recibe las solicitudes del usuario, las procesa y actualiza el Modelo o la Vista
 <h5 id="interfaz-resultante_1">Interfaz resultante</h5>
 <p><img alt="app" src="../assets/ohm_law_qt.png" /></p>
 <p>Los nombres de los widgets y su jerarquía</p>
-<p><img alt="jerarquía" src="assets/" /></p>
+<p><img alt="jerarquía" src="../assets/jerarquia_ohm.png" /></p>
 <h4 id="codigo_5">Código</h4>
 <p><code>main.py</code></p>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMessageBox</span>
+
+<span class="kn">from</span> <span class="nn">ui_ohm_law</span> <span class="kn">import</span> <span class="n">Ui_OhmsLawApp</span>
+<span class="kn">from</span> <span class="nn">ohm_law</span> <span class="kn">import</span> <span class="o">*</span>
+
+
+<span class="k">class</span> <span class="nc">AppOhmLaw</span><span class="p">(</span><span class="n">QWidget</span><span class="p">,</span> <span class="n">Ui_OhmsLawApp</span><span class="p">):</span>
+
+    <span class="n">ONE</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">TWO</span> <span class="o">=</span> <span class="mi">22</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buttonGroup_calculate</span><span class="o">.</span><span class="n">buttonToggled</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">calculate</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">btn_calculate</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">calculate</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_value_edit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edit_number</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">input_one</span><span class="o">.</span><span class="n">text</span><span class="p">()</span> <span class="k">if</span> <span class="n">edit_number</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">ONE</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_two</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">if</span> <span class="n">value</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">radio</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buttonGroup_calculate</span><span class="o">.</span><span class="n">checkedButton</span><span class="p">()</span><span class="o">.</span><span class="n">objectName</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">unit</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_value_edit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ONE</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_value_edit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">TWO</span><span class="p">):</span>
+
+            <span class="k">if</span> <span class="n">Voltage</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="ow">in</span> <span class="n">radio</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">Current</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_value_edit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ONE</span><span class="p">))</span><span class="o">.</span><span class="n">value</span>
+                    <span class="o">*</span> <span class="n">Resistance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_value_edit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">TWO</span><span class="p">))</span><span class="o">.</span><span class="n">value</span>
+                <span class="p">)</span>
+                <span class="n">unit</span> <span class="o">=</span> <span class="n">Voltage</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">unit_letter</span>
+            <span class="k">elif</span> <span class="n">Current</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="ow">in</span> <span class="n">radio</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">Voltage</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_value_edit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ONE</span><span class="p">))</span><span class="o">.</span><span class="n">value</span>
+                    <span class="o">/</span> <span class="n">Resistance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_value_edit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">TWO</span><span class="p">))</span><span class="o">.</span><span class="n">value</span>
+                <span class="p">)</span>
+                <span class="n">unit</span> <span class="o">=</span> <span class="n">Current</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">unit_letter</span>
+            <span class="k">elif</span> <span class="n">Resistance</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">()</span> <span class="ow">in</span> <span class="n">radio</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">Voltage</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_value_edit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ONE</span><span class="p">))</span><span class="o">.</span><span class="n">value</span>
+                    <span class="o">/</span> <span class="n">Current</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_value_edit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">TWO</span><span class="p">))</span><span class="o">.</span><span class="n">value</span>
+                <span class="p">)</span>
+                <span class="n">unit</span> <span class="o">=</span> <span class="n">Resistance</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">unit_letter</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lbl_result</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result</span><span class="si">}{</span><span class="n">unit</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="p">()</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Icon</span><span class="o">.</span><span class="n">Critical</span><span class="p">)</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot;No content value&quot;</span><span class="p">)</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">exec</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">AppOhmLaw</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
 </code></pre></div>
-<p><code>ui_window.py</code></p>
-<div class="highlight"><pre><span></span><code>
+<p><code>ui_window.ui</code></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;ui</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;4.0&quot;</span><span class="nt">&gt;</span>
+<span class="w"> </span><span class="nt">&lt;class&gt;</span>OhmsLawApp<span class="nt">&lt;/class&gt;</span>
+<span class="w"> </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QWidget&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;OhmsLawApp&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;geometry&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;rect&gt;</span>
+<span class="w">    </span><span class="nt">&lt;x&gt;</span>0<span class="nt">&lt;/x&gt;</span>
+<span class="w">    </span><span class="nt">&lt;y&gt;</span>0<span class="nt">&lt;/y&gt;</span>
+<span class="w">    </span><span class="nt">&lt;width&gt;</span>471<span class="nt">&lt;/width&gt;</span>
+<span class="w">    </span><span class="nt">&lt;height&gt;</span>408<span class="nt">&lt;/height&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/rect&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;windowTitle&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;string&gt;</span>App<span class="w"> </span>Ohms<span class="w"> </span>Law<span class="nt">&lt;/string&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QVBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verticalLayout&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;label&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;font&gt;</span>
+<span class="w">       </span><span class="nt">&lt;pointsize&gt;</span>22<span class="nt">&lt;/pointsize&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;string&gt;</span>Ohm<span class="w"> </span>Law<span class="nt">&lt;/string&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;alignment&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set&gt;</span>Qt::AlignmentFlag::AlignCenter<span class="nt">&lt;/set&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QGroupBox&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;groupBox&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;title&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;string&gt;</span>To<span class="w"> </span>calculate<span class="nt">&lt;/string&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;alignment&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set&gt;</span>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop<span class="nt">&lt;/set&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QHBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalLayout&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;item&gt;</span>
+<span class="w">       </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QRadioButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;radio_voltage&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;string&gt;</span>Voltage<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">        </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;checked&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">        </span><span class="nt">&lt;attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;buttonGroup&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;string</span><span class="w"> </span><span class="na">notr=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>buttonGroup_calculate<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/attribute&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;item&gt;</span>
+<span class="w">       </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QRadioButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;radio_current&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;string&gt;</span>Current<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">        </span><span class="nt">&lt;attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;buttonGroup&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;string</span><span class="w"> </span><span class="na">notr=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>buttonGroup_calculate<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/attribute&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;item&gt;</span>
+<span class="w">       </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QRadioButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;radio_resistance&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;string&gt;</span>Resistance<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">        </span><span class="nt">&lt;attribute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;buttonGroup&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;string</span><span class="w"> </span><span class="na">notr=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>buttonGroup_calculate<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/attribute&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QFormLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;formLayout&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item</span><span class="w"> </span><span class="na">row=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lbl_one&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Current<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item</span><span class="w"> </span><span class="na">row=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QHBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalLayout_2&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;item&gt;</span>
+<span class="w">        </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLineEdit&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;input_one&quot;</span><span class="nt">/&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">       </span><span class="nt">&lt;item&gt;</span>
+<span class="w">        </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;unit_one&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;font&gt;</span>
+<span class="w">           </span><span class="nt">&lt;bold&gt;</span>true<span class="nt">&lt;/bold&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;string&gt;</span>A<span class="nt">&lt;/string&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;margin&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;number&gt;</span>4<span class="nt">&lt;/number&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item</span><span class="w"> </span><span class="na">row=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lbl_two&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Resistance<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item</span><span class="w"> </span><span class="na">row=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QHBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalLayout_3&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;item&gt;</span>
+<span class="w">        </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLineEdit&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;input_two&quot;</span><span class="nt">/&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">       </span><span class="nt">&lt;item&gt;</span>
+<span class="w">        </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;unit_two&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;font&gt;</span>
+<span class="w">           </span><span class="nt">&lt;bold&gt;</span>true<span class="nt">&lt;/bold&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;string&gt;</span>Ω<span class="nt">&lt;/string&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">         </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;margin&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;number&gt;</span>4<span class="nt">&lt;/number&gt;</span>
+<span class="w">         </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item</span><span class="w"> </span><span class="na">row=</span><span class="s">&quot;2&quot;</span><span class="w"> </span><span class="na">column=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">colspan=</span><span class="s">&quot;2&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QPushButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;btn_calculate&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Calculate<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lbl_result&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;font&gt;</span>
+<span class="w">       </span><span class="nt">&lt;pointsize&gt;</span>22<span class="nt">&lt;/pointsize&gt;</span>
+<span class="w">       </span><span class="nt">&lt;bold&gt;</span>true<span class="nt">&lt;/bold&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;string&gt;</span>-<span class="nt">&lt;/string&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;alignment&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set&gt;</span>Qt::AlignmentFlag::AlignCenter<span class="nt">&lt;/set&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w"> </span><span class="nt">&lt;resources/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;connections/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;buttongroups&gt;</span>
+<span class="w">  </span><span class="nt">&lt;buttongroup</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;buttonGroup_calculate&quot;</span><span class="nt">/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/buttongroups&gt;</span>
+<span class="nt">&lt;/ui&gt;</span>
 </code></pre></div>
 <p><code>ohm_lay.py</code></p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Element</span><span class="p">:</span>
@@ -2513,6 +2767,7 @@ Recibe las solicitudes del usuario, las procesa y actualiza el Modelo o la Vista
     <span class="k">def</span> <span class="nf">calculateResistance</span><span class="p">(</span><span class="n">voltage</span><span class="p">:</span> <span class="n">Voltage</span><span class="p">,</span> <span class="n">current</span><span class="p">:</span> <span class="n">Current</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">Resistance</span><span class="p">(</span><span class="n">voltage</span><span class="o">.</span><span class="n">value</span> <span class="o">/</span> <span class="n">current</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
 </code></pre></div>
+<p><img alt="app" src="../assets/video/ohms_app.gif" /></p>
 
 
 
