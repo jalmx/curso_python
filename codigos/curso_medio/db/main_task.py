@@ -2,7 +2,9 @@ from task import Task
 
 
 class TaskController:
-
+    """Class helper to controller the CRUD
+    """
+    
     def __init__(self):
         if not Task.table_exists():
             Task.create_table()
@@ -44,8 +46,10 @@ if __name__ == "__main__":
 
         if opt == 1:
             print("ADD TASK")
-            name = input("Name task: ")
-            description = input("Description task: ")
+            name = None
+            while not name: # evita que el nombre de la tarea quede vacio
+                name = input("Name task [no puede quedar vacio]: ")
+            description = input("Description task [opcional]: ")
             controller.create_task(name=name, description=description)
         elif opt == 2:
             print("CHANGE STATUS")
