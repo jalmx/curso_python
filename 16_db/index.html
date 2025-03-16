@@ -2072,6 +2072,90 @@ La forma de obtener un registro es con el método <code>Model.get( filtro )</cod
 Tareas completadas:
 1. Limpiar la casa
 </code></pre></div>
+<details>
+<summary>Answer</summary>
+<p><code>task.py</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">peewee</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">SqliteDatabase</span><span class="p">(</span><span class="s2">&quot;task.db&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Task</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">AutoField</span><span class="p">()</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">()</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">CharField</span><span class="p">(</span><span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">BooleanField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">date_register</span> <span class="o">=</span> <span class="n">DateTimeField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;id:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">, name: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">, state:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">database</span> <span class="o">=</span> <span class="n">db</span>
+        <span class="n">db_table</span> <span class="o">=</span> <span class="s2">&quot;tasks&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">task</span> <span class="kn">import</span> <span class="n">Task</span>
+
+
+<span class="k">class</span> <span class="nc">TaskController</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class helper to controller the CRUD</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">Task</span><span class="o">.</span><span class="n">table_exists</span><span class="p">():</span>
+            <span class="n">Task</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">create_task</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
+        <span class="n">Task</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">change_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+        <span class="n">task</span> <span class="o">=</span> <span class="n">Task</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Task</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="nb">id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">task</span><span class="p">:</span>
+            <span class="n">task</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">task</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">show_tasks</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">text_complete</span> <span class="o">=</span> <span class="s2">&quot;Tasks Done:</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">text_incomplete</span> <span class="o">=</span> <span class="s2">&quot;Task Incomplete:</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="n">count_complete</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">count_incomplete</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">Task</span><span class="o">.</span><span class="n">select</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">task</span><span class="o">.</span><span class="n">state</span><span class="p">:</span>
+                <span class="n">text_complete</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">count_complete</span><span class="si">}</span><span class="s2">.- </span><span class="si">{</span><span class="n">task</span><span class="o">.</span><span class="n">name</span><span class="w"> </span><span class="si">}</span><span class="s2"> - description: </span><span class="si">{</span><span class="n">task</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s2"> - (COMPLETE)</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">count_complete</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">text_incomplete</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">count_incomplete</span><span class="si">}</span><span class="s2">.- [</span><span class="si">{</span><span class="n">task</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">task</span><span class="o">.</span><span class="n">name</span><span class="w"> </span><span class="si">}</span><span class="s2"> - description: </span><span class="si">{</span><span class="n">task</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s2"> - (NOT COMPLETE)</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="n">count_incomplete</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">text_complete</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">text_incomplete</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">opt</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">controller</span> <span class="o">=</span> <span class="n">TaskController</span><span class="p">()</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;APP TASK&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Add Task&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Change status Task&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Show Task&quot;</span><span class="p">)</span>
+        <span class="n">opt</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+        <span class="k">if</span> <span class="n">opt</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ADD TASK&quot;</span><span class="p">)</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">while</span> <span class="ow">not</span> <span class="n">name</span><span class="p">:</span> <span class="c1"># evita que el nombre de la tarea quede vació</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Name task [no puede quedar vacio]: &quot;</span><span class="p">)</span>
+            <span class="n">description</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Description task [opcional]: &quot;</span><span class="p">)</span>
+            <span class="n">controller</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">opt</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CHANGE STATUS&quot;</span><span class="p">)</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give ID task to change: &quot;</span><span class="p">))</span>
+            <span class="n">controller</span><span class="o">.</span><span class="n">change_state</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">opt</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">controller</span><span class="o">.</span><span class="n">show_tasks</span><span class="p">()</span>
+</code></pre></div>
+</details>
 <h4 id="ejercicio-2-sistema-de-gestion-de-estudiantes">Ejercicio 2: Sistema de Gestión de Estudiantes</h4>
 <p>Crea una base de datos para gestionar estudiantes en un curso. Los estudiantes tienen un nombre, un apellido, y un promedio (float).</p>
 <p><strong>Requisitos:</strong></p>
