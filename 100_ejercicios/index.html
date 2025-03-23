@@ -701,18 +701,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#convertidor-de-temperaturas" class="md-nav__link">
+  <a href="#convertidor-de-temperaturas-celsius-fahrenheit-kelvin" class="md-nav__link">
     <span class="md-ellipsis">
-      Convertidor de Temperaturas
+      Convertidor de Temperaturas (Celsius - Fahrenheit - Kelvin)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-do" class="md-nav__link">
+  <a href="#to-do-tareas-por-hacer" class="md-nav__link">
     <span class="md-ellipsis">
-      To-do
+      To-do (Tareas por hacer)
     </span>
   </a>
   
@@ -1186,18 +1186,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#convertidor-de-temperaturas" class="md-nav__link">
+  <a href="#convertidor-de-temperaturas-celsius-fahrenheit-kelvin" class="md-nav__link">
     <span class="md-ellipsis">
-      Convertidor de Temperaturas
+      Convertidor de Temperaturas (Celsius - Fahrenheit - Kelvin)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#to-do" class="md-nav__link">
+  <a href="#to-do-tareas-por-hacer" class="md-nav__link">
     <span class="md-ellipsis">
-      To-do
+      To-do (Tareas por hacer)
     </span>
   </a>
   
@@ -1568,9 +1568,180 @@
 <ul>
 <li>Agregar que se elija el submúltiplo (mili, micro) y múltiplo (kilo, mega) a cada unidad, es decir, <code>mA</code>, <code>kΩ</code>, <code>mV</code>.</li>
 </ul>
-<h3 id="convertidor-de-temperaturas">Convertidor de Temperaturas</h3>
-<p>Celsius - Fahrenheit - Kelvin</p>
-<h3 id="to-do">To-do</h3>
+<h3 id="convertidor-de-temperaturas-celsius-fahrenheit-kelvin">Convertidor de Temperaturas (Celsius - Fahrenheit - Kelvin)</h3>
+<p>Tener una entrada de texto para colocar la temperatura, a un lado un combo box para seleccionar la temperatura de entrada y para seleccionar el tipo de temperatura con un radioButton, y un botón para generar el calculo.</p>
+<p><img alt="app" src="../assets/temp_app.png" /></p>
+<details>
+<p>Código ejemplo del archivo <strong>.ui</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;ui</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;4.0&quot;</span><span class="nt">&gt;</span>
+<span class="w"> </span><span class="nt">&lt;class&gt;</span>Form<span class="nt">&lt;/class&gt;</span>
+<span class="w"> </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QWidget&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;Form&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;geometry&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;rect&gt;</span>
+<span class="w">    </span><span class="nt">&lt;x&gt;</span>0<span class="nt">&lt;/x&gt;</span>
+<span class="w">    </span><span class="nt">&lt;y&gt;</span>0<span class="nt">&lt;/y&gt;</span>
+<span class="w">    </span><span class="nt">&lt;width&gt;</span>530<span class="nt">&lt;/width&gt;</span>
+<span class="w">    </span><span class="nt">&lt;height&gt;</span>456<span class="nt">&lt;/height&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/rect&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;windowTitle&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;string&gt;</span>Convertidor<span class="w"> </span>de<span class="w"> </span>Temperatura<span class="nt">&lt;/string&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">  </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QVBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;verticalLayout&quot;</span><span class="nt">&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;label&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sizePolicy&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;sizepolicy</span><span class="w"> </span><span class="na">hsizetype=</span><span class="s">&quot;Preferred&quot;</span><span class="w"> </span><span class="na">vsizetype=</span><span class="s">&quot;Minimum&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;horstretch&gt;</span>0<span class="nt">&lt;/horstretch&gt;</span>
+<span class="w">       </span><span class="nt">&lt;verstretch&gt;</span>0<span class="nt">&lt;/verstretch&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/sizepolicy&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;font&gt;</span>
+<span class="w">       </span><span class="nt">&lt;pointsize&gt;</span>24<span class="nt">&lt;/pointsize&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;string&gt;</span>Convertidor<span class="w"> </span>de<span class="w"> </span>Temperatura<span class="nt">&lt;/string&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QHBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalLayout&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QRadioButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;radioButton&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Celsius<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;spacer</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalSpacer&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;orientation&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;enum&gt;</span>Qt::Orientation::Horizontal<span class="nt">&lt;/enum&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sizeHint&quot;</span><span class="w"> </span><span class="na">stdset=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;size&gt;</span>
+<span class="w">         </span><span class="nt">&lt;width&gt;</span>40<span class="nt">&lt;/width&gt;</span>
+<span class="w">         </span><span class="nt">&lt;height&gt;</span>20<span class="nt">&lt;/height&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/size&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/spacer&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QRadioButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;radioButton_2&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Fahrenheit<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;checked&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;bool&gt;</span>true<span class="nt">&lt;/bool&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;spacer</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalSpacer_2&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;orientation&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;enum&gt;</span>Qt::Orientation::Horizontal<span class="nt">&lt;/enum&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sizeHint&quot;</span><span class="w"> </span><span class="na">stdset=</span><span class="s">&quot;0&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;size&gt;</span>
+<span class="w">         </span><span class="nt">&lt;width&gt;</span>40<span class="nt">&lt;/width&gt;</span>
+<span class="w">         </span><span class="nt">&lt;height&gt;</span>20<span class="nt">&lt;/height&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/size&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/spacer&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QRadioButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;radioButton_3&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>Kelvin<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QHBoxLayout&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;horizontalLayout_2&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLineEdit&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;lineEdit&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;font&gt;</span>
+<span class="w">         </span><span class="nt">&lt;pointsize&gt;</span>12<span class="nt">&lt;/pointsize&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;string&gt;</span>2<span class="nt">&lt;/string&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">     </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QComboBox&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;comboBox&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;font&gt;</span>
+<span class="w">         </span><span class="nt">&lt;pointsize&gt;</span>12<span class="nt">&lt;/pointsize&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">       </span><span class="nt">&lt;item&gt;</span>
+<span class="w">        </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;string&gt;</span>°C<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">       </span><span class="nt">&lt;item&gt;</span>
+<span class="w">        </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;string&gt;</span>°F<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">       </span><span class="nt">&lt;item&gt;</span>
+<span class="w">        </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">         </span><span class="nt">&lt;string&gt;</span>°K<span class="nt">&lt;/string&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">       </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QPushButton&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;pushButton&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;font&gt;</span>
+<span class="w">       </span><span class="nt">&lt;pointsize&gt;</span>12<span class="nt">&lt;/pointsize&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;string&gt;</span>CALCULAR<span class="nt">&lt;/string&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">   </span><span class="nt">&lt;item&gt;</span>
+<span class="w">    </span><span class="nt">&lt;widget</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;QLabel&quot;</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;label_2&quot;</span><span class="nt">&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;sizePolicy&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;sizepolicy</span><span class="w"> </span><span class="na">hsizetype=</span><span class="s">&quot;Preferred&quot;</span><span class="w"> </span><span class="na">vsizetype=</span><span class="s">&quot;Preferred&quot;</span><span class="nt">&gt;</span>
+<span class="w">       </span><span class="nt">&lt;horstretch&gt;</span>0<span class="nt">&lt;/horstretch&gt;</span>
+<span class="w">       </span><span class="nt">&lt;verstretch&gt;</span>1<span class="nt">&lt;/verstretch&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/sizepolicy&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;font&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;font&gt;</span>
+<span class="w">       </span><span class="nt">&lt;pointsize&gt;</span>20<span class="nt">&lt;/pointsize&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/font&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;string&gt;</span>23°F<span class="nt">&lt;/string&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">     </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;alignment&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;set&gt;</span>Qt::AlignmentFlag::AlignCenter<span class="nt">&lt;/set&gt;</span>
+<span class="w">     </span><span class="nt">&lt;/property&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w">   </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w"> </span><span class="nt">&lt;/widget&gt;</span>
+<span class="w"> </span><span class="nt">&lt;resources/&gt;</span>
+<span class="w"> </span><span class="nt">&lt;connections/&gt;</span>
+<span class="nt">&lt;/ui&gt;</span>
+</code></pre></div>
+</details>
+<h3 id="to-do-tareas-por-hacer">To-do (Tareas por hacer)</h3>
 <p>Un gestor de tareas por hacer,</p>
 <ul>
 <li>Agregar tarea</li>
@@ -1580,7 +1751,8 @@
 <li><strong>Usar una base de datos</strong></li>
 </ul>
 <h3 id="estadistica-inferencial">Estadística inferencial</h3>
-<p>Se deben poder leer n numero de datos, y generar una salida con los siguientes datos:</p>
+<p>Se deben poder leer <strong>n</strong> numero de datos, y generar una salida con los siguientes datos:</p>
+<p>Mostrar los datos en una tabla y a un lado las variables estadísticas:</p>
 <ul>
 <li>Media</li>
 <li>Moda</li>
