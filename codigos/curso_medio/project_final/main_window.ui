@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>856</width>
+    <width>858</width>
     <height>732</height>
    </rect>
   </property>
@@ -37,21 +37,21 @@
        <widget class="QWidget" name="widget" native="true">
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="btn_add">
            <property name="text">
             <string>Agrgear</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="btn_edit">
            <property name="text">
             <string>Editar</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="btn_delete">
            <property name="text">
             <string>Eliminar</string>
            </property>
@@ -73,14 +73,14 @@
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout">
             <item>
-             <widget class="QLineEdit" name="lineEdit">
+             <widget class="QLineEdit" name="input_search_table">
               <property name="placeholderText">
                <string>Nombre, Código</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_4">
+             <widget class="QPushButton" name="btn_search_table">
               <property name="text">
                <string>Buscar</string>
               </property>
@@ -89,7 +89,7 @@
            </layout>
           </item>
           <item>
-           <widget class="QTableWidget" name="tableWidget">
+           <widget class="QTableWidget" name="table_components">
             <property name="editTriggers">
              <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
             </property>
@@ -254,14 +254,14 @@
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="input_search_id">
               <property name="placeholderText">
                <string>Id / Codigo</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton_5">
+             <widget class="QPushButton" name="btn_search_id">
               <property name="text">
                <string>Buscar</string>
               </property>
@@ -307,7 +307,7 @@
                 </widget>
                </item>
                <item row="0" column="1">
-                <widget class="QLineEdit" name="lineEdit_3">
+                <widget class="QLineEdit" name="edit_name">
                  <property name="font">
                   <font>
                    <family>JetBrains Mono</family>
@@ -342,7 +342,7 @@
                 </widget>
                </item>
                <item row="1" column="1">
-                <widget class="QLineEdit" name="lineEdit_4">
+                <widget class="QLineEdit" name="edit_code">
                  <property name="font">
                   <font>
                    <family>JetBrains Mono</family>
@@ -350,6 +350,9 @@
                  </property>
                  <property name="text">
                   <string>PIC16F84A</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -368,7 +371,7 @@
                 </widget>
                </item>
                <item row="2" column="1">
-                <widget class="QLineEdit" name="lineEdit_5">
+                <widget class="QLineEdit" name="edit_count">
                  <property name="font">
                   <font>
                    <family>JetBrains Mono</family>
@@ -376,6 +379,9 @@
                  </property>
                  <property name="text">
                   <string>12</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -398,7 +404,7 @@
                 </widget>
                </item>
                <item>
-                <widget class="QPlainTextEdit" name="plainTextEdit">
+                <widget class="QPlainTextEdit" name="edit_description">
                  <property name="font">
                   <font>
                    <family>JetBrains Mono</family>
@@ -417,6 +423,19 @@
                </item>
               </layout>
              </item>
+             <item>
+              <widget class="QWidget" name="widget_2" native="true">
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <item>
+                 <widget class="QLabel" name="lbl_info">
+                  <property name="text">
+                   <string>Información:</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
             </layout>
            </widget>
           </item>
@@ -433,13 +452,85 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>856</width>
+     <width>858</width>
      <height>30</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionAgregar_componente"/>
+    <addaction name="actionEditar_componente"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuEdici_n">
+    <property name="title">
+     <string>Edición</string>
+    </property>
+    <addaction name="actionAdegar_componente"/>
+    <addaction name="actionEditar_componente_2"/>
+    <addaction name="actionEliminar_componente"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuEdici_n"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAgregar_componente">
+   <property name="text">
+    <string>Exportar componente</string>
+   </property>
+  </action>
+  <action name="actionEditar_componente">
+   <property name="text">
+    <string>Exportar todos</string>
+   </property>
+  </action>
+  <action name="actionAdegar_componente">
+   <property name="text">
+    <string>Adegar componente</string>
+   </property>
+  </action>
+  <action name="actionEditar_componente_2">
+   <property name="text">
+    <string>Editar componente</string>
+   </property>
+  </action>
+  <action name="actionEliminar_componente">
+   <property name="text">
+    <string>Eliminar componente</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionotro">
+   <property name="text">
+    <string>otro</string>
+   </property>
+  </action>
  </widget>
+ <tabstops>
+  <tabstop>input_search_table</tabstop>
+  <tabstop>btn_search_table</tabstop>
+  <tabstop>btn_add</tabstop>
+  <tabstop>btn_edit</tabstop>
+  <tabstop>btn_delete</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>input_search_id</tabstop>
+  <tabstop>btn_search_id</tabstop>
+  <tabstop>edit_code</tabstop>
+  <tabstop>edit_count</tabstop>
+  <tabstop>table_components</tabstop>
+  <tabstop>edit_name</tabstop>
+  <tabstop>edit_description</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

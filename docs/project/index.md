@@ -16,4 +16,19 @@ La parte visual se realizara con la herramienta **QT Designer**, y toda la lógi
 
 ![project](../assets/project_final_add.png)
 
+## Características
+
+- Persistencia de datos con SQLite (Peewee ORM)
+- Multiplataforma
+
 ## Desarrollando
+
+## Empaquetando aplicación
+
+Instalar `install auto-py-to-exe`
+
+```bash
+pip install auto-py-to-exe
+
+auto-py-to-exe
+```
