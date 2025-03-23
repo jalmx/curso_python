@@ -424,6 +424,134 @@ Recibe las solicitudes del usuario, las procesa y actualiza el Modelo o la Vista
 
 ## Desarrollo de GUI
 
+### Suma 2 números
+
+#### Interfaz
+
+##### Interfaz propuesta
+
+![app](assets/sumador_app.png)
+
+Los nombres de los widgets y su jerarquía
+
+![jerarquía](assets/sumador_objects_name.png)
+
+#### Código
+
+`main.py`
+
+```python
+import sys
+
+from PySide6.QtWidgets import QApplication, QWidget
+from ui_ventana import Ui_Sumador
+
+
+class Ventana(QWidget, Ui_Sumador):
+    """docstring for Ventana."""
+
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)  # la configuracion o creacion de la ventana
+        self.init()
+
+    def init(self):
+        # voy asignar los eventos
+        self.btn_sumar.clicked.connect(self.sumar)
+
+    def sumar(self):
+        numero1 = float(self.input_1.text())
+        numero2 = float(self.input_2.text())
+        print(numero1 + numero2)
+        resultado = numero1 + numero2
+        self.lbl_resultado.setText(str(resultado))
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)  # creo una instancia de una aplicación QT
+    ventana = Ventana()  # creo una instancia de mi ventana
+    ventana.show()  # muestro mi ventana
+    sys.exit(app.exec())  # ejecuto mi aplicación
+```
+
+`ventana.ui`
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Sumador</class>
+ <widget class="QWidget" name="Sumador">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>413</width>
+    <height>332</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sumador</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+       <pointsize>24</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Calculadora</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="input_1"/>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="input_2"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btn_sumar">
+     <property name="font">
+      <font>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Sumar</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lbl_resultado">
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>resultado</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+```
+
+![app](assets/video/calculadora_2_num.gif)
+
 ### Generador de contraseñas
 
 Se debe realizar una aplicación para la generación de contraseñas seguras, tendrá una entrada para indicar la longitud de la contraseña, un botón para limpiar la contraseña generada y otro botón para copiar la contraseña generada al `clipboard`.
