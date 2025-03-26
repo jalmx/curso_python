@@ -37,7 +37,7 @@ class ComponentController:
     def get_size(self):
         return ModelComponent.select().count()
 
-    def searh(self, text: str):
+    def search(self, text: str):
         components_model = ModelComponent.select().where(
             (ModelComponent.name.contains(text))
             | (ModelComponent.code.contains(text))
@@ -55,17 +55,17 @@ from random import random, choice
 if __name__ == "__main__":
     controller = ComponentController()
 
-    # for i in range(int(random() * 10)):
-    #     v = int(random() * 100)
-    #     c = [f"C{v}", f"L{v}", f"IC {v*3}"]
-    #     controller.insert(
-    #         Component(
-    #             name=f"{choice(c)}",
-    #             description=f"Componente {choice(c)}",
-    #             code=f"{choice(c)}",
-    #             count=int(random() * 100),
-    #         )
-    #     )
+    for i in range(int(random() * 10)):
+        v = int(random() * 100)
+        c = [f"C{v}", f"L{v}", f"IC {v*3}"]
+        controller.insert(
+            Component(
+                name=f"{choice(c)}",
+                description=f"Componente {choice(c)}",
+                code=f"{choice(c)}",
+                count=int(random() * 100),
+            )
+        )
 
     # for i in controller.search_by_code("10")["components"]:
     #     print(i)

@@ -19,14 +19,15 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
 from PySide6.QtWidgets import (QAbstractItemView, QApplication, QFrame, QGridLayout,
     QHBoxLayout, QHeaderView, QLabel, QLineEdit,
     QMainWindow, QMenu, QMenuBar, QPlainTextEdit,
-    QPushButton, QSizePolicy, QStatusBar, QTabWidget,
-    QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
+    QPushButton, QSizePolicy, QSpacerItem, QStatusBar,
+    QTabWidget, QTableWidget, QTableWidgetItem, QVBoxLayout,
+    QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(858, 732)
+        MainWindow.resize(893, 732)
         self.actionAgregar_componente = QAction(MainWindow)
         self.actionAgregar_componente.setObjectName(u"actionAgregar_componente")
         self.actionEditar_componente = QAction(MainWindow)
@@ -61,6 +62,10 @@ class Ui_MainWindow(object):
         self.widget.setObjectName(u"widget")
         self.verticalLayout = QVBoxLayout(self.widget)
         self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalSpacer_2 = QSpacerItem(20, 16, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Preferred)
+
+        self.verticalLayout.addItem(self.verticalSpacer_2)
+
         self.btn_add = QPushButton(self.widget)
         self.btn_add.setObjectName(u"btn_add")
 
@@ -75,6 +80,10 @@ class Ui_MainWindow(object):
         self.btn_delete.setObjectName(u"btn_delete")
 
         self.verticalLayout.addWidget(self.btn_delete)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout.addItem(self.verticalSpacer)
 
 
         self.gridLayout.addWidget(self.widget, 0, 1, 1, 1)
@@ -117,53 +126,9 @@ class Ui_MainWindow(object):
         self.table_components.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
         self.table_components.setHorizontalHeaderItem(6, __qtablewidgetitem6)
-        if (self.table_components.rowCount() < 3):
-            self.table_components.setRowCount(3)
-        __qtablewidgetitem7 = QTableWidgetItem()
-        self.table_components.setItem(0, 0, __qtablewidgetitem7)
-        __qtablewidgetitem8 = QTableWidgetItem()
-        self.table_components.setItem(0, 1, __qtablewidgetitem8)
-        __qtablewidgetitem9 = QTableWidgetItem()
-        self.table_components.setItem(0, 2, __qtablewidgetitem9)
-        __qtablewidgetitem10 = QTableWidgetItem()
-        self.table_components.setItem(0, 3, __qtablewidgetitem10)
-        __qtablewidgetitem11 = QTableWidgetItem()
-        self.table_components.setItem(0, 4, __qtablewidgetitem11)
-        __qtablewidgetitem12 = QTableWidgetItem()
-        self.table_components.setItem(0, 5, __qtablewidgetitem12)
-        __qtablewidgetitem13 = QTableWidgetItem()
-        self.table_components.setItem(0, 6, __qtablewidgetitem13)
-        __qtablewidgetitem14 = QTableWidgetItem()
-        self.table_components.setItem(1, 0, __qtablewidgetitem14)
-        __qtablewidgetitem15 = QTableWidgetItem()
-        self.table_components.setItem(1, 1, __qtablewidgetitem15)
-        __qtablewidgetitem16 = QTableWidgetItem()
-        self.table_components.setItem(1, 2, __qtablewidgetitem16)
-        __qtablewidgetitem17 = QTableWidgetItem()
-        self.table_components.setItem(1, 3, __qtablewidgetitem17)
-        __qtablewidgetitem18 = QTableWidgetItem()
-        self.table_components.setItem(1, 4, __qtablewidgetitem18)
-        __qtablewidgetitem19 = QTableWidgetItem()
-        self.table_components.setItem(1, 5, __qtablewidgetitem19)
-        __qtablewidgetitem20 = QTableWidgetItem()
-        self.table_components.setItem(1, 6, __qtablewidgetitem20)
-        __qtablewidgetitem21 = QTableWidgetItem()
-        self.table_components.setItem(2, 0, __qtablewidgetitem21)
-        __qtablewidgetitem22 = QTableWidgetItem()
-        self.table_components.setItem(2, 1, __qtablewidgetitem22)
-        __qtablewidgetitem23 = QTableWidgetItem()
-        self.table_components.setItem(2, 2, __qtablewidgetitem23)
-        __qtablewidgetitem24 = QTableWidgetItem()
-        self.table_components.setItem(2, 3, __qtablewidgetitem24)
-        __qtablewidgetitem25 = QTableWidgetItem()
-        self.table_components.setItem(2, 4, __qtablewidgetitem25)
-        __qtablewidgetitem26 = QTableWidgetItem()
-        self.table_components.setItem(2, 5, __qtablewidgetitem26)
-        __qtablewidgetitem27 = QTableWidgetItem()
-        self.table_components.setItem(2, 6, __qtablewidgetitem27)
         self.table_components.setObjectName(u"table_components")
         self.table_components.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
-        self.table_components.setRowCount(3)
+        self.table_components.setRowCount(0)
         self.table_components.setColumnCount(7)
 
         self.verticalLayout_3.addWidget(self.table_components)
@@ -281,6 +246,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.lbl_info = QLabel(self.widget_2)
         self.lbl_info.setObjectName(u"lbl_info")
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.lbl_info.sizePolicy().hasHeightForWidth())
+        self.lbl_info.setSizePolicy(sizePolicy2)
 
         self.verticalLayout_7.addWidget(self.lbl_info)
 
@@ -300,7 +270,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 858, 30))
+        self.menubar.setGeometry(QRect(0, 0, 893, 30))
         self.menuArchivo = QMenu(self.menubar)
         self.menuArchivo.setObjectName(u"menuArchivo")
         self.menuEdici_n = QMenu(self.menubar)
@@ -342,97 +312,50 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"App Store Components", None))
-        self.actionAgregar_componente.setText(QCoreApplication.translate("MainWindow", u"Exportar componente", None))
-        self.actionEditar_componente.setText(QCoreApplication.translate("MainWindow", u"Exportar todos", None))
-        self.actionAdegar_componente.setText(QCoreApplication.translate("MainWindow", u"Adegar componente", None))
-        self.actionEditar_componente_2.setText(QCoreApplication.translate("MainWindow", u"Editar componente", None))
-        self.actionEliminar_componente.setText(QCoreApplication.translate("MainWindow", u"Eliminar componente", None))
-        self.actionSalir.setText(QCoreApplication.translate("MainWindow", u"Salir", None))
+        self.actionAgregar_componente.setText(QCoreApplication.translate("MainWindow", u"Export components", None))
+        self.actionEditar_componente.setText(QCoreApplication.translate("MainWindow", u"Export all components", None))
+        self.actionAdegar_componente.setText(QCoreApplication.translate("MainWindow", u"Add component", None))
+        self.actionEditar_componente_2.setText(QCoreApplication.translate("MainWindow", u"Edit component", None))
+        self.actionEliminar_componente.setText(QCoreApplication.translate("MainWindow", u"Delete component", None))
+        self.actionSalir.setText(QCoreApplication.translate("MainWindow", u"Quit", None))
 #if QT_CONFIG(shortcut)
         self.actionSalir.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+Q", None))
 #endif // QT_CONFIG(shortcut)
         self.actionotro.setText(QCoreApplication.translate("MainWindow", u"otro", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Store Components", None))
-        self.btn_add.setText(QCoreApplication.translate("MainWindow", u"Agrgear", None))
-        self.btn_edit.setText(QCoreApplication.translate("MainWindow", u"Editar", None))
-        self.btn_delete.setText(QCoreApplication.translate("MainWindow", u"Eliminar", None))
-        self.input_search_table.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Nombre, C\u00f3digo", None))
-        self.btn_search_table.setText(QCoreApplication.translate("MainWindow", u"Buscar", None))
+        self.btn_add.setText(QCoreApplication.translate("MainWindow", u"Add", None))
+        self.btn_edit.setText(QCoreApplication.translate("MainWindow", u"Edit", None))
+        self.btn_delete.setText(QCoreApplication.translate("MainWindow", u"Delete", None))
+        self.input_search_table.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Name, code", None))
+        self.btn_search_table.setText(QCoreApplication.translate("MainWindow", u"Search", None))
         ___qtablewidgetitem = self.table_components.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"ID", None));
         ___qtablewidgetitem1 = self.table_components.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Nombre", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Name", None));
         ___qtablewidgetitem2 = self.table_components.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"C\u00f3digo", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Code", None));
         ___qtablewidgetitem3 = self.table_components.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Cantidad", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Quantity", None));
         ___qtablewidgetitem4 = self.table_components.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Descripci\u00f3n", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Description", None));
         ___qtablewidgetitem5 = self.table_components.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Ubicaci\u00f3n", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Location", None));
         ___qtablewidgetitem6 = self.table_components.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Status", None));
-
-        __sortingEnabled = self.table_components.isSortingEnabled()
-        self.table_components.setSortingEnabled(False)
-        ___qtablewidgetitem7 = self.table_components.item(0, 0)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"234", None));
-        ___qtablewidgetitem8 = self.table_components.item(0, 1)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"R10", None));
-        ___qtablewidgetitem9 = self.table_components.item(0, 2)
-        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"r10", None));
-        ___qtablewidgetitem10 = self.table_components.item(0, 3)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"9", None));
-        ___qtablewidgetitem11 = self.table_components.item(0, 4)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"Resistencia de 10 ohms", None));
-        ___qtablewidgetitem12 = self.table_components.item(0, 5)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"NA", None));
-        ___qtablewidgetitem13 = self.table_components.item(0, 6)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"Disponible", None));
-        ___qtablewidgetitem14 = self.table_components.item(1, 0)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"324", None));
-        ___qtablewidgetitem15 = self.table_components.item(1, 1)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"bobina 10uH", None));
-        ___qtablewidgetitem16 = self.table_components.item(1, 2)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"L10u", None));
-        ___qtablewidgetitem17 = self.table_components.item(1, 3)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"0", None));
-        ___qtablewidgetitem18 = self.table_components.item(1, 4)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"Bobina de 10uH", None));
-        ___qtablewidgetitem19 = self.table_components.item(1, 5)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"NA", None));
-        ___qtablewidgetitem20 = self.table_components.item(1, 6)
-        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"No disponible", None));
-        ___qtablewidgetitem21 = self.table_components.item(2, 0)
-        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"322", None));
-        ___qtablewidgetitem22 = self.table_components.item(2, 1)
-        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"PIC16F84A", None));
-        ___qtablewidgetitem23 = self.table_components.item(2, 2)
-        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"PIC16F84A", None));
-        ___qtablewidgetitem24 = self.table_components.item(2, 3)
-        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem25 = self.table_components.item(2, 4)
-        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"Microcontrolador", None));
-        ___qtablewidgetitem26 = self.table_components.item(2, 5)
-        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"Desconocida", None));
-        ___qtablewidgetitem27 = self.table_components.item(2, 6)
-        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"Disponible", None));
-        self.table_components.setSortingEnabled(__sortingEnabled)
-
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Listado", None))
-        self.input_search_id.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Id / Codigo", None))
-        self.btn_search_id.setText(QCoreApplication.translate("MainWindow", u"Buscar", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Nombre:", None))
-        self.edit_name.setText(QCoreApplication.translate("MainWindow", u"PIC", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"C\u00f3digo:", None))
-        self.edit_code.setText(QCoreApplication.translate("MainWindow", u"PIC16F84A", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Cantidad:", None))
-        self.edit_count.setText(QCoreApplication.translate("MainWindow", u"12", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Descripci\u00f3n:", None))
-        self.edit_description.setPlainText(QCoreApplication.translate("MainWindow", u"descripcion del component", None))
-        self.lbl_info.setText(QCoreApplication.translate("MainWindow", u"Informaci\u00f3n:", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Componente", None))
-        self.menuArchivo.setTitle(QCoreApplication.translate("MainWindow", u"Archivo", None))
-        self.menuEdici_n.setTitle(QCoreApplication.translate("MainWindow", u"Edici\u00f3n", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"List", None))
+        self.input_search_id.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Id / Code", None))
+        self.btn_search_id.setText(QCoreApplication.translate("MainWindow", u"Search", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Name:", None))
+        self.edit_name.setText("")
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Code:", None))
+        self.edit_code.setText("")
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Quantity:", None))
+        self.edit_count.setText("")
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"Description:", None))
+        self.edit_description.setPlainText("")
+        self.lbl_info.setText(QCoreApplication.translate("MainWindow", u"Information:", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Component", None))
+        self.menuArchivo.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
+        self.menuEdici_n.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
     # retranslateUi
 

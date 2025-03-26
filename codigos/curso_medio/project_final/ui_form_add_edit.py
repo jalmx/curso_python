@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'form_add_edit.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.2
+## Created by: Qt User Interface Compiler version 6.8.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -53,10 +53,10 @@ class Ui_Form(object):
 
         self.gridLayout.addWidget(self.label_2, 0, 0, 1, 1)
 
-        self.lineEdit = QLineEdit(self.widget)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.input_name = QLineEdit(self.widget)
+        self.input_name.setObjectName(u"input_name")
 
-        self.gridLayout.addWidget(self.lineEdit, 0, 1, 2, 1)
+        self.gridLayout.addWidget(self.input_name, 0, 1, 2, 1)
 
         self.label_3 = QLabel(self.widget)
         self.label_3.setObjectName(u"label_3")
@@ -64,10 +64,10 @@ class Ui_Form(object):
 
         self.gridLayout.addWidget(self.label_3, 1, 0, 2, 1)
 
-        self.lineEdit_2 = QLineEdit(self.widget)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.input_code = QLineEdit(self.widget)
+        self.input_code.setObjectName(u"input_code")
 
-        self.gridLayout.addWidget(self.lineEdit_2, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.input_code, 2, 1, 1, 1)
 
         self.label_4 = QLabel(self.widget)
         self.label_4.setObjectName(u"label_4")
@@ -75,10 +75,10 @@ class Ui_Form(object):
 
         self.gridLayout.addWidget(self.label_4, 3, 0, 1, 1)
 
-        self.spinBox = QSpinBox(self.widget)
-        self.spinBox.setObjectName(u"spinBox")
+        self.input_count = QSpinBox(self.widget)
+        self.input_count.setObjectName(u"input_count")
 
-        self.gridLayout.addWidget(self.spinBox, 3, 1, 1, 1)
+        self.gridLayout.addWidget(self.input_count, 3, 1, 1, 1)
 
 
         self.verticalLayout_2.addLayout(self.gridLayout)
@@ -91,10 +91,10 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.label_5)
 
-        self.plainTextEdit = QPlainTextEdit(self.widget)
-        self.plainTextEdit.setObjectName(u"plainTextEdit")
+        self.input_description = QPlainTextEdit(self.widget)
+        self.input_description.setObjectName(u"input_description")
 
-        self.verticalLayout.addWidget(self.plainTextEdit)
+        self.verticalLayout.addWidget(self.input_description)
 
 
         self.verticalLayout_2.addLayout(self.verticalLayout)
@@ -104,15 +104,15 @@ class Ui_Form(object):
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.pushButton_2 = QPushButton(Form)
-        self.pushButton_2.setObjectName(u"pushButton_2")
+        self.btn_cancel = QPushButton(Form)
+        self.btn_cancel.setObjectName(u"btn_cancel")
 
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.horizontalLayout.addWidget(self.btn_cancel)
 
-        self.pushButton = QPushButton(Form)
-        self.pushButton.setObjectName(u"pushButton")
+        self.btn_save = QPushButton(Form)
+        self.btn_save.setObjectName(u"btn_save")
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.btn_save)
 
 
         self.verticalLayout_3.addLayout(self.horizontalLayout)
@@ -125,12 +125,12 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.label.setText(QCoreApplication.translate("Form", u"Agregar/Editar", None))
-        self.label_2.setText(QCoreApplication.translate("Form", u"Nombre:", None))
-        self.label_3.setText(QCoreApplication.translate("Form", u"C\u00f3digo:", None))
-        self.label_4.setText(QCoreApplication.translate("Form", u"Cantidad:", None))
-        self.label_5.setText(QCoreApplication.translate("Form", u"Descripci\u00f3n", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Form", u"Cancelar", None))
-        self.pushButton.setText(QCoreApplication.translate("Form", u"Guardar", None))
+        self.label.setText(QCoreApplication.translate("Form", u"Add/Edit", None))
+        self.label_2.setText(QCoreApplication.translate("Form", u"Name:", None))
+        self.label_3.setText(QCoreApplication.translate("Form", u"Code:", None))
+        self.label_4.setText(QCoreApplication.translate("Form", u"Quantity: ", None))
+        self.label_5.setText(QCoreApplication.translate("Form", u"Description", None))
+        self.btn_cancel.setText(QCoreApplication.translate("Form", u"Cancel", None))
+        self.btn_save.setText(QCoreApplication.translate("Form", u"Save", None))
     # retranslateUi
 

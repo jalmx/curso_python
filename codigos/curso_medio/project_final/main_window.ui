@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>858</width>
+    <width>893</width>
     <height>732</height>
    </rect>
   </property>
@@ -37,25 +37,54 @@
        <widget class="QWidget" name="widget" native="true">
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Policy::Preferred</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>16</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QPushButton" name="btn_add">
            <property name="text">
-            <string>Agrgear</string>
+            <string>Add</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="btn_edit">
            <property name="text">
-            <string>Editar</string>
+            <string>Edit</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="btn_delete">
            <property name="text">
-            <string>Eliminar</string>
+            <string>Delete</string>
            </property>
           </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>
@@ -67,7 +96,7 @@
         </property>
         <widget class="QWidget" name="tab">
          <attribute name="title">
-          <string>Listado</string>
+          <string>List</string>
          </attribute>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
@@ -75,14 +104,14 @@
             <item>
              <widget class="QLineEdit" name="input_search_table">
               <property name="placeholderText">
-               <string>Nombre, Código</string>
+               <string>Name, code</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QPushButton" name="btn_search_table">
               <property name="text">
-               <string>Buscar</string>
+               <string>Search</string>
               </property>
              </widget>
             </item>
@@ -94,14 +123,11 @@
              <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
             </property>
             <property name="rowCount">
-             <number>3</number>
+             <number>0</number>
             </property>
             <property name="columnCount">
              <number>7</number>
             </property>
-            <row/>
-            <row/>
-            <row/>
             <column>
              <property name="text">
               <string>ID</string>
@@ -109,27 +135,27 @@
             </column>
             <column>
              <property name="text">
-              <string>Nombre</string>
+              <string>Name</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>Código</string>
+              <string>Code</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>Cantidad</string>
+              <string>Quantity</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>Descripción</string>
+              <string>Description</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>Ubicación</string>
+              <string>Location</string>
              </property>
             </column>
             <column>
@@ -137,118 +163,13 @@
               <string>Status</string>
              </property>
             </column>
-            <item row="0" column="0">
-             <property name="text">
-              <string>234</string>
-             </property>
-            </item>
-            <item row="0" column="1">
-             <property name="text">
-              <string>R10</string>
-             </property>
-            </item>
-            <item row="0" column="2">
-             <property name="text">
-              <string>r10</string>
-             </property>
-            </item>
-            <item row="0" column="3">
-             <property name="text">
-              <string>9</string>
-             </property>
-            </item>
-            <item row="0" column="4">
-             <property name="text">
-              <string>Resistencia de 10 ohms</string>
-             </property>
-            </item>
-            <item row="0" column="5">
-             <property name="text">
-              <string>NA</string>
-             </property>
-            </item>
-            <item row="0" column="6">
-             <property name="text">
-              <string>Disponible</string>
-             </property>
-            </item>
-            <item row="1" column="0">
-             <property name="text">
-              <string>324</string>
-             </property>
-            </item>
-            <item row="1" column="1">
-             <property name="text">
-              <string>bobina 10uH</string>
-             </property>
-            </item>
-            <item row="1" column="2">
-             <property name="text">
-              <string>L10u</string>
-             </property>
-            </item>
-            <item row="1" column="3">
-             <property name="text">
-              <string>0</string>
-             </property>
-            </item>
-            <item row="1" column="4">
-             <property name="text">
-              <string>Bobina de 10uH</string>
-             </property>
-            </item>
-            <item row="1" column="5">
-             <property name="text">
-              <string>NA</string>
-             </property>
-            </item>
-            <item row="1" column="6">
-             <property name="text">
-              <string>No disponible</string>
-             </property>
-            </item>
-            <item row="2" column="0">
-             <property name="text">
-              <string>322</string>
-             </property>
-            </item>
-            <item row="2" column="1">
-             <property name="text">
-              <string>PIC16F84A</string>
-             </property>
-            </item>
-            <item row="2" column="2">
-             <property name="text">
-              <string>PIC16F84A</string>
-             </property>
-            </item>
-            <item row="2" column="3">
-             <property name="text">
-              <string>1</string>
-             </property>
-            </item>
-            <item row="2" column="4">
-             <property name="text">
-              <string>Microcontrolador</string>
-             </property>
-            </item>
-            <item row="2" column="5">
-             <property name="text">
-              <string>Desconocida</string>
-             </property>
-            </item>
-            <item row="2" column="6">
-             <property name="text">
-              <string>Disponible</string>
-             </property>
-            </item>
            </widget>
           </item>
          </layout>
         </widget>
         <widget class="QWidget" name="tab_2">
          <attribute name="title">
-          <string>Componente</string>
+          <string>Component</string>
          </attribute>
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
@@ -256,14 +177,14 @@
             <item>
              <widget class="QLineEdit" name="input_search_id">
               <property name="placeholderText">
-               <string>Id / Codigo</string>
+               <string>Id / Code</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QPushButton" name="btn_search_id">
               <property name="text">
-               <string>Buscar</string>
+               <string>Search</string>
               </property>
              </widget>
             </item>
@@ -302,7 +223,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>Nombre:</string>
+                  <string>Name:</string>
                  </property>
                 </widget>
                </item>
@@ -314,7 +235,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>PIC</string>
+                  <string/>
                  </property>
                  <property name="readOnly">
                   <bool>true</bool>
@@ -337,7 +258,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>Código:</string>
+                  <string>Code:</string>
                  </property>
                 </widget>
                </item>
@@ -349,7 +270,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>PIC16F84A</string>
+                  <string/>
                  </property>
                  <property name="readOnly">
                   <bool>true</bool>
@@ -366,7 +287,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>Cantidad:</string>
+                  <string>Quantity:</string>
                  </property>
                 </widget>
                </item>
@@ -378,7 +299,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>12</string>
+                  <string/>
                  </property>
                  <property name="readOnly">
                   <bool>true</bool>
@@ -399,7 +320,7 @@
                   </font>
                  </property>
                  <property name="text">
-                  <string>Descripción:</string>
+                  <string>Description:</string>
                  </property>
                 </widget>
                </item>
@@ -414,7 +335,7 @@
                   <bool>true</bool>
                  </property>
                  <property name="plainText">
-                  <string>descripcion del component</string>
+                  <string/>
                  </property>
                  <property name="textInteractionFlags">
                   <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
@@ -428,8 +349,14 @@
                <layout class="QVBoxLayout" name="verticalLayout_7">
                 <item>
                  <widget class="QLabel" name="lbl_info">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="text">
-                   <string>Información:</string>
+                   <string>Information:</string>
                   </property>
                  </widget>
                 </item>
@@ -452,13 +379,13 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>858</width>
+     <width>893</width>
      <height>30</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">
     <property name="title">
-     <string>Archivo</string>
+     <string>File</string>
     </property>
     <addaction name="actionAgregar_componente"/>
     <addaction name="actionEditar_componente"/>
@@ -467,7 +394,7 @@
    </widget>
    <widget class="QMenu" name="menuEdici_n">
     <property name="title">
-     <string>Edición</string>
+     <string>Edit</string>
     </property>
     <addaction name="actionAdegar_componente"/>
     <addaction name="actionEditar_componente_2"/>
@@ -479,32 +406,32 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAgregar_componente">
    <property name="text">
-    <string>Exportar componente</string>
+    <string>Export components</string>
    </property>
   </action>
   <action name="actionEditar_componente">
    <property name="text">
-    <string>Exportar todos</string>
+    <string>Export all components</string>
    </property>
   </action>
   <action name="actionAdegar_componente">
    <property name="text">
-    <string>Adegar componente</string>
+    <string>Add component</string>
    </property>
   </action>
   <action name="actionEditar_componente_2">
    <property name="text">
-    <string>Editar componente</string>
+    <string>Edit component</string>
    </property>
   </action>
   <action name="actionEliminar_componente">
    <property name="text">
-    <string>Eliminar componente</string>
+    <string>Delete component</string>
    </property>
   </action>
   <action name="actionSalir">
    <property name="text">
-    <string>Salir</string>
+    <string>Quit</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>

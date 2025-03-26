@@ -21,13 +21,23 @@ class ModelComponent(Model):
 
 class Component:
 
-    def __init__(self, name, code, description=None, id=None, location="N/A", count=0):
+    def __init__(
+        self,
+        name,
+        code,
+        status=False,
+        description=None,
+        id=None,
+        location="N/A",
+        count=0,
+    ):
         self.id = id
         self.name = name
         self.description = description
         self.code = code
         self.count = count
         self.location = location
+        self.status = status or bool(count)
 
     def __str__(self):
         return f"[id]: {self.id} - [name] {self.name} - [code]:{self.code} - [count]: {self.count} - [location]: {self.location}"
@@ -60,4 +70,5 @@ class Component:
             description=component.description if component.description else "",
             location=component.location if component.location else "",
             count=component.count,
+            status=component.status,
         )
