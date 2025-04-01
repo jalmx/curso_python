@@ -24,7 +24,7 @@ class Ui_Form(object):
         if not Form.objectName():
             Form.setObjectName(u"Form")
         Form.setWindowModality(Qt.WindowModality.ApplicationModal)
-        Form.resize(507, 687)
+        Form.resize(507, 463)
         self.verticalLayout_3 = QVBoxLayout(Form)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.label = QLabel(Form)
@@ -77,6 +77,7 @@ class Ui_Form(object):
 
         self.input_count = QSpinBox(self.widget)
         self.input_count.setObjectName(u"input_count")
+        self.input_count.setMaximum(1000000000)
 
         self.gridLayout.addWidget(self.input_count, 3, 1, 1, 1)
 

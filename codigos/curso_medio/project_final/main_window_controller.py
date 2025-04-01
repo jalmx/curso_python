@@ -8,11 +8,11 @@ from component import Component
 
 class MainWindow(QMainWindow, Ui_MainWindow):
 
-    dialog = None
-    components = None
-    TAB_TABLE = 0
-    TAB_ONE = 1
-    component = None
+    dialog = None  # es para la ventana de agregar y editar
+    components: list[Component] = None  # es la lista de compoenentes
+    TAB_TABLE = 0  # constante estoy en el tab de la tabla
+    TAB_ONE = 1  # constante estoy en el tab de la tabla
+    component = None  # es para el omponente cargado el tab de un solo componente
 
     def __init__(self):
         super().__init__()
@@ -170,9 +170,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.message_error()
 
     def __get_component(self):
-        i = self.table_components.currentRow()
-        if i != -1:
-            return self.components[i]
+
+        if self.table_components.currentRow() != -1:
+            id = self.table_components.item(
+                self.table_components.currentRow(), 0
+            ).text()
+            for component in self.components:
+                if component.id == int(id):
+                    return component
 
         return None
 

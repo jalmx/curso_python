@@ -17,6 +17,7 @@ class Form(QWidget, Ui_Form):
         self.component = component
         self.load_data_ui()
 
+
     def init(self):
         self.btn_cancel.clicked.connect(self.close_dialog)
         self.btn_save.clicked.connect(self.save)

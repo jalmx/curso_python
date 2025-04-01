@@ -50,22 +50,22 @@ class ComponentController:
         }
 
 
-from random import random, choice
+# from random import random, choice
 
-if __name__ == "__main__":
-    controller = ComponentController()
+# if __name__ == "__main__":
+#     controller = ComponentController()
 
-    for i in range(int(random() * 10)):
-        v = int(random() * 100)
-        c = [f"C{v}", f"L{v}", f"IC {v*3}"]
-        controller.insert(
-            Component(
-                name=f"{choice(c)}",
-                description=f"Componente {choice(c)}",
-                code=f"{choice(c)}",
-                count=int(random() * 100),
-            )
-        )
+#     for i in range(int(random() * 10)):
+#         v = int(random() * 100)
+#         c = [f"C{v}", f"L{v}", f"IC {v*3}"]
+#         controller.insert(
+#             Component(
+#                 name=f"{choice(c)}",
+#                 description=f"Componente {choice(c)}",
+#                 code=f"{choice(c)}",
+#                 count=int(random() * 100),
+#             )
+#         )
 
     # for i in controller.search_by_code("10")["components"]:
     #     print(i)
