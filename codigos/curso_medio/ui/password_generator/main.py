@@ -20,6 +20,7 @@ class App(QWidget, Ui_Form):
         self.btn_clear.clicked.connect(self.clear_password)
         self.btn_generate.clicked.connect(self.generate_password)
         self.btn_copy.clicked.connect(self.copy_password)
+        self.edit_length.returnPressed.connect(self.generate_password)
 
     def generate_password(self):
 
@@ -37,9 +38,11 @@ class App(QWidget, Ui_Form):
     def copy_password(self):
         if self.pwd:
             QClipboard().setText(self.pwd)
-            self.message("Copied", "The password was copied to clipboard. You can paste", QMessageBox.Icon.Information)
+            self.message(
+                "Copied", "The password was copied to clipboard. You can paste", QMessageBox.Icon.Information)
         else:
-            self.message("No password", "PASSWORD NOT SETTED", QMessageBox.Icon.Warning)
+            self.message("No password", "PASSWORD NOT SETTER",
+                         QMessageBox.Icon.Warning)
 
     def message(self, title, text, icon):
         msg = QMessageBox()
@@ -54,3 +57,5 @@ if __name__ == "__main__":
     window = App()
     window.show()
     sys.exit(app.exec())
+
+#pyinstaller --noconfirm --onefile --windowed --name "password_generator" --hidden-import "PySide6.QtWidgets" --paths "/home/xizuth/Projects/curso_python/codigos/curso_medio/ui/password_generator"  "/home/xizuth/Projects/curso_python/codigos/curso_medio/ui/password_generator/main.py"

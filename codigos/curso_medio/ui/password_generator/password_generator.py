@@ -80,6 +80,6 @@ class PasswordGenerator:
         return password
 
 
-# For test the class
-if __name__ == "__main__":
-    print(PasswordGenerator().generate_password(5))
+# # For test the class
+# if __name__ == "__main__":
+#     print(PasswordGenerator().generate_password(5))
