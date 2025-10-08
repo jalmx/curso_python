@@ -1044,7 +1044,6 @@
 <li><code>Diccionarios</code></li>
 <li><code>Sets</code></li>
 </ul>
-<p><em>Nota: En este curso solo se cubriran las tuplas y las listas.</em></p>
 <h2 id="101-tuplas">10.1 Tuplas</h2>
 <p>Es una estructura de datos <strong>inmutables</strong>, una vez declarada no puede cambiar su contenido, ni agregar, ni eliminar, no modificar.</p>
 <p>Cada posición de los datos tiene un <strong>indice</strong> (index), el cual me ayuda a acceder a el. <em>La primera posición siempre es 0</em>.</p>
@@ -1146,10 +1145,10 @@ TypeError: 'tuple' object doesn't support item deletion
 9
 </code></pre>
 <h2 id="102-listas">10.2 Listas</h2>
-<p>Es una coleccion de elementos ordenados. En otro lenguajes es conocido como un <code>array</code>. A este tipo de coleccion es Mutable, es decir, se le pueden agregar, eliminar, quitar, elementos. Podemos hacer diversas operaciones con ellos.</p>
+<p>Es una colección de elementos ordenados. En otro lenguajes es conocido como un <code>array</code>. A este tipo de colección es Mutable, es decir, se le pueden agregar, eliminar, quitar, elementos. Podemos hacer diversas operaciones con ellos.</p>
 <p>Elementos que debemos tener en cuenta son:</p>
 <ul>
-<li><code>index</code>: El indice o posicion de cada elemento en la lista, recordar que todas comienzan en la posicion 0.</li>
+<li><code>index</code>: El indice o posición de cada elemento en la lista, recordar que todas comienzan en la posición 0.</li>
 <li><code>length</code>: La longitud o cantidad de elementos que contiene la lista</li>
 </ul>
 <p><strong>Sintaxis</strong></p>
@@ -1195,7 +1194,7 @@ TypeError: 'tuple' object doesn't support item deletion
 <span class="c1">#imprimo la lista</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
 
-<span class="c1">#inserto una materia en la posicion 2</span>
+<span class="c1">#inserto una materia en la posición 2</span>
 <span class="n">materias</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Matematicas&#39;</span><span class="p">)</span>
 
 <span class="c1">#imprimo la lista</span>
@@ -1227,16 +1226,16 @@ TypeError: 'tuple' object doesn't support item deletion
 <span class="c1">#imprimo la lista</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">materias</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>['analogicas', 'digitales', 'mediciones']
-['analogicas', 'digitales', 'mediciones', 'dibujo 3D']
-['analogicas', 'digitales', 'mediciones', 'dibujo 3D', 'neumatica', 'mecanismos']
-['analogicas', 'digitales', 'Matematicas', 'mediciones', 'dibujo 3D', 'neumatica', 'mecanismos']
-['analogicas', 'digitales', 'mediciones', 'dibujo 3D', 'neumatica', 'mecanismos']
-['analogicas', 'dibujo 3D', 'digitales', 'mecanismos', 'mediciones', 'neumatica']
-['analogicas', 'dibujo 3D', 'digitales', 'mecanismos', 'mediciones']
-ultima materia: neumatica
-['mediciones', 'mecanismos', 'digitales', 'dibujo 3D', 'analogicas']
-</code></pre>
+<div class="highlight"><pre><span></span><code>    [&#39;analogicas&#39;, &#39;digitales&#39;, &#39;mediciones&#39;]
+    [&#39;analogicas&#39;, &#39;digitales&#39;, &#39;mediciones&#39;, &#39;dibujo 3D&#39;]
+    [&#39;analogicas&#39;, &#39;digitales&#39;, &#39;mediciones&#39;, &#39;dibujo 3D&#39;, &#39;neumatica&#39;, &#39;mecanismos&#39;]
+    [&#39;analogicas&#39;, &#39;digitales&#39;, &#39;Matematicas&#39;, &#39;mediciones&#39;, &#39;dibujo 3D&#39;, &#39;neumatica&#39;, &#39;mecanismos&#39;]
+    [&#39;analogicas&#39;, &#39;digitales&#39;, &#39;mediciones&#39;, &#39;dibujo 3D&#39;, &#39;neumatica&#39;, &#39;mecanismos&#39;]
+    [&#39;analogicas&#39;, &#39;dibujo 3D&#39;, &#39;digitales&#39;, &#39;mecanismos&#39;, &#39;mediciones&#39;, &#39;neumatica&#39;]
+    [&#39;analogicas&#39;, &#39;dibujo 3D&#39;, &#39;digitales&#39;, &#39;mecanismos&#39;, &#39;mediciones&#39;]
+    ultima materia: neumatica
+    [&#39;mediciones&#39;, &#39;mecanismos&#39;, &#39;digitales&#39;, &#39;dibujo 3D&#39;, &#39;analogicas&#39;]
+</code></pre></div>
 <h3 id="obteniendo-los-datos-de-una-lista">Obteniendo los datos de una lista</h3>
 <p><strong>Sintaxis</strong></p>
 <div class="highlight"><pre><span></span><code>    <span class="n">variable</span> <span class="o">=</span> <span class="n">nombre_lista</span> <span class="p">[</span> <span class="n">posicion</span> <span class="p">]</span>
@@ -1253,11 +1252,11 @@ ultima materia: neumatica
 <span class="nb">print</span><span class="p">(</span><span class="n">materia3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">materia4</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>mediciones
-mecanismos
-digitales
-dibujo 3D
-</code></pre>
+<div class="highlight"><pre><span></span><code>    mediciones
+    mecanismos
+    digitales
+    dibujo 3D
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1"># Recorriendo una lista con FOR</span>
 
 <span class="k">for</span> <span class="n">materia</span> <span class="ow">in</span> <span class="n">materias</span><span class="p">:</span>
@@ -1308,9 +1307,9 @@ dibujo 3D
 <p>Los iteradores por default no te dicen cual es su largo, en muchas ocasiones necesitamos saber el largo para realizar ciertas tareas, para eso Python trae una función que nos ayuda.</p>
 <p><strong>Sintaxis</strong></p>
 <ul>
-<li><code>len(iterator)</code>: Devuelve el numero de los elementos de una coleccion</li>
+<li><code>len(iterator)</code>: Devuelve el numero de los elementos de una colección</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># Ejemplos de aplicacion de la función len()</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Ejemplos de aplicación de la función len()</span>
 
 <span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;hola&#39;</span>
 <span class="n">str_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
@@ -1337,7 +1336,7 @@ largo de diccionario 3
 <div class="highlight"><pre><span></span><code><span class="n">especialidades</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;mecatronica&#39;</span><span class="p">,</span>
     <span class="s1">&#39;laboratorio&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;contanbilidad&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;contabilidad&#39;</span><span class="p">,</span>
     <span class="s1">&#39;mecanica&#39;</span><span class="p">,</span>
     <span class="s1">&#39;electricidad&#39;</span>
     <span class="p">]</span>
@@ -1349,12 +1348,12 @@ largo de diccionario 3
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Una de las especialidades es: </span><span class="si">{</span><span class="n">especialidad</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
 </code></pre></div>
-<pre><code>Una de las especialidades es: mecatronica
-Una de las especialidades es: laboratorio
-Una de las especialidades es: contanbilidad
-Una de las especialidades es: mecanica
-Una de las especialidades es: electricidad
-</code></pre>
+<div class="highlight"><pre><span></span><code>    Una de las especialidades es: mecatronica
+    Una de las especialidades es: laboratorio
+    Una de las especialidades es: contabilidad
+    Una de las especialidades es: mecanica
+    Una de las especialidades es: electricidad
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 <span class="c1">#Creando un pesudobot</span>
 
@@ -1366,13 +1365,13 @@ Una de las especialidades es: electricidad
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cual es tu nombre&#39;</span><span class="p">)</span>
 <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Es un gusto concerte </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Es un gusto conocerte </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Que lindo nombre tienes ;)&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cual es tu hobby?&#39;</span><span class="p">)</span>
 <span class="n">hobby</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Wow!!!! que conincidencia, a mi también me encanta </span><span class="si">{</span><span class="n">hobby</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Wow!!!! que coincidencia, a mi también me encanta </span><span class="si">{</span><span class="n">hobby</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Te cuento que también me gusta mucho </span><span class="si">{</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">hobbies</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div>
 <pre><code>Hola, me llamo BotPy
@@ -1411,12 +1410,11 @@ KeyboardInterrupt                         Traceback (most recent call last)
 KeyboardInterrupt: Interrupted by user
 </code></pre>
 <h2 id="eliminando-elementos-de-la-lista-del">Eliminando elementos de la lista <code>del</code></h2>
-<p>Cuando queremos eliminar algún elemento de una coleccion se usa la palabra reservada <code>del</code> junto a la posicion del elemento a eliminar.</p>
+<p>Cuando queremos eliminar algún elemento de una colección se usa la palabra reservada <code>del</code> junto a la posición del elemento a eliminar.</p>
 <p><strong>Sintaxis</strong></p>
-<ul>
-<li><code>del coleccion[posicion|key]</code></li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># Eliminar elementos de una coleccion</span>
+<div class="highlight"><pre><span></span><code><span class="k">del</span> <span class="n">coleccion</span><span class="p">[</span><span class="n">posicion</span><span class="o">|</span><span class="n">key</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Eliminar elementos de una colección</span>
 
 <span class="n">materias</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;analogica&#39;</span><span class="p">,</span> <span class="s1">&#39;digitales&#39;</span><span class="p">,</span> <span class="s1">&#39;mediciones&#39;</span> <span class="p">]</span>
 
@@ -1442,7 +1440,7 @@ KeyboardInterrupt: Interrupted by user
 <li>Generador de contraseñas, de 8 dígitos que contengan de todos los símbolos.</li>
 </ol>
 <h2 id="103-diccionarios">10.3 Diccionarios</h2>
-<p>Son un tipo de coleccion que su estructura es <code>Llave - Valor</code>. Para obtener el acceso al <em>valor</em> se hace a traves de la <em>llave</em>. La llave es única y por lo tanto no se puede repetir.</p>
+<p>Son un tipo de colección que su estructura es <code>Llave - Valor</code>. Para obtener el acceso al <em>valor</em> se hace a traves de la <em>llave</em>. La llave es única y por lo tanto no se puede repetir.</p>
 <p><strong>Sintaxis</strong></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Creación de un diccionario</span>
     <span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span>
@@ -1530,7 +1528,7 @@ leon
 10
 </code></pre>
 <h2 id="funcion-tuple">Función <code>tuple()</code></h2>
-<p>La función tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.</p>
+<p>La función tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una colección.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mi_tupla</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span> <span class="c1"># crea una tupla vacia</span>
 
 <span class="n">calificaciones</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -1546,7 +1544,7 @@ leon
 (8, 6, 9, 6, 8)
 </code></pre>
 <h2 id="funcion-list">Función <code>list()</code></h2>
-<p>La función list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.</p>
+<p>La función list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una colección.</p>
 <div class="highlight"><pre><span></span><code><span class="n">lista_vacia</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">lista_vacia</span><span class="p">)</span>
@@ -1562,7 +1560,7 @@ leon
 [8, 6, 9, 6, 8]
 </code></pre>
 <h2 id="funcion-dict">Función <code>dict()</code></h2>
-<p>La función dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.</p>
+<p>La función dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una colección.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mi_diccionario</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">mi_diccionario</span><span class="p">)</span>
@@ -1575,7 +1573,7 @@ leon
 {'hola': 4}
 </code></pre>
 <h2 id="funcion-enumerate">Función <code>enumerate()</code></h2>
-<p>A esta función se le pasa un iterable y me devuelve 2 valores, en la primera posicion me pasa el indice y en la segunda posicion me pasa el valor que tiene en ese momento el iterador.</p>
+<p>A esta función se le pasa un iterable y me devuelve 2 valores, en la primera posición me pasa el indice y en la segunda posición me pasa el valor que tiene en ese momento el iterador.</p>
 <p><strong>Sintaxis:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">iterador</span><span class="p">)</span>
 </code></pre></div>
@@ -1584,22 +1582,22 @@ leon
 <span class="c1"># Forma fea y horrible</span>
 <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">pokemon</span> <span class="ow">in</span> <span class="n">pokemons</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La posicion de </span><span class="si">{</span><span class="n">pokemon</span><span class="si">}</span><span class="s1"> es </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La posición de </span><span class="si">{</span><span class="n">pokemon</span><span class="si">}</span><span class="s1"> es </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;===================================&#39;</span><span class="p">)</span>
 
 <span class="c1"># La forma chida</span>
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pokemons</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La posicion de </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1"> es </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La posición de </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1"> es </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>La posicion de pikachu es 0
-La posicion de bolbasor es 1
-La posicion de charizard es 2
+<pre><code>La posición de pikachu es 0
+La posición de bolbasor es 1
+La posición de charizard es 2
 ===================================
-La posicion de pikachu es 0
-La posicion de bolbasor es 1
-La posicion de charizard es 2
+La posición de pikachu es 0
+La posición de bolbasor es 1
+La posición de charizard es 2
 </code></pre>
 <hr />
 <p>Realizado por el Instructor: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
