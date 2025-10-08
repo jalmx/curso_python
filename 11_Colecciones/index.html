@@ -573,9 +573,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#21021-funciones-de-las-listas" class="md-nav__link">
+  <a href="#1021-funciones-de-las-listas" class="md-nav__link">
     <span class="md-ellipsis">
-      2.10.2.1 Funciones de las listas
+      10.2.1 Funciones de las listas
     </span>
   </a>
   
@@ -634,6 +634,21 @@
       10.3 Diccionarios
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="10.3 Diccionarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1031-funciones-de-diccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3.1 Funciones de diccionarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -919,9 +934,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#21021-funciones-de-las-listas" class="md-nav__link">
+  <a href="#1021-funciones-de-las-listas" class="md-nav__link">
     <span class="md-ellipsis">
-      2.10.2.1 Funciones de las listas
+      10.2.1 Funciones de las listas
     </span>
   </a>
   
@@ -980,6 +995,21 @@
       10.3 Diccionarios
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="10.3 Diccionarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1031-funciones-de-diccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.3.1 Funciones de diccionarios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1156,10 +1186,10 @@ TypeError: 'tuple' object doesn't support item deletion
 </code></pre></div>
 <h3 id="como-se-deben-nombrar-las-listas-buena-practica-o-convension">Como se deben nombrar las listas (buena practica o convension)</h3>
 <ul>
-<li>El nombre de la varable que contanga una lista, debe ser en <strong>plural</strong></li>
+<li>El nombre de la variable que contenga una lista, debe ser en <strong>plural</strong></li>
 <li>Puede contener la palabra <strong>**list_**</strong> o <strong>**_list**</strong></li>
 </ul>
-<h3 id="21021-funciones-de-las-listas">2.10.2.1 Funciones de las listas</h3>
+<h3 id="1021-funciones-de-las-listas">10.2.1 Funciones de las listas</h3>
 <p>Las lista son un objeto, por lo tanto cuenta con diversos metodos los cuales nos ayudan a interactuar con ellos:</p>
 <ul>
 <li><code>append(element)</code>: Adds an element at the end of the list</li>
@@ -1435,7 +1465,7 @@ KeyboardInterrupt: Interrupted by user
 </code></pre></div>
 <h3 id="ejercicios">Ejercicios</h3>
 <ol>
-<li>Crear una lista de frutas: <em>manzana</em>, <em>platano</em> y <em>melon</em>. Posteriormete agregar <em>sandia</em>. Despues, agregarle una lista mas que contenga <em>papaya</em>, <em>kiwi</em> y <em>durazno</em>. He imprimir la lista completa. Despues, remover la <em>sandia</em> e imprimir el resultado. Recorrer la lista de frutas imprimiendo cada una (usando un ciclo, de preferencia usar <em>for</em>).</li>
+<li>Crear una lista de frutas: <em>manzana</em>, <em>platano</em> y <em>melon</em>. Posteriormente agregar <em>sandia</em>. Después, agregarle una lista mas que contenga <em>papaya</em>, <em>kiwi</em> y <em>durazno</em>. He imprimir la lista completa. Despues, remover la <em>sandia</em> e imprimir el resultado. Recorrer la lista de frutas imprimiendo cada una (usando un ciclo, de preferencia usar <em>for</em>).</li>
 <li>Crear una lista con sus calificaciones de Matemáticas, y obtener el promedio. Se debe utilizar la función <code>sum</code> para el procedimiento. Imprimir cual es la calificación maxima y minima, usando las funciones <code>max()</code> y <code>min()</code></li>
 <li>Generador de contraseñas, de 8 dígitos que contengan de todos los símbolos.</li>
 </ol>
@@ -1451,6 +1481,18 @@ KeyboardInterrupt: Interrupted by user
         <span class="o">......</span>
     <span class="p">}</span>
 </code></pre></div>
+<h3 id="1031-funciones-de-diccionarios">10.3.1 Funciones de diccionarios</h3>
+<p>El diccionario es un objeto, por lo tanto cuenta con diversos métodos los cuales nos ayudan a interactuar con ellos:</p>
+<ul>
+<li><code>keys()</code>: Devuelve una lista de todas las claves (keys) del diccionario. <code>{'a': 1, 'b': 2}.keys() → dict_keys(['a', 'b'])</code></li>
+<li><code>values()</code>: Devuelve una lista de todos los valores del diccionario. <code>{'a': 1, 'b': 2}.values() → dict_values([1, 2])</code></li>
+<li><code>items()</code>: Devuelve una lista de los pares (clave, valor) como tuples. <code>{'a': 1, 'b': 2}.items() → dict_items([('a', 1), ('b', 2)])</code></li>
+<li><code>get(key, default)</code>: Devuelve el valor asociado a la key. Si la clave no existe, devuelve un valor opcional default (por defecto es None), en lugar de lanzar un error (KeyError). d.get('c', 0)</li>
+<li><code>pop(key, default)</code>: Elimina la clave y su valor asociado del diccionario y devuelve el valor. Si la clave no existe, puede devolver el default o lanzar un KeyError si no se proporciona default. d.pop('a')</li>
+<li><code>update(other_dict)</code>: Fusiona el diccionario actual con otro (<code>other_dict</code>). Si una clave existe en ambos, el valor del <code>other_dict</code> la sobrescribe. Útil para añadir. <code>d.update({'b': 3, 'c': 4})</code></li>
+<li><code>clear()</code>: Elimina todos los pares (clave: valor) del diccionario, dejándolo vacío. <code>d.clear()</code></li>
+<li><code>copy()</code>: Devuelve una copia superficial del diccionario. Importante para evitar modificar el diccionario original accidentalmente. <code>d_copia = d.copy()</code></li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="c1"># Creación de un diccionario</span>
     <span class="n">diccionario</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;llave1&#39;</span> <span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">,</span>
@@ -1528,8 +1570,8 @@ leon
 10
 </code></pre>
 <h2 id="funcion-tuple">Función <code>tuple()</code></h2>
-<p>La función tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una colección.</p>
-<div class="highlight"><pre><span></span><code><span class="n">mi_tupla</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span> <span class="c1"># crea una tupla vacia</span>
+<p>La función tuple crea una instancia de una tupla vacía si no le pasamos ningún argumento. El argumento que puede recibir una colección.</p>
+<div class="highlight"><pre><span></span><code><span class="n">mi_tupla</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span> <span class="c1"># crea una tupla vacía</span>
 
 <span class="n">calificaciones</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
 
@@ -1544,7 +1586,7 @@ leon
 (8, 6, 9, 6, 8)
 </code></pre>
 <h2 id="funcion-list">Función <code>list()</code></h2>
-<p>La función list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una colección.</p>
+<p>La función list crea una instancia de una lista vacía si no le pasamos ningún argumento. El argumento que puede recibir una colección.</p>
 <div class="highlight"><pre><span></span><code><span class="n">lista_vacia</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">lista_vacia</span><span class="p">)</span>
@@ -1560,7 +1602,7 @@ leon
 [8, 6, 9, 6, 8]
 </code></pre>
 <h2 id="funcion-dict">Función <code>dict()</code></h2>
-<p>La función dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una colección.</p>
+<p>La función dict crea una instancia de un diccionario vacía si no le pasamos ningún argumento. El argumento que puede recibir una colección.</p>
 <div class="highlight"><pre><span></span><code><span class="n">mi_diccionario</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">mi_diccionario</span><span class="p">)</span>
@@ -1591,14 +1633,14 @@ leon
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pokemons</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;La posición de </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1"> es </span><span class="si">{</span><span class="n">index</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div>
-<pre><code>La posición de pikachu es 0
-La posición de bolbasor es 1
-La posición de charizard es 2
-===================================
-La posición de pikachu es 0
-La posición de bolbasor es 1
-La posición de charizard es 2
-</code></pre>
+<div class="highlight"><pre><span></span><code>    La posición de pikachu es 0
+    La posición de bolbasor es 1
+    La posición de charizard es 2
+    ===================================
+    La posición de pikachu es 0
+    La posición de bolbasor es 1
+    La posición de charizard es 2
+</code></pre></div>
 <hr />
 <p>Realizado por el Instructor: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
 
