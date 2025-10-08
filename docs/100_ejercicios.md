@@ -130,8 +130,14 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
 5. Genera una lista de 10 edades random (numero máximo) usa `count()` para determinar y mostrar cuántas personas son mayores de edad.
 6. Dadas `lista_a = [1, 2, 3]` y `lista_b = [4, 5]`, usa `extend()` para agregar todos los elementos de lista_b al final de lista_a.
 7. Dada la tupla `datos = ("Ana", 28, "Ingeniera")`, desempaqueta sus valores en tres variables (`nombre, edad, profesion`) y luego imprímelos.
+8. Crea un diccionario llamado `usuarios`. La clave debe ser un nombre de usuario y el valor debe ser otro diccionario con claves 'email' y 'activo'. Agrega dos usuarios.
+9. Dado el diccionario `persona = {"nombre": "Ana", "edad": 23, "ciudad": "México"}`, muestra el valor de la clave "ciudad".
+10. Crea un diccionario con información de tres estudiantes, donde cada valor sea otro diccionario con edad, carrera y promedio.
+11. Crea un diccionario con nombres de productos y sus precios. Luego, pide al usuario el nombre de un producto y muestra su precio.
 
 ## Funciones
+
+1.
 
 ## Archivos
 

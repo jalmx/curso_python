@@ -148,10 +148,10 @@ nombre_lista = [elemento1, elemento2, elemento3,.. , elementoN]
 
 ### Como se deben nombrar las listas (buena practica o convension)
 
-- El nombre de la varable que contanga una lista, debe ser en **plural**
+- El nombre de la variable que contenga una lista, debe ser en **plural**
 - Puede contener la palabra **\*\*list_\*\*** o **\*\*_list\*\***
 
-### 2.10.2.1 Funciones de las listas
+### 10.2.1 Funciones de las listas
 
 Las lista son un objeto, por lo tanto cuenta con diversos metodos los cuales nos ayudan a interactuar con ellos:
 
@@ -471,7 +471,7 @@ print(alumnos)
 
 ### Ejercicios
 
-1. Crear una lista de frutas: *manzana*, *platano* y *melon*. Posteriormete agregar *sandia*. Despues, agregarle una lista mas que contenga *papaya*, *kiwi* y *durazno*. He imprimir la lista completa. Despues, remover la *sandia* e imprimir el resultado. Recorrer la lista de frutas imprimiendo cada una (usando un ciclo, de preferencia usar *for*).
+1. Crear una lista de frutas: *manzana*, *platano* y *melon*. Posteriormente agregar *sandia*. Después, agregarle una lista mas que contenga *papaya*, *kiwi* y *durazno*. He imprimir la lista completa. Despues, remover la *sandia* e imprimir el resultado. Recorrer la lista de frutas imprimiendo cada una (usando un ciclo, de preferencia usar *for*).
 2. Crear una lista con sus calificaciones de Matemáticas, y obtener el promedio. Se debe utilizar la función `sum` para el procedimiento. Imprimir cual es la calificación maxima y minima, usando las funciones `max()` y `min()`
 3. Generador de contraseñas, de 8 dígitos que contengan de todos los símbolos.
 
@@ -491,6 +491,19 @@ Son un tipo de colección que su estructura es `Llave - Valor`. Para obtener el 
         ......
     }
 ```
+
+### 10.3.1 Funciones de diccionarios
+
+El diccionario es un objeto, por lo tanto cuenta con diversos métodos los cuales nos ayudan a interactuar con ellos:
+
+- `keys()`: Devuelve una lista de todas las claves (keys) del diccionario. `{'a': 1, 'b': 2}.keys() → dict_keys(['a', 'b'])`
+- `values()`: Devuelve una lista de todos los valores del diccionario. `{'a': 1, 'b': 2}.values() → dict_values([1, 2])`
+- `items()`: Devuelve una lista de los pares (clave, valor) como tuples. `{'a': 1, 'b': 2}.items() → dict_items([('a', 1), ('b', 2)])`
+- `get(key, default)`: Devuelve el valor asociado a la key. Si la clave no existe, devuelve un valor opcional default (por defecto es None), en lugar de lanzar un error (KeyError). d.get('c', 0)
+- `pop(key, default)`: Elimina la clave y su valor asociado del diccionario y devuelve el valor. Si la clave no existe, puede devolver el default o lanzar un KeyError si no se proporciona default. d.pop('a')
+- `update(other_dict)`: Fusiona el diccionario actual con otro (`other_dict`). Si una clave existe en ambos, el valor del `other_dict` la sobrescribe. Útil para añadir. `d.update({'b': 3, 'c': 4})`
+- `clear()`: Elimina todos los pares (clave: valor) del diccionario, dejándolo vacío. `d.clear()`
+- `copy()`: Devuelve una copia superficial del diccionario. Importante para evitar modificar el diccionario original accidentalmente. `d_copia = d.copy()`
 
 ```python
 # Creación de un diccionario
@@ -576,10 +589,10 @@ for values in calificaciones_neumatica.values():
 
 ## Función `tuple()`
 
-La función tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una colección.
+La función tuple crea una instancia de una tupla vacía si no le pasamos ningún argumento. El argumento que puede recibir una colección.
 
 ```python
-mi_tupla = tuple() # crea una tupla vacia
+mi_tupla = tuple() # crea una tupla vacía
 
 calificaciones = [8,6,9,6,8]
 
@@ -596,7 +609,7 @@ print(tupla_calificaciones)
 
 ## Función `list()`
 
-La función list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una colección.
+La función list crea una instancia de una lista vacía si no le pasamos ningún argumento. El argumento que puede recibir una colección.
 
 ```python
 lista_vacia = list()
@@ -616,7 +629,7 @@ print(lista_calificaciones)
 
 ## Función `dict()`
 
-La función dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una colección.
+La función dict crea una instancia de un diccionario vacía si no le pasamos ningún argumento. El argumento que puede recibir una colección.
 
 ```python
 mi_diccionario = dict()
@@ -658,6 +671,7 @@ for index, value in enumerate(pokemons):
 
 ```
 
+```text
     La posición de pikachu es 0
     La posición de bolbasor es 1
     La posición de charizard es 2
@@ -665,6 +679,7 @@ for index, value in enumerate(pokemons):
     La posición de pikachu es 0
     La posición de bolbasor es 1
     La posición de charizard es 2
+```
 
 ---
 
