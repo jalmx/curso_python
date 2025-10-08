@@ -21,9 +21,9 @@ En python son los siguientes:
 
 Es una estructura de datos **inmutables**, una vez declarada no puede cambiar su contenido, ni agregar, ni eliminar, no modificar.
 
-Cada posicion de los datos tiene un **indice** (index), el cual me ayuda a acceder a el. *La primera posicion siempre es 0*.
+Cada posición de los datos tiene un **indice** (index), el cual me ayuda a acceder a el. *La primera posición siempre es 0*.
 
-**La convencion de como declarar o nombrar a una lista o tupla es en plural**
+> La convención de como declarar o nombrar a una lista o tupla es en plural
 
 parámetros a destacar:
 
@@ -38,7 +38,7 @@ nombre_tupla = (dato1, dato2, ..., datoN)
 ```
 
 ```python
-# Declaracion de una tupla
+# Declaración de una tupla
 
 # Tiene 3 posiciones, comenzado en el 0. Largo de 3
 
@@ -281,6 +281,7 @@ while count < len(materias):
 
 ```
 
+```text
     La materia es:  mediciones
     La materia es:  mecanismos
     La materia es:  digitales
@@ -292,6 +293,7 @@ while count < len(materias):
     La materia es:  digitales
     La materia es:  dibujo 3D
     La materia es:  analogicas
+```
 
 ```python
 # Cosas adicionales que se pueden realizar con listas
@@ -309,43 +311,10 @@ print("El valor maximo:", maximo)
 print("El valor minimo:", minimo)
 ```
 
+```text
     La suma: 88
     El valor maximo: 9
     El valor minimo: 1
-
-### Ejercicios
-
-1. Crear una lista de frutas: *manzana*, *platano* y *melon*. Posteriormete agregar *sandia*. Despues agregarle una lista mas que contenga *papaya*, *kiwi* y *durazno*. He imprimir la lista completa. Despues remover la *sandia* e imprimir el resultado. Recorrer la lista de frutas imprimiendo cada una (usando un ciclo, de preferencia usar *for*).
-
-2. Crear una lista con sus calificaciones de Neumatica, y obtener el promedio. Se debe utilizar la función `sum` para el procedimiento. Imprimir cual es la calificacion maxima y minima, usando las funciones `max()` y `min()`
-
-## Eliminando elementos de la lista `del`
-
-Cuando queremos eliminar algún elemento de una coleccion se usa la palabra reservada `del` junto a la posicion del elemento a eliminar.
-
-**Sintaxis**
-
-- `del coleccion[posicion|key]`
-
-```python
-# Eliminar elementos de una coleccion
-
-materias = ['analogica', 'digitales', 'mediciones' ]
-
-print(materias)
-
-del materias[1] # Elimino el elemento que esta en la posicion 1 de la coleccion
-
-print(materias)
-
-
-alumnos = { 'carlos':[8,8,9] , 'angel':[8,8,8] }
-
-print(alumnos)
-
-del alumnos['carlos']
-
-print(alumnos)
 ```
 
 ## Función `len`
@@ -463,16 +432,62 @@ print(f'Te cuento que también me gusta mucho {random.choice(hobbies)}')
 
     KeyboardInterrupt: Interrupted by user
 
+## Eliminando elementos de la lista `del`
+
+Cuando queremos eliminar algún elemento de una coleccion se usa la palabra reservada `del` junto a la posicion del elemento a eliminar.
+
+**Sintaxis**
+
+- `del coleccion[posicion|key]`
+
+```python
+# Eliminar elementos de una coleccion
+
+materias = ['analogica', 'digitales', 'mediciones' ]
+
+print(materias)
+
+del materias[1] # Elimino el elemento que esta en la posición 1 de la colección
+
+print(materias)
+
+
+alumnos = { 'carlos':[8,8,9] , 'angel':[8,8,8] }
+
+print(alumnos)
+
+del alumnos['carlos']
+
+print(alumnos)
+```
+
+### Ejercicios
+
+1. Crear una lista de frutas: *manzana*, *platano* y *melon*. Posteriormete agregar *sandia*. Despues, agregarle una lista mas que contenga *papaya*, *kiwi* y *durazno*. He imprimir la lista completa. Despues, remover la *sandia* e imprimir el resultado. Recorrer la lista de frutas imprimiendo cada una (usando un ciclo, de preferencia usar *for*).
+2. Crear una lista con sus calificaciones de Matemáticas, y obtener el promedio. Se debe utilizar la función `sum` para el procedimiento. Imprimir cual es la calificación maxima y minima, usando las funciones `max()` y `min()`
+3. Generador de contraseñas, de 8 dígitos que contengan de todos los símbolos.
+
 ## 10.3 Diccionarios
 
-Son un tipo de coleccion que su estructura es `Llave - Valor`. Para obtener el acceso al *valor* se hace a traves de la *llave*. La llave es unica y por lo tanto no se puede repetir.
+Son un tipo de coleccion que su estructura es `Llave - Valor`. Para obtener el acceso al *valor* se hace a traves de la *llave*. La llave es única y por lo tanto no se puede repetir.
 
 **Sintaxis**
 
 ```python
-# Creacion de un diccionario
+# Creación de un diccionario
     diccionario = {
-        'llave1': 'str',
+        'llave1' : valor,
+        'llave2' : valor,
+        'llave3' : valor,
+        'llave4' : valor,
+        ......
+    }
+```
+
+```python
+# Creación de un diccionario
+    diccionario = {
+        'llave1' : 'str',
         'llave2' : 5
         'llave3' : True,
         'llave4' : [1,2,6,'a']

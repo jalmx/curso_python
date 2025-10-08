@@ -186,6 +186,11 @@ else:
     10 es divisible entre 3 or 5
 ```
 
+## Ejercicios
+
+1. Solicitar al usuario un numero de entre 1 al 30, si esta en el rango de 1 `Y` 20 indicar la frase "Tu numero es menor a 20", de lo contrario imprimir el mismo numero que ingreso el usuario.
+2. Solicitar al usuario su año de nacimiento e indicar si nació en año  bisiesto. Para conocer si el año es bisiesto; es divisible por 4, PERO NO es divisible por 100 (esta es una simplificación de la regla real, pero sirve para el ejercicio).
+
 ---
 
 Realizado por el Instructor: [Alejandro Leyva](https://www.alejandro-leyva.com/)

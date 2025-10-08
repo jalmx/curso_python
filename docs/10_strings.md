@@ -11,7 +11,7 @@ La manipulación de string a detalle es sumamente util para separarlo, saber si 
 
 ## 10.1 Convertir a minúsculas (lower)
 
-Una función que nos facilita es convertir todo el string a minúsculas. Ignora simbolos y números.
+Una función que nos facilita es convertir todo el string a minúsculas. Ignora símbolos y números.
 
 - lower(): Converts a string into lower case
 
@@ -138,6 +138,14 @@ print(f'Son espacios: {" ".isspace()}')
 - `strip()` Returns a trimmed version of the string
 
 <https://www.w3schools.com/python/python_ref_string.asp>
+
+## Ejercicios
+
+1. Pide al usuario una palabra. Imprime la palabra primero en mayúsculas y luego en minúsculas.
+2. Pide una frase corta. Usa `capitalize()` para asegurar que solo la primera letra de la frase esté en mayúscula.
+3. Pide un nombre de archivo (ej: documento.pdf). Imprime "Si es un pdf" si termina con '.pdf'.
+4. Pide un nombre de archivo (ej: foto1.png). Indica "Foto valida" si comienza con "foto" y termina con alguna extension como ".png, .jpeg, .jpg" (solo estas extensiones), de lo contrario, archivo no valido.
+5. Pide una frase y una letra. Cuenta y muestra cuántas veces aparece esa letra en la frase.
 
 ---
 

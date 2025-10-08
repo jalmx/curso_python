@@ -277,7 +277,27 @@ if a > b: print("a es mas grande que b")
     a es mas grande que b
 ```
 
-## 6.7 Anidando `if`
+### 6.6.2 Operador ternario
+
+Oficialmente no existe el operador ternario al estilo `C` o `Java`, pero esto vendría ser su equivalente.
+
+```python
+variable = valor_devuelto_True if condicion_verdadera else valor_devuelto_False
+```
+
+```python
+edad = 20
+
+frase = "Eres mayor de edad" if edad >= 18 else "Eres menor de edad"
+
+print(frase)
+```
+
+```text
+    Eres mayor de edad
+```
+
+## 6.7 Anidado `if`
 
 Podemos meter `if` dentro de otro `if`, no hay limites de anidamiento. Se pueden utilizar la cantidad de `if` que sean necesarios. Esta acción se llama `ifs anidados`
 
