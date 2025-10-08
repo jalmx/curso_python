@@ -15,8 +15,6 @@ En python son los siguientes:
 - `Diccionarios`
 - `Sets`
 
-*Nota: En este curso solo se cubriran las tuplas y las listas.*
-
 ## 10.1 Tuplas
 
 Es una estructura de datos **inmutables**, una vez declarada no puede cambiar su contenido, ni agregar, ni eliminar, no modificar.
@@ -135,11 +133,11 @@ while contador < len(calificaciones):
 
 ## 10.2 Listas
 
-Es una coleccion de elementos ordenados. En otro lenguajes es conocido como un `array`. A este tipo de coleccion es Mutable, es decir, se le pueden agregar, eliminar, quitar, elementos. Podemos hacer diversas operaciones con ellos.
+Es una colección de elementos ordenados. En otro lenguajes es conocido como un `array`. A este tipo de colección es Mutable, es decir, se le pueden agregar, eliminar, quitar, elementos. Podemos hacer diversas operaciones con ellos.
 
 Elementos que debemos tener en cuenta son:
 
-- `index`: El indice o posicion de cada elemento en la lista, recordar que todas comienzan en la posicion 0.
+- `index`: El indice o posición de cada elemento en la lista, recordar que todas comienzan en la posición 0.
 - `length`: La longitud o cantidad de elementos que contiene la lista
 
 **Sintaxis**
@@ -190,7 +188,7 @@ materias.extend(materias2)
 #imprimo la lista
 print(materias)
 
-#inserto una materia en la posicion 2
+#inserto una materia en la posición 2
 materias.insert(2,'Matematicas')
 
 #imprimo la lista
@@ -223,6 +221,7 @@ materias.reverse()
 print(materias)
 ```
 
+```text
     ['analogicas', 'digitales', 'mediciones']
     ['analogicas', 'digitales', 'mediciones', 'dibujo 3D']
     ['analogicas', 'digitales', 'mediciones', 'dibujo 3D', 'neumatica', 'mecanismos']
@@ -232,6 +231,7 @@ print(materias)
     ['analogicas', 'dibujo 3D', 'digitales', 'mecanismos', 'mediciones']
     ultima materia: neumatica
     ['mediciones', 'mecanismos', 'digitales', 'dibujo 3D', 'analogicas']
+```
 
 ### Obteniendo los datos de una lista
 
@@ -257,10 +257,12 @@ print(materia3)
 print(materia4)
 ```
 
+```text
     mediciones
     mecanismos
     digitales
     dibujo 3D
+```
 
 ```python
 # Recorriendo una lista con FOR
@@ -323,10 +325,10 @@ Los iteradores por default no te dicen cual es su largo, en muchas ocasiones nec
 
 **Sintaxis**
 
-- `len(iterator)`: Devuelve el numero de los elementos de una coleccion
+- `len(iterator)`: Devuelve el numero de los elementos de una colección
 
 ```python
-# Ejemplos de aplicacion de la función len()
+# Ejemplos de aplicación de la función len()
 
 string = 'hola'
 str_len = len(string)
@@ -355,7 +357,7 @@ print('largo de diccionario',dic_len)
 especialidades = [
     'mecatronica',
     'laboratorio',
-    'contanbilidad',
+    'contabilidad',
     'mecanica',
     'electricidad'
     ]
@@ -368,11 +370,13 @@ while count < len(especialidades):
     count+=1
 ```
 
+```text
     Una de las especialidades es: mecatronica
     Una de las especialidades es: laboratorio
-    Una de las especialidades es: contanbilidad
+    Una de las especialidades es: contabilidad
     Una de las especialidades es: mecanica
     Una de las especialidades es: electricidad
+```
 
 ```python
 import random
@@ -386,13 +390,13 @@ print('Hola, me llamo BotPy')
 print('Cual es tu nombre')
 name = input()
 
-print(f'Es un gusto concerte {name}')
+print(f'Es un gusto conocerte {name}')
 print('Que lindo nombre tienes ;)')
 
 print('Cual es tu hobby?')
 hobby = input()
 
-print(f'Wow!!!! que conincidencia, a mi también me encanta {hobby}')
+print(f'Wow!!!! que coincidencia, a mi también me encanta {hobby}')
 print(f'Te cuento que también me gusta mucho {random.choice(hobbies)}')
 
 ```
@@ -434,14 +438,18 @@ print(f'Te cuento que también me gusta mucho {random.choice(hobbies)}')
 
 ## Eliminando elementos de la lista `del`
 
-Cuando queremos eliminar algún elemento de una coleccion se usa la palabra reservada `del` junto a la posicion del elemento a eliminar.
+Cuando queremos eliminar algún elemento de una colección se usa la palabra reservada `del` junto a la posición del elemento a eliminar.
 
 **Sintaxis**
 
-- `del coleccion[posicion|key]`
+```python
+
+del coleccion[posicion|key]
+
+```
 
 ```python
-# Eliminar elementos de una coleccion
+# Eliminar elementos de una colección
 
 materias = ['analogica', 'digitales', 'mediciones' ]
 
@@ -469,7 +477,7 @@ print(alumnos)
 
 ## 10.3 Diccionarios
 
-Son un tipo de coleccion que su estructura es `Llave - Valor`. Para obtener el acceso al *valor* se hace a traves de la *llave*. La llave es única y por lo tanto no se puede repetir.
+Son un tipo de colección que su estructura es `Llave - Valor`. Para obtener el acceso al *valor* se hace a traves de la *llave*. La llave es única y por lo tanto no se puede repetir.
 
 **Sintaxis**
 
@@ -568,7 +576,7 @@ for values in calificaciones_neumatica.values():
 
 ## Función `tuple()`
 
-La función tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
+La función tuple crea una instancia de una tupla vacia si no le pasamos ningun argumento. El argumento que puede recibir una colección.
 
 ```python
 mi_tupla = tuple() # crea una tupla vacia
@@ -588,7 +596,7 @@ print(tupla_calificaciones)
 
 ## Función `list()`
 
-La función list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
+La función list crea una instancia de una lista vacia si no le pasamos ningun argumento. El argumento que puede recibir una colección.
 
 ```python
 lista_vacia = list()
@@ -608,7 +616,7 @@ print(lista_calificaciones)
 
 ## Función `dict()`
 
-La función dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una coleccion.
+La función dict crea una instancia de un diccionario vacio si no le pasamos ningun argumento. El argumento que puede recibir una colección.
 
 ```python
 mi_diccionario = dict()
@@ -625,7 +633,7 @@ print(mi_diccionario)
 
 ## Función `enumerate()`
 
-A esta función se le pasa un iterable y me devuelve 2 valores, en la primera posicion me pasa el indice y en la segunda posicion me pasa el valor que tiene en ese momento el iterador.
+A esta función se le pasa un iterable y me devuelve 2 valores, en la primera posición me pasa el indice y en la segunda posición me pasa el valor que tiene en ese momento el iterador.
 
 **Sintaxis:**
 
@@ -639,24 +647,24 @@ pokemons = ['pikachu', 'bolbasor', 'charizard' ]
 # Forma fea y horrible
 count = 0
 for pokemon in pokemons:
-    print(f'La posicion de {pokemon} es {count}')
+    print(f'La posición de {pokemon} es {count}')
     count +=1
 
 print('===================================')
 
 # La forma chida
 for index, value in enumerate(pokemons):
-    print(f'La posicion de {value} es {index}')
+    print(f'La posición de {value} es {index}')
 
 ```
 
-    La posicion de pikachu es 0
-    La posicion de bolbasor es 1
-    La posicion de charizard es 2
+    La posición de pikachu es 0
+    La posición de bolbasor es 1
+    La posición de charizard es 2
     ===================================
-    La posicion de pikachu es 0
-    La posicion de bolbasor es 1
-    La posicion de charizard es 2
+    La posición de pikachu es 0
+    La posición de bolbasor es 1
+    La posición de charizard es 2
 
 ---
 

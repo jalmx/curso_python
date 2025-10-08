@@ -98,7 +98,7 @@ print(hexadecimal)
 
 ## 5.3 Función `float()`
 
-En muchas ocasiones puedes tener un `número de punto flotante` almacenado en una variable pero no exactamnete es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `float` para poder realizar operaciones con él. Para esos casos contamos con la función `float()`
+En muchas ocasiones puedes tener un `número de punto flotante` almacenado en una variable pero no exactamente es tipo `número`. Entonces, en ese caso necesitamos que sea de tipo `float` para poder realizar operaciones con él. Para esos casos contamos con la función `float()`
 
 **Sintaxis:**
 
@@ -179,7 +179,7 @@ False
 
 ## Aplicaciones
 
-### 1. Pedir dos números e imprimir el resultado**
+### 1. Pedir dos números e imprimir el resultado
 
 ```python
 print("Mi super calculador de 2 números")

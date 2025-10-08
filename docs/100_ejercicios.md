@@ -103,7 +103,7 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
 
 17. Realizar una calculadora de ley de Ohm, al inicio te da el menú para seleccionar que se desea calcular; para terminar el programa se debe dar la opción de salida, si no el programa sigue mostrando el menu inicial, si el usuario ingresa un valor y "no existe en el menu", manda mensaje que la opción no existe y vuelve a mostrar el menu. El resultado lo debe lanzar en el mejor formato, es decir, si el resultado es 1,000 ohms, en pantalla debe salir 1k, si es posible agregar el símbolo de Omega ($\Omega$) para resistencias, de lo contrario colocar la palabra **"Ohms"**. Si el resultado es 0.005A en pantalla debe salir 5mA. El usuario debe ingresar el valor sin redondear, es decir, si son 10mA debe ingresar -> 0.01A, si el valor es 10k$\Omega$ debe ingresar -> 10000.
 
-### Strings
+## Strings
 
 1. De la siguiente frase "python es la onda, todo el mundo debería aprender python desde cero". Verifica si la palabra "python" está en una oración `find()`.
 2. De la siguiente frase "python es la onda, todo el mundo debería aprender python desde cero". Reemplaza la palabra "python" por "JAVA" en la primera ocasión, después por "JavaScript"; es decir, vas a imprimir 2 veces la frase.
@@ -116,17 +116,26 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
     | **I / i** | `1`|
     | **O / o** | `0`|
     | **U / u** | `(_)`|
+
 4. Extrae todas los letras de una cadena y devuélvelos como una nueva cadena (p. ej. "abc123d4" → "1234").
 5. Extrae todos los dígitos de una cadena y devuélvelos como una nueva cadena (p. ej. "abc123d4" → "abc").
 6. Convierte una frase como "Hola Mundo En Python" a "hola_mundo_en_python".
 
-### Colecciones
+## Colecciones
 
-### Funciones
+1. Crea una lista con 5 números enteros y muéstrala por pantalla utilizando un ciclo.
+2. Genera una lista de 20 números random enteros (tu eliges el limite del máximo), después imprime cada uno, indicando cuales son par e impar. Ejemplo `12 -> par`.
+3. Genera una lista de 10 números random enteros (tu eliges el limite del máximo), la imprimes despues, cambias los valores que están en posiciones *par* por un "0". Ejemplo: `[10, 20, 30, 40, 50]` -> `[10, 20, 0, 40, 0]`.
+4. Dada la lista `paises = ['Chile', 'Perú', 'Ecuador', 'México', 'España']`, imprime el primer elemento, el último elemento y el elemento en el índice 2.
+5. Genera una lista de 10 edades random (numero máximo) usa `count()` para determinar y mostrar cuántas personas son mayores de edad.
+6. Dadas `lista_a = [1, 2, 3]` y `lista_b = [4, 5]`, usa `extend()` para agregar todos los elementos de lista_b al final de lista_a.
+7. Dada la tupla `datos = ("Ana", 28, "Ingeniera")`, desempaqueta sus valores en tres variables (`nombre, edad, profesion`) y luego imprímelos.
 
-### Archivos
+## Funciones
 
-### Errores
+## Archivos
+
+## Errores
 
 ## POO
 
