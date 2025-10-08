@@ -623,15 +623,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#662-operador-ternario" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.2 Operador ternario
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#67-anidando-if" class="md-nav__link">
+  <a href="#67-anidado-if" class="md-nav__link">
     <span class="md-ellipsis">
-      6.7 Anidando if
+      6.7 Anidado if
     </span>
   </a>
   
@@ -1173,15 +1182,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#662-operador-ternario" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.2 Operador ternario
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#67-anidando-if" class="md-nav__link">
+  <a href="#67-anidado-if" class="md-nav__link">
     <span class="md-ellipsis">
-      6.7 Anidando if
+      6.7 Anidado if
     </span>
   </a>
   
@@ -1446,7 +1464,19 @@ Para esto siempre debemos realizar una comparación si entra en ese bloque o va 
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>    a es mas grande que b
 </code></pre></div>
-<h2 id="67-anidando-if">6.7 Anidando <code>if</code></h2>
+<h3 id="662-operador-ternario">6.6.2 Operador ternario</h3>
+<p>Oficialmente no existe el operador ternario al estilo <code>C</code> o <code>Java</code>, pero esto vendría ser su equivalente.</p>
+<div class="highlight"><pre><span></span><code><span class="n">variable</span> <span class="o">=</span> <span class="n">valor_devuelto_True</span> <span class="k">if</span> <span class="n">condicion_verdadera</span> <span class="k">else</span> <span class="n">valor_devuelto_False</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">edad</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">frase</span> <span class="o">=</span> <span class="s2">&quot;Eres mayor de edad&quot;</span> <span class="k">if</span> <span class="n">edad</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="k">else</span> <span class="s2">&quot;Eres menor de edad&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">frase</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>    Eres mayor de edad
+</code></pre></div>
+<h2 id="67-anidado-if">6.7 Anidado <code>if</code></h2>
 <p>Podemos meter <code>if</code> dentro de otro <code>if</code>, no hay limites de anidamiento. Se pueden utilizar la cantidad de <code>if</code> que sean necesarios. Esta acción se llama <code>ifs anidados</code></p>
 <div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dar un numero&quot;</span><span class="p">))</span>
 
