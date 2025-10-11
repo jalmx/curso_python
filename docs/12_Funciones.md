@@ -16,7 +16,7 @@ Bloque de código reutilizable que puede ser llamado n cantidad de veces, debe s
 
 ## Como escribo una función y como la utilizo
 
-### Sintaxis
+**Sintaxis**
 
 ```python
 def name_function():
@@ -55,7 +55,7 @@ elevar_cuadrado()
     4
 ```
 
-### Ejercicios:
+### Ejercicios
 
 1. Realizar una función que en su cuerpo realice la suma de dos números (estos están dados por ustedes), e imprimir el resultado, es decir, cuando se invoque
 
@@ -324,9 +324,158 @@ print( create_pokemon(power=25, name='pikachu'))
 
     Mi pokemo se llama pikachu con un poder de 25
 
-## Devolviendo varios valores
+## Recibiendo n argumentos
 
-<!-- TODO: pendiente -->
+### Argumentos Posicionales Variables `*args`
+
+El operador `*args` (el asterisco es lo importante, "args" es solo una convención de nombre) permite que una función acepte cualquier número de argumentos posicionales.
+
+Cuando usas `*args` en la definición de una función:
+
+- Python recolecta todos los argumentos posicionales extra que se pasan en la llamada.
+- Los empaqueta en una tupla.
+- Asigna esa tupla al nombre de la variable que sigue al asterisco (args).
+
+**Sintaxis:**
+
+```python
+def name_funcion(*arg):
+    # code
+
+def name_funcion(arg1, *arg):
+    # code
+```
+
+**Ejemplo**
+
+```python
+def sumar_todos(*numeros):
+    """Suma una cantidad variable de números."""
+    total = 0
+    for num in numeros:
+        total += num
+    return total
+
+# Llamadas con diferentes números de argumentos
+resultado1 = sumar_todos(10, 5, 2)
+resultado2 = sumar_todos(1, 1, 1, 1, 1, 10)
+resultado3 = sumar_todos() # También funciona con cero argumentos
+
+print(f"Suma 1: {resultado1}") # Output: Suma 1: 17
+print(f"Suma 2: {resultado2}") # Output: Suma 2: 15
+```
+
+### Argumentos de Palabra Clave Variables: `**kwargs`
+
+El operador `**kwargs` (los dos asteriscos son lo importante, "kwargs" viene de *keyword arguments*) permite que una función acepte cualquier número de argumentos de palabra clave.
+
+Cuando usas `**kwargs` en la definición de una función:
+
+- Python recolecta todos los argumentos de palabra clave extra (los que tienen la forma clave=valor) que se pasan en la llamada.
+- Los empaqueta en un diccionario.
+- Asigna ese diccionario al nombre de la variable que sigue a los dos asteriscos (kwargs).
+
+**Sintaxis:**
+
+```python
+def name_funcion(**kwarg):
+    # code
+
+def name_funcion(arg1, **kwarg):
+    # code
+```
+
+**Ejemplo**
+
+```python
+def crear_perfil(nombre, **opciones):
+    """Crea un perfil, aceptando datos adicionales opcionales."""
+    perfil = {'Nombre': nombre}
+    perfil.update(opciones)
+    return perfil
+
+# Llamadas con diferentes argumentos de palabra clave
+perfil1 = crear_perfil("Elena", edad=30, ciudad="Bogotá")
+perfil2 = crear_perfil("Javier", idioma="Inglés")
+perfil3 = crear_perfil("Sofía")
+
+print("\n--- Perfil 1 ---")
+print(perfil1) # Output: {'Nombre': 'Elena', 'edad': 30, 'ciudad': 'Bogotá'}
+
+print("\n--- Perfil 2 ---")
+print(perfil2) # Output: {'Nombre': 'Javier', 'idioma': 'Inglés'}
+```
+
+### Combinando `*args` y `**kwargs`
+
+Puedes combinar argumentos fijos, `*args`, y `**kwargs` en la misma función, pero el orden es **estricto y muy importante**:
+
+- Argumentos Posicionales Fijos (requeridos)
+- `*args` (argumentos posicionales variables)
+- Argumentos de Palabra Clave Fijos (opcionales o con valor por defecto)
+- `**kwargs` (argumentos de palabra clave variables)
+
+**Sintaxis:**
+
+```python
+def name_function(arg_fijo, *args, arg_clave='default', **kwargs):
+    pass
+```
+
+**Ejemplo**
+
+```python
+def configurar_juego(nombre_juego, *jugadores, dificultad='Normal', **opciones_extra):
+    print(f"Juego: {nombre_juego}")
+    print(f"Jugadores: {jugadores}") # Tupla
+    print(f"Dificultad Fija: {dificultad}")
+    print(f"Opciones Extra: {opciones_extra}") # Diccionario
+
+configurar_juego(
+    "D&D",
+    "Pedro", "Laura", "Marta",           # -> *jugadores (tupla)
+    dificultad="Difícil",               # -> argumento de palabra clave fijo
+    mapa="Bosque", música=True, dados=20  # -> **opciones_extra (diccionario)
+)
+```
+
+## Devolviendo *n* valores
+
+En Python, cuando una función usa múltiples expresiones de retorno separadas por comas, realmente está devolviendo una tupla que contiene todos esos valores. Esto permite que la función actúe como si estuviera retornando varios resultados individuales.
+
+**Sintaxis:**
+
+```python
+def my_funcion(*arg):
+    # code
+    #
+    return valueA, valueB,...
+
+# Recibiendo los datos
+
+a, b = my_funcion() # se colocan las variables separadas por coma y en el orden que seran recibidas
+_, b = my_funcion() # en este caso el primer valor no lo usaramos, pero el segundo si lo guardamos en `b`, el guion bajo se usa para indicar que ese valor no lo guardaremos
+a = my_funcion()  # si solo coloco una variable, solo guardamos ese valor, los demas que esten adelante se pierden
+```
+
+**Ejemplo**
+
+```python
+def calcular_operaciones(a, b):
+    """Devuelve la suma, la resta y la multiplicación de dos números."""
+    suma = a + b
+    resta = a - b
+    multiplicacion = a * b
+
+    return suma, resta, multiplicacion
+
+# Desempaquetado: Se asigna cada elemento de la tupla de retorno a su variable correspondiente.
+s, r, m = calcular_operaciones(10, 5)
+
+print(f"Suma: {s}")             # Output: Suma: 15
+print(f"Resta: {r}")            # Output: Resta: 5
+print(f"Multiplicación: {m}")   # Output: Multiplicación: 50
+```
 
 ---
 

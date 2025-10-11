@@ -125,7 +125,7 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
 
 1. Crea una lista con 5 números enteros y muéstrala por pantalla utilizando un ciclo.
 2. Genera una lista de 20 números random enteros (tu eliges el limite del máximo), después imprime cada uno, indicando cuales son par e impar. Ejemplo `12 -> par`.
-3. Genera una lista de 10 números random enteros (tu eliges el limite del máximo), la imprimes despues, cambias los valores que están en posiciones *par* por un "0". Ejemplo: `[10, 20, 30, 40, 50]` -> `[10, 20, 0, 40, 0]`.
+3. Genera una lista de 10 números random enteros (tu eliges el limite del máximo), la imprimes despues, cambias los valores que están en posiciones _par_ por un "0". Ejemplo: `[10, 20, 30, 40, 50]` -> `[10, 20, 0, 40, 0]`.
 4. Dada la lista `paises = ['Chile', 'Perú', 'Ecuador', 'México', 'España']`, imprime el primer elemento, el último elemento y el elemento en el índice 2.
 5. Genera una lista de 10 edades random (numero máximo) usa `count()` para determinar y mostrar cuántas personas son mayores de edad.
 6. Dadas `lista_a = [1, 2, 3]` y `lista_b = [4, 5]`, usa `extend()` para agregar todos los elementos de lista_b al final de lista_a.
@@ -137,11 +137,28 @@ Todos estos ejercicios se debe implementar un ciclo `while` y otro con la versio
 
 ## Funciones
 
-1.
+1. Define una función `celsius_a_fahrenheit(c)` que convierta una temperatura de Celsius a Fahrenheit.
+2. Crea una función `area_circulo(radio)` que calcule el área y otra que sea `perimetro_circulo(radio)` que calcule el perimetro
+3. Escribe una función `mayor(a, b)` que retorne el número más grande entre dos valores.
+4. Define `promedio(lista)` que devuelva el promedio de los números de la lista.
+5. Crea una función `contar_letra(texto, letra)` que cuente cuántas veces aparece una letra en el texto.
+6. Crea `sumar_todo(*args)` que acepte cualquier cantidad de números y devuelva su suma.
+7. Crea una función que reciba dos números y una operación (+, -, *, /) y retorne el resultado.
+8. Escribe una función que valide si una contraseña cumple con: mínimo 8 caracteres, al menos una mayúscula, una minúscula y un número.
+9. Analizador de texto Desarrolla una función que analice un texto y retorne estadísticas: palabras más frecuentes, promedio de longitud de palabras, etc.
 
 ## Archivos
 
+1. Crea una función que escriba una lista de nombres en un archivo de texto, uno por línea.
+2. Desarrolla una función que cuente cuántas líneas tiene un archivo de texto.
+3. Escribe una función que busque una palabra específica en un archivo y retorne en qué líneas aparece.
+4. Desarrolla una función que copie el contenido de un archivo a otro archivo nuevo.
+5.
+
 ## Errores
+
+1. Define una `función dividir(a, b)` que intente dividir a entre b. Usa try...except para manejar la excepción `ZeroDivisionError` e imprime un mensaje de error si ocurre.
+
 
 ## POO
 
