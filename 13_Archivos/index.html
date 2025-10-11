@@ -617,6 +617,60 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo os
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-pathlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo pathlib
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-shutil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo shutil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo csv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo json
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -827,6 +881,60 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo os
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-pathlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo pathlib
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-shutil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo shutil
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo csv
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulo-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      Módulo json
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -848,11 +956,11 @@
 <h2 id="funcion-open">Función <code>open()</code></h2>
 <p>Con solo abrir un archivo de Python podemos llamar a la función <code>open</code> la cual le indicamos la ruta del archivo que queremos abrir y cargar su información, junto con el modo en que lo vamos a utilizar.</p>
 <p><strong>Sintaxis:</strong></p>
-<div class="highlight"><pre><span></span><code>    <span class="nb">open</span><span class="p">(</span><span class="n">ruta_archivo</span><span class="p">,</span><span class="n">modo</span><span class="p">,</span><span class="n">encoding</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code>    <span class="nb">open</span><span class="p">(</span><span class="n">nombre_archivo</span><span class="p">,</span><span class="n">modo</span><span class="p">,</span><span class="n">encoding</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>parámetros:</strong></p>
 <ul>
-<li><code>ruta_archivo</code>: Es la ruta del archivo que se va a carga, la ruta puede ser relativa o absoluta</li>
+<li><code>nombre_archivo</code>: Es la ruta del archivo que se va a carga, la ruta puede ser relativa o absoluta</li>
 <li><code>modo</code>: El modo es como se manejara el archivo, los modos son:</li>
 <li><code>r</code>: Read - Valor por default. Abre el archivo para leerlo. Lanza error en caso que no exista.</li>
 <li><code>w</code>: Write - Abre el archivo para leerlo, en caso que no exista lo creara.</li>
@@ -875,10 +983,13 @@
 <li><code>readline()</code>: Lee una sola linea del archivo. Por default comienza en la primera.</li>
 <li><code>readlines()</code>: Crea una lista con el contenido de cada linea del archivo.</li>
 <li><code>write(data)</code>: Escribe lo que le pasamos como argumento.</li>
+<li><code>writelines(lista)</code>: Escribe varias líneas</li>
 <li><code>seek(position)</code>: Coloca el cursor en esa posicion dentro del archivo.</li>
 <li><code>close()</code>: Cierra el archivo. Esto siempre se debe hacer si se usa el metodo <code>open()</code> solo.</li>
 </ul>
-<p><em>Nota: Contiene mas metodos, ir a la documentacion oficial de <a href="https://docs.python.org/3/library/io.html">IO</a></em></p>
+<blockquote>
+<p>Nota: Contiene mas metodos, ir a la documentacion oficial de <a href="https://docs.python.org/3/library/io.html">IO</a></p>
+</blockquote>
 <div class="highlight"><pre><span></span><code><span class="c1"># Creando un archivo vacio</span>
 <span class="n">file_name</span> <span class="o">=</span> <span class="s1">&#39;archivo.txt&#39;</span>
 
@@ -890,6 +1001,7 @@
 
 <span class="n">mi_archivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;estoy escribiendo el archivo plano</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">mi_archivo</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;esto es el manejo de archivos en python</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">mi_archivo</span><span class="o">.</span><span class="n">writes</span><span class="p">([</span><span class="s2">&quot;java</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;C</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;JavaScript</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">])</span>
 
 <span class="n">mi_archivo</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
@@ -934,6 +1046,322 @@ dato11,dato21,dato31
 
 dato12,dato22,dato32
 </code></pre>
+<h2 id="ejemplos">Ejemplos</h2>
+<ol>
+<li>Crea una función que escriba una lista de nombres en un archivo de texto, uno por línea. Solicitar al usuario uno por uno.</li>
+<li>Crear archivos dummy con el formato <code>pdf</code>, <code>docx</code>, <code>png</code>. 10 de cada uno.</li>
+<li>Solicitar las cafificaciones al usuario de la materia de matematica, guardarlos en un archivo con su promedio al final.</li>
+<li>Crear un archivo CSV con datos dummy, la cantidad es random. ["elemento x", "valor int", "valor float]</li>
+<li>Crea un archivo HTML, solicita el titulo del sitio. Template base HTML:</li>
+</ol>
+<h2 id="modulo-os">Módulo <code>os</code></h2>
+<p>El módulo <code>os</code> permite administrar archivos y carpetas (verificar, eliminar, mover, etc.).</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;archivo.txt&quot;</span><span class="p">)</span>           <span class="c1"># Eliminar archivo</span>
+<span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;carpeta/&quot;</span><span class="p">)</span>             <span class="c1"># Listar archivos</span>
+<span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">&quot;nueva_carpeta&quot;</span><span class="p">)</span>          <span class="c1"># Crear carpeta</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;documentos/proyectos/python&quot;</span><span class="p">)</span>                      <span class="c1"># se usa para crear carpetas (directorios) en el sistema de archivos, incluyendo todas las subcarpetas intermedias necesarias.</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">viejo</span><span class="p">,</span> <span class="n">nuevo</span><span class="p">)</span>            <span class="c1"># Renombrar archivo</span>
+<span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>                        <span class="c1"># Obtener directorio actual</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>               <span class="c1"># Verifica si existe</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>               <span class="c1"># Verifica si es archivo</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>                <span class="c1"># Verifica si es directorio</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ruta1</span><span class="p">,</span> <span class="n">ruta2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c1"># Une rutas correctamente</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>            <span class="c1"># Nombre del archivo</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>             <span class="c1"># Directorio contenedor</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>               <span class="c1"># Divide en directorio y archivo</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>            <span class="c1"># Divide nombre y extensión</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>             <span class="c1"># Ruta absoluta</span>
+</code></pre></div>
+<p><strong>Ejemplos</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="c1">## verificar si existe el archivo</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;saludo.txt&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El archivo existe.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El archivo no existe.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Crea un nuevo directorio. Lanza un error si ya existe.</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;mi_carpeta&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;mi_carpeta&#39;</span><span class="p">)</span>
+
+<span class="c1"># Elimina un archivo. Lanza un FileNotFoundError si no existe.</span>
+<span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;archivo_a_eliminar.txt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Elimina un directorio vacío. Lanza un OSError si no está vacío.</span>
+<span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;carpeta_vacia&#39;</span><span class="p">)</span>
+
+<span class="c1"># Obtener información del archivo</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s1">&#39;documento.txt&#39;</span><span class="p">):</span>
+    <span class="n">tamaño</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="s1">&#39;documento.txt&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tamaño: </span><span class="si">{</span><span class="n">tamaño</span><span class="si">}</span><span class="s2"> bytes&quot;</span><span class="p">)</span>
+
+<span class="c1"># Listar archivos en un directorio</span>
+<span class="n">archivos</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">archivo</span> <span class="ow">in</span> <span class="n">archivos</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">archivo</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.txt&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+
+<span class="c1"># Renombrar un archivo</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;viejo.txt&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;viejo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;nuevo.txt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Eliminar un archivo</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;temporal.txt&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;temporal.txt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Construir rutas de forma segura</span>
+<span class="n">ruta</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;carpeta&#39;</span><span class="p">,</span> <span class="s1">&#39;subcarpeta&#39;</span><span class="p">,</span> <span class="s1">&#39;archivo.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>  <span class="c1"># carpeta/subcarpeta/archivo.txt (o \ en Windows)</span>
+
+<span class="c1"># Extraer componentes de una ruta</span>
+<span class="n">ruta_completa</span> <span class="o">=</span> <span class="s1">&#39;/home/usuario/documentos/informe.txt&#39;</span>
+<span class="n">directorio</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">ruta_completa</span><span class="p">)</span>
+<span class="n">nombre_archivo</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">ruta_completa</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Directorio: </span><span class="si">{</span><span class="n">directorio</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Archivo: </span><span class="si">{</span><span class="n">nombre_archivo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Separar nombre y extensión</span>
+<span class="n">nombre</span><span class="p">,</span> <span class="n">extension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="s1">&#39;documento.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre: </span><span class="si">{</span><span class="n">nombre</span><span class="si">}</span><span class="s2">, Extensión: </span><span class="si">{</span><span class="n">extension</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Obtener ruta absoluta</span>
+<span class="n">ruta_relativa</span> <span class="o">=</span> <span class="s1">&#39;datos.txt&#39;</span>
+<span class="n">ruta_absoluta</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">ruta_relativa</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ruta absoluta: </span><span class="si">{</span><span class="n">ruta_absoluta</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># No lanza error si las carpetas ya existen</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;proyectos/python/ejemplo&quot;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="modulo-pathlib">Módulo <code>pathlib</code></h2>
+<p><code>pathlib</code> es una forma más moderna y orientada a objetos de trabajar con rutas de archivos. Es más intuitiva que os.path y se recomienda para código nuevo.</p>
+<p><strong>Sintaxis</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">Path</span><span class="p">(</span><span class="n">ruta</span><span class="p">)</span>                  <span class="c1"># Crear objeto Path</span>
+<span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>               <span class="c1"># Verificar existencia</span>
+<span class="n">path</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>              <span class="c1"># Es archivo?</span>
+<span class="n">path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span>               <span class="c1"># Es directorio?</span>
+<span class="n">path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>            <span class="c1"># Leer texto</span>
+<span class="n">path</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>      <span class="c1"># Escribir texto</span>
+<span class="n">path</span><span class="o">.</span><span class="n">name</span>                   <span class="c1"># Nombre del archivo</span>
+<span class="n">path</span><span class="o">.</span><span class="n">stem</span>                   <span class="c1"># Nombre sin extensión</span>
+<span class="n">path</span><span class="o">.</span><span class="n">suffix</span>                 <span class="c1"># Extensión</span>
+<span class="n">path</span><span class="o">.</span><span class="n">parent</span>                 <span class="c1"># Directorio padre</span>
+</code></pre></div>
+<p><strong>Ejemplos</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># Crear objeto Path</span>
+<span class="n">archivo</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;datos.txt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Verificar existencia</span>
+<span class="k">if</span> <span class="n">archivo</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El archivo existe&quot;</span><span class="p">)</span>
+
+<span class="c1"># Leer archivo (forma simple)</span>
+<span class="n">contenido</span> <span class="o">=</span> <span class="n">archivo</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contenido</span><span class="p">)</span>
+
+<span class="c1"># Escribir archivo (forma simple)</span>
+<span class="n">archivo</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s2">&quot;Hola mundo</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+<span class="c1"># Trabajar con componentes de ruta</span>
+<span class="n">archivo</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;carpeta/subcarpeta/documento.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre completo: </span><span class="si">{</span><span class="n">archivo</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre sin extensión: </span><span class="si">{</span><span class="n">archivo</span><span class="o">.</span><span class="n">stem</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Extensión: </span><span class="si">{</span><span class="n">archivo</span><span class="o">.</span><span class="n">suffix</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Directorio padre: </span><span class="si">{</span><span class="n">archivo</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Construir rutas</span>
+<span class="n">carpeta</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;documentos&#39;</span><span class="p">)</span>
+<span class="n">archivo</span> <span class="o">=</span> <span class="n">carpeta</span> <span class="o">/</span> <span class="s1">&#39;informe.txt&#39;</span>  <span class="c1"># Operador / para unir rutas</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+
+<span class="c1"># Iterar sobre archivos en un directorio</span>
+<span class="n">directorio</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">archivo</span> <span class="ow">in</span> <span class="n">directorio</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">archivo</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span> <span class="ow">and</span> <span class="n">archivo</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.txt&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">archivo</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># Crear directorios</span>
+<span class="n">nueva_carpeta</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;nueva/carpeta/anidada&#39;</span><span class="p">)</span>
+<span class="n">nueva_carpeta</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Renombrar</span>
+<span class="n">viejo</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;viejo.txt&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">viejo</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">viejo</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;nuevo.txt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Eliminar archivo</span>
+<span class="n">archivo</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;temporal.txt&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">archivo</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="n">archivo</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+
+<span class="c1"># Obtener todos los archivos .txt recursivamente</span>
+<span class="k">for</span> <span class="n">archivo_txt</span> <span class="ow">in</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s1">&#39;*.txt&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">archivo_txt</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="modulo-shutil">Módulo <code>shutil</code></h2>
+<p>Proporciona operaciones de alto nivel para copiar y mover archivos y directorios completos.</p>
+<p><strong>Sintaxis</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">shutil</span>
+
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">origen</span><span class="p">,</span> <span class="n">destino</span><span class="p">)</span>      <span class="c1"># Copiar archivo</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy2</span><span class="p">(</span><span class="n">origen</span><span class="p">,</span> <span class="n">destino</span><span class="p">)</span>     <span class="c1"># Copiar con metadatos</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">origen</span><span class="p">,</span> <span class="n">destino</span><span class="p">)</span>      <span class="c1"># Mover/renombrar</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">(</span><span class="n">origen</span><span class="p">,</span> <span class="n">destino</span><span class="p">)</span>  <span class="c1"># Copiar directorio completo</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">directorio</span><span class="p">)</span>         <span class="c1"># Eliminar directorio y contenido</span>
+</code></pre></div>
+<p>Ejemplo</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Copiar un archivo</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;original.txt&#39;</span><span class="p">):</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s1">&#39;original.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;copia.txt&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Archivo copiado&quot;</span><span class="p">)</span>
+
+<span class="c1"># Copiar preservando metadatos (fecha de modificación, etc.)</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy2</span><span class="p">(</span><span class="s1">&#39;original.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;copia_con_metadatos.txt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Mover un archivo</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="s1">&#39;archivo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;nueva_carpeta/archivo.txt&#39;</span><span class="p">)</span>
+
+<span class="c1"># Copiar un directorio completo</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;carpeta_origen&#39;</span><span class="p">):</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">(</span><span class="s1">&#39;carpeta_origen&#39;</span><span class="p">,</span> <span class="s1">&#39;carpeta_destino&#39;</span><span class="p">)</span>
+
+<span class="c1"># Eliminar un directorio y todo su contenido</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;carpeta_temporal&#39;</span><span class="p">):</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="s1">&#39;carpeta_temporal&#39;</span><span class="p">)</span>
+
+<span class="c1"># Crear un backup</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="s1">&#39;importante.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;importante_backup.txt&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="modulo-csv">Módulo <code>csv</code></h2>
+<p>El formato CSV (Comma-Separated Values) se usa para almacenar datos tabulares (como hojas de cálculo).
+El módulo <code>csv</code> simplifica la lectura y escritura de archivos en formato de valores separados por comas. Te ahorra la molestia de parsear las cadenas de texto manualmente.</p>
+<p><strong>Sintaxis</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c1"># Leer CSV</span>
+<span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">archivo</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+
+<span class="c1"># Escribir CSV</span>
+<span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">archivo</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">archivo</span><span class="p">,</span> <span class="n">fieldnames</span><span class="p">)</span>
+</code></pre></div>
+<strong>Ejemplo</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c1"># Escribir</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;datos.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s2">&quot;Nombre&quot;</span><span class="p">,</span> <span class="s2">&quot;Edad&quot;</span><span class="p">])</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s2">&quot;Ana&quot;</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span>
+
+<span class="c1"># Leer</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;datos.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">fila</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">fila</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c1"># Leer CSV como lista de listas</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datos.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">lector</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">fila</span> <span class="ow">in</span> <span class="n">lector</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">fila</span><span class="p">)</span>  <span class="c1"># Cada fila es una lista</span>
+
+<span class="c1"># Leer CSV como lista de diccionarios</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datos.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">lector</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">fila</span> <span class="ow">in</span> <span class="n">lector</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">fila</span><span class="p">)</span>  <span class="c1"># Cada fila es un diccionario</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre: </span><span class="si">{</span><span class="n">fila</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">, Edad: </span><span class="si">{</span><span class="n">fila</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Escribir CSV desde listas</span>
+<span class="n">datos</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;Nombre&#39;</span><span class="p">,</span> <span class="s1">&#39;Edad&#39;</span><span class="p">,</span> <span class="s1">&#39;Ciudad&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;Ana&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;Madrid&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;Luis&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;salida.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">escritor</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">escritor</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span>
+
+<span class="c1"># Escribir CSV desde diccionarios</span>
+<span class="n">datos_dict</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ana&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;ciudad&#39;</span><span class="p">:</span> <span class="s1">&#39;Madrid&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Luis&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;ciudad&#39;</span><span class="p">:</span> <span class="s1">&#39;Barcelona&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;salida_dict.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">campos</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">,</span> <span class="s1">&#39;ciudad&#39;</span><span class="p">]</span>
+    <span class="n">escritor</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">campos</span><span class="p">)</span>
+    <span class="n">escritor</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>  <span class="c1"># Escribir encabezados</span>
+    <span class="n">escritor</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">datos_dict</span><span class="p">)</span>
+
+<span class="c1"># Leer CSV con delimitador diferente</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datos.tsv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">lector</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">fila</span> <span class="ow">in</span> <span class="n">lector</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">fila</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="modulo-json">Módulo <code>json</code></h2>
+<p>El formato JSON (JavaScript Object Notation) se usa para intercambiar datos entre programas.
+El módulo <code>json</code> (JavaScript Object Notation) es la forma estándar de intercambiar datos estructurados. Te permite convertir diccionarios y listas de Python a cadenas de texto JSON y viceversa, lo que es ideal para guardar y cargar configuraciones o información compleja.</p>
+<p><strong>Sintaxis</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">diccionario</span><span class="p">,</span> <span class="n">archivo</span><span class="p">)</span>   <span class="c1"># Escribir objeto a archivo</span>
+<span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">objeto</span><span class="p">)</span>                <span class="c1"># Convertir objeto a string JSON</span>
+<span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>                <span class="c1"># Leer archivo JSON a objeto</span>
+<span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>                <span class="c1"># Convertir string JSON a objeto</span>
+</code></pre></div>
+<p><strong>Ejemplo</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># Escribir datos a JSON</span>
+<span class="n">datos</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Juan&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s1">&#39;ciudad&#39;</span><span class="p">:</span> <span class="s1">&#39;México&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;hobbies&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;lectura&#39;</span><span class="p">,</span> <span class="s1">&#39;música&#39;</span><span class="p">,</span> <span class="s1">&#39;deportes&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datos.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">datos</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Leer datos desde JSON</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datos.json&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">datos_leidos</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">datos_leidos</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Nombre: </span><span class="si">{</span><span class="n">datos_leidos</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Convertir objeto Python a string JSON</span>
+<span class="n">persona</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;María&#39;</span><span class="p">,</span> <span class="s1">&#39;edad&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+<span class="n">json_string</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">persona</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+
+<span class="c1"># Convertir string JSON a objeto Python</span>
+<span class="n">json_texto</span> <span class="o">=</span> <span class="s1">&#39;{&quot;nombre&quot;: &quot;Pedro&quot;, &quot;edad&quot;: 35}&#39;</span>
+<span class="n">objeto</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_texto</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">objeto</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">])</span>
+
+<span class="c1"># Escribir lista de diccionarios</span>
+<span class="n">usuarios</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Ana&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Luis&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;nombre&#39;</span><span class="p">:</span> <span class="s1">&#39;Carmen&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;usuarios.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">usuarios</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
 <hr />
 <p>Realizado por el Instructor: <a href="https://www.alejandro-leyva.com/">Alejandro Leyva</a></p>
 
