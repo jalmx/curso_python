@@ -1,0 +1,85 @@
+from random import choice
+
+
+class PasswordGenerator:
+    """Module to generate secure password"""
+
+    def generate_numbers(self) -> list:
+        """Generate a list of numbers, from 0 to 9
+
+        Returns:
+            list: list of numbers from 0 to 9
+        """
+        numbers = []
+
+        for i in range(0, 10):
+            numbers.append(str(i))
+
+        return numbers
+
+    def generate_symbols(self, length=4) -> str:
+        password = ""
+        symbols = "!\"#$%&/()=?¿¡'`+',.-_}{[]<>"
+
+        while len(password) < length:
+            password += choice(symbols)
+
+        return password
+
+    def generate_password_numbers(self, length=4) -> str:
+        """Generate a password with only numbers
+
+        Args:
+            length (int, optional): This is the long to be the password. Defaults to 4.
+
+        Returns:
+            str: Return the password with only numbers
+        """
+        password = ""
+        numbers = self.generate_numbers()
+        while len(password) < length:
+            password += choice(numbers)
+
+        return password
+
+    def generate_password_letters(self, length=4) -> str:
+        """Generare a password with letter lowercase and uppercase
+
+        Args:
+            length (int, optional): The long to be the password. Defaults to 4.
+
+        Returns:
+            str: A password with only letters
+        """
+        password = ""
+        letters_low = "abcdefghijklmnopqtstuvwxyz"
+        letter_up = letters_low.upper()
+
+        while len(password) < length:
+            password += choice(letters_low + letter_up)
+
+        return password
+
+    def generate_password(self, length=4) -> str:
+        """Generate a string password with length indicated
+
+        Args:
+            length (int, optional): Length for password. Defaults to 4.
+
+        Returns:
+            str: password
+        """
+        password = ""
+        while len(password) < length:
+            password += choice(
+                self.generate_password_letters(length=1)
+                + self.generate_password_numbers(1)
+                + self.generate_symbols(1)
+            )
+
+        return password
+
+
+# For test the class
+if __name__ == "__main__":
+    print(PasswordGenerator().generate_password(5))
